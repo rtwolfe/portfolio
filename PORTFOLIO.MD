@@ -1,3 +1,70 @@
+<div align="center">
+
+# AI Development Platform
+
+**Solo-built. Three tools. Idea to verified software.**
+
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)
+![Tests](https://img.shields.io/badge/Tests-5%2C198_passing-brightgreen?style=flat-square)
+![Lines](https://img.shields.io/badge/Source-76%2C103_lines-blue?style=flat-square)
+![Modules](https://img.shields.io/badge/Modules-333-purple?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+
+</div>
+
+---
+
+<div align="center">
+
+[Designer-SDD](#designer-sdd--spec-driven-development-cli) | [Charlotte](#charlotte--prompt--claude-code-skill-compiler) | [Stratum](#stratum--automated-quality-pipeline) | [Platform Totals](#platform-totals)
+
+</div>
+
+---
+
+Three standalone tools covering the arc from idea to verified software. Define what to build, compile the prompts that talk to AI, then validate what got built. All Python, all CLI-first, all tested.
+
+<br>
+
+## Designer-SDD — Spec-Driven Development CLI
+
+> Built because specs kept arriving as Slack threads and call transcripts, and teams kept building the wrong thing from ambiguous requirements.
+
+Takes unstructured input — a client brief, a meeting transcript, raw notes — and produces a scored, validated, exportable documentation package: constitution, spec, plan, task breakdown, handoff notes, and README. One source of truth in, GitHub-ready docs out.
+
+<details>
+<summary><strong>What it does</strong></summary>
+
+<br>
+
+- Extracts structured JSON specs from raw text via Claude API
+- Interactive multi-turn brainstorming with auto-detection of valid spec output in Claude responses
+- 3-stage market research pipeline using web search (quick scan → deep dive → handoff to spec builder)
+- Validation with domain-aware rules — CLI projects must declare exit codes, APIs must declare auth schemes, mobile must declare offline behavior
+- Dual-gate scoring: quality gate (28 weighted checks across 7 sections) + buildability gate (8 checks: verifiability, dependency completeness, ambiguity, phase continuity, tech completeness, test strategy, actionability, environment)
+- Iterative refinement loop — two modes: generate improvement instructions, or let Claude auto-fix in up to 3 iterations with re-scoring after each pass
+- Tier-gated export: small specs produce 7 files, medium specs 9, large specs 11
+- Round-trip verification confirms every requirement and task in the spec appears in the rendered output
+- 5 domain templates (CLI tool, REST API, SaaS dashboard, library, Chrome extension) with customizable placeholders and merge support
+- Deterministic HTML dashboard (no API needed) + premium HTML export via Claude
+- Field-by-field spec diffing with quality score delta between versions
+
+</details>
+
+**Architecture:** Strict four-layer separation (CLI → Engine → Core ← Util). Stateless — zero database, zero persistence. Every operation is a pure data transformation. All Claude calls go through a single API wrapper with exponential backoff retry, fully mocked in tests.
+
+```
+17 commands · 6,961 lines of code · 537 tests, all passing
+```
+
+---
+
+## Charlotte — Prompt & Claude Code Skill Compiler
+
+> Built because prompt engineering was ad-hoc string concatenation — no type checking, no version control, no way to test one prompt change against regression.
+
+Write a YAML spec declaring which blocks you need, bind your variables, and Charlotte compiles it through four deterministic stages into provider-ready output for OpenAI, Anthropic, or Google Gemini — or into a Claude Code Skill package with YAML frontmatter, trigger extraction, structured sections, and progressive disclosure. Token budgets enforced. Conflicts caught at compile time. Security scanned. Testable with assertions.
+
 <details>
 <summary><strong>What it does</strong></summary>
 
