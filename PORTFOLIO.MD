@@ -8,14 +8,14 @@
 
 <br>
 
-76,103 lines of Python · 333 modules · 5,198 tests · All passing · 49 CLI commands
+88,194 lines of Python · 324 modules · 6,248 tests · All passing · 64 CLI commands
 
 <br>
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)
-![Tests](https://img.shields.io/badge/Tests-5%2C198_passing-brightgreen?style=flat-square)
-![Lines](https://img.shields.io/badge/Source-76%2C103_lines-blue?style=flat-square)
-![Modules](https://img.shields.io/badge/Modules-333-purple?style=flat-square)
+![Tests](https://img.shields.io/badge/Tests-6%2C248_passing-brightgreen?style=flat-square)
+![Lines](https://img.shields.io/badge/Source-88%2C194_lines-blue?style=flat-square)
+![Modules](https://img.shields.io/badge/Modules-324-purple?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
 </div>
@@ -32,7 +32,7 @@
 
 One person, three tools, one platform. Designer-SDD produces the specs that define what to build. Charlotte compiles the prompts that power the AI stages. Stratum validates what got built and decides whether it ships. Each tool is standalone, but each one feeds the others -- Designer-SDD specs defined every tool here, Charlotte compiles the prompts powering Stratum's AI stages, and Stratum validates the code all three generate. The platform is self-hosting.
 
-The strict layering, the stateless architecture, the investment in 5,198 tests -- all deliberate choices for a 76K-line codebase that has to stay maintainable with a single developer. No shortcuts. No "it works on my machine." Every module tested, every gate enforced, every failure tracked.
+The strict layering, the stateless architecture, the investment in 6,248 tests -- all deliberate choices for an 88K-line codebase that has to stay maintainable with a single developer. No shortcuts. No "it works on my machine." Every module tested, every gate enforced, every failure tracked.
 
 <br>
 
@@ -79,7 +79,7 @@ This is the core of what makes Designer-SDD more than a document generator:
 **Architecture:** Strict four-layer separation (CLI --> Engine --> Core <-- Util). Stateless -- zero database, zero persistence. Every operation is a pure data transformation. All Claude calls go through a single API wrapper with exponential backoff retry, fully mocked in tests. 537 tests covering every validator, every scorer, every renderer, and every CLI command.
 
 ```
-17 commands · 6,961 lines of code · 537 tests, all passing
+16 commands · 8,246 lines of code · 537 tests, all passing
 ```
 
 <br>
@@ -90,14 +90,14 @@ This is the core of what makes Designer-SDD more than a document generator:
 
 > Built because prompt engineering was ad-hoc string concatenation -- no type checking, no version control, no way to test one prompt change against regression.
 
-Charlotte is a real compiler. Not a template stitcher, not a string formatter -- a four-stage deterministic pipeline that parses typed specifications, composes them against a 94-block library with conflict detection and dependency resolution, validates token budgets against 26 model context windows, and renders provider-specific output for OpenAI, Anthropic, and Google Gemini. It has a type system (6 typed variable slots), a security scanner (8 static checks), a test framework (6 assertion types with parallel cross-model execution), a versioning system (content-addressed snapshots with semantic diffing), and a multi-prompt workflow engine (DAG execution with typed data flow between steps). Nothing on the market does this. Most teams are still copying prompts between Notion docs. Charlotte compiles the prompt specifications that drive Stratum's extraction and generation stages.
+Charlotte is a real compiler. Not a template stitcher, not a string formatter -- a five-stage deterministic pipeline that parses typed specifications, composes them against a 94-block library with conflict detection and dependency resolution, runs 8-pass automatic optimization (deduplication, merging, compression, provider-specific hints), validates token budgets against 26 model context windows, and renders provider-specific output for OpenAI, Anthropic, and Google Gemini. It has a type system (6 typed variable slots), a security scanner (54 checks across 21 categories including injection, exfiltration, compliance, and bias), a test framework (30 assertion types with parallel cross-model execution), a versioning system (content-addressed snapshots with semantic diffing), environment management (dev/staging/production with promotion gates), GitHub Actions CI generation, red team simulation, cost estimation, a multi-prompt workflow engine (DAG execution with typed data flow between steps), and a multi-agent compiler that generates runnable projects for four major agent frameworks (CrewAI, LangGraph, AutoGen, OpenAI Agents SDK) plus Google A2A protocol Agent Cards. Nothing on the market does this. Most teams are still copying prompts between Notion docs. Charlotte compiles the prompt specifications that drive Stratum's extraction and generation stages.
 
 <details open>
 <summary><strong>Claude Code Skill Compiler</strong></summary>
 
 <br>
 
-Charlotte also compiles to Claude Code Skills -- structured skill packages that Claude Code can invoke directly. No other tool does this:
+Charlotte compiles to Claude Code Skills -- structured skill packages that Claude Code can invoke directly. No other tool does this:
 
 - Maps block types to structured sections (system --> overview, task --> workflow, few-shot --> quick reference, safety --> critical rules, tool-use --> tools)
 - Extracts triggers and anti-triggers from routing blocks into YAML frontmatter
@@ -108,13 +108,33 @@ Charlotte also compiles to Claude Code Skills -- structured skill packages that 
 </details>
 
 <details>
+<summary><strong>Agent Compiler -- Multi-Framework Agent Export</strong></summary>
+
+<br>
+
+Charlotte's agent compiler takes compiled prompts and workflows containing agent blocks and generates complete, runnable projects for four major agent frameworks:
+
+- **CrewAI** -- YAML agent/task definitions, crew orchestration, `@tool` stubs, hierarchical/sequential process selection
+- **LangGraph** -- StateGraph with typed state, node functions, conditional edges, ToolNode integration, MemorySaver checkpointing
+- **AutoGen** -- AssistantAgent definitions, GroupChat with speaker selection (auto for supervised, round-robin for flat), UserProxyAgent, tool registration
+- **OpenAI Agents SDK** -- Agent definitions with handoffs, `@function_tool` stubs, triage agent pattern, async Runner entry point
+- **Google A2A Protocol** -- Agent Cards with capability detection, skill extraction from tools, input/output mode declaration
+
+Each export includes pyproject.toml, README, and all source files needed to run. A shared extraction layer maps Charlotte's agent blocks (react, plan_execute, goal_decomposition, memory, reflection) to framework-specific constructs without duplicating logic across renderers. Hierarchy detection (supervisor vs hierarchical vs flat) drives framework-appropriate orchestration patterns. All generated Python passes `ast.parse()` validation; all JSON/YAML/TOML is structurally valid.
+
+Multi-agent workflow compilation enriches the base workflow pipeline with agent roles per step, handoff protocols (from routing blocks + dependency edges), shared memory configuration, and automatic hierarchy detection.
+
+</details>
+
+<details>
 <summary><strong>Full capabilities</strong></summary>
 
 <br>
 
 **Compilation Pipeline**
-- 4-stage pipeline: Parse --> Compose --> Validate --> Render
+- 5-stage pipeline: Parse --> Compose --> Optimize --> Validate --> Render
 - 94 built-in blocks across 17 types (system, task, few-shot, chain-of-thought, tool-use, RAG, agent, evaluation, extraction, safety, routing, memory, retrieval, guardrail, planning, conversational, meta)
+- 8-pass automatic optimization: block deduplication, adjacent text merging, empty block stripping, whitespace normalization, system block reordering, example compression, token budget optimization, provider-specific hints
 - Deterministic type-precedence composition -- blocks assemble in fixed order with explicit override support
 - Provider-specific renderers: OpenAI messages array, Anthropic system parameter + messages, Google Gemini system_instruction, generic text
 
@@ -124,25 +144,36 @@ Charlotte also compiles to Claude Code Skills -- structured skill packages that 
 - Jinja2 variable injection with 6 typed slots (string, number, boolean, array, object, document)
 
 **Security & Testing**
-- 8-check security scanner: prompt injection, PII exposure, API key leaks, jailbreak patterns, safety block validation, tool-use permissions, information disclosure, severity filtering
-- Test runner with 6 assertion types (exact match, contains, regex, JSON schema, LLM-as-judge, custom Python evaluators) with parallel execution, response caching, and cross-model matrix testing
+- 54 security checks across 21 categories: injection (basic + advanced), data exfiltration, model manipulation, output control, context poisoning, resource abuse, privilege escalation, cross-prompt attacks, compliance (GDPR/HIPAA/PCI-DSS), supply chain, bias/fairness, hallucination risk, token manipulation, version safety, auth boundary, sandbox escape, prompt structure, logging safety, multi-modal threats, chain safety, MCP tool poisoning
+- Red team simulation with automated adversarial testing and quantitative risk scoring
+- Test runner with 30 assertion types (exact match, contains, not_contains, starts_with, ends_with, regex, JSON schema, JSON/XML/YAML valid, LLM-as-judge, custom evaluator, length_between, word_count, token_count, sentiment, language detection, no_pii, no_profanity, cosine similarity, latency, format_match, all_of, rubric, grounded, guardrail, any_of, none_of, structural, consistency) with parallel execution, response caching, and cross-model matrix testing
+- Evaluation system with history tracking, baseline management, and drift detection
 
 **Workflows & Versioning**
 - Multi-prompt workflow chaining: DAG execution via topological sort, cross-step schema validation, typed data flow between steps, per-step assertions, directory package export
 - Content-addressed versioning with semantic block-aware diffing
 
-**Export & CI**
-- 9 export formats: text, JSON, YAML, API payload (curl + Python snippets), MCP server definition, LangChain template, HTML report, README, Claude Code Skill
+**Agent Compiler & Export**
+- Shared agent extraction layer: AgentDef, ToolDef, HandoffRule, MemoryConfig, AgentTeam dataclasses consumed by all renderers
+- 5 agent framework renderers (CrewAI, LangGraph, AutoGen, OpenAI Agents SDK, A2A) with 30 Jinja2 templates
+- Multi-agent workflow compiler: agent role extraction, handoff protocol detection, hierarchy classification (supervisor/hierarchical/flat), shared memory merging
+- Template injection protection: all generated strings escaped via `tojson` filter, identifiers sanitized via `python_id` filter
+
+**Environment Management & CI**
+- Environment management (dev/staging/production) with variable overrides, promotion gates (test pass rate, score threshold, manual approval), and environment diffing
+- GitHub Actions CI workflow generation with 4 templates: validate-on-PR, test-on-push, scheduled regression, environment promotion
+- 21 export formats: text, JSON, YAML, API payload, MCP definition, LangChain template, HTML report, README, Claude Code Skill, MCP server (single + workflow), CrewAI (single + workflow), LangGraph (single + workflow), AutoGen (single + workflow), OpenAI Agents (single + workflow), A2A Agent Card (single + workflow)
 - Post-compile linter + file watcher with auto-recompile
 - LLM-guided prompt optimization with iterative variable refinement
+- Cost estimation based on token budgets and expected volume
 - CI command: validate --> compile --> scan --> lint --> test in one pass
 
 </details>
 
-**Architecture:** 25 Pydantic v2 models enforce every data boundary. Blocks are pure YAML data validated against schemas, not embedded code -- the library is extensible without touching source. Four global registries (block types, providers, exporters, assertions) make the system pluggable at every layer. Three-tier prompt classification (single-turn, multi-phase, agent-orchestrating) with automatic tier detection and minimum-length enforcement. The compiler itself is tested with 1,615 tests -- more than most production applications have total.
+**Architecture:** 28 Pydantic v2 models enforce every data boundary. Blocks are pure YAML data validated against schemas, not embedded code -- the library is extensible without touching source. Four global registries (block types, providers, exporters, assertions) make the system pluggable at every layer. Three-tier prompt classification (single-turn, multi-phase, agent-orchestrating) with automatic tier detection and minimum-length enforcement. The agent compiler uses a shared extraction layer so all five framework renderers consume the same AgentTeam abstraction -- adding a new framework means one renderer and its templates, nothing else. The compiler itself is tested with 2,573 tests -- more than most production applications have total.
 
 ```
-26 commands · 13,272 lines of code · 94 blocks · 1,615 tests, all passing
+40 commands · 20,263 lines of code · 94 blocks · 30 templates · 2,573 tests, all passing
 ```
 
 <br>
@@ -212,7 +243,7 @@ Point it at source code. It extracts the full architecture using Claude and tree
 **Architecture:** Monorepo with shared extraction core. Each gate is a silo -- independent logic, independent verdict, aggregated by the audit engine into a final pass/fail. Pipeline orchestrator with 11 configurable stages. All gates toggleable. Audit thresholds configurable per gate. GitHub Actions integration for CI/CD.
 
 ```
-6 commands · 233 modules · 55,870 lines of code · 3,046 tests, all passing
+8 commands · 202 modules · 59,685 lines of code · 3,138 tests, all passing
 ```
 
 <br>
@@ -236,8 +267,8 @@ Point it at source code. It extracts the full architecture using Claude and tree
        |                         |                             |
        v                         v                             v
   Scored Spec              Provider-Ready             Pass/Fail Verdict
-  Package (7-11            Prompts or Claude          + Tests + Docs
-  markdown files)          Code Skills                + Transparency
+  Package (7-11            Prompts, Skills,           + Tests + Docs
+  markdown files)          or Agent Projects          + Transparency
 ```
 
 Each tool is standalone. Together they cover the full arc from idea to verified software.
@@ -250,10 +281,10 @@ Each tool is standalone. Together they cover the full arc from idea to verified 
 
 | | Designer-SDD | Charlotte | Stratum | **Combined** |
 |:---|:---:|:---:|:---:|:---:|
-| **Source Lines** | 6,961 | 13,272 | 55,870 | **76,103** |
-| **Python Modules** | 45 | 55 | 233 | **333** |
-| **Tests (passing)** | 537 | 1,615 | 3,046 | **5,198** |
-| **Commands** | 17 | 26 | 6 | **49** |
+| **Source Lines** | 8,246 | 20,263 | 59,685 | **88,194** |
+| **Python Modules** | 43 | 79 | 202 | **324** |
+| **Tests (passing)** | 537 | 2,573 | 3,138 | **6,248** |
+| **Commands** | 16 | 40 | 8 | **64** |
 
 </div>
 
