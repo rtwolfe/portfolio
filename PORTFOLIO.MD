@@ -1,3 +1,100 @@
+<div align="center">
+
+# AI Development Platform
+
+### Automated specification, prompt compilation, and quality assurance for AI-assisted software development
+
+**Solo-built over one year**
+
+<br>
+
+87,912 lines of Python · 377 modules · 6,248 tests · All passing · 59 CLI commands
+
+<br>
+
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)
+![Tests](https://img.shields.io/badge/Tests-6%2C248_passing-brightgreen?style=flat-square)
+![Lines](https://img.shields.io/badge/Source-87%2C912_lines-blue?style=flat-square)
+![Modules](https://img.shields.io/badge/Modules-377-purple?style=flat-square)
+![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+
+</div>
+
+---
+
+<div align="center">
+
+[Designer-SDD](#-designer-sdd--spec-driven-development-cli) · [Charlotte](#-charlotte--prompt--application-compiler) · [Stratum](#-stratum--automated-quality-pipeline) · [How They Connect](#how-they-connect) · [Platform Totals](#platform-totals)
+
+</div>
+
+---
+
+One person, three tools, one platform. Designer-SDD produces the specs that define what to build. Charlotte compiles the prompts that power the AI stages. Stratum validates what got built and decides whether it ships. Each tool is standalone, but each one feeds the others -- Designer-SDD specs defined every tool here, Charlotte compiles the prompts powering Stratum's AI stages, and Stratum validates the code all three generate. The platform is self-hosting.
+
+The strict layering, the stateless architecture, the investment in 6,248 tests -- all deliberate choices for an 88K-line codebase that has to stay maintainable with a single developer. No shortcuts. No "it works on my machine." Every module tested, every gate enforced, every failure tracked.
+
+<br>
+
+---
+
+## <img width="20" height="20" src="https://img.shields.io/badge/-1-blue?style=flat-square" alt="1"> Designer-SDD -- Spec-Driven Development CLI
+
+> Built because specs kept arriving as Slack threads and call transcripts, and teams kept building the wrong thing from ambiguous requirements.
+
+Designer-SDD is a specification engine. Feed it a client brief, a call transcript, a Slack dump, raw notes -- it extracts a structured JSON spec via Claude, then puts it through a gauntlet: validation against domain-specific rules, dual-gate scoring (36 weighted checks across quality and buildability), iterative AI-driven refinement that re-scores after every pass, and round-trip verification that confirms every requirement in the spec appears in the rendered output. The output isn't a document -- it's a scored, validated, GitHub-ready documentation package of up to 11 files. Designer-SDD specs defined every tool in this platform, including Charlotte and Stratum themselves.
+
+<details open>
+<summary><strong>Spec entry and discovery</strong></summary>
+
+<br>
+
+Multiple paths from raw input to structured spec:
+
+- **Intake** -- Extracts structured JSON specs from unstructured text (briefs, notes, transcripts) via Claude with 17 context-aware system prompts. Auto-detects domain and tier.
+- **Create** -- Interactive multi-turn brainstorming with Claude. Auto-detects when valid spec output appears in conversation and extracts it.
+- **Discover** -- 3-stage market research pipeline using web search tools: quick scan (5 searches) → deep dive (10 searches with competitive analysis) → handoff to spec builder with findings.
+- **Form** -- Browser-based HTML intake form for structured spec capture without command-line interaction.
+- **Templates** -- 5 pre-built spec templates (CLI tool, REST API, SaaS dashboard, library/package, Chrome extension) with customizable placeholders and merge support. All templates pass quality gate out-of-the-box.
+
+</details>
+
+<details open>
+<summary><strong>Scoring and validation</strong></summary>
+
+<br>
+
+This is the core of what makes Designer-SDD more than a document generator:
+
+- **Quality gate** -- 28 weighted checks across 7 sections (constitution, spec, plan, tasks, handoff, README, research). Section weights graduated: Constitution 1.0x, Spec 1.5x, Plan 2.0x, Tasks 2.0x, Handoff 1.0x, README 0.5x, Research 0.5x. Not binary pass/fail -- graduated scoring with per-section breakdowns. Threshold: 70%.
+- **Buildability gate** -- 8 checks that ask "can a developer actually build this?": acceptance verifiability, dependency completeness, ambiguity detection, phase continuity, tech completeness, test strategy, DoD actionability, environment specification. Threshold: 60%.
+- **Spec gate** -- 10 hard deterministic rules (A-J): every functional req has description + priority, user stories reference requirements, assumptions have mitigation, open questions have resolution status, risks have mitigation, success criteria are measurable, DoD items are actionable, tech choices justified, task breakdown covers requirements, no unresolved placeholders (TODO/TBD/FIXME). Pass/conditional pass/fail.
+- **Domain-aware validation** -- CLI projects must declare exit codes. APIs must declare auth schemes. Web apps must declare auth and error handling. Mobile must declare offline behavior. Not generic rules -- rules that match the domain.
+- **Round-trip verification** -- after export, verifies that every requirement and task in the source spec actually appears in the rendered markdown. Catches drift between spec and output.
+- **Iterative refinement** -- two modes: generate structured improvement instructions, or let Claude auto-fix the spec in up to 3 iterations with re-scoring after each pass. The spec gets measurably better each round.
+
+</details>
+
+<details>
+<summary><strong>Output and export</strong></summary>
+
+<br>
+
+- **Tier-gated export** -- small specs produce 7 files, medium specs 9, large specs 11:
+  - Always: `CONSTITUTION.md`, `SPEC.md`, `PLAN.md`, `TASKS.md`, `HANDOFF.md`, `README.md`, `spec.json`
+  - Medium/Large: `DATA_MODEL.md`, `QUICKSTART.md`
+  - Large: `ARCHITECTURE.md`
+  - If research section present: `RESEARCH.md`
+- **Deterministic HTML dashboard** (305KB interactive dashboard, no API needed) with metrics, timeline visualization, tech stack breakdown, scoring details
+- **Premium HTML export** via Claude for styled documentation
+- **Field-by-field spec diffing** with quality score delta between versions
+- **Research command** -- answer open questions from RESEARCH section using Claude with optional `--apply` flag to write findings back into the spec
+
+</details>
+
+<details>
+<summary><strong>Full CLI reference</strong></summary>
+
 <br>
 
 | Command | Purpose |
