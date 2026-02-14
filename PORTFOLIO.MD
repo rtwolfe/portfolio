@@ -1,14 +1,10 @@
 <div align="center">
 
-# AI-First Development Platform
+# Tim Wolfe
 
-### I build the tools that make AI-assisted software development reliable.
+### AI Practitioner & Toolmaker
 
-<br>
-
-Four production tools. One unified platform. Solo-built.
-
-Specification &rarr; Prompt Compilation &rarr; Quality Assurance &rarr; Agent Deployment
+Los Altos, CA · [rtwolfe@gmail.com](mailto:rtwolfe@gmail.com) · 650-390-5003 · [LinkedIn](https://linkedin.com/in/timwolfe) · [Telegram](https://t.me/timwolfe)
 
 <br>
 
@@ -21,26 +17,36 @@ Specification &rarr; Prompt Compilation &rarr; Quality Assurance &rarr; Agent De
 
 ---
 
+## About
+
+I design, build, and ship production AI automation across the entire software development lifecycle. Not prototypes -- production platforms deployed at enterprise scale across finance, healthcare, and ecommerce.
+
+Currently serving as an external AI automation architect, designing end-to-end test automation platforms that replace manual QA workflows with AI-driven pipelines for enterprise clients. Previously founded and led an AI practice as CIO & Head of AI Solutions, building the tooling foundations now deployed in production. Before AI, 20+ years of enterprise operations leadership including two IPOs (**Quinstreet**, **Responsys**), four major acquisitions (**IBM**/DemandTec, **EMC**/Syncplicity, **Oracle**/Responsys, **Netmarble**/Kabam), and senior roles at **Salesforce**, **iHeartMedia**, and **Axway**.
+
+The four tools below are the platform I built and continue to evolve. Each one automates a phase of the SDLC that most teams still do by hand -- specification, prompt engineering, quality assurance, and agent deployment. They're standalone, they're tested, and they're in production.
+
+---
+
 <div align="center">
 
-[Designer-SDD](#1-designer-sdd) · [Charlotte](#2-charlotte) · [Stratum](#3-stratum) · [Agent Builder](#4-agent-builder) · [How They Connect](#how-they-connect) · [Platform Totals](#platform-totals)
+[Designer-SDD](#1-designer-sdd) · [Charlotte](#2-charlotte) · [Stratum](#3-stratum) · [Castellan](#4-castellan) · [How They Connect](#how-they-connect) · [Platform Totals](#platform-totals)
 
 </div>
 
 ---
 
-## The Story
+## The Platform
 
 Most AI-generated code ships without anyone checking whether it actually works. Tests that pass no matter what. Prompts held together with string concatenation. Specs that started as Slack threads. Agents that look great in demos and break in production.
 
-I built four tools to fix that. Each one solves a specific failure mode I kept seeing across AI-assisted projects:
+I built four tools to fix that. Each one solves a specific failure mode I kept hitting across client engagements:
 
 - **Ambiguous specs** &rarr; Designer-SDD turns unstructured ideas into scored, validated specification packages
 - **Fragile prompts** &rarr; Charlotte compiles prompts through a real pipeline with type checking, security scanning, and version control
 - **Unvalidated output** &rarr; Stratum extracts architecture, generates tests, and enforces seven independent quality gates before anything ships
-- **Unreliable agents** &rarr; Agent Builder compiles, runs, tests, and deploys AI agents from declarative specs with constitutional governance
+- **Unreliable agents** &rarr; Castellan compiles, runs, tests, and deploys AI agents from declarative specs with constitutional governance
 
-Every tool is standalone. Together they cover the full arc from raw idea to deployed, tested, production agent. The platform is self-hosting -- Designer-SDD specs defined every tool here, Charlotte compiles the prompts that power Stratum's AI stages, Stratum validates the code all four generate, and Agent Builder operationalizes everything into running systems.
+Every tool is standalone. Together they cover the full arc from raw idea to deployed, tested, production agent. The platform is self-hosting -- Designer-SDD specs defined every tool here, Charlotte compiles the prompts that power Stratum's AI stages, Stratum validates the code all four generate, and Castellan operationalizes everything into running systems.
 
 ---
 
@@ -52,7 +58,7 @@ Every tool is standalone. Together they cover the full arc from raw idea to depl
 
 Designer-SDD is a specification engine. Feed it a client brief, a call transcript, raw notes -- it extracts a structured JSON spec via Claude, then puts it through a gauntlet: validation against domain-specific rules, dual-gate scoring (36 weighted checks across quality and buildability), iterative AI-driven refinement that re-scores after every pass, and round-trip verification that confirms every requirement in the spec appears in the rendered output.
 
-The output isn't a document. It's a scored, validated, GitHub-ready documentation package of up to 11 files -- ready for a developer or an AI agent to start building from.
+The output isn't a document. It's a scored, validated, GitHub-ready documentation package of up to 11 files -- ready for a developer or an AI agent to start building from. Designer-SDD specs defined every tool in this platform, and the spec-driven workflow now drives client delivery for enterprise engagements.
 
 ### How it works
 
@@ -135,7 +141,7 @@ Strict four-layer separation: CLI &rarr; Engine &rarr; Core &larr; Util. Statele
 
 Charlotte is a five-stage deterministic compiler that treats prompts as first-class software artifacts. It parses typed specifications, composes them against a 94-block library with conflict detection and dependency resolution, runs 8-pass automatic optimization, validates token budgets against 26 model context windows, and renders provider-specific output for OpenAI, Anthropic, and Google Gemini.
 
-It has a type system, a security scanner, a test framework, a versioning system, environment management, CI/CD generation, and a multi-agent compiler that generates runnable projects for four major agent frameworks. If you wouldn't ship code without a build system, you shouldn't ship prompts without one either.
+It has a type system, a security scanner, a test framework, a versioning system, environment management, CI/CD generation, and a multi-agent compiler that generates runnable projects for four major agent frameworks. If you wouldn't ship code without a build system, you shouldn't ship prompts without one either. Charlotte evolved from a prompt engineering platform I built for client delivery -- voice-driven multi-phase development with evaluation pipelines -- into a full compiler toolchain.
 
 ### The compilation pipeline
 
@@ -250,7 +256,7 @@ YAML Spec → Parse → Compose → Optimize → Validate → Render → Provide
 
 > The problem: teams were shipping AI-generated test suites without checking whether the tests actually tested anything. Hallucinated assertions, mocked-out logic, tests that pass no matter what -- all going straight to CI. Nobody was testing the tests.
 
-Stratum is a six-stage automated quality pipeline. It extracts the full architecture using Claude and tree-sitter across 6 languages, generates unit tests and API tests across multiple frameworks, produces documentation with seven independent analyzers, then runs everything through seven independent quality gates. Each gate produces its own verdict. The audit engine aggregates them into a final pass or fail. A transparency layer tracks every skip, failure, and limitation -- no silent failures.
+Stratum is a six-stage automated quality pipeline. It extracts the full architecture using Claude and tree-sitter across 6 languages, generates unit tests and API tests across multiple frameworks, produces documentation with seven independent analyzers, then runs everything through seven independent quality gates. Each gate produces its own verdict. The audit engine aggregates them into a final pass or fail. A transparency layer tracks every skip, failure, and limitation -- no silent failures. The quality gate architecture and self-healing test generation pipeline are the core of what I deliver for enterprise clients, driving pass rates above 95% across production codebases.
 
 ### The pipeline
 
@@ -327,9 +333,11 @@ Tracks what automation couldn't handle and reports it honestly. Two output repor
 *Philosophy: "We identify bugs. We do NOT fix them."*
 
 <details>
-<summary><strong>Full CLI reference (22 commands)</strong></summary>
+<summary><strong>CLI reference (22 commands)</strong></summary>
 
 <br>
+
+**Unified CLI:**
 
 | Command | Purpose |
 |---------|---------|
@@ -342,7 +350,24 @@ Tracks what automation couldn't handle and reports it honestly. Two output repor
 | `stratum ship` | Full pipeline with handoff documentation |
 | `stratum run` | Full pipeline (extract &rarr; generate &rarr; gate &rarr; audit) |
 
-Plus per-module legacy CLIs: `stratum-out`, `stratum-unit`, `stratum-api`, `stratum-docs` with subcommands for configuration, output selection, and threshold overrides.
+**Per-module CLIs** (each with subcommands for configuration, output selection, and threshold overrides):
+
+| Command | Purpose |
+|---------|---------|
+| `stratum-out generate` | Standalone architecture extraction |
+| `stratum-out discover` | Project structure discovery |
+| `stratum-out diagram` | Architecture diagram generation |
+| `stratum-unit generate` | Standalone unit test generation |
+| `stratum-unit validate` | Test validation and scoring |
+| `stratum-api generate` | Standalone API test generation |
+| `stratum-api plan` | Test plan generation |
+| `stratum-api diff` | Architecture diff and regression targeting |
+| `stratum-api report` | Traceability report generation |
+| `stratum-docs generate` | Standalone documentation generation |
+| `stratum-docs serve` | Live documentation preview server |
+| `stratum-docs analyze` | Run individual analyzers |
+| `stratum-docs gate` | Run documentation quality gates |
+| `stratum-docs render` | Render to specific format (MD, HTML, PDF) |
 
 </details>
 
@@ -378,13 +403,13 @@ Monorepo with shared extraction core. Strict layering: CLI &rarr; Engine &rarr; 
 
 ---
 
-## 4. Agent Builder
+## 4. Castellan
 
-**Define agents in YAML. Compile, run, test, gate, orchestrate, and deploy them.**
+**The keeper of the gates. Define agents in YAML. Compile, run, test, gate, orchestrate, and deploy them.**
 
 > The problem: creating production AI agents required stitching together providers, tools, memory, quality gates, and orchestration patterns from scratch every time. No standard spec format, no compilation pipeline, no way to test agent behavior before deployment. Every agent framework is code-first and quality-last.
 
-Agent Builder flips the model. Write a declarative YAML spec. Compile it through a 5-stage pipeline (parse, compose, optimize, validate, scan). Run it against Anthropic, OpenAI, or Google. Gate every output through automated quality checks. Orchestrate multi-agent systems. Export to Docker, Kubernetes, FastAPI, or Claude Code skills. Agents validated before they run, not after they fail.
+Castellan flips the model. Write a declarative YAML spec. Compile it through a 5-stage pipeline (parse, compose, optimize, validate, scan). Run it against Anthropic, OpenAI, or Google. Gate every output through automated quality checks. Orchestrate multi-agent systems. Export to Docker, Kubernetes, FastAPI, or Claude Code skills. Agents validated before they run, not after they fail.
 
 ### Compilation
 
@@ -514,7 +539,7 @@ Strict four-layer separation: CLI &rarr; Engine &rarr; Core &larr; Util. Async-f
      |                           |                              |                            |
      v                           v                              v                            v
 +--------------+         +---------------+             +---------------+           +------------------+
-| Designer-SDD |         |   Charlotte   |             |    Stratum    |           | Agent Builder    |
+| Designer-SDD |         |   Charlotte   |             |    Stratum    |           | Castellan        |
 |              |         |               |             |               |           |                  |
 | Validate     |         | Compile       |             | Extract       |           | Compile          |
 | Score        |         | Validate      |             | Generate      |           | Run / Orchestrate|
@@ -533,9 +558,9 @@ Each tool is standalone. Together they cover the full arc:
 - **Designer-SDD** defines *what* to build
 - **Charlotte** handles *how to talk to AI*
 - **Stratum** validates *what was built*
-- **Agent Builder** operationalizes *running agents*
+- **Castellan** operationalizes *running agents*
 
-The platform is self-hosting. Designer-SDD specs defined every tool here. Charlotte compiles the prompts that drive Stratum's AI stages. Stratum validates the code all four tools generate. Agent Builder turns the specs and prompts into production agent systems.
+The platform is self-hosting. Designer-SDD specs defined every tool here. Charlotte compiles the prompts that drive Stratum's AI stages. Stratum validates the code all four tools generate. Castellan turns the specs and prompts into production agent systems.
 
 ---
 
@@ -543,7 +568,7 @@ The platform is self-hosting. Designer-SDD specs defined every tool here. Charlo
 
 <div align="center">
 
-| | Designer-SDD | Charlotte | Stratum | Agent Builder | **Combined** |
+| | Designer-SDD | Charlotte | Stratum | Castellan | **Combined** |
 |:---|:---:|:---:|:---:|:---:|:---:|
 | **Source Lines** | 8,246 | 20,263 | 59,685 | 18,133 | **106,327** |
 | **Python Modules** | 52 | 79 | 246 | 80 | **457** |
@@ -560,6 +585,20 @@ The platform is self-hosting. Designer-SDD specs defined every tool here. Charlo
 
 ---
 
-*Solo-designed, solo-built, solo-tested.*
+*Designed, built, and tested by Tim Wolfe.*
+
+</div>
+
+---
+
+<div align="center">
+
+## Let's Talk
+
+I take on AI-first contract engagements -- SDLC automation, test generation pipelines, quality gate systems, agent frameworks, and prompt engineering infrastructure. If your team is shipping AI-generated code and needs it to be reliable, I've built the tooling and I know where the failure modes are.
+
+**Tim Wolfe** · Los Altos, CA
+
+[rtwolfe@gmail.com](mailto:rtwolfe@gmail.com) · 650-390-5003 · [LinkedIn](https://linkedin.com/in/timwolfe) · [Telegram](https://t.me/timwolfe)
 
 </div>
