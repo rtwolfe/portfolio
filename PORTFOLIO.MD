@@ -9,8 +9,8 @@ Los Altos, CA · [rtwolfe@gmail.com](mailto:rtwolfe@gmail.com) · 650-390-5003 �
 <br>
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)
-![Tests](https://img.shields.io/badge/Tests-7%2C555_passing-brightgreen?style=flat-square)
-![Lines](https://img.shields.io/badge/Source-106%2C327_lines-blue?style=flat-square)
+![Tests](https://img.shields.io/badge/Tests-7%2C718_passing-brightgreen?style=flat-square)
+![Lines](https://img.shields.io/badge/Source-109%2C435_lines-blue?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
 </div>
@@ -56,7 +56,7 @@ Every tool is standalone. Together they cover the full arc from raw idea to depl
 
 > The problem: specs kept arriving as Slack threads, call transcripts, and scattered notes. Teams kept building the wrong thing because the requirements were ambiguous. AI agents kept generating code that missed the point because nobody validated the spec before handing it off.
 
-Designer-SDD is a specification engine. Feed it a client brief, a call transcript, raw notes -- it extracts a structured JSON spec via Claude, then puts it through a gauntlet: validation against domain-specific rules, dual-gate scoring (36 weighted checks across quality and buildability), iterative AI-driven refinement that re-scores after every pass, and round-trip verification that confirms every requirement in the spec appears in the rendered output.
+Designer-SDD is a specification engine. Feed it a client brief, a call transcript, raw notes -- it extracts a structured JSON spec via Claude, then puts it through a gauntlet: validation against domain-specific rules, dual-gate scoring (39 weighted checks across quality and buildability), iterative AI-driven refinement that re-scores after every pass, and round-trip verification that confirms every requirement in the spec appears in the rendered output.
 
 The output isn't a document. It's a scored, validated, GitHub-ready documentation package of up to 11 files -- ready for a developer or an AI agent to start building from. Designer-SDD specs defined every tool in this platform, and the spec-driven workflow now drives client delivery for enterprise engagements.
 
@@ -68,7 +68,7 @@ The output isn't a document. It's a scored, validated, GitHub-ready documentatio
 
 | Gate | What it measures | Checks | Threshold |
 |------|-----------------|--------|-----------|
-| **Quality** | Is this spec complete and well-structured? | 28 weighted checks across 7 sections | 70% |
+| **Quality** | Is this spec complete and well-structured? | 31 weighted checks across 7 sections | 70% |
 | **Buildability** | Can a developer (or AI agent) actually build from this? | 8 checks: ambiguity detection, dependency completeness, acceptance verifiability, tech completeness | 60% |
 
 **Domain-aware validation** -- CLI projects must declare exit codes. APIs must declare auth schemes. Web apps must declare error handling. Mobile apps must declare offline behavior. Not generic rules -- rules that match what you're building.
@@ -126,7 +126,7 @@ Strict four-layer separation: CLI &rarr; Engine &rarr; Core &larr; Util. Statele
 </details>
 
 ```
-16 commands · 52 modules · 8,246 lines · 537 tests, all passing
+16 commands · 53 modules · 8,590 lines · 538 tests, all passing
 ```
 
 <br>
@@ -243,7 +243,7 @@ YAML Spec → Parse → Compose → Optimize → Validate → Render → Provide
 </details>
 
 ```
-21 commands · 79 modules · 20,263 lines · 94 blocks · 2,573 tests, all passing
+30 commands · 80 modules · 20,609 lines · 94 blocks · 2,423 tests, all passing
 ```
 
 <br>
@@ -396,7 +396,7 @@ Monorepo with shared extraction core. Strict layering: CLI &rarr; Engine &rarr; 
 </details>
 
 ```
-22 commands · 246 modules · 59,685 lines · 3,138 tests, all passing
+22 commands · 253 modules · 59,793 lines · 3,296 tests, all passing
 ```
 
 <br>
@@ -425,7 +425,7 @@ Same 5-stage pipeline proven in Charlotte, adapted for agent specifications:
 
 Async-first runtime implementing the **Observe &rarr; Think &rarr; Act &rarr; Validate** cycle:
 
-- **3 LLM providers** -- Anthropic (Claude), OpenAI (GPT-4o), Google (Gemini) with streaming, retry, and exponential backoff
+- **3 LLM providers** -- Anthropic (Claude), OpenAI, Google (Gemini) with streaming, retry, and exponential backoff
 - **3 tool types** -- Python functions (auto-extracted from type hints), API calls (httpx with schema validation), shell commands (subprocess with injection prevention)
 - **Sliding window memory** -- Token-budgeted conversation history that never truncates the system prompt, with working memory slots and optional long-term file-based persistence
 - **Quality gates at every step** -- 4 built-in evaluators plus custom evaluator registration. Pre-execution, per-step, and post-execution checkpoints with graduated 0.0-1.0 scoring
@@ -486,7 +486,7 @@ Dynamic routing with priority ordering. Delegation depth limiting prevents infin
 </details>
 
 <details>
-<summary><strong>Full CLI reference (24 commands)</strong></summary>
+<summary><strong>Full CLI reference (32 commands)</strong></summary>
 
 <br>
 
@@ -512,6 +512,10 @@ Dynamic routing with priority ordering. Delegation depth limiting prevents infin
 | `agent generate` | Spec generation from profiles |
 | `agent dashboard` / `agent audit` | Runtime observability |
 | `agent doctor` / `agent selftest` / `agent info` | Diagnostics |
+| `agent templates` | List available agent templates |
+| `agent plugin` | Plugin management |
+| `agent version` | Show version information |
+| `agent env list` / `env use` / `env diff` / `env promote` | Environment management |
 
 </details>
 
@@ -525,7 +529,7 @@ Strict four-layer separation: CLI &rarr; Engine &rarr; Core &larr; Util. Async-f
 </details>
 
 ```
-24 commands · 80 modules · 18,133 lines · 1,307 tests, all passing
+32 commands · 85 modules · 20,443 lines · 1,461 tests, all passing
 ```
 
 <br>
@@ -570,10 +574,10 @@ The platform is self-hosting. Designer-SDD specs defined every tool here. Charlo
 
 | | Designer-SDD | Charlotte | Stratum | Castellan | **Combined** |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| **Source Lines** | 8,246 | 20,263 | 59,685 | 18,133 | **106,327** |
-| **Python Modules** | 52 | 79 | 246 | 80 | **457** |
-| **Tests (passing)** | 537 | 2,573 | 3,138 | 1,307 | **7,555** |
-| **CLI Commands** | 16 | 21 | 22 | 24 | **83** |
+| **Source Lines** | 8,590 | 20,609 | 59,793 | 20,443 | **109,435** |
+| **Python Modules** | 53 | 80 | 253 | 85 | **471** |
+| **Tests (passing)** | 538 | 2,423 | 3,296 | 1,461 | **7,718** |
+| **CLI Commands** | 16 | 30 | 22 | 32 | **100** |
 
 </div>
 
@@ -595,7 +599,7 @@ The platform is self-hosting. Designer-SDD specs defined every tool here. Charlo
 
 ## Let's Talk
 
-I take on AI-first contract engagements -- SDLC automation, test generation pipelines, quality gate systems, agent frameworks, and prompt engineering infrastructure. If your team is shipping AI-generated code and needs it to be reliable, I've built the tooling and I know where the failure modes are.
+I built a 109,000-line, 7,718-test platform that automates the parts of the SDLC most teams are still doing by hand — and I deploy it for clients. If your team is shipping AI-generated code without validated specs, compiled prompts, or quality gates that actually enforce standards, that's the gap I close.
 
 **Tim Wolfe** · Los Altos, CA
 
