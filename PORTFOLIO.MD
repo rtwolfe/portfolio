@@ -9,8 +9,8 @@ Los Altos, CA · [rtwolfe@gmail.com](mailto:rtwolfe@gmail.com) · 650-390-5003 �
 <br>
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)
-![Tests](https://img.shields.io/badge/Tests-7%2C718_passing-brightgreen?style=flat-square)
-![Lines](https://img.shields.io/badge/Source-109%2C435_lines-blue?style=flat-square)
+![Tests](https://img.shields.io/badge/Tests-8%2C712_passing-brightgreen?style=flat-square)
+![Lines](https://img.shields.io/badge/Source-122%2C689_lines-blue?style=flat-square)
 ![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
 
 </div>
@@ -56,7 +56,7 @@ Every tool is standalone. Together they cover the full arc from raw idea to depl
 
 > The problem: specs kept arriving as Slack threads, call transcripts, and scattered notes. Teams kept building the wrong thing because the requirements were ambiguous. AI agents kept generating code that missed the point because nobody validated the spec before handing it off.
 
-Designer-SDD is a specification engine. Feed it a client brief, a call transcript, raw notes -- it extracts a structured JSON spec via Claude, then puts it through a gauntlet: validation against domain-specific rules, dual-gate scoring (39 weighted checks across quality and buildability), iterative AI-driven refinement that re-scores after every pass, and round-trip verification that confirms every requirement in the spec appears in the rendered output.
+Designer-SDD is a specification engine. Feed it a client brief, a call transcript, raw notes -- it extracts a structured JSON spec via Claude, then puts it through a gauntlet: validation against domain-specific rules, dual-gate scoring (36 weighted checks across quality and buildability), iterative AI-driven refinement that re-scores after every pass, and round-trip verification that confirms every requirement in the spec appears in the rendered output.
 
 The output isn't a document. It's a scored, validated, GitHub-ready documentation package of up to 11 files -- ready for a developer or an AI agent to start building from. Designer-SDD specs defined every tool in this platform, and the spec-driven workflow now drives client delivery for enterprise engagements.
 
@@ -68,7 +68,7 @@ The output isn't a document. It's a scored, validated, GitHub-ready documentatio
 
 | Gate | What it measures | Checks | Threshold |
 |------|-----------------|--------|-----------|
-| **Quality** | Is this spec complete and well-structured? | 31 weighted checks across 7 sections | 70% |
+| **Quality** | Is this spec complete and well-structured? | 28 weighted checks across 7 sections | 70% |
 | **Buildability** | Can a developer (or AI agent) actually build from this? | 8 checks: ambiguity detection, dependency completeness, acceptance verifiability, tech completeness | 60% |
 
 **Domain-aware validation** -- CLI projects must declare exit codes. APIs must declare auth schemes. Web apps must declare error handling. Mobile apps must declare offline behavior. Not generic rules -- rules that match what you're building.
@@ -243,7 +243,7 @@ YAML Spec → Parse → Compose → Optimize → Validate → Render → Provide
 </details>
 
 ```
-30 commands · 80 modules · 20,609 lines · 94 blocks · 2,423 tests, all passing
+43 commands · 80 modules · 20,609 lines · 94 blocks · 2,423 tests, all passing
 ```
 
 <br>
@@ -256,7 +256,7 @@ YAML Spec → Parse → Compose → Optimize → Validate → Render → Provide
 
 > The problem: teams were shipping AI-generated test suites without checking whether the tests actually tested anything. Hallucinated assertions, mocked-out logic, tests that pass no matter what -- all going straight to CI. Nobody was testing the tests.
 
-Stratum is a six-stage automated quality pipeline. It extracts the full architecture using Claude and tree-sitter across 6 languages, generates unit tests and API tests across multiple frameworks, produces documentation with seven independent analyzers, then runs everything through seven independent quality gates. Each gate produces its own verdict. The audit engine aggregates them into a final pass or fail. A transparency layer tracks every skip, failure, and limitation -- no silent failures. The quality gate architecture and self-healing test generation pipeline are the core of what I deliver for enterprise clients, driving pass rates above 95% across production codebases.
+Stratum is a six-stage automated quality pipeline. It extracts the full architecture using Claude and tree-sitter across 6 languages, generates unit tests and API tests across 4 frameworks (pytest, jest, JUnit, Go test), produces documentation with seven independent analyzers, then runs everything through seven independent quality gates. Each gate produces its own verdict. The audit engine aggregates them into a final pass or fail. A transparency layer tracks every skip, failure, and limitation -- no silent failures. Every engagement includes CI configs, per-stage cost tracking, and a test priority map. Named baselines enable targeted delta re-testing of only changed code -- converting one-shot engagements into recurring subscriptions. An intelligence layer learns from cross-engagement patterns, prioritizes tests by risk, and routes API calls to the most cost-effective model. The SDD bridge transforms deterministic code extraction into Designer-SDD build specs -- scan any codebase, generate a complete SDD package, rebuild in any framework. The quality gate architecture and self-healing test generation pipeline are the core of what I deliver for enterprise clients, driving pass rates above 95% across production codebases.
 
 ### The pipeline
 
@@ -295,7 +295,7 @@ Combines Claude with tree-sitter static analysis to extract complete codebase st
 
 ### Test generation
 
-**Unit tests** -- generates pytest or jest test suites from extracted architecture. 3-retry validation loop: generate &rarr; execute &rarr; fix. Tests that don't actually run are rejected. Prompts passed via stdin (not CLI arguments) to prevent command injection.
+**Unit tests** -- generates pytest, jest, JUnit, or Go test suites from extracted architecture. 3-retry validation loop: generate &rarr; execute &rarr; fix. Tests that don't actually run are rejected. Prompts passed via stdin (not CLI arguments) to prevent command injection. JUnit validation parses Surefire XML reports; Go validation parses `go test -v` output.
 
 **API tests across 4 layers and 4 frameworks:**
 
@@ -310,7 +310,7 @@ Output in pytest, jest, Postman/Newman, or REST Assured. Architecture diff syste
 
 ### Documentation generation
 
-**7 independent analyzers** -- data flow tracing, decision archaeology (reconstructs *why* decisions were made from code patterns and git history), tribal knowledge capture, change impact prediction, code smell detection, health scoring, and onboarding guide generation. Each analyzer runs independently and feeds 7 quality gates on the docs themselves (accuracy, coverage, completeness, freshness, readability, link validity). Output in Markdown, HTML (with Mermaid diagrams and search index), or PDF.
+**7 independent analyzers** -- data flow tracing, decision archaeology (reconstructs *why* decisions were made from code patterns and git history), tribal knowledge capture, change impact prediction, code smell detection, health scoring, and onboarding guide generation. Each analyzer runs independently and feeds 7 quality gates on the docs themselves (accuracy, coverage, completeness, freshness, readability, link validity). Output in Markdown, HTML (with Mermaid diagrams and search index), or PDF. The **SDD bridge** transforms extraction results into Designer-SDD spec format -- scan any existing codebase, produce a complete build spec, then rebuild it in a different framework or language.
 
 ### The seven quality gates
 
@@ -332,8 +332,24 @@ Tracks what automation couldn't handle and reports it honestly. Two output repor
 
 *Philosophy: "We identify bugs. We do NOT fix them."*
 
+### CI integration & cost tracking
+
+Generates GitHub Actions and GitLab CI configs across all 4 test frameworks -- 8 templates with dependency caching, coverage artifact upload, and build failure on test failure. Per-stage API cost tracking reports token counts and estimated cost per engagement, broken down by pipeline stage.
+
+### Baseline + delta service
+
+Named baselines snapshot extraction state. The delta engine diffs against previous baselines at the function level -- detecting added, modified, and removed functions -- then generates targeted tests only for changed code. Removed functions are flagged for deprecation, not silently dropped. Converts one-shot engagements into subscription re-testing.
+
+### Intelligence layer
+
+**Predictive test prioritization** ranks every function by a 6-factor risk score (complexity, change frequency, recency, centrality, coverage, defect history) using git history when available. Produces `TEST_PRIORITY_MAP.md` so the most dangerous untested code gets covered first.
+
+**Smart model routing** selects Claude model tiers (Haiku/Sonnet/Opus) per API call based on task complexity -- simple extraction gets Haiku, standard test generation gets Sonnet, complex functions and late-stage fix retries escalate to Opus. Target: 20-40% cost reduction without quality loss.
+
+**Cross-engagement pattern library** captures anonymized templates from successful test generations and feeds proven patterns back into future prompts. Tracks common hallucination types per code category so the generator avoids known failure modes.
+
 <details>
-<summary><strong>CLI reference (22 commands)</strong></summary>
+<summary><strong>CLI reference (21 commands)</strong></summary>
 
 <br>
 
@@ -349,6 +365,10 @@ Tracks what automation couldn't handle and reports it honestly. Two output repor
 | `stratum verify` | Spec requirement verification |
 | `stratum ship` | Full pipeline with handoff documentation |
 | `stratum run` | Full pipeline (extract &rarr; generate &rarr; gate &rarr; audit) |
+| `stratum baseline save` | Save extraction snapshot as named baseline |
+| `stratum baseline list` | List saved baselines |
+| `stratum baseline diff` | Diff baseline against current extraction |
+| `stratum delta` | Run targeted pipeline on changed code only |
 
 **Per-module CLIs** (each with subcommands for configuration, output selection, and threshold overrides):
 
@@ -368,6 +388,7 @@ Tracks what automation couldn't handle and reports it honestly. Two output repor
 | `stratum-docs analyze` | Run individual analyzers |
 | `stratum-docs gate` | Run documentation quality gates |
 | `stratum-docs render` | Render to specific format (MD, HTML, PDF) |
+| `stratum-docs sdd` | Generate Designer-SDD spec from codebase extraction |
 
 </details>
 
@@ -396,7 +417,7 @@ Monorepo with shared extraction core. Strict layering: CLI &rarr; Engine &rarr; 
 </details>
 
 ```
-22 commands · 253 modules · 59,793 lines · 3,296 tests, all passing
+21 commands · 310 modules · 73,047 lines · 4,290 tests, all passing
 ```
 
 <br>
@@ -425,7 +446,7 @@ Same 5-stage pipeline proven in Charlotte, adapted for agent specifications:
 
 Async-first runtime implementing the **Observe &rarr; Think &rarr; Act &rarr; Validate** cycle:
 
-- **3 LLM providers** -- Anthropic (Claude), OpenAI, Google (Gemini) with streaming, retry, and exponential backoff
+- **3 LLM providers** -- Anthropic (Claude), OpenAI (GPT-4o), Google (Gemini) with streaming, retry, and exponential backoff
 - **3 tool types** -- Python functions (auto-extracted from type hints), API calls (httpx with schema validation), shell commands (subprocess with injection prevention)
 - **Sliding window memory** -- Token-budgeted conversation history that never truncates the system prompt, with working memory slots and optional long-term file-based persistence
 - **Quality gates at every step** -- 4 built-in evaluators plus custom evaluator registration. Pre-execution, per-step, and post-execution checkpoints with graduated 0.0-1.0 scoring
@@ -486,7 +507,7 @@ Dynamic routing with priority ordering. Delegation depth limiting prevents infin
 </details>
 
 <details>
-<summary><strong>Full CLI reference (32 commands)</strong></summary>
+<summary><strong>Full CLI reference (28 commands)</strong></summary>
 
 <br>
 
@@ -512,10 +533,6 @@ Dynamic routing with priority ordering. Delegation depth limiting prevents infin
 | `agent generate` | Spec generation from profiles |
 | `agent dashboard` / `agent audit` | Runtime observability |
 | `agent doctor` / `agent selftest` / `agent info` | Diagnostics |
-| `agent templates` | List available agent templates |
-| `agent plugin` | Plugin management |
-| `agent version` | Show version information |
-| `agent env list` / `env use` / `env diff` / `env promote` | Environment management |
 
 </details>
 
@@ -529,7 +546,7 @@ Strict four-layer separation: CLI &rarr; Engine &rarr; Core &larr; Util. Async-f
 </details>
 
 ```
-32 commands · 85 modules · 20,443 lines · 1,461 tests, all passing
+28 commands · 85 modules · 20,443 lines · 1,461 tests, all passing
 ```
 
 <br>
@@ -574,10 +591,10 @@ The platform is self-hosting. Designer-SDD specs defined every tool here. Charlo
 
 | | Designer-SDD | Charlotte | Stratum | Castellan | **Combined** |
 |:---|:---:|:---:|:---:|:---:|:---:|
-| **Source Lines** | 8,590 | 20,609 | 59,793 | 20,443 | **109,435** |
-| **Python Modules** | 53 | 80 | 253 | 85 | **471** |
-| **Tests (passing)** | 538 | 2,423 | 3,296 | 1,461 | **7,718** |
-| **CLI Commands** | 16 | 30 | 22 | 32 | **100** |
+| **Source Lines** | 8,590 | 20,609 | 73,047 | 20,443 | **122,689** |
+| **Python Modules** | 53 | 80 | 310 | 85 | **528** |
+| **Tests (passing)** | 538 | 2,423 | 4,290 | 1,461 | **8,712** |
+| **CLI Commands** | 16 | 43 | 21 | 28 | **108** |
 
 </div>
 
@@ -599,7 +616,7 @@ The platform is self-hosting. Designer-SDD specs defined every tool here. Charlo
 
 ## Let's Talk
 
-I built a 109,000-line, 7,718-test platform that automates the parts of the SDLC most teams are still doing by hand — and I deploy it for clients. If your team is shipping AI-generated code without validated specs, compiled prompts, or quality gates that actually enforce standards, that's the gap I close.
+I take on AI-first contract engagements -- SDLC automation, test generation pipelines, quality gate systems, agent frameworks, and prompt engineering infrastructure. If your team is shipping AI-generated code and needs it to be reliable, I've built the tooling and I know where the failure modes are.
 
 **Tim Wolfe** · Los Altos, CA
 
