@@ -2,7 +2,7 @@
 
 # Tim Wolfe
 
-### AI Systems Engineer · Toolmaker · Independent Consultant
+### AI Infrastructure Architect | Autonomous SDLC · Agent Governance · LLM Platform Engineering
 
 Los Altos, CA · [rtwolfe@gmail.com](mailto:rtwolfe@gmail.com) · 650-390-5003 · [LinkedIn](https://linkedin.com/in/timwolfe) · [Telegram](https://t.me/timwolfe)
 
