@@ -30,7 +30,7 @@ I build **compilers** for AI — agentic compilers, prompt compilers, QA compile
 **Four compilers, one closed loop:**
 
 - **Specification Compiler** (Designer-SDD) — compiles unstructured ideas into scored, validated build packages. Rapid prototyping starts here: spec it, score it, build anything from it
-- **Prompt & Skill Compiler** (Charlotte) — compiles prompts and Claude Code skills through a deterministic pipeline with a 94-block type system, security scanning, versioning, and CI/CD generation. SDLC automation for every prompt artifact
+- **Prompt, Skill & MCP Compiler** (Charlotte) — compiles prompts, Claude Code skills, and MCP servers through a deterministic pipeline with a 94-block type system, security scanning, versioning, and CI/CD generation. MCP server generation produces complete Python projects with tool handlers, resource endpoints, prompt definitions, and Claude Desktop config from compiled specs. SDLC automation for every prompt artifact
 - **QA Compiler** (Stratum) — extracts full architecture, compiles unit tests + API tests + documentation, then enforces eight quality gates. SDLC automation for test generation, documentation, and quality assurance
 - **Agentic Compiler** (Castellan) — the heart of the stack. YAML in, governed production agent out. Constitutional governance, runtime guardrails, OWASP audit, multi-target deployment. This is the agent compiler
 - **Agentic Portal** (Monitoring Portal) — receives cryptographically signed health packets from every deployed agent, tracks governance drift in real time, fires alerts, instant kill switch. The closed loop on every compiled agent
@@ -45,7 +45,7 @@ Before AI infrastructure: 20+ years of enterprise operations leadership — two 
 
 ### The Compiler Stack — Agent Governance + SDLC Automation
 
-[Castellan — Agentic Compiler](#1-castellan--agentic-compiler) · [Charlotte — Prompt & Skill Compiler](#2-charlotte--prompt--skill-compiler) · [Stratum — QA Compiler](#3-stratum--qa-compiler) · [Designer-SDD — Specification Compiler](#4-designer-sdd--specification-compiler)
+[Castellan — Agentic Compiler](#1-castellan--agentic-compiler) · [Charlotte — Prompt, Skill & MCP Compiler](#2-charlotte--prompt-skill--mcp-compiler) · [Stratum — QA Compiler](#3-stratum--qa-compiler) · [Designer-SDD — Specification Compiler](#4-designer-sdd--specification-compiler)
 
 ### The Agentic Portal — Fleet Governance + Operations
 
@@ -68,7 +68,7 @@ Code gets compiled. Databases get migrated. Infrastructure gets provisioned thro
 I built four compilers and an agentic operations portal to fix that. Each compiler automates a phase of the AI SDLC where hand-assembly fails. The portal closes the loop with real-time governance monitoring:
 
 - **Rapid prototyping** → Designer-SDD compiles unstructured ideas — briefs, transcripts, notes — into scored, validated, build-ready specification packages. The output isn't a document. It's a complete SDD package that any developer or AI agent can build from. Spec it, score it, build absolutely anything.
-- **Prompt SDLC** → Charlotte compiles prompts and Claude Code skills through a 5-stage deterministic pipeline with a 94-block type system, security scanning across 54 checks, version control, and CI/CD generation. Full SDLC automation for every prompt artifact — compiled, versioned, tested, deployed.
+- **Prompt SDLC** → Charlotte compiles prompts, Claude Code skills, and MCP servers through a 5-stage deterministic pipeline with a 94-block type system, security scanning across 54 checks, version control, and CI/CD generation. MCP server generation produces complete Python projects from compiled specs — tool handlers, resource endpoints, prompt definitions, and client config. Full SDLC automation for every prompt artifact — compiled, versioned, tested, deployed.
 - **QA automation** → Stratum compiles source code into comprehensive quality assessments — extracting full architecture across 6 languages, generating unit tests, API tests, and documentation, then enforcing eight independent quality gates. SDLC automation for test generation and quality assurance.
 - **Agentic compilation + governance** → Castellan compiles YAML specs into production-ready governed agents with constitutional governance, runtime guardrails, OWASP security auditing, and multi-target deployment. This is the agentic compiler. Governance is structural — enforced at compile time, embedded in the deployed agent, monitored in production.
 - **Fleet governance** → The Monitoring Portal receives cryptographically signed health packets from every deployed agent, tracks governance drift in real time, fires alerts when safety thresholds breach, and provides an instant kill switch for any agent in the fleet. The agentic portal that closes the governance loop.
@@ -269,13 +269,13 @@ WebSocket-based real-time dashboard showing governance events — gate evaluatio
 
 ---
 
-## 2. Charlotte — Prompt & Skill Compiler
+## 2. Charlotte — Prompt, Skill & MCP Compiler
 
-**The prompt and skill compiler. Full SDLC automation for every prompt artifact — compiled, versioned, tested, secured, deployed.**
+**The prompt, skill, and MCP server compiler. Full SDLC automation for every prompt artifact — compiled, versioned, tested, secured, deployed.**
 
 > The problem: prompt engineering had no SDLC. No compilation. No type checking. No version control. No security scanning. No way to test one prompt change against regression. Teams were shipping prompts the same way they shipped code in the 90s — copy-paste and pray nothing breaks in production. Prompts are the instructions that govern what AI agents do. They deserve the same rigor as the code that deploys them.
 
-Charlotte is a **prompt and skill compiler** — a 5-stage deterministic pipeline that treats prompts and Claude Code skills as first-class software artifacts with a real SDLC. It parses typed YAML specifications, compiles them against a 94-block library with conflict detection and dependency resolution, runs 8-pass automatic optimization, validates token budgets against 26 model context windows, and renders provider-specific output for OpenAI, Anthropic, and Google Gemini.
+Charlotte is a **prompt, skill, and MCP server compiler** — a 5-stage deterministic pipeline that treats prompts, Claude Code skills, and MCP servers as first-class software artifacts with a real SDLC. It parses typed YAML specifications, compiles them against a 94-block library with conflict detection and dependency resolution, runs 8-pass automatic optimization, validates token budgets against 26 model context windows, and renders provider-specific output for OpenAI, Anthropic, and Google Gemini.
 
 This is a **compiler** with a type system, a security scanner, a test framework, a versioning system, environment management, CI/CD generation, and a multi-agent compiler that generates runnable projects for five major agent frameworks. Charlotte automates the entire prompt SDLC — from authoring through testing to production deployment. If you wouldn't ship code without a build system, you shouldn't ship prompts without one either.
 
@@ -304,6 +304,10 @@ Every prompt gets scanned at compile time. 54 checks across 21 categories: injec
 ### Skills Compiler — Claude Code Skill SDLC
 
 Charlotte compiles Claude Code skills directly — structured YAML specs optimized for the `charlotte compile -f skill` export path. The same 94-block library, the same security scanner, the same test framework — purpose-built output for Claude Code skill deployment. Skills are compiled artifacts with full SDLC: authored as specs, validated at compile time, tested against baselines, versioned, and deployed. Not hand-written instruction strings pasted into a config file.
+
+### MCP Server Compiler — Complete MCP Server Generation
+
+Charlotte compiles YAML specs into complete, runnable MCP server projects. The MCP renderer extracts MCP primitives from specific block types — `tool_use` blocks become MCP tools with JSON Schema input validation, `rag` blocks become static knowledge resources, `memory` blocks become dynamic state resources, `retrieval` blocks become parameterized resource templates, and the full compiled prompt becomes an MCP prompt with runtime arguments. Output is a complete Python project: `server.py` with tool handlers, resource endpoints, and prompt definitions; `pyproject.toml` with MCP SDK dependency; `README.md` with tool/resource/prompt documentation tables; `server.json` capability manifest; and `claude_desktop_config.json` ready to paste into Claude Desktop. Supports both single-prompt and workflow-based server generation. Workflow servers aggregate tools and resources across steps with deduplication and execution order metadata. Validate with `charlotte mcp validate`, preview with `charlotte mcp info`.
 
 ### Test Framework
 
@@ -700,7 +704,7 @@ Every data path is tenant-scoped. WebSocket connections subscribe only to their 
 +--------------+    +-------------+      +-------------+    +------------------+
 | Designer-SDD |    |  Charlotte  |      |   Stratum   |    |    Castellan     |
 | Specification|    | Prompt/Skill|      |     QA      |    |    Agentic       |
-| Compiler     |    | Compiler    |      |   Compiler  |    |    Compiler      |
+| Compiler     |    | /MCP Compiler|     |   Compiler  |    |    Compiler      |
 |              |    |             |      |             |    |                  |
 | Validate     |    | Compile     |      | Extract     |    | Compile          |
 | Score        |    | Validate    |      | Generate    |    | Govern / Guard   |
@@ -711,7 +715,8 @@ Every data path is tenant-scoped. WebSocket connections subscribe only to their 
        v                   v                    v                     v
   Scored Spec        Provider-Ready        Pass/Fail Verdict    Running Agent ------+
   Package (7-11      Prompts, Skills,      + Tests + Docs       (CLI, HTTP, Docker, |
-  files)             or Agent Projects     + Transparency        K8s, Temporal)      |
+  files)             MCP Servers, or       + Transparency        K8s, Temporal)      |
+                     Agent Projects                                                  |
                                                                                      |
                                                                                      v
                                                                    +------------------------+
@@ -729,14 +734,14 @@ Every data path is tenant-scoped. WebSocket connections subscribe only to their 
 Each system is standalone. Each is a compiler. Together they automate the full SDLC for AI agents:
 
 - **Designer-SDD** (Specification Compiler) — compiles *what to build*. Rapid prototyping from raw idea to scored, validated spec package
-- **Charlotte** (Prompt & Skill Compiler) — compiles *how agents communicate*. Full SDLC automation for prompts and skills
+- **Charlotte** (Prompt, Skill & MCP Compiler) — compiles *how agents communicate*. Full SDLC automation for prompts, skills, and MCP servers
 - **Stratum** (QA Compiler) — compiles *proof that it works*. SDLC automation for testing, documentation, and quality gates
 - **Castellan** (Agentic Compiler) — compiles *the agent itself*. Governance is structural — constitutional, runtime, and deployment
 - **Monitoring Portal** (Agentic Portal) — governs *the agent in production*. Governance drift, alerts, kill switch, audit trail
 
 **Four compilers. One agentic portal. Full SDLC automation with governance at every phase.**
 
-The platform is self-hosting. Designer-SDD specs defined every tool. Charlotte compiled the prompts that power Stratum's AI stages. Stratum validates the code all five generate. Castellan compiles the agents with embedded governance. The Monitoring Portal watches them run.
+The platform is self-hosting. Designer-SDD specs defined every tool. Charlotte compiled the prompts, skills, and MCP servers that power Stratum's AI stages. Stratum validates the code all five generate. Castellan compiles the agents with embedded governance. The Monitoring Portal watches them run.
 
 ---
 
