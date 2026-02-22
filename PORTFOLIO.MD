@@ -2,16 +2,20 @@
 
 # Tim Wolfe
 
-### AI Infrastructure Architect | Autonomous SDLC · Agent Governance · LLM Platform Engineering
+### AI Infrastructure Architect
+
+Autonomous SDLC  ·  Agent Governance  ·  LLM Platform Engineering  ·  Security Auditing
 
 Los Altos, CA · [rtwolfe@gmail.com](mailto:rtwolfe@gmail.com) · 650-390-5003 · [LinkedIn](https://linkedin.com/in/timwolfe) · [Telegram](https://t.me/timwolfe)
 
 <br>
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)
-![Tests](https://img.shields.io/badge/Tests-13%2C133_passing-brightgreen?style=flat-square)
-![Lines](https://img.shields.io/badge/Source-184%2C338_lines-blue?style=flat-square)
-![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)
+![TypeScript](https://img.shields.io/badge/TypeScript-React%20%2B%20Next.js-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![Source](https://img.shields.io/badge/Source-217%2C363_lines-blue?style=flat-square)
+![Tests](https://img.shields.io/badge/Tests-14%2C311_passing-brightgreen?style=flat-square)
+![Systems](https://img.shields.io/badge/Production_Systems-8-purple?style=flat-square)
+![License](https://img.shields.io/badge/License-Proprietary-orange?style=flat-square)
 
 </div>
 
@@ -19,19 +23,33 @@ Los Altos, CA · [rtwolfe@gmail.com](mailto:rtwolfe@gmail.com) · 650-390-5003 �
 
 ## About
 
-I build the infrastructure layer between your team and production AI. Not wrappers. Not demos. A full compilation stack — specification engine, prompt compiler, QA automation pipeline, and agent compiler — each delivered as a service, each tested, each running in production.
+I build the infrastructure layer between your team and production AI. Not wrappers. Not demos. Not another chat interface. **Eight production systems** — compilers, security auditors, operations platforms, and SaaS products — each tested, each running, each solving a problem that costs enterprise teams weeks of manual effort every sprint.
 
-Most teams building with AI are doing it the hard way: stitching together string concatenation, copy-pasted prompts, frameworks they don't control, and test suites that pass no matter what the code does. I built the alternative.
+Most teams building with AI are doing it the hard way: string concatenation, copy-pasted prompts, frameworks they don't control, test suites that pass no matter what the code does, agents that ship without governance, and compliance documentation assembled by hand the night before an audit. I built the alternative.
 
-The four services below automate every phase of AI-driven software development. They work standalone. Together, they form a closed loop from raw idea to deployed, tested, governed production agent — and they're the same tools I use to deliver for enterprise clients across finance, healthcare, and ecommerce.
+The eight systems below automate every phase of AI-driven software development — from raw idea to deployed, governed, monitored agent — and they're the same tools I use to deliver for enterprise clients across finance, healthcare, and ecommerce.
 
-Before AI infrastructure, 20+ years of enterprise operations leadership: two IPOs (**Quinstreet**, **Responsys**), four acquisitions (**IBM**/DemandTec, **EMC**/Syncplicity, **Oracle**/Responsys, **Netmarble**/Kabam), and senior technical roles at **Salesforce**, **iHeartMedia**, and **Axway**.
+Before AI infrastructure: 20+ years of enterprise operations leadership — two IPOs (**Quinstreet**, **Responsys**), four acquisitions (**IBM**/DemandTec, **EMC**/Syncplicity, **Oracle**/Responsys, **Netmarble**/Kabam), and senior technical roles at **Salesforce**, **iHeartMedia**, and **Axway**.
 
 ---
 
 <div align="center">
 
-[Castellan](#1-castellan--agent-compiler) · [Charlotte](#2-charlotte--prompt--skills-compiler) · [Stratum](#3-stratum--qa-automation-pipeline) · [Designer-SDD](#4-designer-sdd--specification-engine) · [How They Connect](#how-they-connect) · [Platform Totals](#platform-totals)
+### The Stack
+
+[Castellan](#1-castellan--agent-compiler) · [Charlotte](#2-charlotte--prompt--skills-compiler) · [Stratum](#3-stratum--qa-automation-pipeline) · [Designer-SDD](#4-designer-sdd--specification-engine)
+
+### Security & Operations
+
+[Aegis](#5-aegis--security-audit-platform) · [Monitoring Portal](#6-castellan-monitoring-portal--fleet-operations)
+
+### Enterprise Products
+
+[TACP](#7-tacp--temporal-audit--compliance-platform) · [Claude-Designer](#8-claude-designer--claudemd-generator)
+
+---
+
+[How They Connect](#how-they-connect) · [Platform Totals](#platform-totals)
 
 </div>
 
@@ -39,18 +57,36 @@ Before AI infrastructure, 20+ years of enterprise operations leadership: two IPO
 
 ## The Platform
 
-AI development has a compiling problem. Code gets compiled. Databases get migrated. Infrastructure gets provisioned through declarative configs with validation and version control. But AI systems — the prompts, the agents, the specs they're built from, the tests that prove they work — are still being assembled by hand, shipped on instinct, and debugged in production.
+AI development has a compiling problem. Code gets compiled. Databases get migrated. Infrastructure gets provisioned through declarative configs with validation and version control. But AI systems — the prompts, the agents, the specs they're built from, the tests that prove they work, the audits that prove they're safe — are still assembled by hand, shipped on instinct, and debugged in production.
 
-I built four compilers to fix that. One for every phase where ambiguity kills you:
+I built eight systems to fix that. Four compilers, one security auditor, one operations platform, and two enterprise products:
 
-- **Ambiguous specs** &rarr; Designer-SDD extracts, scores, and validates build-ready specification packages from raw input
-- **Fragile prompts** &rarr; Charlotte compiles prompts and skills through a deterministic pipeline with type checking, security scanning, and version control
-- **Unvalidated output** &rarr; Stratum extracts architecture, generates tests, and enforces seven independent quality gates before anything ships
-- **Ungoverned agents** &rarr; Castellan compiles YAML specs into production-ready agents with constitutional governance, runtime guardrails, OWASP security auditing, and multi-target deployment
+| System | What It Solves |
+|:--|:--|
+| **Castellan** | Agents ship ungoverned → YAML-in, governed agent out, with constitutional enforcement |
+| **Charlotte** | Prompts are string concatenation → Real compiler with type system, security scanner, 94-block library |
+| **Stratum** | Tests don't test anything → 8 quality gates including mutation testing and flaky detection |
+| **Designer-SDD** | Specs arrive as Slack threads → Scored, validated, build-ready documentation packages |
+| **Aegis** | Security is an afterthought → Pre-deployment OWASP Top 10 audit with CI gate |
+| **Monitoring Portal** | Deployed agents are black boxes → Real-time fleet health, drift detection, kill switch |
+| **TACP** | Compliance audits take weeks → Temporal workflow history → regulator-ready reports in minutes |
+| **Claude-Designer** | CLAUDE.md files are guesswork → Codebase-aware generation with effectiveness scoring |
 
-Every service is standalone. Together they cover the full arc from unstructured idea to deployed, tested, governed agent. The platform is self-hosting — Designer-SDD specs defined every tool, Charlotte compiled the prompts that drive Stratum's AI stages, Stratum validates the code all four generate, and Castellan operationalizes the agents the whole stack produces.
+Every system is standalone. Together they cover the full arc from unstructured idea to deployed, tested, governed, monitored agent. The platform is self-hosting — Designer-SDD specs defined every tool, Charlotte compiled the prompts that drive Stratum's AI stages, Stratum validates the code all eight generate, Castellan operationalizes the agents, Aegis audits them, and the Monitoring Portal watches them run.
 
 ---
+
+<br>
+
+<div align="center">
+
+# The Compiler Stack
+
+*Four compilers. Every phase where ambiguity kills you.*
+
+</div>
+
+<br>
 
 ## 1. Castellan — Agent Compiler
 
@@ -58,7 +94,7 @@ Every service is standalone. Together they cover the full arc from unstructured 
 
 > The problem: every team building AI agents hits the same wall. The prototype works. Then production hits back — the agent says things it shouldn't, costs $47 on a single session, crashes on a flaky API call, and nobody can prove it won't go off-script next week. Most agent frameworks are code-first and quality-last. They hand you a runtime and leave governance, testing, and deployment as an exercise for the reader.
 
-Castellan flips the model. Write a declarative YAML spec. Compile it through a 5-stage pipeline. Run it against Anthropic, OpenAI, or Google. Gate every response through runtime guardrails. Audit the entire agent against the OWASP Top 10 for Agentic Applications. Export to Python, Docker, FastAPI, Kubernetes, Temporal, LangGraph, CrewAI, AutoGen, Haystack, or Claude Code skill — with optional embedded governance that travels with the deployed agent. Your agents are validated before they run — not after they fail.
+Castellan flips the model. Write a declarative YAML spec. Compile it through a 5-stage pipeline. Run it against Anthropic, OpenAI, or Google. Gate every response through runtime guardrails. Audit the entire agent against the OWASP Top 10 for Agentic Applications. Export to Python, Docker, FastAPI, Kubernetes, Temporal, LangGraph, CrewAI, AutoGen, Haystack, or Claude Code skill — with optional embedded governance that travels with the deployed agent. Validated before they run. Not after they fail.
 
 Think of it as **Terraform for AI agents**: declarative, version-controlled, auditable, CI/CD-ready.
 
@@ -66,8 +102,8 @@ Think of it as **Terraform for AI agents**: declarative, version-controlled, aud
 
 Every agent spec — no exceptions — runs through 6 deterministic stages before a single token is generated:
 
-| Stage | What it does |
-|-------|-------------|
+| Stage | Purpose |
+|:--|:--|
 | **Parse** | Validates YAML, resolves block references from the 21-block library, applies `!include` directives and `extends`/`mixins` inheritance, detects circular dependencies |
 | **Compose** | Assembles the system prompt from prioritized blocks (system > constitution > task > context > tools > few_shot > constraints > output_format), injects Jinja2 variables |
 | **Optimize** | Token budget analysis, prompt compression, whitespace normalization, cost estimation |
@@ -88,32 +124,32 @@ Every LLM response runs through an inline guardrail pipeline before it reaches t
 - **Hallucination Detection** — quoted facts and numbers in responses verified against tool results and conversation context
 - **Most-restrictive-wins semantics** — when multiple guardrails fire, the strictest action (BLOCK > REDACT > WARN > PASS) is applied
 
-### OWASP Security Audit (Aegis)
+### OWASP Agentic Security Audit (Aegis)
 
-Castellan includes a full security audit service mapped to the OWASP Top 10 for Agentic Applications:
+Full security audit mapped to the OWASP Top 10 for Agentic Applications:
 
 | OWASP ID | Risk | What Aegis Audits |
-|----------|------|------------------|
-| ASI01 | Prompt Injection | Injection patterns, delimiter exploitation, role confusion |
-| ASI02 | Tool Poisoning | Tool chaining data flow, validated sinks |
-| ASI03 | Excessive Agency | Blast radius scoring, write tools, missing rate limits |
-| ASI04 | Supply Chain | Hardcoded secrets, dependency analysis |
-| ASI05 | Output Handling | Response safety, content policies |
-| ASI06 | Memory Poisoning | Persistent state injection vectors |
-| ASI07 | Insecure Delegation | Agent spawning chains, depth limits |
-| ASI08 | Human Oversight | Autonomy envelope, kill switches, cascading failures |
-| ASI09 | Trust Exploitation | Confidence calibration, trust score verification |
-| ASI10 | Insufficient Monitoring | Audit logging, kill switch accessibility |
+|:--|:--|:--|
+| ASI-01 | Prompt Injection | Injection patterns, delimiter exploitation, role confusion |
+| ASI-02 | Tool Poisoning | Tool chaining data flow, validated sinks |
+| ASI-03 | Excessive Agency | Blast radius scoring, write tools, missing rate limits |
+| ASI-04 | Supply Chain | Hardcoded secrets, dependency analysis |
+| ASI-05 | Output Handling | Response safety, content policies |
+| ASI-06 | Memory Poisoning | Persistent state injection vectors |
+| ASI-07 | Insecure Delegation | Agent spawning chains, depth limits |
+| ASI-08 | Human Oversight | Autonomy envelope, kill switches, cascading failures |
+| ASI-09 | Trust Exploitation | Confidence calibration, trust score verification |
+| ASI-10 | Insufficient Monitoring | Audit logging, kill switch accessibility |
 
 Aegis produces six deliverables: executive summary, technical report, OWASP scorecard, generated test suite, candor report, and handoff guide. Verdict: **SHIP / CONDITIONAL / BLOCK** — with CI gate support (`aegis gate --threshold B` returns exit code 0 or 1).
 
 ### Multi-Turn Behavioral Testing
 
-Single input/output assertions aren't enough. Castellan's test runner supports full multi-turn conversation testing with 28 assertion types — `contains`, `not_contains`, `regex_match`, `json_valid`, `min_length`, `max_length`, composite operators (`all_of`, `any_of`, `none_of`), and more. Built-in adversarial personas: `jailbreak`, `confused`, `topic_switch`, `boundary_probe`. You can prove your agent handles jailbreak attempts correctly, maintains context across topic switches, and refuses prohibited content — all in a CI pipeline, before deployment.
+Single input/output assertions aren't enough. Castellan's test runner supports full multi-turn conversation testing with 28 assertion types — `contains`, `not_contains`, `regex_match`, `json_valid`, `min_length`, `max_length`, composite operators (`all_of`, `any_of`, `none_of`), and more. Built-in adversarial personas: `jailbreak`, `confused`, `topic_switch`, `boundary_probe`. Prove your agent handles jailbreak attempts correctly, maintains context across topic switches, and refuses prohibited content — all in CI, before deployment.
 
 ### Execution Engine
 
-Async-first ReAct runtime implementing the **Observe &rarr; Think &rarr; Act &rarr; Validate** cycle with full production resilience:
+Async-first ReAct runtime implementing the **Observe → Think → Act → Validate** cycle with full production resilience:
 
 - **3 LLM providers** — Anthropic (Claude), OpenAI (GPT-4o), Google (Gemini) with streaming, retry, and exponential backoff
 - **MCP client** — tool discovery, auth, and calling against MCP servers
@@ -125,8 +161,8 @@ Async-first ReAct runtime implementing the **Observe &rarr; Think &rarr; Act &ra
 
 ### Multi-Agent Orchestration
 
-| Pattern | How it works |
-|---------|-------------|
+| Pattern | How It Works |
+|:--|:--|
 | **Supervisor** | Master agent routes tasks to specialists via regex/keyword rules, synthesizes results |
 | **Pipeline** | Sequential chain with stage transforms, stops on error |
 | **Broadcast** | Parallel fan-out with aggregation strategies: concat, first, or vote |
@@ -138,39 +174,25 @@ Dynamic routing with priority ordering. Delegation depth limiting prevents infin
 
 **7 export targets** — Python package, Docker (Dockerfile + Compose), FastAPI server (/chat, /health, /trace, /stream), Claude Code skill, Kubernetes (Deployment, Service, ConfigMap, Secret, Kustomization, optional Helm charts), Temporal workflow, and client delivery package.
 
+**Governed exports** — the `--governed` flag on LangGraph, CrewAI, AutoGen, and Haystack exports embeds `castellan.mantle` governance directly in the exported code: `@governed` decorator, compliance JSONL logging, kill switch, autonomy ceiling. Governance travels with the deployed agent — not as an external dependency, but as inline enforcement that works even if the agent runs outside Castellan's runtime.
+
 **Observability** — OpenTelemetry span export, Prometheus metrics, 8 lifecycle event hooks, Rich tree trace visualization, interactive debugger with 6 breakpoint types, governance dashboard with fleet metrics, monthly health reports with drift detection, and append-only audit log with JSON export for compliance.
-
-### Typed Governance Models
-
-All 5 governance sub-schemas — `governance`, `human_oversight`, `data_sensitivity`, `sign_off`, and `testing` — are now typed Pydantic v2 models. Parse-time validation catches misconfigurations (typos, wrong types, missing fields) at compile time, not at runtime. If a governance block is structurally invalid, the compiler rejects it before a single token is generated.
 
 ### CI/CD Governance Gate
 
 `castellan ci-diff` compiles both base and head spec versions, runs governance scoring on both, and produces a `GovernanceImpactReport` posted as a PR comment. Verdict: **APPROVE / REVIEW / BLOCK**. GitHub Action and GitLab CI templates included. Governance regression is now a merge-blocking signal, not a post-deploy surprise.
 
-### Governed Exports
-
-The `--governed` flag on LangGraph, CrewAI, AutoGen, and Haystack exports embeds `castellan.mantle` governance directly in the exported code: `@governed` decorator, compliance JSONL logging, kill switch, autonomy ceiling. Governance travels with the deployed agent — not as an external dependency, but as inline enforcement that works even if the agent is running outside Castellan's runtime.
-
 ### Visual Execution Replay
 
 `castellan replay --visual` renders execution traces into self-contained interactive HTML. Dark-themed timeline with collapsible turns, tool calls, gate evaluations, guardrail decisions, cost breakdown, and annotation panel. One file, no dependencies, shareable with stakeholders who don't have a terminal.
 
-### Unified Runtime
-
-A single `_execute_turns()` async generator eliminates the prior `run()`/`run_stream()` duplication. Human checkpoint enforcement is now structural: autonomous agents with no HITL channel raise `SessionCeilingExceededError` rather than silently running unchecked. One code path, one set of invariants, one place to audit.
-
-### Live Governance Dashboard
-
-WebSocket-based real-time dashboard showing governance events — gate evaluations, guardrail hits, kill switch activations — as they happen. No polling, no refresh. Connect a browser and watch your agent fleet's governance posture update live.
-
 <details>
-<summary><strong>Full CLI reference (45 commands)</strong></summary>
+<summary><strong>Full CLI reference (51 commands)</strong></summary>
 
 <br>
 
 | Command | Purpose |
-|---------|---------|
+|:--|:--|
 | `castellan init` | Scaffold agent from template or intake form |
 | `castellan compile` | 5-stage compilation pipeline |
 | `castellan run` | Interactive or single-message execution |
@@ -179,7 +201,7 @@ WebSocket-based real-time dashboard showing governance events — gate evaluatio
 | `castellan test` | Behavioral + adversarial conversation testing |
 | `castellan score` | Constitutional + gate scoring |
 | `castellan candor` | Transparency analysis |
-| `castellan trace` / `castellan replay` | Execution trace and replay |
+| `castellan trace` / `castellan replay` | Execution trace and visual replay |
 | `castellan orchestrate` | Multi-agent orchestration |
 | `castellan serve` | Production FastAPI server |
 | `castellan export` | 7 deployment targets |
@@ -212,12 +234,16 @@ WebSocket-based real-time dashboard showing governance events — gate evaluatio
 | `castellan sbom` | AI software bill of materials |
 | `castellan identity` | Agent identity manifest |
 | `aegis audit` | Full OWASP Top 10 security audit |
+| `aegis scan` | Quick security scan |
 | `aegis gate` | CI gate with verdict threshold |
+| `aegis scorecard` | OWASP scorecard generation |
+| `aegis diff` | Audit comparison between versions |
+| `aegis estimate` | Audit cost estimation |
 
 </details>
 
 ```
-45 commands · 426 modules · 80,457 lines · 5,661 tests, all passing
+51 commands · 665 modules · 81,394 lines · 5,880 tests, all passing
 ```
 
 <br>
@@ -260,7 +286,7 @@ Charlotte compiles Claude Code skills directly — structured YAML specs optimiz
 
 ### Test Framework
 
-30 assertion types including exact match, regex, JSON schema validation, LLM-as-judge, cosine similarity, sentiment analysis, language detection, PII detection, latency thresholds, and composite assertions. Parallel cross-model execution. Evaluation history with regression drift detection. You can run a prompt change against a baseline and know immediately whether it regressed.
+30 assertion types including exact match, regex, JSON schema validation, LLM-as-judge, cosine similarity, sentiment analysis, language detection, PII detection, latency thresholds, and composite assertions. Parallel cross-model execution. Evaluation history with regression drift detection. Run a prompt change against a baseline and know immediately whether it regressed.
 
 ### Multi-Agent Compiler
 
@@ -290,28 +316,8 @@ Text, JSON, YAML, API payload, MCP definition, LangChain template, HTML report, 
 
 </details>
 
-<details>
-<summary><strong>10 production example packs</strong></summary>
-
-<br>
-
-| Pack | Pattern | Use Case |
-|------|---------|----------|
-| Customer Support Bot | multi-phase | E-commerce: returns, shipping, routing, conversation history |
-| Code Review Assistant | multi-phase | Structured JSON feedback with severity ratings |
-| Legal Document Analyzer | multi-phase | Contract analysis with citations and legal disclaimers |
-| ML Model Evaluator | agent-orchestrating | Accuracy, fairness, robustness, explainability |
-| Content Moderator | multi-phase | Confidence scores, escalation routing |
-| Research Summarizer | multi-phase | Literature review with conflict detection |
-| API Test Generator | agent-orchestrating | Test case generation from OpenAPI specs |
-| Multilingual Assistant | multi-phase | 8-language support with persona consistency |
-| Incident Responder | agent-orchestrating | Production incident diagnosis (ReAct pattern) |
-| Prompt Optimizer | multi-phase | Meta-prompt for critiquing and refining prompts |
-
-</details>
-
 ```
-21 commands · 83 modules · 21,409 lines · 94 blocks · 2,548 tests, all passing
+45 commands · 178 modules · 19,706 lines · 2,600 tests, all passing
 ```
 
 <br>
@@ -324,39 +330,39 @@ Text, JSON, YAML, API payload, MCP definition, LangChain template, HTML report, 
 
 > The problem: teams were shipping AI-generated test suites without checking whether the tests actually tested anything. Hallucinated assertions. Mocked-out logic. Tests that pass no matter what — going straight to CI. Nobody was testing the tests.
 
-Stratum is a 6-stage automated quality pipeline. It extracts full architecture using Claude and tree-sitter across 6 languages, generates unit tests and API tests across 4 frameworks, produces documentation with seven independent analyzers, then runs everything through seven independent quality gates. Each gate produces its own verdict. The audit engine aggregates them into a final pass or fail. A transparency layer tracks every skip, failure, and limitation — no silent failures.
+Stratum is a multi-stage automated quality pipeline. It extracts full architecture using Claude and tree-sitter across 6 languages, generates unit tests and API tests across 4 frameworks, produces documentation with seven independent analyzers, then runs everything through eight independent quality gates. Each gate produces its own verdict. The audit engine aggregates them into a final pass or fail. A transparency layer tracks every skip, failure, and limitation — no silent failures.
 
 ### The Pipeline
 
 ```
 SOURCE CODE
-    │
-    ▼
-┌──────────────────────────────────────────┐
-│ 1. EXTRACT (tree-sitter + Claude)        │
-│    Classes, functions, endpoints → JSON   │
-│    6 languages · framework detection      │
-└──────────┬───────────────────────────────┘
-           │
-    ┌──────┴──────────┬──────────────┐
-    ▼                 ▼              ▼
-┌──────────┐   ┌───────────┐   ┌──────────┐
-│ 2. UNIT  │   │ 3. API    │   │ 4. DOCS  │
-│ pytest / │   │ 4 layers  │   │ 7 analyzers│
-│ jest /   │   │ 4 frameworks│  │ 3 formats │
-│ JUnit /  │   │           │   │           │
-│ Go test  │   │           │   │           │
-└────┬─────┘   └─────┬─────┘   └────┬─────┘
-     └────────────────┼──────────────┘
-                      ▼
-┌──────────────────────────────────────────┐
-│ 5. QUALITY GATES (7 independent modules) │
-└──────────────────┬───────────────────────┘
-                   ▼
-┌──────────────────────────────────────────┐
-│ 6. CANDOR — Transparency Report          │
-│ What automation couldn't handle          │
-└──────────────────────────────────────────┘
+    |
+    v
++------------------------------------------+
+| 1. EXTRACT (tree-sitter + Claude)        |
+|    Classes, functions, endpoints -> JSON  |
+|    6 languages · framework detection      |
++----------+-------------------------------+
+           |
+    +------+----------+---------------+
+    v                  v               v
++----------+    +-----------+    +----------+
+| 2. UNIT  |    | 3. API    |    | 4. DOCS  |
+| pytest   |    | 4 layers  |    | 7 anlyzrs|
+| jest     |    | 4 frmwrks |    | 3 formats|
+| JUnit    |    |           |    |          |
+| Go test  |    |           |    |          |
++----+-----+    +-----+-----+    +----+-----+
+     +----------------+--------------+
+                      v
++------------------------------------------+
+| 5. QUALITY GATES (8 independent modules) |
++------------------+-----------------------+
+                   v
++------------------------------------------+
+| 6. CANDOR - Transparency Report          |
+|    What automation couldn't handle       |
++------------------------------------------+
 ```
 
 ### Architecture Extraction
@@ -365,23 +371,23 @@ Combines Claude with tree-sitter static analysis to extract complete codebase st
 
 ### Test Generation
 
-**Unit tests** — generates pytest, jest, JUnit, or Go test suites from extracted architecture. 3-retry validation loop: generate &rarr; execute &rarr; fix. Tests that don't actually run are rejected before they leave the pipeline.
+**Unit tests** — generates pytest, jest, JUnit, or Go test suites from extracted architecture. 3-retry validation loop: generate → execute → fix. Tests that don't actually run are rejected before they leave the pipeline.
 
 **API tests across 4 layers and 4 frameworks:**
 
-| Layer | What it validates |
-|-------|-----------------|
+| Layer | What It Validates |
+|:--|:--|
 | **Contract** | API surface matches the spec — methods, paths, status codes, content types |
 | **Boundary** | Edge cases — empty payloads, max-length strings, type coercion, null handling |
-| **Workflow** | Multi-step state transitions — create &rarr; read &rarr; update &rarr; delete sequences |
+| **Workflow** | Multi-step state transitions — create → read → update → delete sequences |
 | **Regression** | Previously-found defects captured as permanent guards |
 
-### The Seven Quality Gates
+### The Eight Quality Gates
 
-This is the core of Stratum. Seven independent modules, each with its own verdict. All seven must pass for a pipeline to ship.
+The core of Stratum. Eight independent modules, each with its own verdict. All eight must pass for a pipeline to ship.
 
-| Gate | What it enforces |
-|------|-----------------| 
+| Gate | What It Enforces |
+|:--|:--|
 | **Forge** | The Seven Rules — every generated test must: **(A)** invoke the code under test, **(B)** assert on outputs not inputs, **(C)** not swallow exceptions, **(D)** verify every mock, **(E)** test error paths, **(F)** fail if the code is wrong, **(G)** have no interdependence. All seven or rejected. |
 | **Aegis** | Security scanning — 24 vulnerability types across 9 detectors. SQL injection, command injection, XSS, auth bypass, data exposure, hardcoded secrets. Generates exploit tests to prove vulnerabilities and remediation tests to verify fixes. |
 | **Sentinel** | Mutation testing — 8 mutator types. Mutates source, runs the test suite, calculates whether the suite actually catches the mutations. Proves tests have teeth. |
@@ -389,6 +395,7 @@ This is the core of Stratum. Seven independent modules, each with its own verdic
 | **Arbiter** | Harvests quality rules from external linters (flake8, eslint, clippy, go vet) and maps them to test quality categories. |
 | **CodeGate** | AI code quality gate — pure rule-based, no LLM calls. 10-item production readiness checklist. 3-tier dependency verification: recognized, hallucination risk, unverifiable. Catches hallucinated dependencies, happy-path-only logic, context-blind decisions. |
 | **Intent** | Spec requirement verification — validates that generated code implements the requirements from the original spec. Coverage percentage and gap analysis. |
+| **Candor** | Transparency layer — every skip, limitation, and assumption surfaced. No silent failures. |
 
 ### Baseline + Delta Service
 
@@ -398,41 +405,14 @@ Named baselines snapshot extraction state. The delta engine diffs against previo
 
 **Predictive test prioritization** ranks every function by a 6-factor risk score — complexity, change frequency, recency, centrality, coverage, defect history — using git history when available. Produces `TEST_PRIORITY_MAP.md` so the most dangerous untested code gets covered first.
 
-**Smart model routing** selects Claude model tiers (Haiku/Sonnet/Opus) per API call based on task complexity. Target: 20-40% cost reduction without quality loss.
+**Smart model routing** selects Claude model tiers (Haiku/Sonnet/Opus) per API call based on task complexity. Target: 20–40% cost reduction without quality loss.
 
 **SDD Bridge** — transforms extraction output into Designer-SDD spec format. Scan any existing codebase, produce a complete build spec, then rebuild it in a different framework or language.
 
 *Philosophy: "We identify bugs. We do NOT fix them."*
 
-<details>
-<summary><strong>CLI reference (27 commands)</strong></summary>
-
-<br>
-
-| Command | Purpose |
-|---------|---------|
-| `stratum extract` | Extract architecture from source code |
-| `stratum generate tests` | Generate unit + API tests |
-| `stratum generate docs` | Generate documentation |
-| `stratum audit` | Run all quality gates |
-| `stratum review` | CodeGate standalone review |
-| `stratum verify` | Spec requirement verification |
-| `stratum ship` | Full pipeline with handoff documentation |
-| `stratum run` | Full pipeline (extract → generate → gate → audit) |
-| `stratum baseline save` | Save extraction snapshot as named baseline |
-| `stratum baseline list` | List saved baselines |
-| `stratum baseline diff` | Diff baseline against current extraction |
-| `stratum delta` | Run targeted pipeline on changed code only |
-| `stratum-out generate` | Standalone architecture extraction |
-| `stratum-unit generate` | Standalone unit test generation |
-| `stratum-api generate` | Standalone API test generation |
-| `stratum-docs generate` | Standalone documentation generation |
-| `stratum-docs sdd` | Generate Designer-SDD spec from codebase |
-
-</details>
-
 ```
-27 commands · 313 modules · 73,882 lines · 4,386 tests, all passing
+34 commands · 499 modules · 73,792 lines · 4,436 tests, all passing
 ```
 
 <br>
@@ -449,14 +429,14 @@ Designer-SDD is a specification engine. Feed it a client brief, a call transcrip
 
 The output isn't a document. It's a scored, validated, GitHub-ready documentation package of up to 11 files — ready for a developer or an AI agent to build from. Every tool in this platform was built from a Designer-SDD spec.
 
-### How it Works
+### How It Works
 
 **Multiple entry points** — intake from raw text, interactive brainstorming with Claude, 3-stage web-powered market research, browser-based HTML form, or 5 pre-built templates (CLI, REST API, SaaS dashboard, library, Chrome extension).
 
 **Dual-gate scoring** — two independent scoring systems run on every spec:
 
-| Gate | What it measures | Checks | Threshold |
-|------|-----------------|--------|-----------| 
+| Gate | What It Measures | Checks | Threshold |
+|:--|:--|:--|:--|
 | **Quality** | Is this spec complete and well-structured? | 28 weighted checks across 7 sections | 70% |
 | **Buildability** | Can a developer or AI agent actually build from this? | 8 checks: ambiguity detection, dependency completeness, acceptance verifiability, tech completeness | 60% |
 
@@ -468,34 +448,186 @@ The output isn't a document. It's a scored, validated, GitHub-ready documentatio
 
 **Round-trip verification** — after export, verifies that every requirement and task in the source spec appears in the rendered markdown. Catches drift between spec and output.
 
-<details>
-<summary><strong>Full CLI reference (16 commands)</strong></summary>
+```
+17 commands · 74 modules · 7,909 lines · 582 tests, all passing
+```
 
 <br>
 
-| Command | Purpose |
-|---------|---------| 
-| `designer intake` | Extract specs from unstructured text (briefs, notes, transcripts) |
-| `designer create` | Interactive brainstorming with Claude |
-| `designer discover` | 3-stage market research pipeline with web search |
-| `designer form` | Launch browser-based HTML intake form |
-| `designer validate` | Check spec completeness against domain rules |
-| `designer score` | Dual-gate scoring (quality + buildability) |
-| `designer improve` | Auto-improve via Claude refinement loop |
-| `designer ingest` | Full pipeline (validate → score → export) |
-| `designer export` | Render tier-gated markdown package |
-| `designer diff` | Field-by-field spec comparison with score deltas |
-| `designer research` | Answer open questions via Claude |
-| `designer verify` | Post-export round-trip integrity check |
-| `designer template list` | Browse pre-built templates |
-| `designer template preview` | Preview template contents |
-| `designer template use` | Scaffold project from template |
-| `designer init` | Initialize project configuration |
+---
 
-</details>
+<br>
+
+<div align="center">
+
+# Security & Operations
+
+*Audit before deploy. Monitor after.*
+
+</div>
+
+<br>
+
+## 5. Aegis — Security Audit Platform
+
+**Pre-deployment OWASP Top 10 audit for AI agents. Ship with evidence, not hope.**
+
+> The problem: agent security reviews were manual checklists run by someone who'd never seen the OWASP Agentic Top 10 — if they were run at all. Teams shipped agents with injection surfaces, unconstrained tool access, and no kill switch, then found out in production.
+
+Aegis is a standalone security audit platform that orchestrates four analysis engines — Charlotte's prompt scanner, Castellan's behavioral analyzer, Stratum's code detectors, and Forge's test quality gate — into a unified DAG-based pipeline with three parallel audit layers. Cross-layer graph analysis correlates findings across prompt, behavior, and code surfaces. Root-cause deduplication collapses symptoms into actionable issues.
+
+### What It Produces
+
+Seven deliverables from a single `aegis audit` command:
+
+| Deliverable | What It Contains |
+|:--|:--|
+| **Executive Summary** | Risk posture, top findings, go/no-go recommendation |
+| **Technical Report** | Every finding with evidence, reproduction steps, remediation guidance |
+| **OWASP Scorecard** | Per-category A–F grade mapped to ASI-01 through ASI-10 |
+| **Test Suite** | Generated tests that prove each finding and verify each fix |
+| **Candor Report** | What the audit couldn't cover and why — no silent gaps |
+| **Handoff Guide** | Prioritized remediation roadmap for the engineering team |
+| **CI Gate Verdict** | **SHIP / CONDITIONAL / BLOCK** with configurable threshold |
+
+### CI Integration
+
+```bash
+aegis gate --threshold B   # exit 0 if all categories >= B, exit 1 otherwise
+```
+
+Runs in GitHub Actions, GitLab CI, or any pipeline. Block the merge if the agent doesn't pass security review. No human bottleneck, no forgotten checklist.
 
 ```
-16 commands · 53 modules · 8,590 lines · 538 tests, all passing
+9 commands · 78 modules · 12,264 lines · 340 tests, all passing
+```
+
+<br>
+
+---
+
+## 6. Castellan Monitoring Portal — Fleet Operations
+
+**Real-time operations dashboard for governed agent fleets.**
+
+> The problem: agents deploy and disappear into a black box. Governance scores drift. Costs creep. Guardrails fire silently. By the time someone notices, the damage is done and the audit trail is incomplete.
+
+The Monitoring Portal is a full-stack operations platform — FastAPI backend with Next.js frontend — that receives cryptographically signed health packets from every deployed Castellan agent, tracks governance drift in real time, fires alerts when safety thresholds breach, and provides an instant kill switch for any agent in the fleet.
+
+### Architecture
+
+| Layer | Stack |
+|:--|:--|
+| **Frontend** | Next.js, React, TypeScript, SWR, WebSocket |
+| **API** | FastAPI, 15 REST + WebSocket endpoints |
+| **Auth** | Clerk JWT (RS256, JWKS with TTL cache) + HMAC-SHA256 packet signatures |
+| **Database** | SQLAlchemy async, 10 tables, composite indexes |
+| **Real-time** | Tenant-scoped WebSocket with operator broadcast |
+
+### What It Monitors
+
+- **Governance scores** — per-agent, per-tenant, with historical trend analysis
+- **Compliance drift** — configurable trend window, degrading/stable/recovering classification
+- **Alert evaluation** — threshold-based with deduplication (upsert on active alerts)
+- **Kill switch** — issue and release with multi-kill awareness and audit trail
+- **Recertification** — 90-day cycles with grace periods and overdue tracking
+- **Cost tracking** — per-agent, per-session token and USD accumulation
+- **Audit trail** — immutable, append-only, every action logged
+
+### Security Hardened
+
+10 security findings (3 HIGH, 4 MEDIUM, 3 LOW) identified and resolved pre-production:
+
+- JWKS cache with TTL and force-refresh on key rotation
+- Tenant-scoped WebSocket isolation — no cross-tenant data leakage
+- Required `tenant_id` for new agent registration — no O(n) tenant scanning
+- Dev mode defaults to `viewer` role, not `operator`
+- CORS origins configurable per environment
+- Data retention with automated daily purge
+
+```
+15 endpoints · 41 modules · 2,729 backend lines · 3,692 frontend lines
+```
+
+<br>
+
+---
+
+<br>
+
+<div align="center">
+
+# Enterprise Products
+
+*Standalone commercial systems.*
+
+</div>
+
+<br>
+
+## 7. TACP — Temporal Audit & Compliance Platform
+
+**Connect your Temporal cluster. Get regulator-ready audit documentation.**
+
+> The problem: enterprises running Temporal for critical workflows — payment processing, healthcare data pipelines, financial reconciliation — face quarterly audit cycles that take weeks of manual documentation. Engineers pull workflow execution histories by hand, compliance teams assemble narratives in Word documents, and the whole process repeats next quarter. Meanwhile, anomalies in workflow patterns go undetected until an auditor finds them.
+
+TACP is a commercial SaaS platform that connects to Temporal clusters via the official gRPC API (read-only — zero write access to production) and transforms raw workflow execution history into structured, regulator-ready audit documentation. Multi-tenant. Multi-framework. One-click report generation.
+
+### Compliance Frameworks
+
+| Framework | What TACP Generates |
+|:--|:--|
+| **SOC 2** | Control effectiveness narratives, evidence mapping, exception tracking |
+| **HIPAA** | PHI access audit trails, minimum necessary enforcement verification |
+| **SOX** | Financial workflow integrity evidence, segregation of duties verification |
+| **ISO 27001** | Information security control assessment, risk treatment documentation |
+
+### How It Works
+
+1. **Connect** — Register Temporal cluster via gRPC endpoint (read-only credentials)
+2. **Ingest** — Continuous workflow execution history import with incremental sync
+3. **Analyze** — AI-generated audit narratives via Claude, anomaly detection, pattern analysis
+4. **Report** — One-click PDF/DOCX generation with evidence chains and executive summaries
+5. **Archive** — Immutable SHA-256 signed report storage for regulator retrieval
+
+### Architecture
+
+| Component | Stack |
+|:--|:--|
+| **Frontend** | React, TypeScript, Vite |
+| **API** | FastAPI, 20 REST endpoints, Pydantic v2 |
+| **Database** | PostgreSQL (schema-per-tenant), SQLAlchemy 2.0 async, Alembic migrations |
+| **Workers** | Celery + Redis for async report generation |
+| **AI** | Anthropic Claude API for audit narrative generation |
+| **Export** | WeasyPrint (PDF), python-docx (DOCX) |
+
+```
+20 endpoints · 94 modules · 9,334 backend lines · 1,940 frontend lines · 131 tests
+```
+
+<br>
+
+---
+
+## 8. Claude-Designer — CLAUDE.md Generator
+
+**Scan a codebase. Generate a tailored CLAUDE.md. Score its effectiveness.**
+
+> The problem: teams adopting Claude Code write their CLAUDE.md files by guessing — or don't write them at all. The result: Claude Code misunderstands the project structure, ignores conventions, suggests wrong patterns, and developers lose trust in the tool. The difference between a good CLAUDE.md and a bad one is the difference between a 10x productivity boost and a frustrating experience.
+
+Claude-Designer scans a codebase, detects the stack, conventions, tooling, and patterns, then generates a tailored CLAUDE.md that actually reflects how the project works. A 33-pattern mistake-to-instruction matcher converts common pitfalls into explicit guidance. An effectiveness scoring rubric (0–100) measures coverage, specificity, and correctness. Before/after audit comparison proves the improvement.
+
+### What It Does
+
+- **Codebase scanning** — detects language, framework, package manager, test runner, linting tools, directory structure, naming conventions
+- **Pattern matching** — 33 mistake-to-instruction patterns that convert "developers often get this wrong" into explicit CLAUDE.md guidance
+- **Effectiveness scoring** — 0–100 rubric measuring coverage (does it address the right topics?), specificity (are instructions actionable?), and correctness (does it match the actual codebase?)
+- **Template library** — pre-built templates for common stacks (Python/FastAPI, TypeScript/Next.js, Go, Rust)
+- **Audit mode** — compare an existing CLAUDE.md against the detected codebase, identify gaps, score improvement potential
+- **Score history** — track effectiveness over time as the CLAUDE.md evolves
+
+```
+13 commands · 55 modules · 4,603 lines · 342 tests, all passing
 ```
 
 <br>
@@ -506,31 +638,47 @@ The output isn't a document. It's a scored, validated, GitHub-ready documentatio
 
 ```
   Raw Idea              YAML Spec            Source Code           Agent Spec
-     │                     │                     │                     │
-     ▼                     ▼                     ▼                     ▼
+     |                     |                     |                     |
+     v                     v                     v                     v
 +--------------+    +-------------+      +-------------+    +------------------+
-| Designer-SDD |    |  Charlotte  |      |   Stratum   |    |   Castellan      |
+| Designer-SDD |    |  Charlotte  |      |   Stratum   |    |    Castellan     |
 |              |    |             |      |             |    |                  |
 | Validate     |    | Compile     |      | Extract     |    | Compile          |
 | Score        |    | Validate    |      | Generate    |    | Govern / Guard   |
 | Improve      |    | Test        |      | Gate        |    | Test / Audit     |
 | Export       |    | Export      |      | Audit       |    | Export / Deploy  |
 +------+-------+    +------+------+      +------+------+    +--------+---------+
-       │                   │                    │                     │
-       ▼                   ▼                    ▼                     ▼
+       |                   |                    |                     |
+       v                   v                    v                     v
   Scored Spec        Provider-Ready        Pass/Fail Verdict    Running Agent
   Package (7-11      Prompts, Skills,      + Tests + Docs       (CLI, HTTP, Docker,
   files)             or Agent Projects     + Transparency        K8s, Temporal)
+                                                                      |
+       +--------------------------------------------------------------+
+       |                           |                                   |
+       v                           v                                   v
++-------------+          +-----------------+                 +------------------+
+|    Aegis    |          |   Monitoring    |                 |      TACP        |
+|             |          |     Portal      |                 |                  |
+| OWASP Audit |          | Health packets  |                 | Temporal cluster |
+| CI Gate     |          | Drift tracking  |                 | Compliance docs  |
+| Scorecard   |          | Kill switch     |                 | SOC 2 / HIPAA /  |
+|             |          | Alert eval      |                 | SOX / ISO 27001  |
++-------------+          +-----------------+                 +------------------+
 ```
 
-Each service is standalone. Together they close the loop:
+Each system is standalone. Together they close the loop:
 
 - **Designer-SDD** defines *what* to build — scored, validated, ready for a developer or an AI agent
 - **Charlotte** handles *how to talk to AI* — compiled prompts and skills that don't break in production
-- **Stratum** validates *what was built* — seven gates, no silent failures, delta re-testing on every change
+- **Stratum** validates *what was built* — eight gates, no silent failures, delta re-testing on every change
 - **Castellan** operationalizes *running agents* — governed, audited, resilient, deployed
+- **Aegis** proves *agents are safe* — OWASP Top 10 audit with CI gate before any merge
+- **Monitoring Portal** watches *agents in production* — governance drift, alerts, kill switch, audit trail
+- **TACP** handles *compliance at scale* — workflow audit documentation that satisfies regulators
+- **Claude-Designer** accelerates *AI-assisted development* — the right CLAUDE.md from day one
 
-The platform is self-hosting. Designer-SDD specs defined every tool. Charlotte compiled the prompts that power Stratum's AI stages. Stratum validates the code all four generate. Castellan turns the whole stack into production agent systems.
+The platform is self-hosting. Designer-SDD specs defined every tool. Charlotte compiled the prompts that power Stratum's AI stages. Stratum validates the code all eight generate. Castellan turns the whole stack into production agent systems. Aegis audits every agent before deployment. The Monitoring Portal watches them run.
 
 ---
 
@@ -538,12 +686,12 @@ The platform is self-hosting. Designer-SDD specs defined every tool. Charlotte c
 
 <div align="center">
 
-| | Designer-SDD | Charlotte | Stratum | Castellan | **Combined** |
-|:---|:---:|:---:|:---:|:---:|:---:|
-| **Source Lines** | 8,590 | 21,409 | 73,882 | 80,457 | **184,338** |
-| **Python Modules** | 53 | 83 | 313 | 426 | **875** |
-| **Tests (passing)** | 538 | 2,548 | 4,386 | 5,661 | **13,133** |
-| **CLI Commands** | 16 | 21 | 27 | 45 | **109** |
+| | Designer | Charlotte | Stratum | Castellan | Aegis | Monitoring | TACP | Claude-Designer | **Combined** |
+|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **Source Lines** | 7,909 | 19,706 | 73,792 | 81,394 | 12,264 | 6,421 | 11,274 | 4,603 | **217,363** |
+| **Modules** | 74 | 178 | 499 | 665 | 78 | 92 | 109 | 55 | **1,750** |
+| **Tests** | 582 | 2,600 | 4,436 | 5,880 | 340 | — | 131 | 342 | **14,311** |
+| **Commands / Endpoints** | 17 | 45 | 34 | 51 | 9 | 15 | 20 | 13 | **204** |
 
 </div>
 
@@ -551,11 +699,7 @@ The platform is self-hosting. Designer-SDD specs defined every tool. Charlotte c
 
 <div align="center">
 
-**Stack:** Python 3.10+ · Claude API · OpenAI API · Google Gemini API · Pydantic v2 · tree-sitter · Typer · Click · Rich · FastAPI · Jinja2 · asyncio · httpx · tiktoken · WeasyPrint · OpenTelemetry · Prometheus · YAML/JSON
-
----
-
-*Designed, built, and tested by Tim Wolfe.*
+**Stack:** Python 3.10+ · TypeScript · React · Next.js · Claude API · OpenAI API · Google Gemini API · Pydantic v2 · SQLAlchemy 2.0 · FastAPI · tree-sitter · Typer · Click · Rich · Jinja2 · asyncio · httpx · tiktoken · WeasyPrint · OpenTelemetry · Prometheus · Temporal SDK · Celery · Redis · PostgreSQL · Clerk · WebSockets
 
 </div>
 
@@ -565,7 +709,7 @@ The platform is self-hosting. Designer-SDD specs defined every tool. Charlotte c
 
 ## Let's Talk
 
-I take on AI-first contract engagements — agent compilation, prompt infrastructure, SDLC automation, test generation pipelines, quality gate systems, and OWASP security auditing. If your team is shipping AI-generated code, AI-powered features, or production agents and needs them to be reliable, governed, and production-grade — I've built the compiler stack and I know exactly where the failure modes are.
+I take on AI-first contract engagements — agent compilation, prompt infrastructure, SDLC automation, test generation pipelines, quality gate systems, OWASP security auditing, fleet monitoring, and compliance documentation. If your team is shipping AI-generated code, AI-powered features, or production agents and needs them reliable, governed, and production-grade — I've built the compiler stack and I know exactly where the failure modes are.
 
 **Tim Wolfe** · Los Altos, CA
 
