@@ -2,7 +2,7 @@
 
 # Tim Wolfe
 
-### AI Infrastructure Architect | Context Engineering Architect | Agent Governance | Agentic Systems Design | Autonomous SDLC
+### AI Infrastructure Architect | Context Engineering | Agent Governance | Agentic Systems | Autonomous SDLC
 
 <br>
 
