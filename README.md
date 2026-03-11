@@ -2,7 +2,7 @@
 
 # Tim Wolfe
 
-### AI Infrastructure Architect | Context Engineering | Agent Governance | Agentic Systems | Autonomous SDLC
+### AI Infrastructure Architect
 
 <br>
 
@@ -41,7 +41,7 @@ I build **governance infrastructure for AI agents** — the compilers, scanners,
 
 **The Agent Governance Platform:**
 
-- **Castellan** — the agentic compiler. YAML spec in, governed production agent out. Constitutional governance, runtime guardrails, OWASP audit, multi-target deployment. Governance is structural, not aspirational
+- **Castellan** — the agentic compiler. YAML spec in, governed production agent out. Constitutional governance, runtime guardrails, OWASP audit, multi-target deployment, OpenClaw governance proxy with skill supply chain scanning. Governance is structural, not aspirational
 - **Aegis** — pre-deployment security audit. Three parallel audit layers (prompt, behavior, code), cross-layer analysis, OWASP Top 10 for Agentic Applications mapping, verdict: SHIP / CONDITIONAL / BLOCK
 - **Arbiter** — batch governance auditing. Scans folders of agent artifacts through a 3-stage pipeline (LLM extraction, deterministic rules scoring, narrative generation) and produces compliance reports across six audit layers
 - **Herald** — authenticated bidirectional command channel. HMAC-SHA256 signed envelopes between operator portals and agent fleets, with A2A governed communication, MCP gateway, and NHI identity management
@@ -101,7 +101,7 @@ Code gets compiled. Databases get migrated. Infrastructure gets provisioned thro
 
 I built six governance systems and six supporting tools to fix that. The governance platform handles the full agent lifecycle — compilation, security audit, batch compliance scanning, fleet communication, governance reverse-engineering, and real-time monitoring. The tools automate the SDLC phases that feed into it:
 
-- **Agentic compilation + governance** — Castellan compiles YAML specs into production-ready governed agents with constitutional governance, runtime guardrails, OWASP security auditing, and multi-target deployment. Governance is structural — enforced at compile time, embedded in the deployed agent, monitored in production
+- **Agentic compilation + governance** — Castellan compiles YAML specs into production-ready governed agents with constitutional governance, runtime guardrails, OWASP security auditing, multi-target deployment, and OpenClaw governance (transparent WebSocket proxy with skill supply chain scanning for the 247K-star open-source agent platform). Governance is structural — enforced at compile time, embedded in the deployed agent, monitored in production
 - **Pre-deployment security** — Aegis runs three parallel audit layers (prompt, behavior, code), cross-layer analysis, and maps findings to OWASP Top 10 for Agentic Applications. Verdict: SHIP / CONDITIONAL / BLOCK with CI gate support
 - **Batch compliance auditing** — Arbiter scans folders of agent artifacts through a 3-stage pipeline and produces compliance reports across six governance layers. Deterministic scoring with zero LLM variance in the rules engine
 - **Fleet communication** — Herald provides HMAC-SHA256 authenticated command channels between operators and agent fleets, governed A2A inter-agent messaging, MCP tool governance, and non-human identity management
@@ -249,6 +249,37 @@ Dynamic routing with priority ordering. Delegation depth limiting prevents infin
 
 WebSocket-based real-time dashboard showing governance events — gate evaluations, guardrail hits, kill switch activations — as they happen. No polling, no refresh. Connect a browser and watch your agent fleet's governance posture update live.
 
+### OpenClaw Governance (C17)
+
+**The first governance framework for the most popular open-source agent platform.**
+
+OpenClaw is the most widely adopted open-source agent framework — 247K+ GitHub stars, 21+ messaging channels (Telegram, Slack, WhatsApp, Discord, and more), thousands of community-built skills. It also has zero built-in governance. Every tool call runs with ambient authority. Koi Security discovered 824+ malicious skills in the "ClawHavoc" campaign. CVSS 8.8 vulnerability reported. Castellan C17 provides three integration surfaces:
+
+**WebSocket Gateway Proxy** — Transparent proxy between downstream clients and the upstream OpenClaw Gateway. Intercepts all governed method frames (`tools.invoke`, `node.invoke`, `chat.send`, `exec.approval.resolve`) and runs a full enforcement pipeline per request:
+
+1. Parse & validate (JSON frame validation)
+2. Rate limiting (token bucket per policy)
+3. Tool access control (allowlist/blocklist)
+4. Turn count limits (max invocations per session)
+5. Skill governance (allowlist/blocklist for `/skill_name` invocations)
+6. Trust scoring (4-dimensional anomaly detection: output consistency, tool patterns, latency, intent alignment)
+7. Output filtering (regex-based PII redaction)
+8. Tamper-evident attestation (SHA-256 chain per interaction)
+
+Per-channel policies allow different tool access per messaging channel — Telegram read-only, Slack full access, WhatsApp restricted tools.
+
+**Skill Supply Chain Scanner** — OpenClaw skills are Markdown files with YAML frontmatter, installed from the ClawHub marketplace. The scanner runs 22 detection patterns across 6 threat categories: prompt injection, data exfiltration, privilege escalation, credential harvesting, supply chain dependencies, and code obfuscation. Risk classification: LOW / MEDIUM / HIGH / CRITICAL.
+
+**HTTP Endpoint Governance** — The same enforcement pipeline applied to REST APIs, webhook receivers, and internal microservices. One policy file governs all three transports (WebSocket, HTTP, gRPC).
+
+```bash
+# Single command deployment
+castellan openclaw policy.json --gateway ws://localhost:18789 --listen-port 18790
+
+# With skill scanning
+castellan openclaw policy.json --scan ./skills/ --serve
+```
+
 <details>
 <summary><strong>Full CLI reference (87 commands)</strong></summary>
 
@@ -291,6 +322,7 @@ WebSocket-based real-time dashboard showing governance events — gate evaluatio
 | `castellan autopilot` | Governance autopilot diagnostics |
 | `castellan verify` | Crypto provenance verification |
 | `castellan sign` | HMAC-SHA256 spec signing |
+| `castellan openclaw` | OpenClaw governance proxy + skill scanner |
 | `castellan watchtower` | Fleet telemetry server |
 | `castellan sentinel` | Recovery controller |
 | `castellan fleet` | Fleet governance dashboard |
