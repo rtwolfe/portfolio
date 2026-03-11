@@ -2,7 +2,7 @@
 
 # Tim Wolfe
 
-### AI Infrastructure Architect
+### AI Infrastructure Architect | Agentic Systems Design | Agent Governance · Autonomous SDLC | 2 IPOs, 5 Acquisitions
 
 <br>
 
