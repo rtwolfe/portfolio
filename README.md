@@ -4,26 +4,38 @@
 
 ### AI Infrastructure Architect
 
-Agent Governance  ·  Autonomous SDLC  ·  LLM Platform Engineering
+<br>
 
-Los Altos, CA · [rtwolfe@gmail.com](mailto:rtwolfe@gmail.com) · 650-390-5003 · [LinkedIn](https://linkedin.com/in/timwolfe) · [Telegram](https://t.me/timwolfe)
+**I build the compilers, auditors, and monitoring systems that make AI agents safe to deploy.**
+
+<br>
+
+![Source](https://img.shields.io/badge/301%2C000%2B-Source_Lines-2563EB?style=for-the-badge)
+![Tests](https://img.shields.io/badge/20%2C800%2B-Tests_Passing-16A34A?style=for-the-badge)
+![Systems](https://img.shields.io/badge/12-Production_Systems-7C3AED?style=for-the-badge)
+![Standards](https://img.shields.io/badge/11-Compliance_Standards-DC2626?style=for-the-badge)
 
 <br>
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-React%20%2B%20Next.js-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![Source](https://img.shields.io/badge/Source-294%2C000%2B_lines-blue?style=flat-square)
-![Tests](https://img.shields.io/badge/Tests-18%2C300%2B_passing-brightgreen?style=flat-square)
-![Systems](https://img.shields.io/badge/Production_Systems-11-purple?style=flat-square)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js_16-000000?style=flat-square&logo=next.js&logoColor=white)
 ![License](https://img.shields.io/badge/License-Proprietary-orange?style=flat-square)
 
+<br>
+
+Los Altos, CA · [rtwolfe@gmail.com](mailto:rtwolfe@gmail.com) · 650-390-5003 · [LinkedIn](https://linkedin.com/in/timwolfe) · [Telegram](https://t.me/timwolfe)
+
 </div>
+
+<br>
 
 ---
 
 ## About
 
-I build **governance infrastructure for AI agents** — the compilers, scanners, auditors, command channels, and monitoring portals that make autonomous agents safe to deploy in production. Not wrappers. Not demos. Not prompt templates. **Six interconnected governance systems and five supporting tools** that close the loop from raw idea to deployed, governed, monitored agent fleet.
+I build **governance infrastructure for AI agents** — the compilers, scanners, auditors, command channels, and monitoring portals that make autonomous agents safe to deploy in production. Not wrappers. Not demos. Not prompt templates. **Six interconnected governance systems and six supporting tools** that close the loop from raw idea to deployed, governed, monitored agent fleet.
 
 **Governance is the core problem.** Every team shipping AI agents hits the same wall: the prototype works, but production demands governance — constitutional constraints, runtime guardrails, OWASP security auditing, compliance drift detection, kill switches, audit trails. Most frameworks hand you a runtime and leave governance as an exercise for the reader. I built a platform that makes governance structural. It's enforced at compile time. It travels with the deployed agent. It's monitored in real time. It's not optional.
 
@@ -43,6 +55,7 @@ I build **governance infrastructure for AI agents** — the compilers, scanners,
 - **Designer-SDD** — specification compiler. Raw ideas to scored, validated, build-ready spec packages. Every tool in this platform was built from a Designer-SDD spec
 - **Axle** — API compiler. Single YAML spec to FastAPI server, OpenAPI 3.1, MCP tools, MCP server, and pytest suite
 - **Dissector** — domain agent opportunity mapper. Analyzes any business domain and produces prioritized, build-ready AI agent opportunity blueprints
+- **ClaudeMD** — CLAUDE.md quality compiler. Treats CLAUDE.md files as engineered artifacts with 15 validation rules, quality grading across 5 weighted dimensions, automated fixes, and full ecosystem audit
 
 Every system is standalone. Together they automate the full lifecycle for AI agents — from rapid prototyping through governed deployment to real-time fleet monitoring. The platform is self-hosting: these are the same tools I use to deliver for enterprise clients across finance, healthcare, and ecommerce.
 
@@ -52,15 +65,27 @@ Before AI infrastructure: 20+ years of enterprise operations leadership — two 
 
 <div align="center">
 
-### The Agent Governance Platform
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    AGENT GOVERNANCE PLATFORM                    │
+│                                                                 │
+│   COMPILE        AUDIT         COMMUNICATE    SCAN     MONITOR  │
+│   Castellan      Aegis         Herald         Recon    Vigil    │
+│                  Arbiter                                        │
+├─────────────────────────────────────────────────────────────────┤
+│                       SUPPORTING TOOLS                          │
+│                                                                 │
+│   DESIGN         BUILD         VALIDATE       ANALYZE  LINT     │
+│   Designer-SDD   Charlotte     Stratum        Dissect  ClaudeMD │
+│                  Axle                                           │
+└─────────────────────────────────────────────────────────────────┘
+```
 
-[Castellan — Agentic Compiler](#1-castellan--agentic-compiler) · [Aegis — Security Audit](#2-aegis--pre-deployment-security-audit) · [Arbiter — Governance Auditor](#3-arbiter--batch-governance-auditor) · [Herald — Command Channel](#4-herald--authenticated-command-channel) · [Recon — Governance Scanner](#5-recon--governance-reverse-engineering) · [Vigil — Fleet Dashboard](#6-vigil--fleet-governance-dashboard)
+<br>
 
-### The Tools
+**The Platform** &nbsp;&nbsp; [Castellan](#1-castellan--agentic-compiler) · [Aegis](#2-aegis--pre-deployment-security-audit) · [Arbiter](#3-arbiter--batch-governance-auditor) · [Herald](#4-herald--authenticated-command-channel) · [Recon](#5-recon--governance-reverse-engineering) · [Vigil](#6-vigil--fleet-governance-dashboard)
 
-[Charlotte — Prompt Compiler](#7-charlotte--prompt-skill--mcp-compiler) · [Stratum — QA Compiler](#8-stratum--qa-compiler) · [Designer-SDD — Specification Compiler](#9-designer-sdd--specification-compiler) · [Axle — API Compiler](#10-axle--api-compiler) · [Dissector — Domain Opportunity Mapper](#11-dissector--domain-agent-opportunity-mapper)
-
----
+**The Tools** &nbsp;&nbsp; [Charlotte](#7-charlotte--prompt-skill--mcp-compiler) · [Stratum](#8-stratum--qa-compiler) · [Designer-SDD](#9-designer-sdd--specification-compiler) · [Axle](#10-axle--api-compiler) · [Dissector](#11-dissector--domain-agent-opportunity-mapper) · [ClaudeMD](#12-claudemd--claudemd-quality-compiler)
 
 [How They Connect](#how-they-connect) · [Platform Totals](#platform-totals)
 
@@ -74,7 +99,7 @@ AI agents have a governance problem. And a compilation problem. And an SDLC prob
 
 Code gets compiled. Databases get migrated. Infrastructure gets provisioned through declarative configs with validation and version control. But AI agents — the specs they're built from, the prompts they use, the tests that prove they work, the governance that keeps them safe — are still assembled by hand, shipped on instinct, and debugged in production. There's no compiler. No governance enforcement. No automated SDLC. No way to prove an agent won't go off-script next week.
 
-I built six governance systems and five supporting tools to fix that. The governance platform handles the full agent lifecycle — compilation, security audit, batch compliance scanning, fleet communication, governance reverse-engineering, and real-time monitoring. The tools automate the SDLC phases that feed into it:
+I built six governance systems and six supporting tools to fix that. The governance platform handles the full agent lifecycle — compilation, security audit, batch compliance scanning, fleet communication, governance reverse-engineering, and real-time monitoring. The tools automate the SDLC phases that feed into it:
 
 - **Agentic compilation + governance** — Castellan compiles YAML specs into production-ready governed agents with constitutional governance, runtime guardrails, OWASP security auditing, and multi-target deployment. Governance is structural — enforced at compile time, embedded in the deployed agent, monitored in production
 - **Pre-deployment security** — Aegis runs three parallel audit layers (prompt, behavior, code), cross-layer analysis, and maps findings to OWASP Top 10 for Agentic Applications. Verdict: SHIP / CONDITIONAL / BLOCK with CI gate support
@@ -87,6 +112,7 @@ I built six governance systems and five supporting tools to fix that. The govern
 - **Rapid prototyping** — Designer-SDD compiles unstructured ideas into scored, validated, build-ready specification packages
 - **API compilation** — Axle compiles a single YAML spec into six production-ready artifacts
 - **Domain analysis** — Dissector maps AI agent opportunities across any business domain with prioritized, build-ready blueprints
+- **Instruction validation** — ClaudeMD compiles and validates CLAUDE.md instruction files with quality scoring, automated fixes, and ecosystem audit
 
 Every system is standalone. Together they automate the full lifecycle from unstructured idea to deployed, tested, governed, monitored agent fleet. The platform is self-hosting — Designer-SDD specs defined every tool, Charlotte compiled the prompts, Stratum validates the code, Castellan compiles the agents, Aegis audits them, Arbiter scores compliance, Herald delivers commands, and Vigil watches them run.
 
@@ -98,7 +124,10 @@ Every system is standalone. Together they automate the full lifecycle from unstr
 
 # The Agent Governance Platform
 
-*Six systems. Compile, audit, scan, communicate, reverse-engineer, monitor.*
+*Six systems. One closed loop. Compile, audit, scan, communicate, reverse-engineer, monitor.*
+
+![Platform Lines](https://img.shields.io/badge/187%2C624-Source_Lines-2563EB?style=flat-square)
+![Platform Tests](https://img.shields.io/badge/10%2C674-Tests_Passing-16A34A?style=flat-square)
 
 </div>
 
@@ -276,9 +305,11 @@ WebSocket-based real-time dashboard showing governance events — gate evaluatio
 
 </details>
 
-```
-87 commands · 449 modules · 101,007 lines · 6,704 tests, all passing
-```
+<div align="center">
+
+`87 commands` · `449 modules` · `101,007 lines` · `6,712 tests, all passing`
+
+</div>
 
 <br>
 
@@ -327,9 +358,11 @@ Findings mapped to: EU AI Act, NIST AI RMF, ISO 42001, CoSAI, NIST 800-53.
 
 Automatically detects and adapts to LangChain, CrewAI, OpenAI Agents SDK, with generic fallback for any Python/TypeScript/Java/Go agent.
 
-```
-10 commands · 103 modules · 19,598 lines · 675 tests, all passing
-```
+<div align="center">
+
+`10 commands` · `103 modules` · `19,688 lines` · `728 tests, all passing`
+
+</div>
 
 <br>
 
@@ -372,9 +405,11 @@ Arbiter is a **batch agent governance auditing service** that scans folders of A
 - **Per-artifact output** — Markdown + JSON audit report per artifact, plus batch summary
 - **Severity is never softened** — CRITICAL stays CRITICAL
 
-```
-CLI · 17 modules · 2,245 lines · 84 tests, all passing
-```
+<div align="center">
+
+`CLI` · `17 modules` · `2,679 lines` · `84 tests, all passing`
+
+</div>
 
 <br>
 
@@ -419,9 +454,11 @@ Policy-enforcing proxy for MCP tool access governance. OAuth 2.1 + DPoP (Demonst
 
 HMAC-SHA256 signing over canonical JSON. Constant-time comparison prevents timing attacks. Message expiry prevents replay. Constitutional bounds prevent governance override. Multi-tenant isolation with tenant-scoped signatures.
 
-```
-Library · 34 modules · 3,596 lines · 219 tests, all passing
-```
+<div align="center">
+
+`Library` · `34 modules` · `3,596 lines` · `260 tests, all passing`
+
+</div>
 
 <br>
 
@@ -471,9 +508,11 @@ Call graph analysis, data flow analysis with SSA, taint analysis, code topology,
 
 Reconstructed agent.yaml with confidence annotations, compliance manifests and scorecards (28+ files per scan), AI SBOM (Software Bill of Materials), professional governance reports, audit checklists, SARIF format support, and Castellan Intake Bridge for streamlined onboarding.
 
-```
-CLI · 174 modules · 43,195 lines · 2,604 tests, all passing
-```
+<div align="center">
+
+`CLI` · `174 modules` · `45,022 lines` · `2,705 tests, all passing`
+
+</div>
 
 <br>
 
@@ -519,9 +558,11 @@ Every data path is tenant-scoped. WebSocket connections subscribe only to their 
 
 Fleet-wide broadcast messaging through Herald command channel. Operators issue queries, config updates, broadcasts, and recalls to the entire fleet or targeted agents — all through the Vigil dashboard.
 
-```
-69 endpoints · 131 modules · 15,214 lines (7,903 Python + 7,311 TypeScript) · 185 tests, all passing
-```
+<div align="center">
+
+`69 endpoints` · `131 modules` · `15,632 lines (8,308 Python + 7,324 TypeScript)` · `185 tests, all passing`
+
+</div>
 
 <br>
 
@@ -533,7 +574,10 @@ Fleet-wide broadcast messaging through Herald command channel. Operators issue q
 
 # The Tools
 
-*Five tools. Compile prompts, compile tests, compile specs, compile APIs, map opportunities.*
+*Six tools. Compile prompts, compile tests, compile specs, compile APIs, map opportunities, validate instructions.*
+
+![Tools Lines](https://img.shields.io/badge/113%2C335-Source_Lines-2563EB?style=flat-square)
+![Tools Tests](https://img.shields.io/badge/10%2C170-Tests_Passing-16A34A?style=flat-square)
 
 </div>
 
@@ -630,9 +674,11 @@ Text, JSON, YAML, API payload, MCP definition, LangChain template, HTML report, 
 
 </details>
 
-```
-45 commands · 104 modules · 23,191 lines · 2,705 tests, all passing
-```
+<div align="center">
+
+`45 commands` · `104 modules` · `25,221 lines` · `3,592 tests, all passing`
+
+</div>
 
 <br>
 
@@ -750,9 +796,11 @@ Eight independent modules, each with its own verdict. All eight must pass for a 
 
 </details>
 
-```
-34 commands · 313 modules · 73,793 lines · 4,386 tests, all passing
-```
+<div align="center">
+
+`34 commands` · `313 modules` · `73,793 lines` · `4,436 tests, all passing`
+
+</div>
 
 <br>
 
@@ -823,9 +871,11 @@ After export, the compiler verifies that every requirement and every task in the
 
 </details>
 
-```
-17 commands · 49 modules · 8,258 lines · 677 tests, all passing
-```
+<div align="center">
+
+`17 commands` · `49 modules` · `8,258 lines` · `800 tests, all passing`
+
+</div>
 
 <br>
 
@@ -868,9 +918,11 @@ api.yaml ──> [ Parse ] ──> [ Flatten ] ──> [ Render ] ──> FastAP
 
 Auto-derives tool names from endpoints (e.g., `POST /payments/{id}` → `create_payments_by_id`). Semantic validation: `$ref` resolution, duplicate detection, HTTP status codes, tool name collisions. Structural validation: Pydantic enforces type/ref mutual exclusivity.
 
-```
-6 commands · 15 modules · 2,151 lines · 134 tests, all passing
-```
+<div align="center">
+
+`6 commands` · `15 modules` · `2,151 lines` · `1,252 tests, all passing`
+
+</div>
 
 <br>
 
@@ -904,9 +956,53 @@ The Dissector is a **domain agent opportunity mapper** that analyzes any organiz
 
 Two compiled implementations: a full agent-orchestrating system (10 blocks, 7,507 tokens) and a multi-phase skill version (6 blocks, 4,653 tokens). Both Charlotte-compiled with validated block composition.
 
-```
-Compiled prompt system · 1,993 lines
-```
+<div align="center">
+
+`Compiled prompt system` · `1,993 lines`
+
+</div>
+
+<br>
+
+---
+
+## 12. ClaudeMD — CLAUDE.md Quality Compiler
+
+**The instruction compiler. Treats CLAUDE.md files as engineered artifacts — validated, scored, and auto-improved before they govern a single token.**
+
+> The problem: CLAUDE.md files are the primary way developers configure Claude Code's behavior, but they're written by instinct and shipped on hope. Too many instructions degrade performance — research shows a ~150 instruction limit before quality drops. Critical rules buried in the middle get lost to periphery bias. There's no validation, no quality measurement, no way to know if a CLAUDE.md is helping or hurting. Teams hand-write the instructions that govern their most powerful tools, with no compiler, no linter, and no test suite. Instruction files deserve the same rigor as the code they govern.
+
+ClaudeMD is a **CLAUDE.md quality compiler** — a CLI tool that applies research-backed best practices to validate, score, and improve Claude Code instruction files. It enforces the ~150 instruction limit, detects periphery bias issues, validates the WHAT/WHY/HOW framework from Anthropic's official guidance, and ensures progressive disclosure via skills and rules.
+
+### Validation Engine — 15 Rules
+
+Rule-based checking with rationale and fix suggestions for every issue. Severity levels: error, warning, info. Exit codes for CI integration (0 = clean, 1 = warnings, 2 = errors).
+
+### Quality Scoring — 5 Weighted Dimensions
+
+| Dimension | Weight | What It Measures |
+|:--|:--|:--|
+| **Conciseness** | 25% | Instruction count relative to ~150 limit, section density |
+| **Coverage** | 25% | Essential sections present: project context, coding standards, testing, error handling |
+| **Specificity** | 20% | Actionable instructions vs. vague guidance |
+| **Progressive Disclosure** | 15% | Proper use of skills, rules, and agents for overflow |
+| **Anti-patterns** | 15% | Absence of known failure modes: linter rules, overly verbose instructions |
+
+Grades: A (90–100), B (80–89), C (70–79), D (60–69), F (<60).
+
+### Automated Improvement
+
+Auto-fix with unified diff output: removes linter-territory rules, deduplicates instructions, adds trailing newlines, reorders sections. Write mode applies changes with `.bak` backup.
+
+### Ecosystem Audit
+
+Full scan across the Claude Code instruction ecosystem: CLAUDE.md, `.claude/rules/`, agents, skills, and `.mcp.json`. Detects orphaned rules, missing configuration, and ecosystem-level issues.
+
+<div align="center">
+
+`5 commands` · `1,919 lines` · `90 tests, all passing`
+
+</div>
 
 <br>
 
@@ -941,8 +1037,8 @@ Compiled prompt system · 1,993 lines
   │   Designer-SDD ──────> Charlotte ─────────> Stratum                 │
   │   (Spec Compiler)      (Prompt Compiler)    (QA Compiler)           │
   │                                                                      │
-  │   Axle                 Dissector                                     │
-  │   (API Compiler)       (Opportunity Mapper)                         │
+  │   Axle                 Dissector              ClaudeMD                │
+  │   (API Compiler)       (Opportunity Mapper)   (CLAUDE.md Compiler)  │
   │                                                                      │
   └──────────────────────────────────────────────────────────────────────┘
 
@@ -957,12 +1053,13 @@ Compiled prompt system · 1,993 lines
   Recon              → reverse-engineers governance from existing agents
   Vigil              → monitors everything in production
   Dissector          → maps where to build agents next
+  ClaudeMD           → validates and improves CLAUDE.md instruction files
 ```
 
 ### The Governance Loop
 
 1. **Design** — Designer-SDD compiles the spec. Dissector identifies the opportunities
-2. **Build** — Charlotte compiles the prompts. Castellan compiles the agent. Axle compiles the API
+2. **Build** — Charlotte compiles the prompts. Castellan compiles the agent. Axle compiles the API. ClaudeMD validates instruction files
 3. **Validate** — Stratum runs quality gates. Aegis audits security. Arbiter scores compliance
 4. **Deploy** — Herald establishes the command channel
 5. **Monitor** — Vigil tracks governance drift, fires alerts, enforces kill switches
@@ -976,51 +1073,92 @@ Every system is standalone. Together they close the loop.
 
 <div align="center">
 
+<br>
+
+![Total Lines](https://img.shields.io/badge/300%2C959-Total_Source_Lines-2563EB?style=for-the-badge)
+![Total Tests](https://img.shields.io/badge/20%2C844-Tests_Passing-16A34A?style=for-the-badge)
+![Total Systems](https://img.shields.io/badge/12-Production_Systems-7C3AED?style=for-the-badge)
+
+<br>
+
 ### Agent Governance Platform
 
 | | Castellan | Aegis | Arbiter | Herald | Recon | Vigil | **Subtotal** |
 |:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **Source Lines** | 101,007 | 19,598 | 2,245 | 3,596 | 43,195 | 15,214 | **184,855** |
+| **Source Lines** | 101,007 | 19,688 | 2,679 | 3,596 | 45,022 | 15,632 | **187,624** |
 | **Modules** | 449 | 103 | 17 | 34 | 174 | 131 | **908** |
-| **Tests** | 6,704 | 675 | 84 | 219 | 2,604 | 185 | **10,471** |
+| **Tests** | 6,712 | 728 | 84 | 260 | 2,705 | 185 | **10,674** |
 
 ### Tools
 
-| | Charlotte | Stratum | Designer-SDD | Axle | Dissector | **Subtotal** |
-|:--|:--:|:--:|:--:|:--:|:--:|:--:|
-| **Source Lines** | 23,191 | 73,793 | 8,258 | 2,151 | 1,993 | **109,386** |
-| **Modules** | 104 | 313 | 49 | 15 | — | **481** |
-| **Tests** | 2,705 | 4,386 | 677 | 134 | — | **7,902** |
+| | Charlotte | Stratum | Designer-SDD | Axle | Dissector | ClaudeMD | **Subtotal** |
+|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **Source Lines** | 25,221 | 73,793 | 8,258 | 2,151 | 1,993 | 1,919 | **113,335** |
+| **Modules** | 104 | 313 | 49 | 15 | — | — | **481** |
+| **Tests** | 3,592 | 4,436 | 800 | 1,252 | — | 90 | **10,170** |
 
 ### Combined
 
 | Metric | Value |
 |:--|:--|
-| **Total Systems** | 11 |
-| **Total Source Lines** | 294,241 |
-| **Total Modules** | 1,389 |
-| **Total Tests (passing)** | 18,373 |
-
-</div>
+| **Total Systems** | **12** |
+| **Total Source Lines** | **300,959** |
+| **Total Modules** | **1,389** |
+| **Total Tests (passing)** | **20,844** |
+| **Compliance Standards** | **11** (EU AI Act, NIST AI RMF, GDPR, HIPAA, PCI-DSS, SOC 2, ISO 42001, ISO 27001, FZ-152, OWASP, CoSAI) |
 
 <br>
 
-<div align="center">
+**Stack**
 
-**Stack:** Python 3.10+ · TypeScript · React 19 · Next.js 16 · Claude API · OpenAI API · Google Gemini API · Pydantic v2 · SQLAlchemy 2.0 · FastAPI · tree-sitter · Typer · Click · Rich · Jinja2 · asyncio · httpx · tiktoken · OpenTelemetry · Prometheus · Clerk · WebSockets · YAML/JSON · Tailwind CSS · shadcn/ui · Recharts · SWR
+![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)
+![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=next.js&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-v2-E92063?style=flat-square&logo=pydantic&logoColor=white)
+![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0-D71F00?style=flat-square)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
+
+![Claude](https://img.shields.io/badge/Claude_API-D4A574?style=flat-square&logo=anthropic&logoColor=black)
+![OpenAI](https://img.shields.io/badge/OpenAI_API-412991?style=flat-square&logo=openai&logoColor=white)
+![Gemini](https://img.shields.io/badge/Gemini_API-4285F4?style=flat-square&logo=google&logoColor=white)
+![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-000000?style=flat-square&logo=opentelemetry&logoColor=white)
+![WebSocket](https://img.shields.io/badge/WebSocket-010101?style=flat-square)
+![tree--sitter](https://img.shields.io/badge/tree--sitter-6_languages-yellow?style=flat-square)
 
 </div>
 
 ---
 
+<br>
+
 <div align="center">
 
 ## Let's Talk
 
-I take on AI-first contract engagements: **agent governance platforms**, **agentic compilation**, **SDLC automation**, **rapid prototyping** from spec to production, pre-deployment security auditing, batch compliance scanning, fleet governance monitoring, prompt and skill compilation, test generation pipelines, quality gate systems, OWASP security auditing, and governance reverse-engineering. If your team is shipping production agents and needs them governed, compiled, tested, and monitored — not hand-assembled and hoped for — I built the platform that makes that possible.
+</div>
+
+If your team is shipping production AI agents and needs them **governed, compiled, tested, and monitored** — not hand-assembled and hoped for — I built the platform that makes that possible.
+
+I take on AI-first contract engagements:
+
+> **Agent governance platforms** · **Agentic compilation** · **SDLC automation** · **Rapid prototyping** from spec to production · Pre-deployment security auditing · Batch compliance scanning · Fleet governance monitoring · Prompt and skill compilation · Test generation pipelines · Quality gate systems · OWASP security auditing · Governance reverse-engineering
+
+<div align="center">
+
+<br>
 
 **Tim Wolfe** · Los Altos, CA
 
 [rtwolfe@gmail.com](mailto:rtwolfe@gmail.com) · 650-390-5003 · [LinkedIn](https://linkedin.com/in/timwolfe) · [Telegram](https://t.me/timwolfe)
+
+<br>
+
+*20+ years enterprise ops · 2 IPOs · 4 acquisitions · Salesforce · IBM · Oracle · iHeartMedia*
+
+<br>
 
 </div>
