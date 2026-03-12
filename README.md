@@ -2,7 +2,7 @@
 
 # Tim Wolfe
 
-### AI Infrastructure Architect | Context Engineering | Agent Governance | Agentic Systems | Autonomous SDLC
+### AI Infrastructure Architect
 
 <br>
 
@@ -10,8 +10,8 @@
 
 <br>
 
-![Source](https://img.shields.io/badge/301%2C000%2B-Source_Lines-2563EB?style=for-the-badge)
-![Tests](https://img.shields.io/badge/20%2C800%2B-Tests_Passing-16A34A?style=for-the-badge)
+![Source](https://img.shields.io/badge/300%2C000%2B-Source_Lines-2563EB?style=for-the-badge)
+![Tests](https://img.shields.io/badge/19%2C100%2B-Tests_Passing-16A34A?style=for-the-badge)
 ![Systems](https://img.shields.io/badge/12-Production_Systems-7C3AED?style=for-the-badge)
 ![Standards](https://img.shields.io/badge/11-Compliance_Standards-DC2626?style=for-the-badge)
 
@@ -126,8 +126,8 @@ Every system is standalone. Together they automate the full lifecycle from unstr
 
 *Six systems. One closed loop. Compile, audit, scan, communicate, reverse-engineer, monitor.*
 
-![Platform Lines](https://img.shields.io/badge/187%2C624-Source_Lines-2563EB?style=flat-square)
-![Platform Tests](https://img.shields.io/badge/10%2C674-Tests_Passing-16A34A?style=flat-square)
+![Platform Lines](https://img.shields.io/badge/189%2C355-Source_Lines-2563EB?style=flat-square)
+![Platform Tests](https://img.shields.io/badge/10%2C852-Tests_Passing-16A34A?style=flat-square)
 
 </div>
 
@@ -339,7 +339,7 @@ castellan openclaw policy.json --scan ./skills/ --serve
 
 <div align="center">
 
-`87 commands` · `449 modules` · `101,007 lines` · `6,712 tests, all passing`
+`87 commands` · `439 modules` · `103,194 lines` · `6,940 tests, all passing`
 
 </div>
 
@@ -392,7 +392,7 @@ Automatically detects and adapts to LangChain, CrewAI, OpenAI Agents SDK, with g
 
 <div align="center">
 
-`10 commands` · `103 modules` · `19,688 lines` · `728 tests, all passing`
+`10 commands` · `103 modules` · `20,017 lines` · `675 tests, all passing`
 
 </div>
 
@@ -439,7 +439,7 @@ Arbiter is a **batch agent governance auditing service** that scans folders of A
 
 <div align="center">
 
-`CLI` · `17 modules` · `2,679 lines` · `84 tests, all passing`
+`CLI` · `18 modules` · `2,679 lines` · `100 tests, all passing`
 
 </div>
 
@@ -488,7 +488,7 @@ HMAC-SHA256 signing over canonical JSON. Constant-time comparison prevents timin
 
 <div align="center">
 
-`Library` · `34 modules` · `3,596 lines` · `260 tests, all passing`
+`Library` · `34 modules` · `3,596 lines` · `219 tests, all passing`
 
 </div>
 
@@ -542,7 +542,7 @@ Reconstructed agent.yaml with confidence annotations, compliance manifests and s
 
 <div align="center">
 
-`CLI` · `174 modules` · `45,022 lines` · `2,705 tests, all passing`
+`CLI` · `172 modules` · `44,642 lines` · `2,733 tests, all passing`
 
 </div>
 
@@ -592,7 +592,7 @@ Fleet-wide broadcast messaging through Herald command channel. Operators issue q
 
 <div align="center">
 
-`69 endpoints` · `131 modules` · `15,632 lines (8,308 Python + 7,324 TypeScript)` · `185 tests, all passing`
+`69 endpoints` · `138 modules` · `15,227 lines (7,903 Python + 7,324 TypeScript)` · `185 tests, all passing`
 
 </div>
 
@@ -608,8 +608,8 @@ Fleet-wide broadcast messaging through Herald command channel. Operators issue q
 
 *Six tools. Compile prompts, compile tests, compile specs, compile APIs, map opportunities, validate instructions.*
 
-![Tools Lines](https://img.shields.io/badge/113%2C335-Source_Lines-2563EB?style=flat-square)
-![Tools Tests](https://img.shields.io/badge/10%2C170-Tests_Passing-16A34A?style=flat-square)
+![Tools Lines](https://img.shields.io/badge/111%2C576-Source_Lines-2563EB?style=flat-square)
+![Tools Tests](https://img.shields.io/badge/8%2C282-Tests_Passing-16A34A?style=flat-square)
 
 </div>
 
@@ -708,7 +708,7 @@ Text, JSON, YAML, API payload, MCP definition, LangChain template, HTML report, 
 
 <div align="center">
 
-`45 commands` · `104 modules` · `25,221 lines` · `3,592 tests, all passing`
+`45 commands` · `98 modules` · `24,889 lines` · `3,043 tests, all passing`
 
 </div>
 
@@ -830,7 +830,7 @@ Eight independent modules, each with its own verdict. All eight must pass for a 
 
 <div align="center">
 
-`34 commands` · `313 modules` · `73,793 lines` · `4,436 tests, all passing`
+`34 commands` · `311 modules` · `73,508 lines` · `4,322 tests, all passing`
 
 </div>
 
@@ -905,7 +905,7 @@ After export, the compiler verifies that every requirement and every task in the
 
 <div align="center">
 
-`17 commands` · `49 modules` · `8,258 lines` · `800 tests, all passing`
+`17 commands` · `49 modules` · `8,258 lines` · `693 tests, all passing`
 
 </div>
 
@@ -952,7 +952,7 @@ Auto-derives tool names from endpoints (e.g., `POST /payments/{id}` → `create_
 
 <div align="center">
 
-`6 commands` · `15 modules` · `2,151 lines` · `1,252 tests, all passing`
+`6 commands` · `15 modules` · `2,151 lines` · `134 tests, all passing`
 
 </div>
 
@@ -990,7 +990,7 @@ Two compiled implementations: a full agent-orchestrating system (10 blocks, 7,50
 
 <div align="center">
 
-`Compiled prompt system` · `1,993 lines`
+`Compiled prompt system` · `1,626 lines`
 
 </div>
 
@@ -1032,7 +1032,7 @@ Full scan across the Claude Code instruction ecosystem: CLAUDE.md, `.claude/rule
 
 <div align="center">
 
-`5 commands` · `1,919 lines` · `90 tests, all passing`
+`5 commands` · `1,144 lines` · `90 tests, all passing`
 
 </div>
 
@@ -1107,8 +1107,8 @@ Every system is standalone. Together they close the loop.
 
 <br>
 
-![Total Lines](https://img.shields.io/badge/300%2C959-Total_Source_Lines-2563EB?style=for-the-badge)
-![Total Tests](https://img.shields.io/badge/20%2C844-Tests_Passing-16A34A?style=for-the-badge)
+![Total Lines](https://img.shields.io/badge/300%2C931-Total_Source_Lines-2563EB?style=for-the-badge)
+![Total Tests](https://img.shields.io/badge/19%2C134-Tests_Passing-16A34A?style=for-the-badge)
 ![Total Systems](https://img.shields.io/badge/12-Production_Systems-7C3AED?style=for-the-badge)
 
 <br>
@@ -1117,26 +1117,26 @@ Every system is standalone. Together they close the loop.
 
 | | Castellan | Aegis | Arbiter | Herald | Recon | Vigil | **Subtotal** |
 |:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **Source Lines** | 101,007 | 19,688 | 2,679 | 3,596 | 45,022 | 15,632 | **187,624** |
-| **Modules** | 449 | 103 | 17 | 34 | 174 | 131 | **908** |
-| **Tests** | 6,712 | 728 | 84 | 260 | 2,705 | 185 | **10,674** |
+| **Source Lines** | 103,194 | 20,017 | 2,679 | 3,596 | 44,642 | 15,227 | **189,355** |
+| **Modules** | 439 | 103 | 18 | 34 | 172 | 138 | **904** |
+| **Tests** | 6,940 | 675 | 100 | 219 | 2,733 | 185 | **10,852** |
 
 ### Tools
 
 | | Charlotte | Stratum | Designer-SDD | Axle | Dissector | ClaudeMD | **Subtotal** |
 |:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **Source Lines** | 25,221 | 73,793 | 8,258 | 2,151 | 1,993 | 1,919 | **113,335** |
-| **Modules** | 104 | 313 | 49 | 15 | — | — | **481** |
-| **Tests** | 3,592 | 4,436 | 800 | 1,252 | — | 90 | **10,170** |
+| **Source Lines** | 24,889 | 73,508 | 8,258 | 2,151 | 1,626 | 1,144 | **111,576** |
+| **Modules** | 98 | 311 | 49 | 15 | — | 20 | **493** |
+| **Tests** | 3,043 | 4,322 | 693 | 134 | — | 90 | **8,282** |
 
 ### Combined
 
 | Metric | Value |
 |:--|:--|
 | **Total Systems** | **12** |
-| **Total Source Lines** | **300,959** |
-| **Total Modules** | **1,389** |
-| **Total Tests (passing)** | **20,844** |
+| **Total Source Lines** | **300,931** |
+| **Total Modules** | **1,397** |
+| **Total Tests (passing)** | **19,134** |
 | **Compliance Standards** | **11** (EU AI Act, NIST AI RMF, GDPR, HIPAA, PCI-DSS, SOC 2, ISO 42001, ISO 27001, FZ-152, OWASP, CoSAI) |
 
 <br>
