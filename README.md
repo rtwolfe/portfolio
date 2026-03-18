@@ -2,7 +2,7 @@
 
 # Tim Wolfe
 
-### AI Infrastructure Architect | Context Engineering | Agent Governance | Agentic Systems | Autonomous SDLC
+### AI Infrastructure Architect
 
 <br>
 
@@ -10,14 +10,15 @@
 
 <br>
 
-![Source](https://img.shields.io/badge/315%2C000%2B-Source_Lines-2563EB?style=for-the-badge)
-![Tests](https://img.shields.io/badge/19%2C000%2B-Tests_Passing-16A34A?style=for-the-badge)
-![Systems](https://img.shields.io/badge/14-Production_Systems-7C3AED?style=for-the-badge)
-![Standards](https://img.shields.io/badge/11-Compliance_Standards-DC2626?style=for-the-badge)
+![Source](https://img.shields.io/badge/365%2C000%2B-Source_Lines-2563EB?style=for-the-badge)
+![Tests](https://img.shields.io/badge/19%2C400%2B-Tests_Passing-16A34A?style=for-the-badge)
+![Systems](https://img.shields.io/badge/16-Production_Systems-7C3AED?style=for-the-badge)
+![Standards](https://img.shields.io/badge/16%2B-Compliance_Standards-DC2626?style=for-the-badge)
 
 <br>
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-2021-DEA584?style=flat-square&logo=rust&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-React%20%2B%20Next.js-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![Next.js](https://img.shields.io/badge/Next.js_16-000000?style=flat-square&logo=next.js&logoColor=white)
@@ -35,31 +36,35 @@ Los Altos, CA · [rtwolfe@gmail.com](mailto:rtwolfe@gmail.com) · 650-390-5003 �
 
 ## About
 
-I build **governance infrastructure for AI agents** — the compilers, scanners, auditors, command channels, and monitoring portals that make autonomous agents safe to deploy in production. Not wrappers. Not demos. Not prompt templates. **Six interconnected governance systems and eight supporting tools** that close the loop from raw idea to deployed, governed, monitored agent fleet.
+I build **governance infrastructure for AI agents** — the compilers, scanners, auditors, command channels, and monitoring portals that make autonomous agents safe to deploy in production. Not wrappers. Not demos. Not prompt templates. **Seven interconnected governance systems and nine automation tools** that close the loop from raw idea to deployed, governed, monitored agent fleet.
 
 **Governance is the core problem.** Every team shipping AI agents hits the same wall: the prototype works, but production demands governance — constitutional constraints, runtime guardrails, OWASP security auditing, compliance drift detection, kill switches, audit trails. Most frameworks hand you a runtime and leave governance as an exercise for the reader. I built a platform that makes governance structural. It's enforced at compile time. It travels with the deployed agent. It's monitored in real time. It's not optional.
 
-**The Agent Governance Platform:**
+**Compliance runs deep.** Three systems in this platform — Castellan, Seneschal, and Charlotte — carry full regulatory compliance coverage: **EU AI Act** risk classification, **HIPAA** safeguard mapping, **PCI-DSS v4.0** goal compliance, **SOC 2 Type II** evidence generation, **NIST 800-53** federal security controls, **NIST AI RMF** and **NIST CSF 2.0 (CAISI)**, **FedRAMP**, **FIPS 140-3** cryptography, **DoD STIG** checklist export with CAT I–III severity, **ISO 42001/27001**, **GDPR Article 22**, **OWASP Top 10**, and **CoSAI** threat modeling. Seneschal enforces it all on-premises in Rust with SPIFFE identity, mTLS, and air-gapped operation for classified environments up to TS/SCI.
 
-- **Castellan** — the agentic compiler. YAML spec in, governed production agent out. Constitutional governance, runtime guardrails, OWASP audit, multi-target deployment, OpenClaw governance proxy with skill supply chain scanning. Governance is structural, not aspirational
-- **Aegis** — pre-deployment security audit. Three parallel audit layers (prompt, behavior, code), cross-layer analysis, OWASP Top 10 for Agentic Applications mapping, verdict: SHIP / CONDITIONAL / BLOCK
-- **Arbiter** — batch governance auditing. Scans folders of agent artifacts through a 3-stage pipeline (LLM extraction, deterministic rules scoring, narrative generation) and produces compliance reports across six audit layers
-- **Herald** — authenticated bidirectional command channel. HMAC-SHA256 signed envelopes between operator portals and agent fleets, with A2A governed communication, MCP gateway, and NHI identity management
+**The Castellan Agent & MCP Governance Platform:**
+
+- **Castellan** — the agentic compiler. YAML spec in, governed production agent out. Constitutional governance, runtime guardrails, OWASP audit, multi-target deployment, OpenClaw governance proxy with skill supply chain scanning. 27-module compliance engine covering 13+ regulatory frameworks. Governance is structural, not aspirational
+- **Seneschal** — on-premises runtime authority. Rust binary enforcing policy gates for all A2A and MCP communication. SPIFFE/SPIRE identity, FIPS 140-3 crypto, MLS RFC 9420 encrypted messaging, CDS classification governance (Unclassified through TS/SCI), 32-event attestation chains. Built for air-gapped and classified environments
+- **Charlotte** — prompt and MCP compiler. 94-block type system, 89 security patterns across 22 categories, 35+ DoD detection patterns, STIG checklist export, MCP DoD hardening, multi-provider rendering, MCP server generation. Full SDLC for prompt artifacts with defense-grade scanning
+- **Aegis** — pre-deployment security audit. Three parallel audit layers (prompt, behavior, code), cross-layer analysis, OWASP Top 10 for Agentic Applications mapping, compliance mapping to EU AI Act / NIST / ISO 42001 / CoSAI. Verdict: SHIP / CONDITIONAL / BLOCK
+- **Herald** — authenticated bidirectional command channel. HMAC-SHA256 signed envelopes between operator portals and agent fleets, with A2A governed communication, MCP gateway with OAuth 2.1 + DPoP, and NHI identity management
 - **Recon** — governance reverse-engineering. 3-stage pipeline that scans existing agent code (21 framework adapters) and reconstructs governance contracts with compliance assessments across 11 international standards
 - **Vigil** — fleet governance dashboard. Real-time health telemetry, governance drift detection, alert evaluation, kill switch, recertification cycles, cost tracking, immutable audit trails. The closed loop on every deployed agent
 
-**The Supporting Tools:**
+**Automation Tooling:**
 
-- **Charlotte** — prompt compiler. 94-block type system, security scanning, multi-provider rendering, MCP server generation, agent scaffold export. Full SDLC for prompt artifacts
 - **Stratum** — QA compiler. Architecture extraction, test generation, documentation, eight independent quality gates. SDLC automation for testing and quality assurance
 - **Designer-SDD** — specification compiler. Raw ideas to scored, validated, build-ready spec packages. Every tool in this platform was built from a Designer-SDD spec
-- **Axle** — API compiler. Single YAML spec to FastAPI server, OpenAPI 3.1, MCP tools, MCP server, and pytest suite
-- **Dissector** — domain agent opportunity mapper. Analyzes any business domain and produces prioritized, build-ready AI agent opportunity blueprints
-- **ClaudeMD** — CLAUDE.md quality compiler. Treats CLAUDE.md files as engineered artifacts with 15 validation rules, quality grading across 5 weighted dimensions, automated fixes, and full ecosystem audit
-- **Test Harness** — agent governance test harness. Charlotte-compiled orchestrating agent that validates agents against their Castellan governance contracts and A2A channel through Seneschal, with spec-derived assertions and Aegis-compatible output
+- **Gauntlet** — code adjudication system. 3-layer pipeline with 18 domain adjudicators, 21 Charlotte-compiled prompts, integrated OODA loop for self-correction. Built to catch AI-generated code failures before production
+- **Citadel** — unified design intelligence platform. Compliance-aware front end for both compilers with 14 FastMCP tools, live codebase introspection, and compiler-ready spec generation. Governance profiles for FedRAMP, DoD IL4/IL5, HIPAA, SOC 2, PCI-DSS, EU AI Act, GDPR
+- **VC+** — capital intelligence system. Multi-agent pipeline with 6 MCP servers pulling live data from SEC EDGAR, Crunchbase, NewsAPI. Helps founders find VC, PE, growth equity, and M&A capital through pattern matching
+- **PRD+** — AI CPO PRD compiler. Charlotte-compiled 13-step workflow that normalizes any product input and compiles production-quality PRDs grounded in market reality
+- **Agent-Dissector** — domain agent opportunity mapper. Analyzes any business domain and produces prioritized, governance-ready AI agent opportunity blueprints with three-wave implementation roadmaps
+- **Agent-Test-Harness** — agent governance test harness. Charlotte-compiled orchestrating agent that validates agents against their Castellan governance contracts and A2A channel through Seneschal, with spec-derived assertions and Aegis-compatible output
 - **Passport** — agent passport generator. Charlotte-compiled multi-phase system that reads any AI agent artifact and produces structured Agent Passports — self-contained HTML documents documenting agent identity, configuration, capabilities, and governance gaps
 
-Every system is standalone. Together they automate the full lifecycle for AI agents — from rapid prototyping through governed deployment to real-time fleet monitoring. The platform is self-hosting: these are the same tools I use to deliver for enterprise clients across finance, healthcare, and ecommerce.
+Every system is standalone. Together they automate the full lifecycle for AI agents — from rapid prototyping through governed deployment to real-time fleet monitoring. The platform is self-hosting: these are the same tools I use to deliver for enterprise clients across finance, healthcare, and defense.
 
 Before AI infrastructure: 20+ years of enterprise operations leadership — two IPOs (**Quinstreet**, **Responsys**), four acquisitions (**IBM**/DemandTec, **EMC**/Syncplicity, **Oracle**/Responsys, **Netmarble**/Kabam), and senior technical roles at **Salesforce**, **iHeartMedia**, and **Axway**.
 
@@ -69,25 +74,28 @@ Before AI infrastructure: 20+ years of enterprise operations leadership — two 
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    AGENT GOVERNANCE PLATFORM                    │
+│              CASTELLAN AGENT & MCP GOVERNANCE PLATFORM           │
 │                                                                 │
-│   COMPILE        AUDIT         COMMUNICATE    SCAN     MONITOR  │
-│   Castellan      Aegis         Herald         Recon    Vigil    │
-│                  Arbiter                                        │
+│   COMPILE       ENFORCE      AUDIT       COMMUNICATE   MONITOR  │
+│   Castellan     Seneschal    Aegis       Herald        Vigil    │
+│   Charlotte                                                     │
+│                              SCAN                               │
+│                              Recon                              │
 ├─────────────────────────────────────────────────────────────────┤
-│                       SUPPORTING TOOLS                          │
+│                       AUTOMATION TOOLING                        │
 │                                                                 │
-│   DESIGN         BUILD         VALIDATE       ANALYZE  LINT     │
-│   Designer-SDD   Charlotte     Stratum        Dissect  ClaudeMD │
-│                  Axle          Test Harness   Passport           │
+│   QUALITY       DESIGN       INTELLIGENCE   VALIDATE            │
+│   Stratum       Designer-SDD VC+            Agent-Test-Harness  │
+│   Gauntlet      Citadel      PRD+           Passport            │
+│                              Dissector                          │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
 <br>
 
-**The Platform** &nbsp;&nbsp; [Castellan](#1-castellan--agentic-compiler) · [Aegis](#2-aegis--pre-deployment-security-audit) · [Arbiter](#3-arbiter--batch-governance-auditor) · [Herald](#4-herald--authenticated-command-channel) · [Recon](#5-recon--governance-reverse-engineering) · [Vigil](#6-vigil--fleet-governance-dashboard)
+**The Platform** &nbsp;&nbsp; [Castellan](#1-castellan--agentic-compiler) · [Seneschal](#2-seneschal--on-premises-governed-agent-infrastructure) · [Charlotte](#3-charlotte--prompt--mcp-compiler) · [Aegis](#4-aegis--pre-deployment-security-audit) · [Herald](#5-herald--authenticated-command-channel) · [Recon](#6-recon--governance-reverse-engineering) · [Vigil](#7-vigil--fleet-governance-dashboard)
 
-**The Tools** &nbsp;&nbsp; [Charlotte](#7-charlotte--prompt-skill--mcp-compiler) · [Stratum](#8-stratum--qa-compiler) · [Designer-SDD](#9-designer-sdd--specification-compiler) · [Axle](#10-axle--api-compiler) · [Dissector](#11-dissector--domain-agent-opportunity-mapper) · [ClaudeMD](#12-claudemd--claudemd-quality-compiler) · [Test Harness](#13-test-harness--agent-governance-test-harness) · [Passport](#14-passport--agent-passport-generator)
+**The Tools** &nbsp;&nbsp; [Stratum](#8-stratum--qa-compiler) · [Designer-SDD](#9-designer-sdd--specification-compiler) · [Gauntlet](#10-gauntlet--code-adjudication-system) · [Citadel](#11-citadel--unified-design-intelligence-platform) · [VC+](#12-vc--capital-intelligence-system) · [PRD+](#13-prd--ai-cpo-prd-compiler) · [Dissector](#14-agent-dissector--domain-agent-opportunity-mapper) · [Test Harness](#15-agent-test-harness--agent-governance-test-harness) · [Passport](#16-passport--agent-passport-generator)
 
 [How They Connect](#how-they-connect) · [Platform Totals](#platform-totals)
 
@@ -101,24 +109,26 @@ AI agents have a governance problem. And a compilation problem. And an SDLC prob
 
 Code gets compiled. Databases get migrated. Infrastructure gets provisioned through declarative configs with validation and version control. But AI agents — the specs they're built from, the prompts they use, the tests that prove they work, the governance that keeps them safe — are still assembled by hand, shipped on instinct, and debugged in production. There's no compiler. No governance enforcement. No automated SDLC. No way to prove an agent won't go off-script next week.
 
-I built six governance systems and eight supporting tools to fix that. The governance platform handles the full agent lifecycle — compilation, security audit, batch compliance scanning, fleet communication, governance reverse-engineering, and real-time monitoring. The tools automate the SDLC phases that feed into it:
+I built seven governance systems and nine automation tools to fix that. The governance platform handles the full agent lifecycle — compilation, on-premises enforcement, security audit, fleet communication, governance reverse-engineering, and real-time monitoring. The tools automate the SDLC phases that feed into it:
 
-- **Agentic compilation + governance** — Castellan compiles YAML specs into production-ready governed agents with constitutional governance, runtime guardrails, OWASP security auditing, multi-target deployment, and OpenClaw governance (transparent WebSocket proxy with skill supply chain scanning for the 247K-star open-source agent platform). Governance is structural — enforced at compile time, embedded in the deployed agent, monitored in production
-- **Pre-deployment security** — Aegis runs three parallel audit layers (prompt, behavior, code), cross-layer analysis, and maps findings to OWASP Top 10 for Agentic Applications. Verdict: SHIP / CONDITIONAL / BLOCK with CI gate support
-- **Batch compliance auditing** — Arbiter scans folders of agent artifacts through a 3-stage pipeline and produces compliance reports across six governance layers. Deterministic scoring with zero LLM variance in the rules engine
-- **Fleet communication** — Herald provides HMAC-SHA256 authenticated command channels between operators and agent fleets, governed A2A inter-agent messaging, MCP tool governance, and non-human identity management
+- **Agentic compilation + governance** — Castellan compiles YAML specs into production-ready governed agents with constitutional governance, runtime guardrails, OWASP security auditing, multi-target deployment, and OpenClaw governance (transparent WebSocket proxy with skill supply chain scanning for the 247K-star open-source agent platform). 27-module compliance engine with typed models for EU AI Act, HIPAA, PCI-DSS v4.0, SOC 2, NIST, FedRAMP, and more. Governance is structural — enforced at compile time, embedded in the deployed agent, monitored in production
+- **On-premises enforcement** — Seneschal is the Rust runtime authority that enforces every policy gate on-premises. SPIFFE/SPIRE identity, FIPS 140-3 cryptography, MLS encrypted messaging, cross-domain classification governance from Unclassified through TS/SCI, 32-event attestation chains. Air-gapped operation for classified environments. All rule-based, fully explainable — 25 named violation types, zero ML inference in the policy path
+- **Prompt SDLC + defense scanning** — Charlotte compiles prompts, Claude Code skills, and MCP servers through a 5-stage deterministic pipeline. 89 security patterns across 22 categories including 35+ DoD-aligned patterns mapped to NIST 800-53 control families, STIG checklist export with CAT I–III severity, FIPS 140-3 compliance validation, MCP DoD hardening (mTLS, CAC, classification banners, non-root containers). Full SDLC automation for every prompt artifact
+- **Pre-deployment security** — Aegis runs three parallel audit layers (prompt, behavior, code), cross-layer analysis, and maps findings to OWASP Top 10 for Agentic Applications. Compliance mapping to EU AI Act, NIST AI RMF, ISO 42001, CoSAI, NIST 800-53. Verdict: SHIP / CONDITIONAL / BLOCK with CI gate support
+- **Fleet communication** — Herald provides HMAC-SHA256 authenticated command channels between operators and agent fleets, governed A2A inter-agent messaging, MCP tool governance with OAuth 2.1 + DPoP, and non-human identity management
 - **Governance reverse-engineering** — Recon scans existing agent codebases (21 framework adapters from LangChain to CrewAI to raw Python) and reconstructs governance contracts with compliance assessments across 11 international standards
 - **Fleet monitoring** — Vigil receives cryptographically signed health packets from every deployed agent, tracks governance drift in real time, fires alerts when safety thresholds breach, and provides an instant kill switch for any agent in the fleet
-- **Prompt SDLC** — Charlotte compiles prompts, Claude Code skills, and MCP servers through a 5-stage deterministic pipeline. Full SDLC automation for every prompt artifact
 - **QA automation** — Stratum compiles source code into comprehensive quality assessments with eight independent quality gates
 - **Rapid prototyping** — Designer-SDD compiles unstructured ideas into scored, validated, build-ready specification packages
-- **API compilation** — Axle compiles a single YAML spec into six production-ready artifacts
-- **Domain analysis** — Dissector maps AI agent opportunities across any business domain with prioritized, build-ready blueprints
-- **Instruction validation** — ClaudeMD compiles and validates CLAUDE.md instruction files with quality scoring, automated fixes, and ecosystem audit
-- **Agent testing** — Test Harness validates agents against their Castellan governance contracts and A2A channels with spec-derived assertions and Aegis-compatible output
+- **Code adjudication** — Gauntlet catches AI-generated code failures through 18 domain adjudicators with an OODA self-correction loop
+- **Design intelligence** — Citadel provides compliance-aware design front end for both compilers with live introspection and governance profile resolution
+- **Capital intelligence** — VC+ maps capital paths for founders through a multi-agent pipeline with live SEC EDGAR, Crunchbase, and news data
+- **PRD compilation** — PRD+ compiles any product input into production-quality PRDs through a 13-step AI CPO workflow
+- **Domain analysis** — Agent-Dissector maps AI agent opportunities across any business domain with prioritized, governance-ready blueprints
+- **Agent testing** — Agent-Test-Harness validates agents against their Castellan governance contracts and A2A channels with spec-derived assertions and Aegis-compatible output
 - **Agent documentation** — Passport reads any AI agent artifact and produces structured Agent Passports documenting identity, configuration, capabilities, and governance gaps
 
-Every system is standalone. Together they automate the full lifecycle from unstructured idea to deployed, tested, governed, monitored agent fleet. The platform is self-hosting — Designer-SDD specs defined every tool, Charlotte compiled the prompts, Stratum validates the code, Castellan compiles the agents, Aegis audits them, Arbiter scores compliance, Herald delivers commands, and Vigil watches them run.
+Every system is standalone. Together they automate the full lifecycle from unstructured idea to deployed, tested, governed, monitored agent fleet. The platform is self-hosting — Designer-SDD specs defined every tool, Charlotte compiled the prompts, Stratum validates the code, Castellan compiles the agents, Seneschal enforces the policies, Aegis audits them, Herald delivers commands, and Vigil watches them run.
 
 ---
 
@@ -126,12 +136,12 @@ Every system is standalone. Together they automate the full lifecycle from unstr
 
 <div align="center">
 
-# The Agent Governance Platform
+# The Castellan Agent & MCP Governance Platform
 
-*Six systems. One closed loop. Compile, audit, scan, communicate, reverse-engineer, monitor.*
+*Seven systems. One closed loop. Compile, enforce, audit, scan, communicate, monitor.*
 
-![Platform Lines](https://img.shields.io/badge/190%2C564-Source_Lines-2563EB?style=flat-square)
-![Platform Tests](https://img.shields.io/badge/10%2C981-Tests_Passing-16A34A?style=flat-square)
+![Platform Lines](https://img.shields.io/badge/251%2C533-Source_Lines-2563EB?style=flat-square)
+![Platform Tests](https://img.shields.io/badge/14%2C247-Tests_Passing-16A34A?style=flat-square)
 
 </div>
 
@@ -145,7 +155,7 @@ Every system is standalone. Together they automate the full lifecycle from unstr
 
 > The problem: every team building AI agents hits the same wall. The prototype works. Then production demands governance — the agent says things it shouldn't, costs $47 on a single session, crashes on a flaky API call, and nobody can prove it won't go off-script next week. Most agent frameworks are code-first and governance-last. They hand you a runtime and leave governance, testing, compliance, and deployment as an exercise for the reader. Governance gets bolted on after the fact — if it gets added at all.
 
-Castellan is an **agentic compiler** — the first tool that makes agent governance structural rather than aspirational. Write a declarative YAML spec. Castellan compiles it through a 5-stage pipeline, enforces constitutional governance at compile time and runtime, gates every response through inline guardrails, audits the entire agent against the OWASP Top 10 for Agentic Applications, and exports to 7 deployment targets — Python, Docker, FastAPI, Kubernetes, Temporal, Claude Code skill, or client delivery package — with optional embedded governance that travels with the deployed agent across LangGraph, CrewAI, AutoGen, and Haystack.
+Castellan is an **agentic compiler** — the first tool that makes agent governance structural rather than aspirational. Write a declarative YAML spec. Castellan compiles it through a 6-stage pipeline, enforces constitutional governance at compile time and runtime, gates every response through inline guardrails, audits the entire agent against the OWASP Top 10 for Agentic Applications, and exports to 7 deployment targets — Python, Docker, FastAPI, Kubernetes, Temporal, Claude Code skill, or client delivery package — with optional embedded governance that travels with the deployed agent across LangGraph, CrewAI, AutoGen, and Haystack.
 
 This isn't a framework. It's a **compiler**. The agent is governed before it runs. Validated before it deploys. Monitored after it ships.
 
@@ -175,6 +185,28 @@ Every compiled agent carries a constitution: core values, technical boundaries, 
 All 5 governance sub-schemas — `governance`, `human_oversight`, `data_sensitivity`, `sign_off`, and `testing` — are typed Pydantic v2 models with `extra = "ignore"` for backward compatibility. Parse-time validation catches misconfigurations (typos, wrong types, missing fields) at compile time, not at runtime. If a governance block is structurally invalid, the compiler rejects it before a single token is generated.
 
 Governance travels with the agent. The `--governed` export flag embeds `castellan.mantle` governance directly into LangGraph, CrewAI, AutoGen, and Haystack exports — `@governed` decorator, compliance JSONL logging, kill switch, autonomy ceiling. Even if the agent runs outside Castellan's runtime, governance enforcement is inline. Not an external dependency. Not optional.
+
+### Compliance Engine — 27 Modules, 13+ Regulatory Frameworks
+
+Castellan's compliance engine provides **typed, auditable compliance assessment** across defense, healthcare, finance, and international standards:
+
+| Framework | What Castellan Does |
+|:--|:--|
+| **EU AI Act** | Risk tier classification (unacceptable/high/limited/minimal), article-by-article compliance status, evidence collection |
+| **HIPAA** (45 CFR 164) | Administrative, Physical, Technical safeguard mapping; HHS AI Guidance (2025) alignment |
+| **PCI-DSS v4.0** | 6-goal compliance mapping with PCI SSC AI/ML supplement (2024) |
+| **SOC 2 Type II** | Dual-mode evidence generation for service organization audit |
+| **NIST AI RMF** | Governance-to-function/category alignment |
+| **NIST 800-53** | 30+ federal security control patterns across 12 control families |
+| **NIST IR 8596 / CSF 2.0** | CAISI AI Agent Standards Initiative, 6-function structure (GOVERN/IDENTIFY/PROTECT/DETECT/RESPOND/RECOVER) |
+| **ISO 42001** | AI management system standard mapping |
+| **GDPR Article 22** | Automated decision-making rights, PII redaction, erasure support |
+| **FZ-152** | Data protection assessment |
+| **FINRA 2026** | Financial regulatory compliance assessment |
+| **FedRAMP** | Federal risk and authorization management |
+| **OWASP Agentic** | Full Top 10 vulnerability mapping (ASI01–ASI10) with evidence |
+
+Additional: SHA-256 tamper-evident attestation chains, system card generation (NIST/EU AI Act aligned), compliance manifests with regulatory classification, DoD delivery packages (SSP, CMR, integration guides), agentic JWT with PoP keys and delegation chains, A2A bilateral policy enforcement, CBRA 4-dimension risk scoring, 5-level autonomy certification taxonomy, and 7-section audit report generation with framework mapping to AIUC-1, ISO 42001, NIST AI RMF, OWASP, and MITRE ATLAS controls.
 
 ### Runtime Guardrails
 
@@ -292,7 +324,7 @@ castellan openclaw policy.json --scan ./skills/ --serve
 | Command | Purpose |
 |:--|:--|
 | `castellan init` | Scaffold agent from template or intake form |
-| `castellan compile` | 5-stage compilation pipeline |
+| `castellan compile` | 6-stage compilation pipeline |
 | `castellan run` | Interactive or single-message execution |
 | `castellan validate` | Completeness and schema checks |
 | `castellan scan` | Security scanning (18+ patterns) |
@@ -343,7 +375,7 @@ castellan openclaw policy.json --scan ./skills/ --serve
 
 <div align="center">
 
-`87 commands` · `473 modules` · `104,044 lines` · `7,097 tests, all passing`
+`87 commands` · `523 modules` · `118,014 lines` · `7,310 tests, all passing`
 
 </div>
 
@@ -351,7 +383,140 @@ castellan openclaw policy.json --scan ./skills/ --serve
 
 ---
 
-## 2. Aegis — Pre-Deployment Security Audit
+## 2. Seneschal — On-Premises Governed Agent Infrastructure
+
+**The on-premises runtime authority. SPIFFE identity, FIPS 140-3 crypto, air-gapped operation. Built for classified environments.**
+
+> The problem: cloud-hosted governance is a non-starter for defense, intelligence, and regulated industries. Agents operating in air-gapped environments, handling classified data across CUI through TS/SCI, need governance enforcement that runs locally — no cloud dependency, no external API calls, no trust in someone else's infrastructure. The policy engine must be fast, deterministic, and auditable.
+
+Seneschal is a **Rust binary** that serves as the on-premises runtime authority for the Castellan agent governance platform. It enforces policy gates for all agent-to-agent (A2A) and agent-to-MCP-server communication, manages a dual-node registry (Castellan-compiled agents + Charlotte-compiled MCP servers), maintains tamper-evident attestation chains, and operates with **full autonomy** — no cloud connectivity required. When connectivity is available, it syncs attestation records upstream through Herald.
+
+### Four-Layer Architecture
+
+| Layer | Name | What It Does |
+|:--|:--|:--|
+| **Layer 4** | **Identity** | SPIFFE/SPIRE (CNCF-graduated) — X.509 SVIDs, trust domain management, mTLS credential provisioning. Every node gets a cryptographic identity: `spiffe://domain/agent/name` or `spiffe://domain/mcp/name` |
+| **Layer 3** | **The Record** | Append-only SHA-256 attestation chain — 32 event types across 6 categories (governance, security, infrastructure, operational, audit, federation). Tamper-evident, immutable, upstream Herald sync when connected |
+| **Layer 2** | **The Brain** | Rule-based policy gates — 7-check A2A gate + 8-check MCP gate. 25 named violation types. All deterministic, zero ML inference, fully explainable |
+| **Layer 1** | **The Fabric** | MLS RFC 9420 (IETF-ratified) encrypted group messaging. Forward secrecy. Fast path for pre-approved bilateral pairs |
+
+### Compliance & Security
+
+| Capability | Standard / Implementation |
+|:--|:--|
+| **Cryptography** | FIPS 140-3 via `aws-lc-rs` — Ed25519-Dalek, AES-GCM, SHA-256. Validated crypto module |
+| **Identity** | SPIFFE/SPIRE — X.509 SVIDs, trust domain management, mTLS for all node-to-node communication |
+| **Messaging** | MLS RFC 9420 — IETF-ratified encrypted group messaging with forward secrecy |
+| **Classification** | CDS governance across 6 levels: Unclassified, FOUO, CUI, SECRET, TOP SECRET, TS/SCI. Cross-classification data flow with channel authorization, label HMAC verification, content quarantine |
+| **DoD Alignment** | Zero Trust Architecture, CAC/PKI authentication (IA-2(12)), STIG compliance, fail-closed architecture |
+| **Federation** | NIST CAISI compliance (checks 17–23) — bilateral agreement enforcement, trust domain validation, policy reconciliation, cross-org data flow control, mutual kill switch |
+| **Authentication** | Operator-mTLS with client certificate authentication, delegation certificates signed with Ed25519 root keys |
+
+### Policy Gates — Rule-Based, Fully Explainable
+
+**A2A Gate (7 checks):**
+1. Delegation scope validation
+2. JWT verification (HMAC-SHA256)
+3. Bilateral policy checks
+4. Autonomy gating (level 1–5)
+5. Data flow control
+6. Rate limiting (sliding window)
+7. Trust scoring
+
+**MCP Gate (8 checks):**
+1. Node type validation (Agent → McpServer)
+2. Status checks (not recalled/expired)
+3. MCP policy existence
+4. Kill switch check
+5. Agent permission (A2APolicy on Castellan side)
+6. Server trust (trusted_agents on Charlotte side)
+7. Tool access control
+8. Rate limiting (per-agent, per-server)
+
+**25 named violation types** — all rule-based (no ML/inference). Every denial produces a named violation, an explanation, and an attestation chain entry. Auditable, reproducible, defensible.
+
+### Air-Gapped Operation
+
+Seneschal is designed to operate **fully autonomously** without Herald or any cloud connectivity. Local SPIRE server handles workload attestation. SQLite-backed registry and state. When connectivity is restored, attestation records sync upstream. The security posture is identical whether connected or disconnected.
+
+<div align="center">
+
+`Rust binary` · `37 modules` · `15,633 lines` · `119 tests, all passing`
+
+</div>
+
+<br>
+
+---
+
+## 3. Charlotte — Prompt & MCP Compiler
+
+**The prompt compiler. 94-block type system, defense-grade security scanning, multi-provider rendering, MCP server generation.**
+
+> The problem: prompts are the source code of AI applications, but they have no SDLC. No compilation. No type system. No testing framework. No security scanning. No version control semantics. No CI/CD. Prompts are strings — written in text files, copy-pasted between projects, tested by running them and hoping. For any artifact this critical, that's engineering malpractice.
+
+Charlotte transforms prompt engineering into **structured, validated, composable software engineering** through a 5-stage deterministic pipeline. Write a YAML spec. Charlotte compiles it into a validated, optimized, deployment-ready prompt with security scanning, testing, and multi-provider rendering. Full SDLC — the same rigor you'd apply to any production code artifact.
+
+### The Compilation Pipeline
+
+| Stage | What It Does |
+|:--|:--|
+| **Parse** | Validates YAML, resolves block references from the 94-block library across 17 types, checks required fields and constraints |
+| **Compose** | Assembles blocks in priority order, resolves variables with Jinja2, applies composition rules |
+| **Optimize** | Token budget analysis per provider model, prompt compression, whitespace normalization, cost estimation |
+| **Validate** | 30 assertion types for behavioral testing, output format verification, quality threshold checks |
+| **Render** | Multi-provider output — OpenAI, Anthropic, Google Gemini. Claude Code skills. MCP servers. GitHub Actions CI |
+
+### Defense & Federal Compliance Scanning
+
+Charlotte implements **89 security patterns across 22 categories** — the deepest compliance scanning of any prompt engineering tool:
+
+| Capability | Implementation |
+|:--|:--|
+| **DoD Patterns** | 35+ detection patterns aligned to NIST 800-53 control families: AC (Access Control), AU (Audit), IA (Identification/Auth), SC (System Communications), SI (System Integrity), CM (Configuration), CP (Contingency), IR (Incident Response), RA (Risk Assessment), SA (Supply Chain) |
+| **STIG Export** | Full checklist generation with vulnerability IDs (V-222400 format), CAT I–III severity classification, status tracking, 12+ NIST 800-53 control families |
+| **FIPS 140-3** | Non-FIPS algorithm detection (MD5, weak crypto), FIPS transport requirement validation |
+| **mTLS / CAC** | Mutual TLS enforcement, Common Access Card / PKI authentication support |
+| **Classification Banners** | CUI, UNCLASSIFIED//FOUO, SECRET, TOP SECRET display enforcement |
+| **MCP DoD Hardening** | TLS 1.2+, AES-256, non-root containers, read-only filesystems, capability dropping, no-new-privileges |
+| **CoSAI Threat Model** | MCP-T1 (session token leakage), MCP-T2 (tenant isolation), MCP-T6 (shadow MCP servers), MCP-T9 (consent fatigue) |
+| **Audit Format** | JSON, CEF (ArcSight/SIEM integration), Syslog (RFC 5424) export |
+| **OWASP LLM Top 10** | Full coverage with red team testing alignment |
+
+**`dod_governance_preset()`** — one-call preset that activates FIPS requirement, mTLS enforcement, CAC authentication, and human approval gates. STIG profile support: `full`, `cat1` (critical only), `cat2` (high + critical), `none`.
+
+### MCP Server Generation & Governance
+
+Charlotte compiles prompt specs into **complete MCP servers** with governance baked in:
+
+- **MCPGovernanceSpec** — classification level, audit_required, kill_switch, human_approval, trusted_agents, max_token_age
+- **Authentication** — OAuth 2.1, JWT verification, scope validation
+- **Data Flow Control** — data type classification (data/instruction/mixed), injection defense (strict/moderate/advisory)
+- **Seneschal Integration** — identity fragment generation with DoD hardening, registration with FIPS/mTLS/CAC requirements, fail-closed audit enforcement, kill switch propagation
+
+### What Charlotte Compiles
+
+| Output | Description |
+|:--|:--|
+| **Optimized Prompts** | Token-budgeted, provider-specific, security-scanned |
+| **Claude Code Skills** | Complete skill packages with metadata and routing |
+| **MCP Servers** | Full server code with governance, auth, and audit |
+| **Test Suites** | Behavioral assertions, adversarial testing, regression checks |
+| **CI Pipelines** | GitHub Actions workflows for prompt SDLC |
+| **Workflow Chains** | Multi-prompt sequential pipelines with stage dependencies |
+| **DoD Packages** | STIG checklists, classification banners, audit trails |
+
+<div align="center">
+
+`CLI` · `104 modules` · `34,045 lines` · `3,034 tests, all passing`
+
+</div>
+
+<br>
+
+---
+
+## 4. Aegis — Pre-Deployment Security Audit
 
 **The security auditor. Three parallel audit layers, OWASP Top 10 mapping, verdict: SHIP / CONDITIONAL / BLOCK.**
 
@@ -404,54 +569,7 @@ Automatically detects and adapts to LangChain, CrewAI, OpenAI Agents SDK, with g
 
 ---
 
-## 3. Arbiter — Batch Governance Auditor
-
-**The batch auditor. Scan folders of agent artifacts, produce structured compliance reports across six governance layers.**
-
-> The problem: governance auditing is manual and per-agent. When you have a fleet of agents from multiple teams, multiple frameworks, and multiple formats, you need batch auditing — not one-at-a-time reviews.
-
-Arbiter is a **batch agent governance auditing service** that scans folders of AI agent artifacts and produces structured audit reports. It processes any mix of formats — system prompts, Castellan YAMLs, LangChain configs, CrewAI crews, AutoGen configs, A2A topologies, JSON, Markdown, plain text — through a three-stage pipeline with exactly two LLM calls per artifact and a fully deterministic rules engine.
-
-### The Three-Stage Pipeline
-
-| Stage | What It Does | LLM Calls |
-|:--|:--|:--|
-| **1. Extraction** | Instructor-based structured extraction from raw artifacts via Claude | 1 |
-| **2. Scoring** | Six deterministic audit layers — zero LLM, fully reproducible | 0 |
-| **3. Narrative** | Human-readable remediation roadmaps and compliance assessments | 1 |
-
-**Core invariant:** The rules engine (Stage 2) has zero imports of anthropic or instructor. Scoring is deterministic — identical input produces identical output, every run.
-
-### Six Audit Layers
-
-| Layer | What It Scores |
-|:--|:--|
-| **System Prompt** | Depth scale, five-part structure, constraint count, failure behavior coverage |
-| **Tool Policy** | Per-tool scoring, state-mutating flags, approval requirements |
-| **Orchestration** | Control flow explicitness, Why-Not-One-Agent test for multi-agent boundaries |
-| **Context Coverage** | Domain vocabulary density, context window budget |
-| **Validation** | Test count by agent type, assertion specificity, constitutional enforcement |
-| **Governance** | Blast radius, autonomy ceiling, audit trail, kill switch, compliance matrix (HIPAA, SOC2, GDPR) |
-
-### Batch Processing
-
-- **Concurrent processing** with asyncio (configurable 1–10 workers)
-- **Failure isolation** — one bad artifact doesn't abort the batch
-- **Resume capability** — re-run without `--force` to skip already-audited artifacts
-- **Per-artifact output** — Markdown + JSON audit report per artifact, plus batch summary
-- **Severity is never softened** — CRITICAL stays CRITICAL
-
-<div align="center">
-
-`CLI` · `18 modules` · `2,679 lines` · `100 tests, all passing`
-
-</div>
-
-<br>
-
----
-
-## 4. Herald — Authenticated Command Channel
+## 5. Herald — Authenticated Command Channel
 
 **The command channel. HMAC-signed bidirectional communication between operator portals and deployed agent fleets.**
 
@@ -500,7 +618,7 @@ HMAC-SHA256 signing over canonical JSON. Constant-time comparison prevents timin
 
 ---
 
-## 5. Recon — Governance Reverse-Engineering
+## 6. Recon — Governance Reverse-Engineering
 
 **The governance scanner. Point it at existing agent code, get back a complete governance contract with compliance assessments across 11 international standards.**
 
@@ -520,12 +638,12 @@ Recon is a **3-stage pipeline that reverse-engineers governance contracts** from
 
 LangChain, LangGraph, CrewAI, AutoGen, OpenAI Agents, AWS Bedrock Agents, Google ADK, Semantic Kernel, DSPy, JavaScript/TypeScript, Java, Go adapters (via tree-sitter), raw prompt files, YAML specs, MCP manifests, OpenAI System Cards, A2A/Doc Agent Cards — with generic fallback.
 
-### 11 Compliance Standards
+### Compliance Assessments — 11 International Standards
 
 | Standard | Domain |
-|:---|:---|
-| EU AI Act | European AI regulation (Articles 9–15 risk classification) |
-| NIST AI RMF | US federal AI risk management (4-function maturity scoring) |
+|:--|:--|
+| EU AI Act | European AI regulation |
+| NIST AI RMF | US federal AI risk management |
 | OWASP LLM Top 10 | Agentic application security |
 | GDPR | European data protection |
 | HIPAA | US healthcare privacy |
@@ -533,16 +651,16 @@ LangChain, LangGraph, CrewAI, AutoGen, OpenAI Agents, AWS Bedrock Agents, Google
 | SOC 2 | Service organization controls |
 | ISO 42001 | AI management systems |
 | ISO 27001 | Information security |
-| FZ-152 | Russian data protection |
+| FZ-152 | Data protection |
 | Cross-Standard | Synthesis across all standards |
 
-### Analysis Subsystems
+### Outputs
 
-Call graph analysis, data flow analysis with SSA, taint analysis, code topology, string propagation tracking, class hierarchy analysis — all feeding into governance signal extraction.
-
-### Output Artifacts
-
-Reconstructed agent.yaml with confidence annotations, compliance manifests and scorecards (28+ files per scan), AI SBOM (Software Bill of Materials), professional governance reports, audit checklists, SARIF format support, and Castellan Intake Bridge for streamlined onboarding.
+- **Reconstructed agent.yaml** — full Castellan spec with confidence annotations
+- **Compliance manifests** — per-standard compliance assessment with gap detection
+- **OWASP scorecard** — security posture assessment
+- **AI SBOM** — software bill of materials for the agent
+- **Multi-agent topology** — detected agent boundaries with relationship mapping
 
 <div align="center">
 
@@ -554,49 +672,37 @@ Reconstructed agent.yaml with confidence annotations, compliance manifests and s
 
 ---
 
-## 6. Vigil — Fleet Governance Dashboard
+## 7. Vigil — Fleet Governance Dashboard
 
-**The operations portal. Real-time governance monitoring for every deployed agent in the fleet.**
+**The monitoring portal. Real-time governance drift detection, alert evaluation, kill switch, and fleet-wide compliance tracking.**
 
-> The problem: agents deploy and disappear into a black box. Governance scores drift. Costs creep. Guardrails fire silently. Constitutional violations go undetected. By the time someone notices, the damage is done and the audit trail is incomplete. Governance at compile time is necessary. Governance at runtime is necessary. But without governance in production — continuous, real-time, with kill-switch authority — you're flying blind.
+> The problem: governance doesn't end at deployment. Agents drift. Costs spike. Compliance posture degrades. Without continuous monitoring, you're flying blind — and the first sign of trouble is a production incident, not a dashboard alert.
 
-Vigil is the **fleet governance dashboard** — a full-stack platform (FastAPI backend + Next.js frontend) that receives cryptographically signed health packets from every deployed agent, tracks governance drift in real time, fires alerts when safety thresholds breach, and provides an instant kill switch for any agent in the fleet. The agentic compiler governs the agent at compile time. Vigil governs the agent in production. That's the closed governance loop.
+Vigil is a **multi-tenant fleet governance dashboard** that ingests cryptographically signed health packets from deployed agents, evaluates governance compliance in real time, fires alerts on threshold breaches, and serves interactive dashboards. It's the closed loop on every deployed agent — the system that proves governance is maintained, not just configured.
 
-### Architecture
+### What Vigil Monitors
 
-| Layer | Stack |
+| Capability | Details |
 |:--|:--|
-| **Frontend** | Next.js 16, React 19, TypeScript, Tailwind CSS 4, shadcn/ui, Recharts 3, SWR 2, WebSocket |
-| **API** | FastAPI, 69 REST + WebSocket endpoints |
-| **Auth** | Clerk JWT (RS256, JWKS with TTL cache) + HMAC-SHA256 packet signatures |
-| **Database** | SQLAlchemy 2.0 async, 20 tables, composite indexes |
-| **Infrastructure** | PostgreSQL + TimescaleDB (prod), SQLite (dev), Redis (prod) |
-| **Real-time** | Tenant-scoped WebSocket with operator broadcast |
+| **Health Telemetry** | HMAC-signed health packets from every agent, ingested and validated |
+| **Governance Drift** | Real-time compliance scoring, drift detection from baseline |
+| **Cost Governance** | Per-agent and fleet-wide cost tracking with budget alerts |
+| **Incident Management** | Alert creation, escalation, resolution tracking |
+| **A2A Tracking** | Agent-to-agent communication monitoring and policy verification |
+| **Attestation Verification** | Chain integrity verification for deployed agents |
+| **Kill Switch** | Instant remote kill for any agent in the fleet |
+| **Recertification** | Automated recertification cycles with drift-triggered reviews |
 
-### What It Monitors
+### Technical Specs
 
-- **Governance scores** — per-agent, per-tenant, with historical trend analysis
-- **Compliance drift** — 0.0–1.0 drift detection with degrading / stable / recovering classification and automatic alert escalation
-- **Alert evaluation** — threshold-based with deduplication and multi-level severity
-- **Kill switch** — issue and release with multi-kill awareness — releasing one kill doesn't restore status if others remain active
-- **Recertification** — 90-day cycles with grace periods and overdue tracking
-- **Cost tracking** — per-agent, per-session token and USD accumulation with budget enforcement
-- **Audit trail** — immutable, append-only, every action logged with timestamp and initiator
-- **A2A communication** — agent-to-agent message routing, policy decisions, conversation tracking
-- **Incident management** — auto-escalation and incident lifecycle tracking
-- **Attestation chains** — SHA-256 tamper-evident record verification
-
-### Multi-Tenant Isolation
-
-Every data path is tenant-scoped. WebSocket connections subscribe only to their tenant's events — operators get a wildcard channel, tenant users see only their own agents. Health packet ingest requires cryptographic signature verification against the tenant's signing key.
-
-### Herald Integration
-
-Fleet-wide broadcast messaging through Herald command channel. Operators issue queries, config updates, broadcasts, and recalls to the entire fleet or targeted agents — all through the Vigil dashboard.
+- **20 database tables** — PostgreSQL + TimescaleDB for time-series, SQLite for local dev
+- **69 API endpoints** — full CRUD, WebSocket real-time events, SSE streaming
+- **Herald integration** — fleet command dispatch directly from the dashboard
+- **Multi-tenant** — Clerk JWT authentication, tenant-scoped data isolation
 
 <div align="center">
 
-`69 endpoints` · `138 modules` · `15,632 lines (8,308 Python + 7,324 TypeScript)` · `185 tests, all passing`
+`Full-Stack` · `138 modules` · `15,632 lines (Python + TypeScript)` · `185 tests, all passing`
 
 </div>
 
@@ -604,115 +710,14 @@ Fleet-wide broadcast messaging through Herald command channel. Operators issue q
 
 ---
 
-<br>
-
 <div align="center">
 
-# The Tools
+# Automation Tooling
 
-*Six tools. Compile prompts, compile tests, compile specs, compile APIs, map opportunities, validate instructions.*
+*Nine tools. Design, build, validate, analyze — the SDLC for everything AI agents need.*
 
-![Tools Lines](https://img.shields.io/badge/125%2C193-Source_Lines-2563EB?style=flat-square)
-![Tools Tests](https://img.shields.io/badge/8%2C096-Tests_Passing-16A34A?style=flat-square)
-
-</div>
-
-<br>
-
----
-
-## 7. Charlotte — Prompt, Skill & MCP Compiler
-
-**The prompt, skill, and MCP server compiler. Full SDLC automation for every prompt artifact — compiled, versioned, tested, secured, deployed.**
-
-> The problem: prompt engineering had no SDLC. No compilation. No type checking. No version control. No security scanning. No way to test one prompt change against regression. Teams were shipping prompts the same way they shipped code in the 90s — copy-paste and pray nothing breaks in production. Prompts are the instructions that govern what AI agents do. They deserve the same rigor as the code that deploys them.
-
-Charlotte is a **prompt, skill, and MCP server compiler** — a 5-stage deterministic pipeline that treats prompts, Claude Code skills, and MCP servers as first-class software artifacts with a real SDLC. It parses typed YAML specifications, compiles them against a 94-block library with conflict detection and dependency resolution, runs 8-pass automatic optimization, validates token budgets against 26 model context windows, and renders provider-specific output for OpenAI, Anthropic, and Google Gemini.
-
-This is a **compiler** with a type system, a security scanner, a test framework, a versioning system, environment management, CI/CD generation, and a multi-agent compiler that generates runnable projects for five major agent frameworks. Charlotte automates the entire prompt SDLC — from authoring through testing to production deployment. If you wouldn't ship code without a build system, you shouldn't ship prompts without one either.
-
-### The Compilation Pipeline
-
-Every prompt spec runs through 5 deterministic stages:
-
-```
-YAML Spec -> Parse -> Compose -> Optimize -> Validate -> Render -> Provider-Ready Output
-```
-
-1. **Parse** — Read spec, resolve block references from the 94-block library, validate against Pydantic v2 schemas. Circular dependency detection, `!include` resolution, inheritance chain validation
-2. **Compose** — Assemble blocks in strict type-precedence order (17 types, each with defined priority). Detect conflicts, enforce singletons, resolve dependencies, inject typed variables. The composition engine ensures a compiled prompt can't be structurally invalid — blocks that conflict are caught here, not at inference time
-3. **Optimize** — 8 automatic passes: deduplication, adjacent text merging, empty block stripping, whitespace normalization, system block reordering, example compression, token budget optimization, provider-specific hints. No manual tuning required — the compiler handles it
-4. **Validate** — Conflict detection, token budgeting per target model with per-block breakdown, completeness checks, composition rule enforcement. Every prompt gets a token budget report showing exactly where the budget is spent
-5. **Render** — Provider-specific output: OpenAI messages array, Anthropic system parameter, Google Gemini system_instruction, or generic text. Same spec, different providers, correct output format guaranteed
-
-### 94-Block Library Across 17 Types
-
-Every block is pure YAML — no embedded code. The library is extensible without touching source code. 94 blocks across 17 types cover every prompt engineering pattern: system, task, few-shot, chain-of-thought, tool use, RAG, agent, evaluation, extraction, meta, conversational, safety, routing, memory, retrieval, guardrail, planning. The compiler enforces assembly order, singleton constraints, and tier requirements. A composed prompt can't be structurally invalid because the type system won't allow it.
-
-### Security Scanner — 54 Checks, 21 Categories
-
-Every prompt gets scanned at compile time. 54 checks across 21 categories: injection, exfiltration, model manipulation, context poisoning, privilege escalation, compliance (GDPR/HIPAA/PCI-DSS), supply chain, bias/fairness, MCP tool poisoning, and more. The scanner runs as a compilation stage — security isn't an afterthought, it's built into the pipeline. A prompt that fails security scanning doesn't compile.
-
-### Skills Compiler — Claude Code Skill SDLC
-
-Charlotte compiles Claude Code skills directly — structured YAML specs optimized for the `charlotte compile -f skill` export path. The same 94-block library, the same security scanner, the same test framework — purpose-built output for Claude Code skill deployment. Skills are compiled artifacts with full SDLC: authored as specs, validated at compile time, tested against baselines, versioned, and deployed. Not hand-written instruction strings pasted into a config file.
-
-### MCP Server Compiler — Complete MCP Server Generation
-
-Charlotte compiles YAML specs into complete, runnable MCP server projects. The MCP renderer extracts MCP primitives from specific block types — `tool_use` blocks become MCP tools with JSON Schema input validation, `rag` blocks become static knowledge resources, `memory` blocks become dynamic state resources, `retrieval` blocks become parameterized resource templates, and the full compiled prompt becomes an MCP prompt with runtime arguments. Output is a complete Python project: `server.py` with tool handlers, resource endpoints, and prompt definitions; `pyproject.toml` with MCP SDK dependency; `README.md` with tool/resource/prompt documentation tables; `server.json` capability manifest; and `claude_desktop_config.json` ready to paste into Claude Desktop. Supports both single-prompt and workflow-based server generation. Workflow servers aggregate tools and resources across steps with deduplication and execution order metadata. Validate with `charlotte mcp validate`, preview with `charlotte mcp info`.
-
-### Test Framework
-
-30 assertion types: exact match, regex, JSON schema validation, LLM-as-judge, cosine similarity, sentiment analysis, language detection, PII detection, latency thresholds, and composite assertions (`all_of`, `any_of`, `none_of`). Parallel cross-model execution — test the same prompt against Claude, GPT-4o, and Gemini simultaneously. Evaluation history with regression drift detection. Run a prompt change against a baseline and know immediately whether it regressed. This is what makes prompt changes safe — every change is tested before it ships.
-
-### Multi-Agent Compiler
-
-Takes compiled prompts and generates complete, runnable multi-agent projects for CrewAI, LangGraph, AutoGen, OpenAI Agents SDK, and Google A2A protocol. Each export includes pyproject.toml, README, and all source files — ready to `pip install` and run. A shared extraction layer means adding a new framework is one renderer and its templates.
-
-### Workflow Engine
-
-Chain multiple prompt specs into multi-step workflows with typed data flow (`{{steps.X.output.field}}`). Topological execution ordering ensures steps run in dependency order. Conditional step execution via Jinja2 expressions. Cross-step schema validation catches type mismatches at compile time. End-to-end workflow testing validates the entire chain, not just individual steps.
-
-### Versioning & Environments
-
-**Content-addressed versioning** — JSON snapshots with semantic block-aware diffing. Track added, removed, and modified blocks across versions. Know exactly what changed between v1 and v2 of a prompt, at the block level.
-
-**Environment management** — Dev/staging/production environments with variable overrides, promotion gates (test pass rate, score threshold, manual approval), and environment diffing. Promote a prompt from staging to production only when it passes the gates.
-
-**CI/CD** — 4 GitHub Actions workflow templates: validate-on-PR, test-on-push, scheduled regression, environment promotion.
-
-<details>
-<summary><strong>21 export formats</strong></summary>
-
-<br>
-
-Text, JSON, YAML, API payload, MCP definition, LangChain template, HTML report, README, Claude Code Skill, MCP server, CrewAI, LangGraph, AutoGen, OpenAI Agents, A2A Agent Card — each in single-prompt and workflow variants.
-
-</details>
-
-<details>
-<summary><strong>10 production example packs</strong></summary>
-
-<br>
-
-| Pack | Pattern | Use Case |
-|:--|:--|:--|
-| Customer Support Bot | multi-phase | E-commerce: returns, shipping, routing, conversation history |
-| Code Review Assistant | multi-phase | Structured JSON feedback with severity ratings |
-| Legal Document Analyzer | multi-phase | Contract analysis with citations and legal disclaimers |
-| ML Model Evaluator | agent-orchestrating | Accuracy, fairness, robustness, explainability |
-| Content Moderator | multi-phase | Confidence scores, escalation routing |
-| Research Summarizer | multi-phase | Literature review with conflict detection |
-| API Test Generator | agent-orchestrating | Test case generation from OpenAPI specs |
-| Multilingual Assistant | multi-phase | 8-language support with persona consistency |
-| Incident Responder | agent-orchestrating | Production incident diagnosis (ReAct pattern) |
-| Prompt Optimizer | multi-phase | Meta-prompt for critiquing and refining prompts |
-
-</details>
-
-<div align="center">
-
-`45 commands` · `91 modules` · `22,893 lines` · `2,857 tests, all passing`
+![Tools Lines](https://img.shields.io/badge/113%2C527-Source_Lines-2563EB?style=flat-square)
+![Tools Tests](https://img.shields.io/badge/5%2C245-Tests_Passing-16A34A?style=flat-square)
 
 </div>
 
@@ -722,119 +727,30 @@ Text, JSON, YAML, API payload, MCP definition, LangChain template, HTML report, 
 
 ## 8. Stratum — QA Compiler
 
-**The QA compiler. Full SDLC automation for testing, documentation, and quality assurance — point it at source code and it compiles the proof that it works.**
+**The QA compiler. Architecture extraction, test generation, documentation, eight independent quality gates.**
 
-> The problem: teams were shipping AI-generated test suites without checking whether the tests actually tested anything. Hallucinated assertions. Mocked-out logic. Tests that pass no matter what — going straight to CI. Nobody was testing the tests. And documentation? Either nonexistent or stale before the PR merged. The QA phase of the SDLC was manual, incomplete, and untrustworthy.
+Stratum is a unified code quality, architecture extraction, test generation, and documentation pipeline. It consolidates **8 quality gates** and executes a pipeline with 3-layer context extraction across 6 languages, test generation across 4 frameworks, documentation rendering with 7 independent analyzers, and comprehensive validation across **13 modules**:
 
-Stratum is a **QA compiler** that automates the testing and documentation phases of the SDLC. It takes source code as input and compiles a comprehensive quality assessment: full architecture extraction using Claude and tree-sitter across 6 languages, unit test generation across 4 test frameworks, API test generation across 4 test layers, documentation generation with 7 independent analyzers, and eight independent quality gates that each produce their own verdict. The audit engine aggregates them into a final pass or fail. A transparency layer tracks every skip, failure, and limitation — no silent failures.
-
-This isn't "generate some tests and hope they work." This is a **compiler** that automates SDLC quality assurance — the output is a validated, gated, auditable quality package.
-
-### The Pipeline
-
-```
-SOURCE CODE
-    |
-    v
-+------------------------------------------+
-| 1. EXTRACT (tree-sitter + Claude)        |
-|    Classes, functions, endpoints -> JSON  |
-|    6 languages · framework detection      |
-+----------+-------------------------------+
-           |
-    +------+----------+---------------+
-    v                  v               v
-+----------+    +-----------+    +----------+
-| 2. UNIT  |    | 3. API    |    | 4. DOCS  |
-| pytest   |    | 4 layers  |    | 7 anlyzrs|
-| jest     |    | 4 frmwrks |    | 3 formats|
-| JUnit    |    |           |    |          |
-| Go test  |    |           |    |          |
-+----+-----+    +-----+-----+    +----+-----+
-     +----------------+--------------+
-                      v
-+------------------------------------------+
-| 5. QUALITY GATES (8 independent modules) |
-+------------------+-----------------------+
-                   v
-+------------------------------------------+
-| 6. CANDOR - Transparency Report          |
-|    What automation couldn't handle       |
-+------------------------------------------+
-```
-
-### Architecture Extraction
-
-The first compilation stage. Combines Claude's understanding with tree-sitter static analysis to extract complete codebase structure across 6 languages — Python, TypeScript, JavaScript, Java, Go, Rust — with framework auto-detection for Flask, FastAPI, Django, Express, Koa, Nest.js, Spring, and Quarkus. Output: 6 JSON artifacts including `source_model.json` — the critical intermediate representation consumed by every downstream stage.
-
-### Unit Test Compilation
-
-Generates pytest, jest, JUnit, or Go test suites from the extracted architecture. Not "write some tests" — a 3-retry validation loop: generate → execute → fix. Tests that don't actually run are rejected before they leave the pipeline. Tests that don't import the code under test are rejected. Tests that assert on inputs instead of outputs are rejected. Every generated test is validated against the Seven Rules (see Forge gate below) before it ships.
-
-### API Test Compilation — 4 Layers, 4 Frameworks
-
-API tests compile across four independent layers, each targeting a different failure mode:
-
-| Layer | What It Validates | Why It Matters |
-|:--|:--|:--|
-| **Contract** | API surface matches the spec — methods, paths, status codes, content types | Catches breaking changes before they hit production |
-| **Boundary** | Edge cases — empty payloads, max-length strings, type coercion, null handling | Catches the bugs that only show up with real user input |
-| **Workflow** | Multi-step state transitions — create → read → update → delete sequences | Catches state machine violations invisible to unit tests |
-| **Regression** | Previously-found defects captured as permanent guards | Ensures fixed bugs stay fixed across every future release |
-
-### Documentation Compilation — 7 Analyzers, 3 Formats
-
-Seven independent documentation analyzers: architecture, API, dependency, complexity, coverage, security, and convention. Output formats: Markdown documentation package, HTML report, and structured JSON.
-
-### The Eight Quality Gates
-
-Eight independent modules, each with its own verdict. All eight must pass for a pipeline to ship.
-
-| Gate | What It Enforces |
+| Module | Function |
 |:--|:--|
-| **Forge** | The Seven Rules — every generated test must: **(A)** invoke the code under test, **(B)** assert on outputs not inputs, **(C)** not swallow exceptions, **(D)** verify every mock, **(E)** test error paths, **(F)** fail if the code is wrong, **(G)** have no interdependence. All seven or rejected. |
-| **Aegis** | Security scanning — 24 vulnerability types across 9 detectors. SQL injection, command injection, XSS, auth bypass, data exposure, hardcoded secrets. Generates exploit tests and remediation tests. |
-| **Sentinel** | Mutation testing — 8 mutator types. Proves tests have teeth. |
-| **Specter** | Flaky test detection — 9 pattern types. Auto-quarantine isolates unreliable tests. |
-| **Arbiter** | Harvests quality rules from external linters (flake8, eslint, clippy, go vet). |
-| **CodeGate** | AI code quality gate — pure rule-based, no LLM calls. 10-item production readiness checklist. 3-tier dependency verification. |
-| **Intent** | Spec requirement verification — validates generated code implements original spec requirements. |
-| **Candor** | Transparency layer — every skip, limitation, and assumption surfaced. No silent failures. |
+| **Arbiter** | Rules engine — configurable quality rules |
+| **Forge** | 7 Laws of architecture validation |
+| **Candor** | Transparency reporting |
+| **Sentinel** | File watching and incremental analysis |
+| **Hydra** | Parallel execution engine |
+| **Specter** | Ghost dependency detection |
+| **Chronicle** | History analysis and trend tracking |
+| **Aegis** | Security vulnerability detection |
+| **Prophet** | Predictive quality scoring |
+| **Oracle** | Deep code analysis |
+| **Mimic** | Mirror testing and behavior cloning |
+| **Verdict** | Final quality judgment with pass/fail |
 
-### Intelligence Layer
-
-**Predictive test prioritization** ranks every function by a 6-factor risk score — complexity, change frequency, recency, centrality, coverage, defect history. **Smart model routing** selects Claude model tiers per task. **SDD Bridge** transforms extraction output into Designer-SDD spec format.
-
-<details>
-<summary><strong>Full CLI reference (34 commands)</strong></summary>
-
-<br>
-
-| Command | Purpose |
-|:--|:--|
-| `stratum extract` | Extract architecture from source code |
-| `stratum generate tests` | Compile unit + API tests |
-| `stratum generate docs` | Compile documentation |
-| `stratum audit` | Run all quality gates |
-| `stratum review` | CodeGate standalone review |
-| `stratum verify` | Spec requirement verification |
-| `stratum ship` | Full pipeline with handoff documentation |
-| `stratum run` | Full pipeline (extract → generate → gate → audit) |
-| `stratum baseline save` | Save extraction snapshot as named baseline |
-| `stratum baseline list` | List saved baselines |
-| `stratum baseline diff` | Diff baseline against current extraction |
-| `stratum delta` | Run targeted pipeline on changed code only |
-| `stratum-out generate` | Standalone architecture extraction |
-| `stratum-unit generate` | Standalone unit test compilation |
-| `stratum-api generate` | Standalone API test compilation |
-| `stratum-docs generate` | Standalone documentation compilation |
-| `stratum-docs sdd` | Generate Designer-SDD spec from codebase |
-
-</details>
+**Context extraction** runs in three layers: L1 Skeleton (AST parsing), L2 Feature Slices (functional grouping), L3 Cross-Cutting (system-wide patterns). Six languages supported via tree-sitter.
 
 <div align="center">
 
-`34 commands` · `311 modules` · `73,508 lines` · `4,322 tests, all passing`
+`CLI` · `311 modules` · `73,508 lines` · `4,322 tests, all passing`
 
 </div>
 
@@ -844,72 +760,20 @@ Eight independent modules, each with its own verdict. All eight must pass for a 
 
 ## 9. Designer-SDD — Specification Compiler
 
-**The specification compiler. Rapid prototyping from unstructured idea to scored, validated, build-ready spec package. Then build absolutely anything.**
+**The spec compiler. Raw ideas to scored, validated, build-ready documentation packages.**
 
-> The problem: specs kept arriving as Slack threads, call transcripts, and scattered notes. Teams kept building the wrong thing because requirements were ambiguous. AI agents kept generating code that missed the point because nobody validated the spec before handing it off. The gap between "what the client said" and "what got built" was where projects went to die. There was no compiler for the *idea itself*.
+Designer-SDD converts JSON specifications into **complete, GitHub-ready documentation packages**. Every tool in this platform was built from a Designer-SDD spec.
 
-Designer-SDD is a **specification compiler** that applies the **Spec-Driven Development** methodology — turning raw ideas into production-ready build packages through a deterministic compilation pipeline. Feed it any input — a client brief, a call transcript, raw notes, an interactive brainstorming session, a web research pipeline — and it compiles a structured JSON spec via Claude, then runs it through a gauntlet: validation against domain-specific rules, dual-gate scoring across 36 weighted checks, iterative AI-driven refinement that re-scores after every pass, and round-trip verification that confirms every requirement in the spec appears in the rendered output.
-
-**This is the rapid prototyping engine.** Go from a Slack thread to a scored, validated, GitHub-ready specification package of up to 11 files in minutes — ready for any developer or any AI agent to build from. **Every tool in this platform was built from a Designer-SDD spec.** That's the methodology: spec it, score it, validate it, then build absolutely anything. The spec is the single source of truth that survives the entire development lifecycle.
-
-### Entry Points — Any Input, Structured Output
-
-| Entry Point | What It Takes | When To Use It |
-|:--|:--|:--|
-| **Intake** | Raw text — briefs, emails, call transcripts, meeting notes | Client sends unstructured requirements |
-| **Create** | Interactive brainstorming session with Claude | Starting from a vague idea |
-| **Discover** | 3-stage web-powered market research pipeline | Need competitive analysis and market context |
-| **Form** | Browser-based HTML intake form | Structured self-service from stakeholders |
-| **Templates** | 5 pre-built templates (CLI, REST API, SaaS dashboard, library, Chrome extension) | Known project archetype |
-
-### Dual-Gate Scoring
-
-| Gate | What It Measures | Checks | Threshold |
-|:--|:--|:--|:--|
-| **Quality** | Is this spec complete and well-structured? | 28 weighted checks across 7 sections | 70% |
-| **Buildability** | Can a developer or AI agent actually build from this? | 8 checks: ambiguity detection, dependency completeness, acceptance verifiability, tech completeness | 60% |
-
-### Tier-Gated Export
-
-| Tier | Files | What's Included |
-|:--|:--|:--|
-| **Small** | 7 | CONSTITUTION.md, SPEC.md, PLAN.md, TASKS.md, HANDOFF.md, README.md, source JSON |
-| **Medium** | 9 | + DATA_MODEL.md, QUICKSTART.md |
-| **Large** | 11 | + ARCHITECTURE.md, RESEARCH.md |
-
-### Round-Trip Verification
-
-After export, the compiler verifies that every requirement and every task in the source JSON spec appears in the rendered markdown files. Zero tolerance for requirements that silently disappear during rendering.
-
-<details>
-<summary><strong>Full CLI reference (17 commands)</strong></summary>
-
-<br>
-
-| Command | Purpose |
-|:--|:--|
-| `designer intake` | Compile specs from unstructured text (briefs, notes, transcripts) |
-| `designer create` | Interactive brainstorming with Claude |
-| `designer discover` | 3-stage market research pipeline with web search |
-| `designer form` | Launch browser-based HTML intake form |
-| `designer validate` | Check spec completeness against domain rules |
-| `designer score` | Dual-gate scoring (quality + buildability) |
-| `designer improve` | Auto-improve via Claude refinement loop |
-| `designer ingest` | Full pipeline (validate → score → export) |
-| `designer export` | Render tier-gated markdown package |
-| `designer diff` | Field-by-field spec comparison with score deltas |
-| `designer research` | Answer open questions via Claude |
-| `designer verify` | Post-export round-trip integrity check |
-| `designer template list` | Browse pre-built templates |
-| `designer template preview` | Preview template contents |
-| `designer template use` | Scaffold project from template |
-| `designer init` | Initialize project configuration |
-
-</details>
+- **Dual-gate scoring** — Quality (28 checks) + Buildability (8 checks)
+- **Iterative AI refinement** — up to 3 passes with quality improvement targeting
+- **Tier-gated export** — 7 / 9 / 11 files based on project size
+- **Standard artifacts** — CONSTITUTION.md, SPEC.md, PLAN.md, TASKS.md, RESEARCH.md, HANDOFF.md, README.md
+- **Interactive intake** — brainstorming mode, web-powered market research, browser-based forms
+- **Round-trip verification** — ensures generated docs match the source spec
 
 <div align="center">
 
-`17 commands` · `49 modules` · `8,258 lines` · `693 tests, all passing`
+`CLI` · `49 modules` · `8,258 lines` · `693 tests, all passing`
 
 </div>
 
@@ -917,46 +781,96 @@ After export, the compiler verifies that every requirement and every task in the
 
 ---
 
-## 10. Axle — API Compiler
+## 10. Gauntlet — Code Adjudication System
 
-**The API compiler. Single YAML spec in, six production-ready artifacts out.**
+**The code adjudicator. 18 domain adjudicators with OODA self-correction. Built to catch AI-generated code failures before production.**
 
-> The problem: building a new API means writing the same boilerplate six times — the server, the OpenAPI spec, the MCP tool definitions, the MCP server, the test suite, and the test config. Each drifts from the others. The contract lives in one place, the implementation in another. Every artifact is a separate maintenance burden.
+Gauntlet is a Charlotte-compiled, prompt-native code adjudication system evaluating repositories against a structured library of **21 precision-engineered prompts** with an integrated OODA loop for self-correction.
 
-Axle is a **design-first API compiler** that transforms a single YAML specification (`api.yaml`) into six production-ready artifacts through a three-stage pipeline (Parse → Flatten → Render):
+### Three-Layer Pipeline
+
+| Layer | What It Does |
+|:--|:--|
+| **Mechanical** | File walker, parser, chunker, dependency mapper (tree-sitter) |
+| **Intelligence** | 18 domain adjudicators across 21 Charlotte-compiled prompts — orchestration, correctness, security, architecture, quality, risk, integrity |
+| **Reporting** | Universal JSON output contract with severity-ranked verdict |
+
+**OODA Loop** — Observe → Orient → Decide → Act. After initial adjudication, Gauntlet re-scans to verify stability. If findings shift between passes, it flags instability rather than silently accepting the first result.
+
+**Guardrail block** — prevents prompt injection in code input from influencing adjudicator behavior.
+
+<div align="center">
+
+`CLI` · `4,427 lines` · `115 tests, all passing`
+
+</div>
+
+<br>
+
+---
+
+## 11. Citadel — Unified Design Intelligence Platform
+
+**The design front end. Compliance-aware introspection into both compilers with compiler-ready spec generation.**
+
+Citadel reads live from both Castellan and Charlotte codebases, iterates on designs conversationally, and produces **compiler-ready specs with wiring already done**. Two operating modes: interactive CLI (Anthropic API) and FastMCP server (for MCP clients like Claude Code).
+
+### 14 FastMCP Tools
+
+| Category | Tools |
+|:--|:--|
+| **Introspection** | 5 tools — browse models, fields, enums, inheritance trees, search across both compilers |
+| **Generation** | 2 tools — generate Castellan agent specs, Charlotte prompt specs |
+| **Validation** | 2 tools — validate YAML against compiler schemas, check field compatibility |
+| **Design Intelligence** | 3 tools — suggest governance configs, recommend block compositions, analyze spec gaps |
+| **Decomposition** | 2 tools — break monolithic specs into composable modules |
+
+### Compliance Profile Resolution
+
+Built-in governance profiles for **FedRAMP**, **DoD IL4/IL5**, **HIPAA**, **SOC 2**, **PCI-DSS**, **EU AI Act**, and **GDPR**. Select a profile, and Citadel pre-populates the governance sections of generated specs with the required controls.
+
+<div align="center">
+
+`CLI + MCP Server` · `4,558 lines` · `117 tests, all passing`
+
+</div>
+
+<br>
+
+---
+
+## 12. VC+ — Capital Intelligence System
+
+**The capital intelligence pipeline. Multi-agent system with live MCP data for founder fundraising.**
+
+VC+ is a multi-agent capital intelligence pipeline that helps founders find VC, PE, growth equity, and M&A capital through pattern matching and live data gathering. Runs on Claude Code Max where Claude is the runtime and MCP servers are the data layer.
+
+### 5-Stage Pipeline
 
 ```
-api.yaml ──> [ Parse ] ──> [ Flatten ] ──> [ Render ] ──> FastAPI Server
-                                                      ──> OpenAPI 3.1 Spec
-                                                      ──> MCP Tool Definitions
-                                                      ──> MCP Server
-                                                      ──> Pytest Suite
-                                                      ──> Pytest Config
+Query ──> [ Router ] ──> [ Research ] ──> [ Analysis ] ──> [ Intelligence ] ──> [ Dossier ]
 ```
 
-### What It Generates
+### Three Operating Modes
 
-| Artifact | What You Get |
+| Mode | What It Does |
 |:--|:--|
-| **FastAPI Server** | Fully typed Pydantic v2 models, route stubs with 501 Not Implemented responses, auth middleware |
-| **OpenAPI 3.1 Spec** | Standards-compliant API documentation |
-| **MCP Tools** | Anthropic-format tool definitions for AI assistants |
-| **MCP Server** | Runnable FastMCP server that calls your API over HTTP |
-| **Pytest Suite** | Async test suite with happy-path, missing-field, and wrong-type tests per endpoint |
-| **Pytest Config** | Test fixtures and async test infrastructure |
+| **Company → Capital** | Given a company profile, maps optimal capital paths (VC, PE, growth equity, M&A) |
+| **Market Query** | Searches for capital opportunities matching specific criteria |
+| **Firm Dossier** | Produces deep intelligence reports on specific firms |
 
-### AI-Assisted Design
+### Live Data Sources
 
-- **AXLE_API_ARCHITECT.md** — Charlotte-compiled prompt for claude.ai projects with Ideation and Spec modes
-- **axle-intake.html** — Visual HTML form for browser-based API design with live YAML generation
+- **SEC EDGAR** — regulatory filings, fund registrations
+- **Crunchbase** — funding rounds, investor profiles, company data
+- **NewsAPI** — recent news, sentiment signals
+- **Website Scanner** — company site analysis for positioning and team data
 
-### Smart Naming & Validation
-
-Auto-derives tool names from endpoints (e.g., `POST /payments/{id}` → `create_payments_by_id`). Semantic validation: `$ref` resolution, duplicate detection, HTTP status codes, tool name collisions. Structural validation: Pydantic enforces type/ref mutual exclusivity.
+52K tokens of domain knowledge: glossary, frameworks, red flag library. Data contracts via Pydantic. Charlotte-compiled prompt specs + Castellan agent specs.
 
 <div align="center">
 
-`6 commands` · `15 modules` · `2,151 lines` · `134 tests, all passing`
+`MCP Server Suite` · `5,537 lines`
 
 </div>
 
@@ -964,37 +878,21 @@ Auto-derives tool names from endpoints (e.g., `POST /payments/{id}` → `create_
 
 ---
 
-## 11. Dissector — Domain Agent Opportunity Mapper
+## 13. PRD+ — AI CPO PRD Compiler
 
-**The opportunity mapper. Feed it any business domain, get back a prioritized blueprint of every AI agent worth building.**
+**The PRD compiler. 20-year veteran AI CPO that turns any product input into production-quality PRDs.**
 
-> The problem: organizations know they want AI agents but don't know where to start. They're overwhelmed by the technology and can't see the opportunities in their own operations. They need someone to analyze their business domain and produce a concrete, build-ready map of what agents would actually deliver value — not generic AI pitches, but specific agents mapped to specific processes.
+PRD+ is a Charlotte-compiled AI Chief Product Officer that normalizes any natural-language product input, researches competitive landscape in real time, challenges assumptions with evidence, and compiles **production-quality PRDs grounded in market reality**.
 
-The Dissector is a **domain agent opportunity mapper** that analyzes any organization type — law offices, restaurants, consulting firms, dental practices, construction companies — and produces comprehensive AI agent opportunity blueprints. It decomposes organizations into nine functional categories, identifies minimum 15 opportunity cards per domain, and generates three-wave implementation roadmaps (0–90, 90–180, 180–365 days).
-
-### What It Produces
-
-- **Functional Anatomy** — Nine-category decomposition of any business domain with specific processes per category
-- **Opportunity Cards** — Each card includes: agent name, category, function, data requirements, build complexity, value tier, ROI estimate, and wave assignment
-- **Prioritization Matrix** — Multi-factor scoring across value, complexity, data readiness, and organizational appetite
-- **Three-Wave Roadmap** — Phased implementation plan with dependencies and success criteria
-- **OTS Assessment** — Off-the-shelf tool evaluation against custom build opportunities (e.g., Harvey AI, CoCounsel, LexisNexis Protege, Clio)
-- **Human-in-the-Loop Flags** — Explicit flagging of privilege-sensitive and liability-creating zones
-
-### Design Principles
-
-- **Functional anatomy first** — identifies agents from business processes, never technology-first
-- **Strict boundary enforcement** — maps opportunities only, does not provide technical architecture or agent code specs
-- **Domain-agnostic engine** — the same methodology works for any industry
-- **Builder vocabulary** — assumes the reader can build; uses domain-specific precision, not marketing language
-
-### Architecture
-
-Two compiled implementations: a full agent-orchestrating system (10 blocks, 7,507 tokens) and a multi-phase skill version (6 blocks, 4,653 tokens). Both Charlotte-compiled with validated block composition.
+- **13-step workflow** with multi-turn state tracking
+- **29-item evaluation checklist** with 90% quality threshold
+- **Post-PRD pipeline** producing 5 additional artifacts
+- **Two variants** — full Agent Orchestrating (13 blocks, 13,615 tokens) and Skill (6 blocks, 5,253 tokens)
+- **13-block composition** — System Identity, Guardrails, Safety, Routing, Task, Few-Shot, CoT, Tools, State Management, ReAct Agent, Evaluation
 
 <div align="center">
 
-`Compiled prompt system` · `1,886 lines`
+`Charlotte-Compiled Agent`
 
 </div>
 
@@ -1002,41 +900,25 @@ Two compiled implementations: a full agent-orchestrating system (10 blocks, 7,50
 
 ---
 
-## 12. ClaudeMD — CLAUDE.md Quality Compiler
+## 14. Agent-Dissector — Domain Agent Opportunity Mapper
 
-**The instruction compiler. Treats CLAUDE.md files as engineered artifacts — validated, scored, and auto-improved before they govern a single token.**
+**The opportunity mapper. Analyzes any business domain and produces governance-ready AI agent blueprints.**
 
-> The problem: CLAUDE.md files are the primary way developers configure Claude Code's behavior, but they're written by instinct and shipped on hope. Too many instructions degrade performance — research shows a ~150 instruction limit before quality drops. Critical rules buried in the middle get lost to periphery bias. There's no validation, no quality measurement, no way to know if a CLAUDE.md is helping or hurting. Teams hand-write the instructions that govern their most powerful tools, with no compiler, no linter, and no test suite. Instruction files deserve the same rigor as the code they govern.
+Agent-Dissector is a governance-ready AI automation opportunity intelligence platform with two operating modes:
 
-ClaudeMD is a **CLAUDE.md quality compiler** — a CLI tool that applies research-backed best practices to validate, score, and improve Claude Code instruction files. It enforces the ~150 instruction limit, detects periphery bias issues, validates the WHAT/WHY/HOW framework from Anthropic's official guidance, and ensures progressive disclosure via skills and rules.
+**Panoramic Mode** — Given a domain, produces a complete briefing: what AI agents and MCP servers should be built, in what order, with what governance. Five-layer analytical workflow producing six structured output sections with 15–40+ opportunity cards per domain.
 
-### Validation Engine — 15 Rules
+**Targeted Mode** — Corrects decomposition, produces governance-ready cards, generates intake briefs.
 
-Rule-based checking with rationale and fix suggestions for every issue. Severity levels: error, warning, info. Exit codes for CI integration (0 = clean, 1 = warnings, 2 = errors).
-
-### Quality Scoring — 5 Weighted Dimensions
-
-| Dimension | Weight | What It Measures |
-|:--|:--|:--|
-| **Conciseness** | 25% | Instruction count relative to ~150 limit, section density |
-| **Coverage** | 25% | Essential sections present: project context, coding standards, testing, error handling |
-| **Specificity** | 20% | Actionable instructions vs. vague guidance |
-| **Progressive Disclosure** | 15% | Proper use of skills, rules, and agents for overflow |
-| **Anti-patterns** | 15% | Absence of known failure modes: linter rules, overly verbose instructions |
-
-Grades: A (90–100), B (80–89), C (70–79), D (60–69), F (<60).
-
-### Automated Improvement
-
-Auto-fix with unified diff output: removes linter-territory rules, deduplicates instructions, adds trailing newlines, reorders sections. Write mode applies changes with `.bak` backup.
-
-### Ecosystem Audit
-
-Full scan across the Claude Code instruction ecosystem: CLAUDE.md, `.claude/rules/`, agents, skills, and `.mcp.json`. Detects orphaned rules, missing configuration, and ecosystem-level issues.
+- **Autonomy classification** — Agent vs MCP Server vs Agent+MCP based on goal pursuit vs accessibility
+- **Governance tiering** — 8 data classification levels, compliance framework mapping, A2A topology
+- **Three-wave roadmaps** — 0–90, 90–180, 180–365 days
+- **HITL flagging** — explicit human-in-the-loop designation for privilege-sensitive and liability-creating zones
+- **"Why Not One Agent?" test** — justifies decomposition boundaries
 
 <div align="center">
 
-`5 commands` · `1,144 lines` · `90 tests, all passing`
+`Charlotte-Compiled Agent` · `1,886 lines`
 
 </div>
 
@@ -1044,29 +926,25 @@ Full scan across the Claude Code instruction ecosystem: CLAUDE.md, `.claude/rule
 
 ---
 
-## 13. Test Harness — Agent Governance Test Harness
+## 15. Agent-Test-Harness — Agent Governance Test Harness
 
-**The governance test harness. Validates agents against their Castellan governance contracts and A2A channels with spec-derived assertions.**
+**The governance tester. Validates agents against their Castellan contracts and A2A channels through Seneschal.**
 
-> The problem: you compiled an agent with Castellan, audited it with Aegis, and deployed it through Herald. But how do you prove the governance contracts are actually enforced at runtime? You need a structured testing agent that can exercise every governance boundary, validate A2A policy enforcement through Seneschal, and produce Aegis-compatible evidence packages.
+Agent-Test-Harness is a Charlotte-compiled orchestrating agent that exercises constitutional compliance, bilateral policy gate enforcement through Seneschal, attestation chain verification, and runtime guardrail enforcement.
 
-The Test Harness is a **Charlotte-compiled orchestrating agent** that validates agents against their Castellan governance contracts. It exercises constitutional compliance, A2A bilateral policy gates, attestation chain verification, and runtime guardrail enforcement. Eight assertion types cover governance boundary testing from prompt injection resistance to kill switch responsiveness.
+### 5-Layer Validation Stack
 
-### What It Tests
-
-- **Constitutional compliance** — validates agent responses against declared constitutional principles and severity-ranked governance rules
-- **A2A policy enforcement** — exercises bilateral policy gates through Seneschal broker with trust score verification
-- **Attestation chain integrity** — verifies tamper-evident attestation chains across agent interactions
-- **Runtime guardrail enforcement** — tests PII redaction, prompt injection filtering, hallucination detection, and output safety
-- **Kill switch responsiveness** — validates emergency shutdown paths and autonomy ceiling enforcement
-
-### Architecture
-
-Charlotte-compiled agent-orchestrating system (12 blocks, 11,148 tokens) with spec-derived assertion framework and Aegis-compatible output format.
+| Layer | Function |
+|:--|:--|
+| **Spec Loader** | Loads and validates agent governance contract |
+| **Discovery Runner** | Establishes baseline capabilities |
+| **Scenario Sequencer** | Baseline → Boundary → Adversarial → Governance → Kill Switch |
+| **Assertion Engine** | 8 assertion types: boundary, injection resistance, tool scope, kill switch, attestation, A2A policy, constitutional, escalation |
+| **Reporter** | Atomic writes: report.md, report.json, violations.json — Aegis-compatible |
 
 <div align="center">
 
-`Compiled prompt system` · `10,677 lines`
+`Charlotte-Compiled Agent` · `10,677 lines`
 
 </div>
 
@@ -1074,37 +952,20 @@ Charlotte-compiled agent-orchestrating system (12 blocks, 11,148 tokens) with sp
 
 ---
 
-## 14. Passport — Agent Passport Generator
+## 16. Passport — Agent Passport Generator
 
-**The agent passport generator. Reads any AI agent artifact and produces a structured Agent Passport — a self-contained HTML document that tells you exactly what the agent is.**
+**The documentation generator. Reads any agent artifact, produces a self-contained HTML Agent Passport.**
 
-> The problem: agent artifacts come in dozens of formats — Castellan YAML, LangChain Python, CrewAI configs, raw system prompts, MCP manifests, OpenAI Agents SDK — and there's no standard way to document what an agent is, how it's configured, what tools it has access to, and what governance gaps exist. You need a way to produce a canonical, human-readable identity document for any agent, regardless of framework.
+Passport reads any AI agent artifact and produces structured **Agent Passports** — self-contained HTML documents that document exactly what an agent is, how it's configured, what tools and capabilities it has, and what governance gaps exist.
 
-Passport is a **Charlotte-compiled multi-phase system** that reads any AI agent artifact and produces structured Agent Passports. It identifies the framework format, extracts identity and behavior configuration, maps capabilities and tools, documents constraints and guardrails, and flags what's configured versus what's merely implied. The passport is the difference between "we think the agent has guardrails" and "here's exactly what's configured and what's missing."
-
-### What It Produces
-
-- **Agent Identity** — name, version, provider, model, framework, compilation status
-- **Behavior Configuration** — system prompt analysis, persona definition, communication style
-- **Capabilities & Tools** — tool inventory with permission levels and blast radius assessment
-- **Constraints & Guardrails** — explicit guardrail blocks vs. implied behavior boundaries
-- **Memory & State** — persistence configuration, context window management, state handling
-- **Orchestration Patterns** — multi-agent coordination, delegation chains, handoff protocols
-- **Governance Gaps** — what's not defined, what's implied but not enforced, what's missing
-
-### Design Principles
-
-- **Configured vs. implied** — obsessive distinction between what's explicitly configured and what's merely implied by context
-- **Framework-agnostic** — reads Castellan YAML, LangChain, LangGraph, CrewAI, AutoGen, OpenAI Agents SDK, Google ADK, MCP manifests, and raw system prompts
-- **Documentation, not evaluation** — produces passports, not opinions. Trustworthy because it reports what's there, not what should be
-
-### Architecture
-
-Charlotte-compiled multi-phase system (9 blocks, 8,014 tokens) with field extraction pipeline and HTML passport rendering.
+- **Multi-framework** — Castellan YAML, LangChain, LangGraph, CrewAI, AutoGen, OpenAI Agents SDK, Google ADK, MCP manifests, raw system prompts
+- **Configured vs. implied** — obsessive distinction between what is explicitly configured and what is merely assumed
+- **Governance gaps** — flags missing kill switches, absent HITL checkpoints, undefined autonomy ceilings, missing audit trails
+- **Documentation, not evaluation** — trustworthy because it reports what's there, not what should be
 
 <div align="center">
 
-`Compiled prompt system` · `4,676 lines`
+`Charlotte-Compiled Agent` · `4,676 lines`
 
 </div>
 
@@ -1115,64 +976,71 @@ Charlotte-compiled multi-phase system (9 blocks, 8,014 tokens) with field extrac
 ## How They Connect
 
 ```
-                         AGENT GOVERNANCE PLATFORM
+                    CASTELLAN AGENT & MCP GOVERNANCE PLATFORM
   ┌──────────────────────────────────────────────────────────────────────┐
   │                                                                      │
-  │   COMPILE              AUDIT               COMMUNICATE              │
-  │   ───────              ─────               ───────────              │
-  │   Castellan ─────────> Aegis               Herald                   │
-  │   (Agent Compiler)     (Security Audit)    (Command Channel)        │
-  │        │                    │                    │                   │
-  │        │               Arbiter                   │                   │
-  │        │               (Batch Governance)        │                   │
-  │        │                                         │                   │
-  │   SCAN                 MONITOR                                      │
-  │   ────                 ───────                                      │
-  │   Recon ─────────────> Vigil <───────────────────┘                  │
-  │   (Reverse-Engineer)   (Fleet Dashboard)                            │
+  │   COMPILE              ENFORCE              AUDIT                    │
+  │   ───────              ───────              ─────                    │
+  │   Castellan ─────────> Seneschal            Aegis                    │
+  │   (Agent Compiler)     (On-Prem Runtime)    (Security Audit)         │
+  │        │                    │                    │                    │
+  │   Charlotte                 │                    │                    │
+  │   (Prompt Compiler)         │                    │                    │
+  │                             │                    │                    │
+  │   COMMUNICATE          SCAN                 MONITOR                  │
+  │   ───────────          ────                 ───────                  │
+  │   Herald ─────────────────────────────────> Vigil                    │
+  │   (Command Channel)   Recon ──────────────> (Fleet Dashboard)        │
+  │                       (Reverse-Engineer)                             │
   │                                                                      │
   └──────────────────────────────────────────────────────────────────────┘
 
-                              SUPPORTING TOOLS
+                              AUTOMATION TOOLING
   ┌──────────────────────────────────────────────────────────────────────┐
   │                                                                      │
-  │   DESIGN               BUILD               VALIDATE                 │
-  │   ──────               ─────               ────────                 │
-  │   Designer-SDD ──────> Charlotte ─────────> Stratum                 │
-  │   (Spec Compiler)      (Prompt Compiler)    (QA Compiler)           │
+  │   QUALITY              DESIGN               INTELLIGENCE             │
+  │   ───────              ──────               ────────────             │
+  │   Stratum              Designer-SDD         VC+                      │
+  │   (QA Compiler)        (Spec Compiler)      (Capital Intel)          │
   │                                                                      │
-  │   Axle                 Dissector              ClaudeMD                │
-  │   (API Compiler)       (Opportunity Mapper)   (CLAUDE.md Compiler)  │
+  │   Gauntlet             Citadel              PRD+                     │
+  │   (Code Adjudicator)   (Design Intel)       (PRD Compiler)           │
   │                                                                      │
-  │   Test Harness         Passport                                      │
+  │   VALIDATE                                  Dissector                │
+  │   ────────                                  (Opportunity Mapper)     │
+  │   Agent-Test-Harness   Passport                                      │
   │   (Governance Tester)  (Agent Passports)                             │
   │                                                                      │
   └──────────────────────────────────────────────────────────────────────┘
 
   Data Flow:
   Designer-SDD specs → define every tool
-  Charlotte prompts  → power AI stages across Stratum, Aegis, Recon, Arbiter
+  Charlotte prompts  → power AI stages across Stratum, Aegis, Recon, Gauntlet
   Stratum            → validates code all systems generate
   Castellan          → compiles agents with governance
+  Seneschal          → enforces policies on-premises
   Aegis              → audits agent security pre-deployment
-  Arbiter            → batch-audits agent fleets for compliance
   Herald             → delivers commands to deployed agents
   Recon              → reverse-engineers governance from existing agents
   Vigil              → monitors everything in production
+  Citadel            → design intelligence front end for both compilers
+  Gauntlet           → catches AI-generated code failures
+  VC+                → maps capital paths with live data
+  PRD+               → compiles product requirements
   Dissector          → maps where to build agents next
-  ClaudeMD           → validates and improves CLAUDE.md instruction files
   Test Harness       → validates agents against governance contracts
   Passport           → generates identity documents for any agent artifact
 ```
 
 ### The Governance Loop
 
-1. **Design** — Designer-SDD compiles the spec. Dissector identifies the opportunities
-2. **Build** — Charlotte compiles the prompts. Castellan compiles the agent. Axle compiles the API. ClaudeMD validates instruction files. Passport documents agent artifacts
-3. **Validate** — Stratum runs quality gates. Aegis audits security. Arbiter scores compliance. Test Harness validates governance contracts
-4. **Deploy** — Herald establishes the command channel
-5. **Monitor** — Vigil tracks governance drift, fires alerts, enforces kill switches
-6. **Scan** — Recon reverse-engineers governance from agents already in production
+1. **Design** — Designer-SDD compiles the spec. Dissector identifies the opportunities. PRD+ compiles requirements. Citadel provides design intelligence
+2. **Build** — Charlotte compiles the prompts. Castellan compiles the agent. Gauntlet adjudicates the code. Passport documents agent artifacts
+3. **Validate** — Stratum runs quality gates. Aegis audits security. Test Harness validates governance contracts
+4. **Enforce** — Seneschal enforces policies on-premises with SPIFFE identity and FIPS crypto
+5. **Deploy** — Herald establishes the command channel
+6. **Monitor** — Vigil tracks governance drift, fires alerts, enforces kill switches
+7. **Scan** — Recon reverse-engineers governance from agents already in production
 
 Every system is standalone. Together they close the loop.
 
@@ -1184,43 +1052,45 @@ Every system is standalone. Together they close the loop.
 
 <br>
 
-![Total Lines](https://img.shields.io/badge/315%2C757-Total_Source_Lines-2563EB?style=for-the-badge)
-![Total Tests](https://img.shields.io/badge/19%2C077-Tests_Passing-16A34A?style=for-the-badge)
-![Total Systems](https://img.shields.io/badge/14-Production_Systems-7C3AED?style=for-the-badge)
+![Total Lines](https://img.shields.io/badge/365%2C060-Total_Source_Lines-2563EB?style=for-the-badge)
+![Total Tests](https://img.shields.io/badge/19%2C494-Tests_Passing-16A34A?style=for-the-badge)
+![Total Systems](https://img.shields.io/badge/16-Production_Systems-7C3AED?style=for-the-badge)
 
 <br>
 
-### Agent Governance Platform
+### Castellan Agent & MCP Governance Platform
 
-| | Castellan | Aegis | Arbiter | Herald | Recon | Vigil | **Subtotal** |
-|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **Source Lines** | 104,044 | 20,017 | 2,679 | 3,596 | 44,596 | 15,632 | **190,564** |
-| **Modules** | 473 | 103 | 18 | 34 | 172 | 138 | **938** |
-| **Tests** | 7,097 | 675 | 100 | 219 | 2,705 | 185 | **10,981** |
+| | Castellan | Seneschal | Charlotte | Aegis | Herald | Recon | Vigil | **Subtotal** |
+|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **Source Lines** | 118,014 | 15,633 | 34,045 | 20,017 | 3,596 | 44,596 | 15,632 | **251,533** |
+| **Modules** | 523 | 37 | 104 | 103 | 34 | 172 | 138 | **1,111** |
+| **Tests** | 7,310 | 119 | 3,034 | 675 | 219 | 2,705 | 185 | **14,247** |
 
-### Tools
+### Automation Tooling
 
-| | Charlotte | Stratum | Designer-SDD | Axle | Dissector | ClaudeMD | Test Harness | Passport | **Subtotal** |
-|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **Source Lines** | 22,893 | 73,508 | 8,258 | 2,151 | 1,886 | 1,144 | 10,677 | 4,676 | **125,193** |
-| **Modules** | 91 | 311 | 49 | 15 | — | 20 | — | — | **486** |
-| **Tests** | 2,857 | 4,322 | 693 | 134 | — | 90 | — | — | **8,096** |
+| | Stratum | Designer | Gauntlet | Citadel | VC+ | PRD+ | Dissector | Harness | Passport | **Subtotal** |
+|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **Source Lines** | 73,508 | 8,258 | 4,427 | 4,558 | 5,537 | — | 1,886 | 10,677 | 4,676 | **113,527** |
+| **Modules** | 311 | 49 | — | — | — | — | — | — | — | **360+** |
+| **Tests** | 4,322 | 693 | 115 | 117 | — | — | — | — | — | **5,247** |
 
 ### Combined
 
 | Metric | Value |
 |:--|:--|
-| **Total Systems** | **14** |
-| **Total Source Lines** | **315,757** |
-| **Total Modules** | **1,424** |
-| **Total Tests (passing)** | **19,077** |
-| **Compliance Standards** | **11** (EU AI Act, NIST AI RMF, GDPR, HIPAA, PCI-DSS, SOC 2, ISO 42001, ISO 27001, FZ-152, OWASP, CoSAI) |
+| **Total Systems** | **16** |
+| **Total Source Lines** | **365,060** |
+| **Total Modules** | **1,471+** |
+| **Total Tests (passing)** | **19,494** |
+| **Compliance Standards** | **16+** (EU AI Act, NIST AI RMF, NIST 800-53, NIST CSF 2.0/CAISI, GDPR, HIPAA, PCI-DSS v4.0, SOC 2 Type II, ISO 42001, ISO 27001, FZ-152, OWASP Top 10, CoSAI, FedRAMP, FIPS 140-3, DoD STIG) |
+| **Languages** | Python, Rust, TypeScript |
 
 <br>
 
 **Stack**
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)
+![Rust](https://img.shields.io/badge/Rust-2021-DEA584?style=flat-square&logo=rust&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)
 ![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=next.js&logoColor=white)
@@ -1237,6 +1107,7 @@ Every system is standalone. Together they close the loop.
 ![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-000000?style=flat-square&logo=opentelemetry&logoColor=white)
 ![WebSocket](https://img.shields.io/badge/WebSocket-010101?style=flat-square)
 ![tree--sitter](https://img.shields.io/badge/tree--sitter-6_languages-yellow?style=flat-square)
+![SPIFFE](https://img.shields.io/badge/SPIFFE%2FSPIRE-CNCF-326CE5?style=flat-square&logo=cncf&logoColor=white)
 
 </div>
 
@@ -1254,7 +1125,7 @@ If your team is shipping production AI agents and needs them **governed, compile
 
 I take on AI-first contract engagements:
 
-> **Agent governance platforms** · **Agentic compilation** · **SDLC automation** · **Rapid prototyping** from spec to production · Pre-deployment security auditing · Batch compliance scanning · Fleet governance monitoring · Prompt and skill compilation · Test generation pipelines · Quality gate systems · OWASP security auditing · Governance reverse-engineering
+> **Agent governance platforms** · **Agentic compilation** · **On-premises policy enforcement** · **Defense & federal compliance** (FIPS, STIG, FedRAMP, DoD IL) · **SDLC automation** · **Rapid prototyping** from spec to production · Pre-deployment security auditing · Fleet governance monitoring · Prompt and skill compilation · Test generation pipelines · Quality gate systems · OWASP security auditing · Governance reverse-engineering
 
 <div align="center">
 
