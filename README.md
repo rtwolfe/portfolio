@@ -1137,7 +1137,7 @@ I take on AI-first contract engagements:
 
 <br>
 
-*20+ years enterprise ops · 2 IPOs · 4 acquisitions · Salesforce · IBM · Oracle · iHeartMedia*
+*20+ years enterprise ops · 2 IPOs · 5 acquisitions · Salesforce · IBM · Oracle · iHeartMedia*
 
 <br>
 
