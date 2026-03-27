@@ -2,7 +2,7 @@
 
 # Tim Wolfe
 
-### Context Architect | Agent Governance, MCP & Secure Systems | DoD · NIST-Aligned | CSPO · A-CSCM
+###Context Architect | Agent Governance, MCP & Secure Systems | DoD · NIST-Aligned | CSPO · A-CSCM
 
 <br>
 
@@ -10,9 +10,9 @@
 
 <br>
 
-![Source](https://img.shields.io/badge/398%2C000%2B-Source_Lines-2563EB?style=for-the-badge)
+![Source](https://img.shields.io/badge/381%2C000%2B-Source_Lines-2563EB?style=for-the-badge)
 ![Tests](https://img.shields.io/badge/19%2C800%2B-Tests_Passing-16A34A?style=for-the-badge)
-![Systems](https://img.shields.io/badge/14-Production_Systems-7C3AED?style=for-the-badge)
+![Systems](https://img.shields.io/badge/12-Production_Systems-7C3AED?style=for-the-badge)
 ![Standards](https://img.shields.io/badge/18%2B-Compliance_Standards-DC2626?style=for-the-badge)
 
 <br>
@@ -36,11 +36,11 @@ Los Altos, CA · [rtwolfe@gmail.com](mailto:rtwolfe@gmail.com) · 650-390-5003 �
 
 ## About
 
-I build **governance infrastructure for AI agents** — the compilers, scanners, auditors, command channels, and monitoring portals that make autonomous agents safe to deploy in production. Not wrappers. Not demos. Not prompt templates. **Seven interconnected governance systems and seven automation tools** that close the loop from raw idea to deployed, governed, monitored agent fleet — including domain-specific platforms for legal practice and clinical healthcare.
+I build **governance infrastructure for AI agents** — the compilers, scanners, auditors, command channels, and monitoring portals that make autonomous agents safe to deploy in production. Not wrappers. Not demos. Not prompt templates. **Seven interconnected governance systems and five automation & utility tools** that close the loop from raw idea to deployed, governed, monitored agent fleet — with defense-grade compliance enforcement at every stage.
 
 **Governance is the core problem.** Every team shipping AI agents hits the same wall: the prototype works, but production demands governance — constitutional constraints, runtime guardrails, OWASP security auditing, compliance drift detection, kill switches, audit trails. Most frameworks hand you a runtime and leave governance as an exercise for the reader. I built a platform that makes governance structural. It's enforced at compile time. It travels with the deployed agent. It's monitored in real time. It's not optional.
 
-**Compliance runs deep.** This platform carries full regulatory compliance coverage across **18+ frameworks**: **EU AI Act** risk classification, **HIPAA** safeguard mapping with HL7/FHIR interoperability, **PCI-DSS v4.0** goal compliance, **SOC 2 Type II** evidence generation, **NIST 800-53** federal security controls, **NIST AI RMF** and **NIST CSF 2.0 (CAISI)**, **FedRAMP** (Low/Moderate/High), **FIPS 140-3** cryptography, **CNSA 2.0** post-quantum alignment, **CNSSP-12** classified environment compliance, **DoD STIG** checklist export with CAT I–III severity, **DoD IL4/IL5** impact level controls, **ISO 42001/27001**, **GDPR Article 22**, **OWASP Top 10**, **CoSAI** threat modeling, **ABA Model Rules** for legal practice, **FINRA 2026** financial regulatory compliance, and **COPPA** child privacy protection.
+**Compliance runs deep.** This platform carries full regulatory compliance coverage across **18+ frameworks**: **EU AI Act** risk classification, **HIPAA** safeguard mapping with HL7/FHIR interoperability, **PCI-DSS v4.0** goal compliance, **SOC 2 Type II** evidence generation, **NIST 800-53** federal security controls, **NIST AI RMF** and **NIST CSF 2.0 (CAISI)**, **FedRAMP** (Low/Moderate/High), **FIPS 140-3** cryptography, **CNSA 2.0** post-quantum alignment, **CNSSP-12** classified environment compliance, **DoD STIG** checklist export with CAT I–III severity, **DoD IL4/IL5** impact level controls, **ISO 42001/27001**, **GDPR Article 22**, **OWASP Top 10**, **CoSAI** threat modeling, **FINRA 2026** financial regulatory compliance, and **COPPA** child privacy protection.
 
 **The Castellan Agent & MCP Governance Platform:**
 
@@ -55,17 +55,12 @@ I build **governance infrastructure for AI agents** — the compilers, scanners,
 **Automation & Utility Tooling:**
 
 - **Stratum** — QA compiler. Architecture extraction, test generation, documentation, eight independent quality gates. SDLC automation for testing and quality assurance
-- **Gauntlet** — code adjudication system. 3-layer pipeline with 18 domain adjudicators, 21 Charlotte-compiled prompts, integrated OODA loop for self-correction. Built to catch AI-generated code failures before production
-- **VC+** — capital intelligence system. Multi-agent pipeline with 6 MCP servers pulling live data from SEC EDGAR, Crunchbase, NewsAPI. Helps founders find VC, PE, growth equity, and M&A capital through pattern matching
 - **Chancery** — AI Chief Product Officer. Transforms unstructured product input into production-quality PRDs through a 3-phase, 3-gate workflow with deterministic quality scoring. Detects 10 compliance frameworks (PCI-DSS, HIPAA, GDPR, EU AI Act, NIST 800-53, COPPA, SOC 2, FedRAMP, HL7 FHIR, FINRA) and 7 cognitive biases
 - **CoWork** — governed plugin designer. Decomposes natural language role descriptions into 15–30 governed Claude Code plugins with SENESCHAL runtime enforcement, audit trails, HITL gates, and 10 compliance framework support (FedRAMP, DoD IL4/IL5, HIPAA, SOC 2, PCI-DSS v4.0, EU AI Act, GDPR). Every plugin ships with a `.castellan/` governance sidecar
+- **Forge** — platform integration test harness for Castellan, Charlotte, SENESCHAL, and Drawbridge. 12 test layers mapped to NIST 800-53 controls with automated compliance evidence report generation for Authorizing Officials. CI gates block progression on governance regression — compliance verification is structural, not manual
+- **DoD Hardened MCP Servers** — 34 Level 6 hardened Rust binaries (17 tool servers + 17 knowledge servers) providing 137 query-only tools, 92 MCP resources, and 92 KB files (~1.8MB DoD domain content). CUI // NOFORN classified. Level 6 binary hardening (stripped, PIE/ASLR, full RELRO, BIND_NOW, NX, panic=abort, LTO, overflow-checks). Shared `mcp-hardened` crate provides mTLS (rustls), structured audit (JSON/CEF/Syslog), and CNSA 2.0 crypto (SHA-384, HMAC-SHA384). Covers ACAS/Nessus vulnerability scanning, Splunk SIEM, Snort/Suricata IDS, AD/PKI identity, STIG Compiler, ATO Package assembly, SBOM/Supply Chain (EO 14028), STRIDE/DREAD threat modeling, IR Playbook, behavioral threat intelligence, Zero Trust Architecture, CNSA cryptographic compliance, DFIR digital forensics, firewall policy, EDR endpoint detection, PAM privileged access, and cloud security. SENESCHAL enforces read-only contract at runtime
 
-**Domain-Specific Platforms:**
-
-- **LawClaw** — governed legal plugin suite. 34 plugins per discipline (privacy/security, family law, general) compiled through CoWork with ABA Model Rules compliance mapping (Rules 1.1, 1.5, 1.6, 1.7, 1.15, 5.1, 5.3). 13 HITL gates per profile, 50+ state breach notification laws, 33 jurisdiction-specific privacy regulations
-- **Rampart** — governed clinical device telemetry platform. 40K+ lines with HIPAA safeguard mapping (PHI encryption, access logging, 6-year retention, RBAC), HL7/FHIR interoperability, BAA execution support, patient right of access implementation, and breach notification procedures. 762 automated tests
-
-Every system is standalone. Together they automate the full lifecycle for AI agents — from rapid prototyping through governed deployment to real-time fleet monitoring. The platform is self-hosting: these are the same tools I use to deliver for enterprise clients across finance, healthcare, legal, and defense.
+Every system is standalone. Together they automate the full lifecycle for AI agents — from rapid prototyping through governed deployment to real-time fleet monitoring. The platform is self-hosting: these are the same tools I use to deliver for enterprise clients across finance and defense.
 
 Before AI infrastructure: 20+ years of enterprise operations leadership — two IPOs (**Quinstreet**, **Responsys**), four acquisitions (**IBM**/DemandTec, **EMC**/Syncplicity, **Oracle**/Responsys, **Netmarble**/Kabam), and senior technical roles at **Salesforce**, **iHeartMedia**, and **Axway**.
 
@@ -86,16 +81,11 @@ Before AI infrastructure: 20+ years of enterprise operations leadership — two 
 │   │  POLICY:  Citadel-edge                                  │   │
 │   └─────────────────────────────────────────────────────────┘   │
 ├─────────────────────────────────────────────────────────────────┤
-│                       AUTOMATION TOOLING                        │
+│                    AUTOMATION & UTILITY TOOLING                  │
 │                                                                 │
-│   QUALITY       INTELLIGENCE   PRD           PLUGINS            │
-│   Stratum       VC+            Chancery      CoWork             │
-│   Gauntlet                                                      │
-├─────────────────────────────────────────────────────────────────┤
-│                    DOMAIN-SPECIFIC PLATFORMS                     │
-│                                                                 │
-│   LEGAL                        MEDICAL                          │
-│   LawClaw                      Rampart                          │
+│   QUALITY       PRD           PLUGINS       COMPLIANCE          │
+│   Stratum       Chancery      CoWork        Forge               │
+│                                             DoD MCP Servers     │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -103,9 +93,7 @@ Before AI infrastructure: 20+ years of enterprise operations leadership — two 
 
 **The Platform** &nbsp;&nbsp; [Castellan](#1-castellan--agentic-compiler) · [Charlotte](#2-charlotte--prompt--mcp-compiler) · [Aegis](#3-aegis--pre-deployment-security-audit) · [Herald](#4-herald--authenticated-command-channel) · [Recon](#5-recon--governance-reverse-engineering) · [Citadel](#6-citadel--unified-design-intelligence-platform) · [Drawbridge](#7-drawbridge--governed-a2a-communication-backbone)
 
-**The Tools** &nbsp;&nbsp; [Stratum](#8-stratum--qa-compiler) · [Gauntlet](#9-gauntlet--code-adjudication-system) · [VC+](#10-vc--capital-intelligence-system) · [Chancery](#11-chancery--ai-chief-product-officer) · [CoWork](#12-cowork--governed-plugin-designer)
-
-**Domain Platforms** &nbsp;&nbsp; [LawClaw](#13-lawclaw--governed-legal-plugin-suite) · [Rampart](#14-rampart--governed-clinical-telemetry-platform)
+**The Tools** &nbsp;&nbsp; [Stratum](#8-stratum--qa-compiler) · [Chancery](#9-chancery--ai-chief-product-officer) · [CoWork](#10-cowork--governed-plugin-designer) · [Forge](#11-forge--platform-integration-test-harness) · [DoD Hardened MCP Servers](#12-dod-hardened-mcp-servers--classified-rust-tool--knowledge-infrastructure)
 
 [How They Connect](#how-they-connect) · [Platform Totals](#platform-totals)
 
@@ -119,7 +107,7 @@ AI agents have a governance problem. And a compilation problem. And an SDLC prob
 
 Code gets compiled. Databases get migrated. Infrastructure gets provisioned through declarative configs with validation and version control. But AI agents — the specs they're built from, the prompts they use, the tests that prove they work, the governance that keeps them safe — are still assembled by hand, shipped on instinct, and debugged in production. There's no compiler. No governance enforcement. No automated SDLC. No way to prove an agent won't go off-script next week.
 
-I built seven governance systems and seven automation tools to fix that — plus domain-specific platforms for regulated industries. The governance platform handles the full agent lifecycle — compilation, on-premises enforcement, security audit, fleet communication, governance reverse-engineering, and real-time monitoring. The tools automate the SDLC phases that feed into it:
+I built seven governance systems and five automation & utility tools to fix that. The governance platform handles the full agent lifecycle — compilation, on-premises enforcement, security audit, fleet communication, governance reverse-engineering, and real-time monitoring. The tools automate the SDLC phases that feed into it — with compliance verification woven into every stage:
 
 - **Agentic compilation + governance** — Castellan compiles YAML specs into production-ready governed agents with constitutional governance, runtime guardrails, OWASP security auditing, multi-target deployment, and OpenClaw governance (transparent WebSocket proxy with skill supply chain scanning for the 247K-star open-source agent platform). 18-framework compliance engine with typed models for EU AI Act, HIPAA, PCI-DSS v4.0, SOC 2, NIST, FedRAMP, CNSSP-12, DoD IL4/IL5, FINRA 2026, and more. Governance is structural — enforced at compile time, embedded in the deployed agent, monitored in production. Castellan includes three hardened Rust sub-components: **SENESCHAL** (on-premises runtime authority with 15-check policy gates, SPIFFE/SPIRE identity, FIPS 140-3 crypto, MLS messaging, CDS classification through TS/SCI), **vigil-edge** (5-dimensional governance scoring with z-score anomaly detection), and **Citadel-edge** (air-gapped policy management with CNSA 2.0 signing and compliance floors)
 - **Prompt SDLC + defense scanning** — Charlotte compiles prompts, Claude Code skills, and MCP servers through a 5-stage deterministic pipeline. 89 security patterns across 22 categories including 35+ DoD-aligned patterns mapped to NIST 800-53 control families, STIG checklist export with CAT I–III severity, FIPS 140-3 compliance validation, MCP DoD hardening (mTLS, CAC, classification banners, non-root containers). Full SDLC automation for every prompt artifact
@@ -129,14 +117,12 @@ I built seven governance systems and seven automation tools to fix that — plus
 - **Design intelligence** — Citadel provides compliance-aware design front end for both compilers with live introspection and governance profile resolution (FedRAMP, DoD IL4/IL5, HIPAA, SOC 2, PCI-DSS, EU AI Act, GDPR)
 - **Cross-organizational A2A** — Drawbridge provides governed agent-to-agent communication with CNSA 2.0 cryptographic proof, bilateral 7-check crossing gates, replay protection via persistent nonce tracking, kill switch propagation, and optional post-quantum hardening. CNSSP-12 compliance floor for classified environments
 - **QA automation** — Stratum compiles source code into comprehensive quality assessments with eight independent quality gates
-- **Code adjudication** — Gauntlet catches AI-generated code failures through 18 domain adjudicators with an OODA self-correction loop
-- **Capital intelligence** — VC+ maps capital paths for founders through a multi-agent pipeline with live SEC EDGAR, Crunchbase, and news data
 - **PRD compilation** — Chancery transforms unstructured product input into production-quality PRDs with deterministic quality scoring, 10 compliance framework detection, and 7 cognitive bias identification
 - **Plugin engineering** — CoWork generates governed Claude Code plugins with SENESCHAL enforcement, 10 compliance framework support, and governance sidecar packaging
-- **Legal automation** — LawClaw delivers 34 governed plugins per legal discipline with ABA Model Rules compliance, 13 HITL gates per profile, and jurisdiction-specific regulatory awareness
-- **Clinical telemetry** — Rampart provides governed AI agent infrastructure for healthcare with HIPAA safeguard mapping, HL7/FHIR interoperability, PHI encryption, access logging, and breach notification procedures
+- **Compliance integration testing** — Forge validates platform integration across Castellan, Charlotte, SENESCHAL, and Drawbridge through 12 test layers mapped to NIST 800-53 controls, generating compliance evidence reports for Authorizing Officials with CI-gated progression
+- **DoD hardened tooling** — 34 Level 6 hardened Rust MCP binaries providing classified-environment tooling across 17 defense domains with CNSA 2.0 crypto, mTLS enforcement, structured audit logging, and SENESCHAL read-only contract enforcement
 
-Every system is standalone. Together they automate the full lifecycle from unstructured idea to deployed, tested, governed, monitored agent fleet. The platform is self-hosting — Chancery compiles the PRDs, Charlotte compiled the prompts, Stratum validates the code, Castellan compiles the agents, SENESCHAL enforces the policies, Aegis audits them, Herald delivers commands, vigil-edge watches them run, and Drawbridge governs cross-organizational communication.
+Every system is standalone. Together they automate the full lifecycle from unstructured idea to deployed, tested, governed, monitored agent fleet. The platform is self-hosting — Chancery compiles the PRDs, Charlotte compiled the prompts, Stratum validates the code, Castellan compiles the agents, SENESCHAL enforces the policies, Aegis audits them, Herald delivers commands, vigil-edge watches them run, Drawbridge governs cross-organizational communication, Forge validates compliance evidence across the platform, and the DoD Hardened MCP Servers provide classified-environment tooling under SENESCHAL's read-only contract.
 
 ---
 
@@ -148,8 +134,8 @@ Every system is standalone. Together they automate the full lifecycle from unstr
 
 *Seven systems. One closed loop. Compile, enforce, audit, scan, communicate, bridge, monitor.*
 
-![Platform Lines](https://img.shields.io/badge/253%2C000%2B-Source_Lines-2563EB?style=flat-square)
-![Platform Tests](https://img.shields.io/badge/14%2C500%2B-Tests_Passing-16A34A?style=flat-square)
+![Platform Lines](https://img.shields.io/badge/256%2C722-Source_Lines-2563EB?style=flat-square)
+![Platform Tests](https://img.shields.io/badge/14%2C378-Tests_Passing-16A34A?style=flat-square)
 
 </div>
 
@@ -771,10 +757,10 @@ Kill switches propagate across organizational boundaries. If one territory revok
 
 # Automation & Utility Tooling
 
-*Five tools. Quality, intelligence, PRD compilation, governed plugin engineering.*
+*Five tools. Quality assurance, PRD compilation, governed plugin engineering, compliance integration testing, DoD hardened infrastructure.*
 
-![Tools Lines](https://img.shields.io/badge/101%2C000%2B-Source_Lines-2563EB?style=flat-square)
-![Tools Tests](https://img.shields.io/badge/4%2C700%2B-Tests_Passing-16A34A?style=flat-square)
+![Tools Lines](https://img.shields.io/badge/124%2C400%2B-Source_Lines-2563EB?style=flat-square)
+![Tools Tests](https://img.shields.io/badge/5%2C491-Tests_Passing-16A34A?style=flat-square)
 
 </div>
 
@@ -815,74 +801,7 @@ Stratum is a unified code quality, architecture extraction, test generation, and
 
 ---
 
-## 9. Gauntlet — Code Adjudication System
-
-**The code adjudicator. 18 domain adjudicators with OODA self-correction. Built to catch AI-generated code failures before production.**
-
-Gauntlet is a Charlotte-compiled, prompt-native code adjudication system evaluating repositories against a structured library of **21 precision-engineered prompts** with an integrated OODA loop for self-correction.
-
-### Three-Layer Pipeline
-
-| Layer | What It Does |
-|:--|:--|
-| **Mechanical** | File walker, parser, chunker, dependency mapper (tree-sitter) |
-| **Intelligence** | 18 domain adjudicators across 21 Charlotte-compiled prompts — orchestration, correctness, security, architecture, quality, risk, integrity |
-| **Reporting** | Universal JSON output contract with severity-ranked verdict |
-
-**OODA Loop** — Observe → Orient → Decide → Act. After initial adjudication, Gauntlet re-scans to verify stability. If findings shift between passes, it flags instability rather than silently accepting the first result.
-
-**Guardrail block** — prevents prompt injection in code input from influencing adjudicator behavior.
-
-<div align="center">
-
-`CLI` · `4,427 lines` · `115 tests, all passing`
-
-</div>
-
-<br>
-
----
-
-## 10. VC+ — Capital Intelligence System
-
-**The capital intelligence pipeline. Multi-agent system with live MCP data for founder fundraising.**
-
-VC+ is a multi-agent capital intelligence pipeline that helps founders find VC, PE, growth equity, and M&A capital through pattern matching and live data gathering. Runs on Claude Code Max where Claude is the runtime and MCP servers are the data layer.
-
-### 5-Stage Pipeline
-
-```
-Query ──> [ Router ] ──> [ Research ] ──> [ Analysis ] ──> [ Intelligence ] ──> [ Dossier ]
-```
-
-### Three Operating Modes
-
-| Mode | What It Does |
-|:--|:--|
-| **Company → Capital** | Given a company profile, maps optimal capital paths (VC, PE, growth equity, M&A) |
-| **Market Query** | Searches for capital opportunities matching specific criteria |
-| **Firm Dossier** | Produces deep intelligence reports on specific firms |
-
-### Live Data Sources
-
-- **SEC EDGAR** — regulatory filings, fund registrations
-- **Crunchbase** — funding rounds, investor profiles, company data
-- **NewsAPI** — recent news, sentiment signals
-- **Website Scanner** — company site analysis for positioning and team data
-
-52K tokens of domain knowledge: glossary, frameworks, red flag library. Data contracts via Pydantic. Charlotte-compiled prompt specs + Castellan agent specs.
-
-<div align="center">
-
-`MCP Server Suite` · `5,537 lines`
-
-</div>
-
-<br>
-
----
-
-## 11. Chancery — AI Chief Product Officer
+## 9. Chancery — AI Chief Product Officer
 
 **The PRD compiler. Transforms unstructured product input into production-quality PRDs with compliance-aware quality scoring.**
 
@@ -929,7 +848,7 @@ Chancery automatically detects and flags when a product touches regulated domain
 
 ---
 
-## 12. CoWork — Governed Plugin Designer
+## 10. CoWork — Governed Plugin Designer
 
 **The plugin engineer. Decomposes roles into governed Claude Code plugins with SENESCHAL enforcement and compliance sidecar packaging.**
 
@@ -977,53 +896,42 @@ Every plugin ships with a `.castellan/` governance sidecar containing:
 
 ---
 
-<div align="center">
+## 11. Forge — Platform Integration Test Harness
 
-# Domain-Specific Platforms
+**The compliance verification engine. 12 test layers mapped to NIST 800-53 controls with automated evidence generation for Authorizing Officials.**
 
-*Governed AI for regulated industries — legal practice and clinical healthcare.*
+> The problem: platform systems pass their own unit tests, but cross-system governance contracts — Castellan-to-SENESCHAL policy enforcement, Charlotte-to-Drawbridge classification handling, multi-component compliance evidence chains — are only provable through structured integration testing. Without it, compliance claims are assertions, not evidence.
 
-</div>
+Forge is the **platform integration test harness** for the Castellan governance ecosystem. It validates cross-system contracts between Castellan, Charlotte, SENESCHAL, and Drawbridge through 12 structured test layers, each mapped to specific NIST 800-53 control families. Test results generate compliance evidence reports formatted for Authorizing Officials (AOs), providing auditable proof that governance enforcement works end-to-end — not just within individual components.
 
-<br>
+### 12 Test Layers
 
----
-
-## 13. LawClaw — Governed Legal Plugin Suite
-
-**The legal automation platform. 34 governed plugins per discipline with ABA Model Rules compliance and jurisdiction-specific regulatory awareness.**
-
-> The problem: law firms need AI automation but cannot tolerate ungoverned AI touching client communications, billing, or privileged information. The ABA Model Rules impose specific obligations on technology-assisted legal practice. Most AI tools have zero awareness of these obligations.
-
-LawClaw is the **governed legal plugin suite** for law firms — 34 plugins per discipline (privacy/security, family law, general) compiled through CoWork Plugin Designer with **ABA Model Rules compliance** baked into every plugin. Every email, time entry, and client communication passes through governance gates.
-
-### ABA Model Rules Compliance Mapping
-
-| ABA Rule | Obligation | How LawClaw Enforces |
+| Layer | What It Validates | NIST 800-53 Controls |
 |:--|:--|:--|
-| **Rule 1.1** (Competence) | Competent representation | HITL gate on all legal advice |
-| **Rule 1.5** (Fees) | Reasonable fees | HITL gate on all billing actions |
-| **Rule 1.6** (Confidentiality) | Client confidences | HITL gate on privileged communications |
-| **Rule 1.7** (Conflicts) | Conflict of interest | Conflict check gates before engagement |
-| **Rule 1.15** (Trust Accounts) | Safekeeping property | Disbursement control gates |
-| **Rule 5.1/5.3** (Supervision) | Supervisory responsibility | Full audit trails for all AI actions |
+| **L1: Compilation** | Castellan + Charlotte compile specs correctly | CM-6, SA-10 |
+| **L2: Policy Gates** | SENESCHAL 15-check gates enforce correctly | AC-3, AC-4, AC-6 |
+| **L3: Attestation** | SHA-384 chains are tamper-evident end-to-end | AU-10, AU-14 |
+| **L4: Classification** | CDS classification governance across levels | AC-16, SC-16 |
+| **L5: Crossing** | Drawbridge bilateral gates enforce correctly | AC-4, SC-7 |
+| **L6: Kill Switch** | Kill switches propagate across all systems | SI-17, IR-4 |
+| **L7: Identity** | SPIFFE/SVID identity chains validate | IA-2, IA-8 |
+| **L8: Crypto** | FIPS 140-3 / CNSA 2.0 crypto operations | SC-12, SC-13 |
+| **L9: Audit** | Structured audit logs (JSON/CEF/Syslog) generate | AU-2, AU-3, AU-6 |
+| **L10: Federation** | Cross-org policy reconciliation works | CA-3, SA-9 |
+| **L11: Drift** | Governance drift detection fires correctly | CM-3, SI-7 |
+| **L12: Evidence** | Compliance reports generate for AO review | CA-2, CA-6 |
 
-### Governance Enforcement
+### CI Gate Integration
 
-- **13 HITL gates per profile** — 7 base gates + 6 discipline-specific gates
-- **Strict governance tier** — Bash denied, 25-turn cap
-- **Full audit trails** — every action logged for supervisory review
-- **Conflict check gates** — automated conflict detection before client engagement
+Forge integrates with CI pipelines as a merge-blocking gate. Test failures in any compliance-mapped layer block progression — governance regression cannot ship. Evidence reports attach to pipeline artifacts for audit trail continuity.
 
-### Jurisdiction-Specific Awareness
+### Compliance Evidence Reports
 
-- **50+ state breach notification laws** — jurisdiction-specific requirements
-- **33 jurisdiction-specific privacy regulations** — including CCPA, BIPA, state-specific rules
-- **International privacy frameworks** — GDPR, PIPEDA, LGPD, POPIA awareness
+Each test run produces structured evidence reports containing: test layer results, NIST 800-53 control mapping, pass/fail verdicts with timestamps, system versions under test, and cryptographic attestation of report integrity. Reports are formatted for direct inclusion in ATO (Authority to Operate) packages.
 
 <div align="center">
 
-`CoWork-Compiled Plugin Suite` · `34 plugins per discipline`
+`Test Harness` · `~4,735 lines` · `862 tests, all passing`
 
 </div>
 
@@ -1031,44 +939,70 @@ LawClaw is the **governed legal plugin suite** for law firms — 34 plugins per 
 
 ---
 
-## 14. Rampart — Governed Clinical Telemetry Platform
+## 12. DoD Hardened MCP Servers — Classified Rust Tool & Knowledge Infrastructure
 
-**The healthcare platform. HIPAA-governed AI agents for clinical device telemetry with HL7/FHIR interoperability.**
+**34 Level 6 hardened Rust binaries for defense environments. CUI // NOFORN classified. CNSA 2.0 crypto, mTLS enforcement, SENESCHAL read-only contract.**
 
-> The problem: clinical device telemetry generates massive volumes of data that clinicians cannot manually review. AI agents can process this data — but only under strict HIPAA governance with proper PHI handling, access controls, audit logging, and breach notification procedures. Most AI healthcare tools treat compliance as an afterthought.
+> The problem: defense environments need MCP tooling that meets Level 6 binary hardening standards, operates under classified handling restrictions, and provides query-only access to sensitive domain knowledge — vulnerability scanning procedures, STIG compilation, ATO package assembly, threat modeling frameworks, incident response playbooks. Commercial MCP servers are built for convenience, not for classified environments. They ship without hardening, without structured audit, without cryptographic compliance, and without runtime policy enforcement.
 
-Rampart is a **governed AI agent platform for clinical device telemetry management**. It integrates with healthcare data systems (HL7, FHIR) and provides MCP-based access to structured clinical data under strict HIPAA governance.
+The DoD Hardened MCP Servers are **34 Level 6 hardened Rust binaries** — 17 tool servers and 17 knowledge servers — providing 137 query-only tools, 92 MCP resources, and 92 KB files containing approximately 1.8MB of DoD domain content. All binaries are classified **CUI // NOFORN** and operate under SENESCHAL's read-only contract enforcement at runtime.
 
-### HIPAA Safeguard Implementation
+### Level 6 Binary Hardening
 
-| Safeguard Category | Implementation |
+Every binary ships with the full hardening profile:
+
+| Hardening Measure | Implementation |
 |:--|:--|
-| **Administrative** | BAA execution support, workforce training tracking, sanction policy |
-| **Physical** | Device telemetry access controls, workstation security |
-| **Technical** | PHI encryption (mandatory), access logging (mandatory), RBAC (mandatory) |
-| **Organizational** | Covered entity vs. business associate differentiation |
+| **Stripped symbols** | All debug symbols removed from release binaries |
+| **PIE/ASLR** | Position-independent executables with address space layout randomization |
+| **Full RELRO** | Read-only relocations — GOT hardened against overwrite attacks |
+| **BIND_NOW** | Immediate symbol binding — no lazy resolution |
+| **NX (No Execute)** | Non-executable stack and heap |
+| **panic=abort** | No unwinding — panic terminates immediately |
+| **LTO** | Link-time optimization across all crates |
+| **overflow-checks** | Integer overflow detection enabled in release builds |
 
-### Compliance Requirements
+### Shared `mcp-hardened` Crate
 
-| Requirement | Implementation |
-|:--|:--|
-| **PHI Encryption** | Mandatory — all PHI encrypted at rest and in transit |
-| **Access Logging** | Mandatory — every PHI access logged with timestamp, user, and purpose |
-| **6-Year Retention** | Mandatory — all audit logs retained for minimum 6 years per HIPAA |
-| **RBAC** | Mandatory — role-based access control for all data access |
-| **Patient Right of Access** | Implemented — patient data export and access request handling |
-| **Breach Notification** | Implemented — automated breach detection and notification procedures |
+All 34 binaries share a common hardened infrastructure crate providing:
 
-### Healthcare Interoperability
+- **mTLS via rustls** — mutual TLS for all server communication, no OpenSSL dependency
+- **Structured audit logging** — JSON, CEF (ArcSight/SIEM), and Syslog (RFC 5424) output formats
+- **CNSA 2.0 cryptography** — SHA-384 hashing, HMAC-SHA384 signing for all attestation and integrity operations
 
-- **HL7** — Health Level 7 message parsing and integration
-- **FHIR** — Fast Healthcare Interoperability Resources support
-- **Clinical Device Telemetry** — real-time device data ingestion and processing
-- **MCP-Based Data Access** — governed tool access to structured clinical data
+### 17 Tool Servers (137 Query-Only Tools)
+
+| Server | Domain | Tools |
+|:--|:--|:--|
+| **ACAS/Nessus** | Vulnerability scanning | Scan policy lookup, plugin family queries, compliance audit references |
+| **Splunk SIEM** | Security monitoring | Search syntax, dashboard templates, alert correlation |
+| **Snort/Suricata IDS** | Intrusion detection | Rule syntax, signature lookup, tuning guidance |
+| **AD/PKI Identity** | Identity management | Active Directory policy, PKI certificate lifecycle, CAC integration |
+| **STIG Compiler** | Compliance checklists | STIG rule lookup, CAT I–III severity queries, checklist generation |
+| **ATO Package** | Authorization to Operate | SSP templates, control implementation statements, POA&M generation |
+| **SBOM/Supply Chain** | Software supply chain (EO 14028) | SBOM generation, dependency analysis, provenance verification |
+| **STRIDE/DREAD** | Threat modeling | Threat enumeration, risk scoring, mitigation mapping |
+| **IR Playbook** | Incident response | Playbook lookup, escalation procedures, containment strategies |
+| **Behavioral Threat Intel** | Threat intelligence | TTP mapping, indicator correlation, adversary profiling |
+| **Zero Trust Architecture** | Network security | ZTA policy templates, micro-segmentation guidance, trust evaluation |
+| **CNSA Crypto** | Cryptographic compliance | Algorithm validation, key management, CNSA 2.0 migration guidance |
+| **DFIR** | Digital forensics | Evidence collection procedures, chain of custody, analysis frameworks |
+| **Firewall Policy** | Network defense | Rule generation, policy analysis, zone architecture |
+| **EDR** | Endpoint detection | Detection rule syntax, response automation, telemetry collection |
+| **PAM** | Privileged access | Session management, credential vaulting, just-in-time access |
+| **Cloud Security** | Cloud defense | CSP hardening guides, workload protection, cloud STIG mapping |
+
+### 17 Knowledge Servers (92 MCP Resources, 92 KB Files)
+
+Each knowledge server provides MCP resources and curated KB files covering DoD-specific domain content — regulations, procedures, reference architectures, compliance mappings, and operational guidance. Approximately 1.8MB of structured domain knowledge accessible through governed MCP resource endpoints.
+
+### SENESCHAL Runtime Enforcement
+
+All 34 servers operate under SENESCHAL's **read-only contract** — tools are query-only by design, and SENESCHAL enforces this contract at runtime through its MCP governance gate. No write operations. No state mutation. No data exfiltration paths. The read-only contract is not a convention — it is enforced by the runtime authority.
 
 <div align="center">
 
-`CLI + MCP Server` · `40,410 lines` · `762 tests, all passing`
+`34 Rust Binaries` · `~28,200 Rust lines` · `CUI // NOFORN`
 
 </div>
 
@@ -1103,32 +1037,22 @@ Rampart is a **governed AI agent platform for clinical device telemetry manageme
   │                                                                      │
   └──────────────────────────────────────────────────────────────────────┘
 
-                           AUTOMATION TOOLING
+                      AUTOMATION & UTILITY TOOLING
   ┌──────────────────────────────────────────────────────────────────────┐
   │                                                                      │
-  │   QUALITY              INTELLIGENCE         PRD / PLUGINS            │
-  │   ───────              ────────────         ─────────────            │
-  │   Stratum              VC+                  Chancery                 │
-  │   (QA Compiler)        (Capital Intel)      (PRD Compiler)           │
+  │   QUALITY              PRD / PLUGINS         COMPLIANCE              │
+  │   ───────              ─────────────         ──────────              │
+  │   Stratum              Chancery              Forge                   │
+  │   (QA Compiler)        (PRD Compiler)        (Integration Tests)     │
   │                                                                      │
-  │   Gauntlet                                  CoWork                   │
-  │   (Code Adjudicator)                        (Plugin Designer)        │
-  │                                                                      │
-  └──────────────────────────────────────────────────────────────────────┘
-
-                        DOMAIN-SPECIFIC PLATFORMS
-  ┌──────────────────────────────────────────────────────────────────────┐
-  │                                                                      │
-  │   LEGAL                                     MEDICAL                  │
-  │   ─────                                     ───────                  │
-  │   LawClaw                                   Rampart                  │
-  │   (ABA-Governed Legal Plugins)              (HIPAA-Governed Clinical) │
+  │                        CoWork                DoD MCP Servers          │
+  │                        (Plugin Designer)     (34 Hardened Binaries)   │
   │                                                                      │
   └──────────────────────────────────────────────────────────────────────┘
 
   Data Flow:
   Chancery PRDs       → define product requirements with compliance detection
-  Charlotte prompts   → power AI stages across Stratum, Aegis, Recon, Gauntlet
+  Charlotte prompts   → power AI stages across Stratum, Aegis, Recon
   Stratum             → validates code all systems generate
   Castellan           → compiles agents with governance
   SENESCHAL           → enforces policies on-premises (Rust binary)
@@ -1139,23 +1063,20 @@ Rampart is a **governed AI agent platform for clinical device telemetry manageme
   Drawbridge          → governs cross-organizational A2A communication
   Recon               → reverse-engineers governance from existing agents
   Citadel             → design intelligence front end for both compilers
-  Gauntlet            → catches AI-generated code failures
-  VC+                 → maps capital paths with live data
   CoWork              → generates governed plugins with SENESCHAL enforcement
-  LawClaw             → ABA-compliant legal automation
-  Rampart             → HIPAA-governed clinical telemetry
+  Forge               → validates platform compliance evidence across systems
+  DoD MCP Servers     → provide classified-environment tooling under SENESCHAL
 ```
 
 ### The Governance Loop
 
 1. **Design** — Chancery compiles the PRDs with compliance detection. Citadel provides design intelligence
-2. **Build** — Charlotte compiles the prompts. Castellan compiles the agent. Gauntlet adjudicates the code
-3. **Validate** — Stratum runs quality gates. Aegis audits security
-4. **Enforce** — SENESCHAL enforces policies on-premises with SPIFFE identity and FIPS crypto
+2. **Build** — Charlotte compiles the prompts. Castellan compiles the agent
+3. **Validate** — Stratum runs quality gates. Aegis audits security. Forge validates cross-system compliance evidence
+4. **Enforce** — SENESCHAL enforces policies on-premises with SPIFFE identity and FIPS crypto. DoD Hardened MCP Servers operate under SENESCHAL's read-only contract
 5. **Deploy** — Herald establishes the command channel. Drawbridge governs cross-org communication
 6. **Monitor** — vigil-edge tracks governance drift, fires alerts on anomalies. Citadel-edge manages air-gapped policy
 7. **Scan** — Recon reverse-engineers governance from agents already in production
-8. **Specialize** — LawClaw delivers ABA-governed legal automation. Rampart provides HIPAA-governed clinical telemetry
 
 Every system is standalone. Together they close the loop.
 
@@ -1167,9 +1088,9 @@ Every system is standalone. Together they close the loop.
 
 <br>
 
-![Total Lines](https://img.shields.io/badge/398%2C000%2B-Total_Source_Lines-2563EB?style=for-the-badge)
+![Total Lines](https://img.shields.io/badge/381%2C000%2B-Total_Source_Lines-2563EB?style=for-the-badge)
 ![Total Tests](https://img.shields.io/badge/19%2C800%2B-Tests_Passing-16A34A?style=for-the-badge)
-![Total Systems](https://img.shields.io/badge/14-Production_Systems-7C3AED?style=for-the-badge)
+![Total Systems](https://img.shields.io/badge/12-Production_Systems-7C3AED?style=for-the-badge)
 
 <br>
 
@@ -1184,26 +1105,19 @@ Every system is standalone. Together they close the loop.
 
 ### Automation & Utility Tooling
 
-| | Stratum | Gauntlet | VC+ | Chancery | CoWork | **Subtotal** |
+| | Stratum | Chancery | CoWork | Forge | DoD MCP Servers | **Subtotal** |
 |:--|:--:|:--:|:--:|:--:|:--:|:--:|
-| **Source Lines** | 73,508 | 4,427 | 5,537 | 11,817 | 6,161 | **101,450** |
-| **Tests** | 4,322 | 115 | — | — | 307 | **4,744** |
-
-### Domain-Specific Platforms
-
-| | LawClaw | Rampart | **Subtotal** |
-|:--|:--:|:--:|:--:|
-| **Source Lines** | (generated) | 40,410 | **40,410+** |
-| **Tests** | — | 762 | **762** |
+| **Source Lines** | 73,508 | 11,817 | 6,161 | ~4,735 | ~28,200 | **~124,421** |
+| **Tests** | 4,322 | — | 307 | 862 | — | **5,491** |
 
 ### Combined
 
 | Metric | Value |
 |:--|:--|
-| **Total Systems** | **14** |
-| **Total Source Lines** | **398,582+** |
-| **Total Tests (passing)** | **19,884+** |
-| **Compliance Standards** | **18+** (EU AI Act, NIST AI RMF, NIST 800-53, NIST CSF 2.0/CAISI, CNSSP-12, GDPR, HIPAA, PCI-DSS v4.0, SOC 2 Type II, ISO 42001, ISO 27001, FZ-152, OWASP Top 10, CoSAI, FedRAMP, FIPS 140-3, DoD STIG/IL4/IL5, CNSA 2.0, ABA Model Rules, FINRA 2026, COPPA, HL7 FHIR) |
+| **Total Systems** | **12** |
+| **Total Source Lines** | **~381,000+** |
+| **Total Tests (passing)** | **~19,800+** |
+| **Compliance Standards** | **18+** (EU AI Act, NIST AI RMF, NIST 800-53, NIST CSF 2.0/CAISI, CNSSP-12, GDPR, HIPAA, PCI-DSS v4.0, SOC 2 Type II, ISO 42001, ISO 27001, FZ-152, OWASP Top 10, CoSAI, FedRAMP, FIPS 140-3, DoD STIG/IL4/IL5, CNSA 2.0, FINRA 2026, COPPA) |
 | **Languages** | Python, Rust, TypeScript |
 
 <br>
@@ -1246,7 +1160,7 @@ If your team is shipping production AI agents and needs them **governed, compile
 
 I take on AI-first contract engagements:
 
-> **Agent governance platforms** · **Agentic compilation** · **On-premises policy enforcement** · **Defense & federal compliance** (FIPS, CNSA 2.0, CNSSP-12, STIG, FedRAMP, DoD IL4/IL5) · **Healthcare compliance** (HIPAA, HL7/FHIR) · **Legal automation** (ABA Model Rules) · **SDLC automation** · **Rapid prototyping** from spec to production · Pre-deployment security auditing · Fleet governance monitoring · Prompt and skill compilation · Test generation pipelines · Quality gate systems · OWASP security auditing · Governance reverse-engineering · Cross-organizational A2A communication
+> **Agent governance platforms** · **Agentic compilation** · **On-premises policy enforcement** · **Defense & federal compliance** (FIPS, CNSA 2.0, CNSSP-12, STIG, FedRAMP, DoD IL4/IL5) · **Compliance evidence automation** · **Classified-environment MCP tooling** · **SDLC automation** · **Rapid prototyping** from spec to production · Pre-deployment security auditing · Fleet governance monitoring · Prompt and skill compilation · Test generation pipelines · Quality gate systems · OWASP security auditing · Governance reverse-engineering · Cross-organizational A2A communication
 
 <div align="center">
 
