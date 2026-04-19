@@ -2,26 +2,26 @@
 
 # Tim Wolfe
 
-Context Architect | Agent Governance, MCP & Secure Systems | DoD · NIST-Aligned | CSPO · A-CSCM
+### Context Architect | Agent Governance, MCP & Secure Systems | DoD · NIST-Aligned | CSPO · A-CSCM
 
 <br>
 
-**I build the compilers, auditors, and monitoring systems that make AI agents safe to deploy.**
+**I build the compilers, runtime authorities, and intelligence platforms that make AI agents safe to deploy.**
 
 <br>
 
-![Source](https://img.shields.io/badge/381%2C000%2B-Source_Lines-2563EB?style=for-the-badge)
-![Tests](https://img.shields.io/badge/19%2C800%2B-Tests_Passing-16A34A?style=for-the-badge)
-![Systems](https://img.shields.io/badge/12-Production_Systems-7C3AED?style=for-the-badge)
-![Standards](https://img.shields.io/badge/18%2B-Compliance_Standards-DC2626?style=for-the-badge)
+![Source](https://img.shields.io/badge/737%2C000%2B-Source_Lines-2563EB?style=for-the-badge)
+![Tests](https://img.shields.io/badge/25%2C000%2B-Tests_Passing-16A34A?style=for-the-badge)
+![Systems](https://img.shields.io/badge/13-Production_Systems-7C3AED?style=for-the-badge)
+![Standards](https://img.shields.io/badge/20%2B-Compliance_Standards-DC2626?style=for-the-badge)
 
 <br>
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Rust](https://img.shields.io/badge/Rust-2021-DEA584?style=flat-square&logo=rust&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-React%20%2B%20Next.js-3178C6?style=flat-square&logo=typescript&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat-square&logo=typescript&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js_16-000000?style=flat-square&logo=next.js&logoColor=white)
+![Axum](https://img.shields.io/badge/Axum-Rust-000000?style=flat-square)
 ![License](https://img.shields.io/badge/License-Proprietary-orange?style=flat-square)
 
 <br>
@@ -36,33 +36,37 @@ Los Altos, CA · [rtwolfe@gmail.com](mailto:rtwolfe@gmail.com) · 650-390-5003 �
 
 ## About
 
-I build **governance infrastructure for AI agents** — the compilers, scanners, auditors, command channels, and monitoring portals that make autonomous agents safe to deploy in production. Not wrappers. Not demos. Not prompt templates. **Seven interconnected governance systems and five automation & utility tools** that close the loop from raw idea to deployed, governed, monitored agent fleet — with defense-grade compliance enforcement at every stage.
+I build **governance infrastructure for AI agents** &mdash; the compilers, runtime authorities, design intelligence platforms, and production products that make autonomous agents safe to deploy. Not wrappers. Not demos. Not prompt templates. **Four core systems, one tooling platform, and eight production products** that close the loop from raw idea to deployed, governed, monitored agent fleet &mdash; with defense-grade compliance enforcement at every stage.
 
-**Governance is the core problem.** Every team shipping AI agents hits the same wall: the prototype works, but production demands governance — constitutional constraints, runtime guardrails, OWASP security auditing, compliance drift detection, kill switches, audit trails. Most frameworks hand you a runtime and leave governance as an exercise for the reader. I built a platform that makes governance structural. It's enforced at compile time. It travels with the deployed agent. It's monitored in real time. It's not optional.
+**Governance is the core problem.** Every team shipping AI agents hits the same wall: the prototype works, but production demands governance &mdash; constitutional constraints, runtime guardrails, OWASP security auditing, compliance drift detection, kill switches, audit trails. Most frameworks hand you a runtime and leave governance as an exercise for the reader. I built a platform that makes governance structural. It's enforced at compile time. It travels with the deployed agent. It's monitored in real time. It's not optional.
 
-**Compliance runs deep.** This platform carries full regulatory compliance coverage across **18+ frameworks**: **EU AI Act** risk classification, **HIPAA** safeguard mapping with HL7/FHIR interoperability, **PCI-DSS v4.0** goal compliance, **SOC 2 Type II** evidence generation, **NIST 800-53** federal security controls, **NIST AI RMF** and **NIST CSF 2.0 (CAISI)**, **FedRAMP** (Low/Moderate/High), **FIPS 140-3** cryptography, **CNSA 2.0** post-quantum alignment, **CNSSP-12** classified environment compliance, **DoD STIG** checklist export with CAT I–III severity, **DoD IL4/IL5** impact level controls, **ISO 42001/27001**, **GDPR Article 22**, **OWASP Top 10**, **CoSAI** threat modeling, **FINRA 2026** financial regulatory compliance, and **COPPA** child privacy protection.
+**Compliance runs deep.** This platform carries full regulatory compliance coverage across **20+ frameworks**: **EU AI Act** risk classification, **HIPAA** safeguard mapping, **PCI-DSS v4.0** goal compliance, **SOC 2 Type II** evidence generation, **NIST 800-53** federal security controls, **NIST 800-171 Rev 2** CUI protection, **NIST AI RMF**, **NIST CSF 2.0 (CAISI)**, **NIST IR 8596**, **FedRAMP** (Low/Moderate/High), **FIPS 140-3** cryptography, **CNSA 2.0** post-quantum alignment, **CNSSP-12** classified environment compliance, **DoD STIG** checklist export, **DoD IL4/IL5** impact level controls, **CMMC L1/L2/L3**, **ISO 42001/27001/42005**, **GDPR**, **GLBA Safeguards**, **FFIEC IT Handbook**, **SOX ITGC**, **OCC SR 11-7**, **FINRA 2026**, **MAS AI RM**, **Singapore IMDA**, **OWASP Top 10**, **CoSAI** threat modeling, and **COPPA**.
 
-**The Castellan Agent & MCP Governance Platform:**
+**The Core Platform:**
 
-- **Castellan** — the agentic compiler. YAML spec in, governed production agent out. Constitutional governance, runtime guardrails, OWASP audit, multi-target deployment, OpenClaw governance proxy with skill supply chain scanning. 18-framework compliance engine. Governance is structural, not aspirational. Includes three hardened Rust sub-components: **SENESCHAL** (on-premises runtime authority with SPIFFE identity, FIPS 140-3 crypto, MLS RFC 9420 messaging, CDS classification governance through TS/SCI, 15-check policy gates), **vigil-edge** (behavioral monitoring agent with 5-dimensional governance scoring, z-score anomaly detection, tool rug-pull detection), and **Citadel-edge** (air-gapped policy management with compliance floors and CNSA 2.0 signing)
-- **Charlotte** — prompt and MCP compiler. 94-block type system, 89 security patterns across 22 categories, 35+ DoD detection patterns, STIG checklist export, MCP DoD hardening, multi-provider rendering, MCP server generation. Full SDLC for prompt artifacts with defense-grade scanning
-- **Aegis** — pre-deployment security audit. Three parallel audit layers (prompt, behavior, code), cross-layer analysis, OWASP Top 10 for Agentic Applications mapping, compliance mapping to EU AI Act / NIST / ISO 42001 / CoSAI. Verdict: SHIP / CONDITIONAL / BLOCK
-- **Herald** — authenticated bidirectional command channel. HMAC-SHA256 signed envelopes between operator portals and agent fleets, with A2A governed communication, MCP gateway with OAuth 2.1 + DPoP, and NHI identity management
-- **Recon** — governance reverse-engineering. 3-stage pipeline that scans existing agent code (21 framework adapters) and reconstructs governance contracts with compliance assessments across 11 international standards
-- **Citadel** — unified design intelligence platform. Compliance-aware front end for both compilers with 14 FastMCP tools, live codebase introspection, and compiler-ready spec generation. Governance profiles for FedRAMP, DoD IL4/IL5, HIPAA, SOC 2, PCI-DSS, EU AI Act, GDPR
-- **Drawbridge** — governed agent-to-agent communication backbone for cross-organizational coordination. CNSA 2.0 cryptographic proof (SHA-384, HMAC-SHA384), bilateral 7-check crossing gates, replay protection, post-quantum hardening (ML-KEM-1024, ML-DSA-87, SLH-DSA-256). Designed for DoD TS/SCI deployment with CNSSP-12 compliance floor
+- **Castellan** &mdash; the agent governance compiler. YAML spec in, governed production agent out. Constitutional governance, runtime guardrails, OWASP audit, 12 export formats including Level 6 hardened Rust binaries. 18-framework compliance engine
+- **Charlotte** &mdash; context engineering compiler. 103-block template catalog across 20 types, 89 security patterns, multi-provider rendering (OpenAI, Anthropic, Google Gemini), and MCP server generation in Python and Level 6 Rust
+- **Citadel** &mdash; compliance-aware design intelligence platform. 43 FastMCP tools for introspection, fleet decomposition, spec generation, and regulatory document generation (FedRAMP SSP, NIST 800-171 SSP, STIG CKL, ISO 42001, GLBA, PCI-DSS, FFIEC, SOX, OCC SR 11-7)
+- **Seneschal** &mdash; on-premises governance runtime. SPIFFE identity, FIPS 140-3 crypto via `aws-lc-rs`, MLS RFC 9420 encrypted messaging, CDS classification governance through TS/SCI, 30-check policy gate, Level 6 hardening
 
-**Automation & Utility Tooling:**
+**Tooling:**
 
-- **Stratum** — QA compiler. Architecture extraction, test generation, documentation, eight independent quality gates. SDLC automation for testing and quality assurance
-- **Chancery** — AI Chief Product Officer. Transforms unstructured product input into production-quality PRDs through a 3-phase, 3-gate workflow with deterministic quality scoring. Detects 10 compliance frameworks (PCI-DSS, HIPAA, GDPR, EU AI Act, NIST 800-53, COPPA, SOC 2, FedRAMP, HL7 FHIR, FINRA) and 7 cognitive biases
-- **CoWork** — governed plugin designer. Decomposes natural language role descriptions into 15–30 governed Claude Code plugins with SENESCHAL runtime enforcement, audit trails, HITL gates, and 10 compliance framework support (FedRAMP, DoD IL4/IL5, HIPAA, SOC 2, PCI-DSS v4.0, EU AI Act, GDPR). Every plugin ships with a `.castellan/` governance sidecar
-- **Forge** — platform integration test harness for Castellan, Charlotte, SENESCHAL, and Drawbridge. 12 test layers mapped to NIST 800-53 controls with automated compliance evidence report generation for Authorizing Officials. CI gates block progression on governance regression — compliance verification is structural, not manual
-- **DoD Hardened MCP Servers** — 34 Level 6 hardened Rust binaries (17 tool servers + 17 knowledge servers) providing 137 query-only tools, 92 MCP resources, and 92 KB files (~1.8MB DoD domain content). CUI // NOFORN classified. Level 6 binary hardening (stripped, PIE/ASLR, full RELRO, BIND_NOW, NX, panic=abort, LTO, overflow-checks). Shared `mcp-hardened` crate provides mTLS (rustls), structured audit (JSON/CEF/Syslog), and CNSA 2.0 crypto (SHA-384, HMAC-SHA384). Covers ACAS/Nessus vulnerability scanning, Splunk SIEM, Snort/Suricata IDS, AD/PKI identity, STIG Compiler, ATO Package assembly, SBOM/Supply Chain (EO 14028), STRIDE/DREAD threat modeling, IR Playbook, behavioral threat intelligence, Zero Trust Architecture, CNSA cryptographic compliance, DFIR digital forensics, firewall policy, EDR endpoint detection, PAM privileged access, and cloud security. SENESCHAL enforces read-only contract at runtime
+- **Forge** &mdash; platform integration test harness (12 NIST 800-53-mapped test layers) + customer agent intake/verify/harden pipeline with compliance evidence generation for Authorizing Officials
 
-Every system is standalone. Together they automate the full lifecycle for AI agents — from rapid prototyping through governed deployment to real-time fleet monitoring. The platform is self-hosting: these are the same tools I use to deliver for enterprise clients across finance and defense.
+**Products:**
 
-Before AI infrastructure: 20+ years of enterprise operations leadership — two IPOs (**Quinstreet**, **Responsys**), four acquisitions (**IBM**/DemandTec, **EMC**/Syncplicity, **Oracle**/Responsys, **Netmarble**/Kabam), and senior technical roles at **Salesforce**, **iHeartMedia**, and **Axway**.
+- **Bastion** &mdash; enterprise governed AI agent platform. 34-crate Rust workspace, 4 SKUs (Citadel hosted / Enclave air-gap / Stronghold on-prem / Sovereign single-tenant), 22 MCP servers, KeyServer license system, Level 6 hardened binaries
+- **Chancery** &mdash; AI Chief Product Officer. Transforms unstructured product input into production-quality PRDs and per-component SDD bundles through a 4-phase, 3-gate workflow. Deployed as Claude Desktop Project and Claude Code skill (`/chancery-architect`)
+- **Verity** &mdash; Scrum Master / Project Manager intelligence platform. 33 crates, 17 MCP servers, 8 governed agents, 23 antipattern detectors, 5 ceremony pipelines, SOC 2 compliant. Reads Jira/Confluence/GitHub/Bitbucket/Slack/Teams; read-only by compile-time construction
+- **Steward** &mdash; Product Owner / Product Manager intelligence platform. 21 crates, 5 MCP servers, 8 PO-specific agents, 16 PO antipattern detectors, 5 PO intelligence cadences. Sibling architecture to Verity
+- **Reeve** &mdash; governed Atlassian administration platform. The *writer* where Verity/Steward are *readers*. 5 MCP servers with 102 Atlassian tools, compliance-aware approval gates, state snapshots + rollback
+- **Meridian** &mdash; governed AI time management platform. 9 MCP servers with 57 tools, 6 intelligence modules, 4 calendar providers (Google/Outlook/CalDAV/Exchange EWS)
+- **Oracle** &mdash; governed intelligence MCP server. CUI // NOFORN, Level 6 hardened, FIPS 140-3 Ed25519 signing, compiled knowledge base with 262 STIG findings
+- **Author** &mdash; story/epic coaching tool. 6-crate Rust workspace with INVEST scoring, 15 anti-pattern detectors, deterministic refusal layer
+
+Every system is standalone. Together they automate the full lifecycle for AI agents &mdash; from rapid prototyping through governed deployment to real-time fleet monitoring. The platform is self-hosting: these are the same tools I use to deliver for enterprise clients.
+
+Before AI infrastructure: 20+ years of enterprise operations leadership &mdash; two IPOs (**Quinstreet**, **Responsys**), four acquisitions (**IBM**/DemandTec, **EMC**/Syncplicity, **Oracle**/Responsys, **Netmarble**/Kabam), and senior technical roles at **Salesforce**, **iHeartMedia**, and **Axway**.
 
 ---
 
@@ -70,30 +74,33 @@ Before AI infrastructure: 20+ years of enterprise operations leadership — two 
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│              CASTELLAN AGENT & MCP GOVERNANCE PLATFORM           │
+│              AGENT & MCP GOVERNANCE PLATFORM                     │
 │                                                                 │
-│   COMPILE       AUDIT        COMMUNICATE   SCAN       DESIGN    │
-│   Castellan     Aegis        Herald        Recon      Citadel   │
-│   Charlotte                  Drawbridge                         │
+│   CORE                                                          │
+│   Castellan    Charlotte    Citadel    Seneschal                │
+│   (agents)     (context)    (design)   (runtime)                │
 │                                                                 │
-│   ┌─ Castellan Sub-Components ──────────────────────────────┐   │
-│   │  ENFORCE: SENESCHAL    MONITOR: vigil-edge              │   │
-│   │  POLICY:  Citadel-edge                                  │   │
-│   └─────────────────────────────────────────────────────────┘   │
 ├─────────────────────────────────────────────────────────────────┤
-│                    AUTOMATION & UTILITY TOOLING                  │
+│                           TOOLING                                │
+│   Forge (test harness + customer agent intake)                   │
 │                                                                 │
-│   QUALITY       PRD           PLUGINS       COMPLIANCE          │
-│   Stratum       Chancery      CoWork        Forge               │
-│                                             DoD MCP Servers     │
+├─────────────────────────────────────────────────────────────────┤
+│                           PRODUCTS                               │
+│   Bastion    Chancery    Verity     Steward    Reeve            │
+│   (platform) (PRD)       (SM/PM)    (PO/PM)    (admin)          │
+│                                                                 │
+│   Meridian   Oracle      Author                                 │
+│   (time)     (intel MCP) (stories)                              │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
 <br>
 
-**The Platform** &nbsp;&nbsp; [Castellan](#1-castellan--agentic-compiler) · [Charlotte](#2-charlotte--prompt--mcp-compiler) · [Aegis](#3-aegis--pre-deployment-security-audit) · [Herald](#4-herald--authenticated-command-channel) · [Recon](#5-recon--governance-reverse-engineering) · [Citadel](#6-citadel--unified-design-intelligence-platform) · [Drawbridge](#7-drawbridge--governed-a2a-communication-backbone)
+**Core** &nbsp;&nbsp; [Castellan](#1-castellan--agent-governance-compiler) · [Charlotte](#2-charlotte--context-engineering-compiler) · [Citadel](#3-citadel--compliance-aware-design-intelligence) · [Seneschal](#4-seneschal--governance-runtime-authority)
 
-**The Tools** &nbsp;&nbsp; [Stratum](#8-stratum--qa-compiler) · [Chancery](#9-chancery--ai-chief-product-officer) · [CoWork](#10-cowork--governed-plugin-designer) · [Forge](#11-forge--platform-integration-test-harness) · [DoD Hardened MCP Servers](#12-dod-hardened-mcp-servers--classified-rust-tool--knowledge-infrastructure)
+**Tooling** &nbsp;&nbsp; [Forge](#5-forge--platform-test-harness--intake-pipeline)
+
+**Products** &nbsp;&nbsp; [Bastion](#6-bastion--enterprise-governed-ai-agent-platform) · [Chancery](#7-chancery--ai-chief-product-officer) · [Verity](#8-verity--smpm-intelligence-platform) · [Steward](#9-steward--popm-intelligence-platform) · [Reeve](#10-reeve--governed-atlassian-administration) · [Meridian](#11-meridian--governed-ai-time-management) · [Oracle](#12-oracle--governed-intelligence-mcp-server) · [Author](#13-author--storyepic-coaching-tool)
 
 [How They Connect](#how-they-connect) · [Platform Totals](#platform-totals)
 
@@ -105,24 +112,11 @@ Before AI infrastructure: 20+ years of enterprise operations leadership — two 
 
 AI agents have a governance problem. And a compilation problem. And an SDLC problem.
 
-Code gets compiled. Databases get migrated. Infrastructure gets provisioned through declarative configs with validation and version control. But AI agents — the specs they're built from, the prompts they use, the tests that prove they work, the governance that keeps them safe — are still assembled by hand, shipped on instinct, and debugged in production. There's no compiler. No governance enforcement. No automated SDLC. No way to prove an agent won't go off-script next week.
+Code gets compiled. Databases get migrated. Infrastructure gets provisioned through declarative configs with validation and version control. But AI agents &mdash; the specs they're built from, the prompts they use, the tests that prove they work, the governance that keeps them safe &mdash; are still assembled by hand, shipped on instinct, and debugged in production. There's no compiler. No governance enforcement. No automated SDLC. No way to prove an agent won't go off-script next week.
 
-I built seven governance systems and five automation & utility tools to fix that. The governance platform handles the full agent lifecycle — compilation, on-premises enforcement, security audit, fleet communication, governance reverse-engineering, and real-time monitoring. The tools automate the SDLC phases that feed into it — with compliance verification woven into every stage:
+I built four core systems, one tooling platform, and eight production products to fix that. The core handles compilation, runtime authority, and design intelligence. The tooling validates cross-system governance contracts. The products deploy the stack in specific domains &mdash; enterprise, product management, operations, time management, classified intel, and authoring discipline.
 
-- **Agentic compilation + governance** — Castellan compiles YAML specs into production-ready governed agents with constitutional governance, runtime guardrails, OWASP security auditing, multi-target deployment, and OpenClaw governance (transparent WebSocket proxy with skill supply chain scanning for the 247K-star open-source agent platform). 18-framework compliance engine with typed models for EU AI Act, HIPAA, PCI-DSS v4.0, SOC 2, NIST, FedRAMP, CNSSP-12, DoD IL4/IL5, FINRA 2026, and more. Governance is structural — enforced at compile time, embedded in the deployed agent, monitored in production. Castellan includes three hardened Rust sub-components: **SENESCHAL** (on-premises runtime authority with 15-check policy gates, SPIFFE/SPIRE identity, FIPS 140-3 crypto, MLS messaging, CDS classification through TS/SCI), **vigil-edge** (5-dimensional governance scoring with z-score anomaly detection), and **Citadel-edge** (air-gapped policy management with CNSA 2.0 signing and compliance floors)
-- **Prompt SDLC + defense scanning** — Charlotte compiles prompts, Claude Code skills, and MCP servers through a 5-stage deterministic pipeline. 89 security patterns across 22 categories including 35+ DoD-aligned patterns mapped to NIST 800-53 control families, STIG checklist export with CAT I–III severity, FIPS 140-3 compliance validation, MCP DoD hardening (mTLS, CAC, classification banners, non-root containers). Full SDLC automation for every prompt artifact
-- **Pre-deployment security** — Aegis runs three parallel audit layers (prompt, behavior, code), cross-layer analysis, and maps findings to OWASP Top 10 for Agentic Applications. Compliance mapping to EU AI Act, NIST AI RMF, ISO 42001, CoSAI, NIST 800-53. Verdict: SHIP / CONDITIONAL / BLOCK with CI gate support
-- **Fleet communication** — Herald provides HMAC-SHA256 authenticated command channels between operators and agent fleets, governed A2A inter-agent messaging, MCP tool governance with OAuth 2.1 + DPoP, and non-human identity management
-- **Governance reverse-engineering** — Recon scans existing agent codebases (21 framework adapters from LangChain to CrewAI to raw Python) and reconstructs governance contracts with compliance assessments across 11 international standards
-- **Design intelligence** — Citadel provides compliance-aware design front end for both compilers with live introspection and governance profile resolution (FedRAMP, DoD IL4/IL5, HIPAA, SOC 2, PCI-DSS, EU AI Act, GDPR)
-- **Cross-organizational A2A** — Drawbridge provides governed agent-to-agent communication with CNSA 2.0 cryptographic proof, bilateral 7-check crossing gates, replay protection via persistent nonce tracking, kill switch propagation, and optional post-quantum hardening. CNSSP-12 compliance floor for classified environments
-- **QA automation** — Stratum compiles source code into comprehensive quality assessments with eight independent quality gates
-- **PRD compilation** — Chancery transforms unstructured product input into production-quality PRDs with deterministic quality scoring, 10 compliance framework detection, and 7 cognitive bias identification
-- **Plugin engineering** — CoWork generates governed Claude Code plugins with SENESCHAL enforcement, 10 compliance framework support, and governance sidecar packaging
-- **Compliance integration testing** — Forge validates platform integration across Castellan, Charlotte, SENESCHAL, and Drawbridge through 12 test layers mapped to NIST 800-53 controls, generating compliance evidence reports for Authorizing Officials with CI-gated progression
-- **DoD hardened tooling** — 34 Level 6 hardened Rust MCP binaries providing classified-environment tooling across 17 defense domains with CNSA 2.0 crypto, mTLS enforcement, structured audit logging, and SENESCHAL read-only contract enforcement
-
-Every system is standalone. Together they automate the full lifecycle from unstructured idea to deployed, tested, governed, monitored agent fleet. The platform is self-hosting — Chancery compiles the PRDs, Charlotte compiled the prompts, Stratum validates the code, Castellan compiles the agents, SENESCHAL enforces the policies, Aegis audits them, Herald delivers commands, vigil-edge watches them run, Drawbridge governs cross-organizational communication, Forge validates compliance evidence across the platform, and the DoD Hardened MCP Servers provide classified-environment tooling under SENESCHAL's read-only contract.
+Every system is standalone. Together they close the loop from unstructured idea to deployed, tested, governed, monitored agent fleet. The platform is self-hosting &mdash; Chancery compiles the PRDs, Charlotte compiles the prompts, Castellan compiles the agents, Seneschal enforces the policies, Forge validates the contracts, Citadel generates compliance evidence, and the products demonstrate the stack in production.
 
 ---
 
@@ -130,12 +124,9 @@ Every system is standalone. Together they automate the full lifecycle from unstr
 
 <div align="center">
 
-# The Castellan Agent & MCP Governance Platform
+# Core Platform
 
-*Seven systems. One closed loop. Compile, enforce, audit, scan, communicate, bridge, monitor.*
-
-![Platform Lines](https://img.shields.io/badge/256%2C722-Source_Lines-2563EB?style=flat-square)
-![Platform Tests](https://img.shields.io/badge/14%2C378-Tests_Passing-16A34A?style=flat-square)
+*Four systems. Compile, design, enforce.*
 
 </div>
 
@@ -143,304 +134,87 @@ Every system is standalone. Together they automate the full lifecycle from unstr
 
 ---
 
-## 1. Castellan — Agentic Compiler
+## 1. Castellan &mdash; Agent Governance Compiler
 
-**The agentic compiler. YAML in, governed production agent out. Governance is structural, not optional.**
+**The agent compiler. YAML in, governed production agent out. Governance is structural, not optional.**
 
-> The problem: every team building AI agents hits the same wall. The prototype works. Then production demands governance — the agent says things it shouldn't, costs $47 on a single session, crashes on a flaky API call, and nobody can prove it won't go off-script next week. Most agent frameworks are code-first and governance-last. They hand you a runtime and leave governance, testing, compliance, and deployment as an exercise for the reader. Governance gets bolted on after the fact — if it gets added at all.
+> The problem: every team building AI agents hits the same wall. The prototype works. Then production demands governance &mdash; the agent says things it shouldn't, costs $47 on a single session, crashes on a flaky API call, and nobody can prove it won't go off-script next week. Most agent frameworks are code-first and governance-last. They hand you a runtime and leave governance, testing, compliance, and deployment as an exercise for the reader.
 
-Castellan is an **agentic compiler** — the first tool that makes agent governance structural rather than aspirational. Write a declarative YAML spec. Castellan compiles it through a 6-stage pipeline, enforces constitutional governance at compile time and runtime, gates every response through inline guardrails, audits the entire agent against the OWASP Top 10 for Agentic Applications, and exports to 7 deployment targets — Python, Docker, FastAPI, Kubernetes, Temporal, Claude Code skill, or client delivery package — with optional embedded governance that travels with the deployed agent across LangGraph, CrewAI, AutoGen, and Haystack.
+Castellan is the **agent governance compiler**. Write a declarative YAML spec. Castellan compiles it through a 5-stage pipeline, enforces constitutional governance at compile time and runtime, gates every response through inline guardrails, audits the entire agent against the OWASP Top 10 for Agentic Applications, and exports to 12 targets including **Level 6 hardened Rust binaries** (FROM scratch, static musl, RELRO+NX, mTLS via rustls) for DoD deployments.
 
 This isn't a framework. It's a **compiler**. The agent is governed before it runs. Validated before it deploys. Monitored after it ships.
 
-Think of it as **Terraform for AI agents**: declarative, version-controlled, auditable, governed, CI/CD-ready.
-
 ### The Compilation Pipeline
 
-Every agent spec — no exceptions — runs through 6 deterministic stages before a single token is generated:
+Every agent spec runs through 5 deterministic stages before a single token is generated:
 
 | Stage | Purpose |
 |:--|:--|
-| **Parse** | Validates YAML, resolves block references from the 21-block library, applies `!include` directives and `extends`/`mixins` inheritance, detects circular dependencies |
-| **Compose** | Assembles the system prompt from prioritized blocks (system > constitution > task > context > tools > few_shot > constraints > output_format), injects Jinja2 variables |
-| **Optimize** | Token budget analysis, prompt compression, whitespace normalization, cost estimation |
+| **Parse** | Validates YAML, resolves block references, applies `!include` directives and `extends`/`mixins` inheritance |
+| **Compose** | Assembles the system prompt from prioritized blocks, injects Jinja2 variables |
+| **Optimize** | Token budget analysis, prompt compression, cost estimation |
 | **Validate** | Schema validation, gate threshold checks, tool permission verification, 10+ completeness rules |
-| **Scan** | Security scanning — 18+ patterns: injection vectors, exfiltration paths, privilege escalation, hardcoded secrets, jailbreak surfaces, unsafe tool patterns |
-| **Render** | Produces a `CompiledAgent` — ready for execution, export, testing, or audit |
+| **Render** | Produces a `CompiledAgent` &mdash; ready for execution, export, testing, or audit |
 
-The pipeline is deterministic. Same input, same output. No randomness, no LLM calls during compilation, no "it depends." If the spec is structurally valid, you get a compiled agent. If it's not, you get a precise error pointing to the line that failed.
+### Constitutional Governance
 
-### Constitutional Governance — The Core of the Agentic Compiler
+Every compiled agent carries a constitution: core values, technical boundaries, quality standards, user commitments. Severity-ranked principles (`critical` / `high` / `medium` / `low`) determine whether violations block output, penalize gate scores, or get logged for audit. All 5 governance sub-schemas are typed Pydantic v2 models &mdash; parse-time validation catches misconfigurations at compile time.
 
-**Governance isn't a feature of Castellan. It's the reason Castellan exists.**
+Governance travels with the agent. The `--governed` export flag embeds governance directly into LangGraph, CrewAI, AutoGen, and Haystack exports &mdash; `@governed` decorator, compliance JSONL logging, kill switch, autonomy ceiling.
 
-Every compiled agent carries a constitution: core values, technical boundaries, quality standards, user commitments. This isn't documentation — it's enforced at compile time and runtime. Severity-ranked principles (`critical` / `high` / `medium` / `low`) with pattern matching determine whether violations block output, penalize gate scores, or get logged for audit. An agent compiled with Castellan cannot claim it has no boundaries. The boundaries are in the spec, versioned in Git, and enforced by the compiler.
-
-All 5 governance sub-schemas — `governance`, `human_oversight`, `data_sensitivity`, `sign_off`, and `testing` — are typed Pydantic v2 models with `extra = "ignore"` for backward compatibility. Parse-time validation catches misconfigurations (typos, wrong types, missing fields) at compile time, not at runtime. If a governance block is structurally invalid, the compiler rejects it before a single token is generated.
-
-Governance travels with the agent. The `--governed` export flag embeds `castellan.mantle` governance directly into LangGraph, CrewAI, AutoGen, and Haystack exports — `@governed` decorator, compliance JSONL logging, kill switch, autonomy ceiling. Even if the agent runs outside Castellan's runtime, governance enforcement is inline. Not an external dependency. Not optional.
-
-### Compliance Engine — 18 Regulatory Frameworks
-
-Castellan's compliance engine provides **typed, auditable compliance assessment** across defense, healthcare, finance, legal, and international standards:
+### Compliance Engine &mdash; 18 Regulatory Frameworks
 
 | Framework | What Castellan Does |
 |:--|:--|
-| **EU AI Act** | Risk tier classification (unacceptable/high/limited/minimal), article-by-article compliance status, evidence collection |
-| **HIPAA** (45 CFR 164) | Administrative, Physical, Technical safeguard mapping; HHS AI Guidance (2025) alignment |
-| **PCI-DSS v4.0** | 6-goal compliance mapping with PCI SSC AI/ML supplement (2024) |
-| **SOC 2 Type II** | Dual-mode evidence generation for service organization audit |
+| **EU AI Act** | Risk tier classification, article-by-article compliance assessment |
+| **HIPAA** | Administrative, Physical, Technical safeguard mapping |
+| **PCI-DSS v4.0** | 6-goal compliance mapping with AI/ML supplement |
+| **SOC 2 Type II** | Dual-mode evidence generation |
 | **NIST AI RMF** | Governance-to-function/category alignment |
-| **NIST 800-53** | 30+ federal security control patterns across 12 control families |
-| **NIST IR 8596 / CSF 2.0** | CAISI AI Agent Standards Initiative, 6-function structure (GOVERN/IDENTIFY/PROTECT/DETECT/RESPOND/RECOVER) |
-| **ISO 42001** | AI management system standard mapping |
-| **ISO 27001** | Information security management |
-| **GDPR Article 22** | Automated decision-making rights, PII redaction, erasure support |
-| **FedRAMP** | Federal risk and authorization management (Low/Moderate/High) |
-| **DoD IL4/IL5** | Impact level controls for defense environments |
-| **CNSSP-12** | Committee on National Security Systems policy for classified environments |
-| **FINRA 2026** | Financial regulatory compliance assessment |
-| **FZ-152** | Data protection assessment |
-| **OWASP Agentic** | Full Top 10 vulnerability mapping (ASI01–ASI10) with evidence |
-| **COPPA** | Children's Online Privacy Protection compliance |
-| **CoSAI** | Threat modeling for AI systems |
-
-Additional: SHA-256 tamper-evident attestation chains, system card generation (NIST/EU AI Act aligned), compliance manifests with regulatory classification, DoD delivery packages (SSP, CMR, integration guides), agentic JWT with PoP keys and delegation chains, A2A bilateral policy enforcement, CBRA 4-dimension risk scoring, 5-level autonomy certification taxonomy, and 7-section audit report generation with framework mapping to AIUC-1, ISO 42001, NIST AI RMF, OWASP, and MITRE ATLAS controls.
+| **NIST 800-53** | 30+ federal security control patterns |
+| **NIST CSF 2.0 (CAISI)** | 6-function structure, AI Agent Standards Initiative |
+| **ISO 42001 / 27001** | AI management system + information security |
+| **GDPR Article 22** | Automated decision-making rights, PII redaction |
+| **FedRAMP** | Federal risk authorization (Low/Moderate/High) |
+| **DoD IL4/IL5** | Impact level controls for defense |
+| **CNSSP-12** | Classified environment compliance |
+| **FINRA 2026** | Financial regulatory compliance |
+| **OWASP Agentic** | Full Top 10 vulnerability mapping |
+| **COPPA** | Children's privacy protection |
 
 ### Runtime Guardrails
 
-Every LLM response runs through an inline guardrail pipeline before it reaches the user — not as a post-processing step, but inside the ReAct loop, on both synchronous and streaming paths:
+Every LLM response runs through an inline guardrail pipeline before it reaches the user:
 
-- **PII Redaction** — emails, SSNs, credit cards, phone numbers, and custom patterns detected and replaced
-- **Prompt Injection Filtering** — input messages scanned for injection attacks, exfiltration attempts, and privilege escalation before reaching the model
-- **Hallucination Detection** — quoted facts and numbers in responses verified against tool results and conversation context
-- **Most-restrictive-wins semantics** — when multiple guardrails fire, the strictest action (BLOCK > REDACT > WARN > PASS) is applied
-
-### OWASP Agentic Security Audit (Aegis)
-
-Full security audit mapped to the OWASP Top 10 for Agentic Applications — built directly into the compiler:
-
-| OWASP ID | Risk | What Aegis Audits |
-|:--|:--|:--|
-| ASI-01 | Prompt Injection | Injection patterns, delimiter exploitation, role confusion |
-| ASI-02 | Tool Poisoning | Tool chaining data flow, validated sinks |
-| ASI-03 | Excessive Agency | Blast radius scoring, write tools, missing rate limits |
-| ASI-04 | Supply Chain | Hardcoded secrets, dependency analysis |
-| ASI-05 | Output Handling | Response safety, content policies |
-| ASI-06 | Memory Poisoning | Persistent state injection vectors |
-| ASI-07 | Insecure Delegation | Agent spawning chains, depth limits |
-| ASI-08 | Human Oversight | Autonomy envelope, kill switches, cascading failures |
-| ASI-09 | Trust Exploitation | Confidence calibration, trust score verification |
-| ASI-10 | Insufficient Monitoring | Audit logging, kill switch accessibility |
-
-Aegis produces six deliverables: executive summary, technical report, OWASP scorecard, generated test suite, candor report, and handoff guide. Verdict: **SHIP / CONDITIONAL / BLOCK** — with CI gate support (`aegis gate --threshold B` returns exit code 0 or 1).
-
-### Multi-Turn Behavioral Testing
-
-Single input/output assertions aren't enough. Castellan's test runner supports full multi-turn conversation testing with 28 assertion types — `contains`, `not_contains`, `regex_match`, `json_valid`, `min_length`, `max_length`, composite operators (`all_of`, `any_of`, `none_of`), and more. Built-in adversarial personas: `jailbreak`, `confused`, `topic_switch`, `boundary_probe`. Prove your agent handles jailbreak attempts correctly, maintains context across topic switches, and refuses prohibited content — all in CI, before deployment.
+- **PII Redaction** &mdash; emails, SSNs, credit cards, phone numbers, custom patterns
+- **Prompt Injection Filtering** &mdash; injection attacks, exfiltration attempts, privilege escalation
+- **Hallucination Detection** &mdash; quoted facts verified against tool results and conversation context
+- **Most-restrictive-wins semantics** &mdash; strictest action (BLOCK > REDACT > WARN > PASS) applied
 
 ### Execution Engine
 
-Async-first ReAct runtime implementing the **Observe → Think → Act → Validate** cycle with full production resilience:
-
-- **3 LLM providers** — Anthropic (Claude), OpenAI (GPT-4o), Google (Gemini) with streaming, retry, and exponential backoff
-- **MCP client** — tool discovery, auth, and calling against MCP servers
-- **A2A protocol** — agent-to-agent task lifecycle and discovery
-- **RAG pipeline** — ingestors, chunkers, embedders, and vector store integration
-- **Sliding window memory** — token-budgeted conversation history that never truncates the system prompt, working memory slots, optional long-term file-based persistence
-- **Cost-aware model routing** — routes each call to the most cost-effective model tier based on task complexity, with per-run budget enforcement and automatic termination
-- **Circuit breaker + rate limiter** — CLOSED/OPEN/HALF_OPEN resilience, token bucket rate limiting, fallback provider chain, LRU + TTL response caching
-
-The unified runtime is a single `_execute_turns()` async generator — one code path, one set of invariants, one place to audit. Human checkpoint enforcement is structural: autonomous agents with no HITL channel raise `SessionCeilingExceededError` rather than silently running unchecked.
+Async-first ReAct runtime: **Observe &rarr; Think &rarr; Act &rarr; Validate** with 4 LLM providers (Anthropic, OpenAI, Google, Ollama), MCP client, A2A protocol, RAG pipeline, sliding-window memory with working memory slots, cost-aware model routing with budget enforcement, circuit breaker with fallback provider chain, and LRU + TTL response caching.
 
 ### Multi-Agent Orchestration
 
 | Pattern | How It Works |
 |:--|:--|
-| **Supervisor** | Master agent routes tasks to specialists via regex/keyword rules, synthesizes results |
+| **Supervisor** | Master agent routes tasks to specialists via regex/keyword rules |
 | **Pipeline** | Sequential chain with stage transforms, stops on error |
-| **Broadcast** | Parallel fan-out with aggregation strategies: concat, first, or vote |
+| **Broadcast** | Parallel fan-out with aggregation (concat, first, vote) |
 | **Peer** | Turn-based collaboration with configurable max rounds |
 
-Dynamic routing with priority ordering. Delegation depth limiting prevents infinite loops. Checkpoint/resume serializes full orchestration state for long-running tasks.
+### Production Deployment &mdash; 12 Targets, Governance Embedded
 
-### Production Deployment — 7 Targets, Governance Embedded
+Python package, Docker, FastAPI server, Claude Code skill, Kubernetes (Deployment/Service/ConfigMap/Secret/Kustomization/Helm), Temporal workflow, client delivery package, and **Level 6 hardened Rust binaries** (FROM scratch, static musl, panic=abort, LTO, stripped) for DoD deployments.
 
-**7 export targets** — Python package, Docker (Dockerfile + Compose), FastAPI server (/chat, /health, /trace, /stream), Claude Code skill, Kubernetes (Deployment, Service, ConfigMap, Secret, Kustomization, optional Helm charts), Temporal workflow, and client delivery package.
+### CI/CD Governance Gate
 
-**Governed exports** across 4 major agent frameworks — LangGraph, CrewAI, AutoGen, and Haystack. Each export embeds `castellan.mantle` governance inline: `@governed` decorator, compliance JSONL logging, kill switch, autonomy ceiling. The agent doesn't phone home to Castellan for governance — it carries governance with it.
-
-**Observability** — OpenTelemetry span export, Prometheus metrics, 8 lifecycle event hooks, Rich tree trace visualization, interactive debugger with 6 breakpoint types, governance dashboard with fleet metrics, monthly health reports with drift detection, and append-only audit log with JSON export for compliance.
-
-### CI/CD Governance Gate — Governance as a Merge-Blocking Signal
-
-`castellan ci-diff` compiles both base and head spec versions, runs governance scoring on both, and produces a `GovernanceImpactReport` posted as a PR comment. Verdict: **APPROVE / REVIEW / BLOCK**. GitHub Action and GitLab CI templates included. Governance regression doesn't slip through code review — it blocks the merge. This is what makes agent governance enforceable at the organizational level: it lives in CI, not in a wiki page.
-
-### Visual Execution Replay
-
-`castellan replay --visual` renders execution traces into self-contained interactive HTML. Dark-themed timeline with collapsible turns, tool calls, gate evaluations, guardrail decisions, cost breakdown, and annotation panel. One file, no dependencies, shareable with stakeholders who don't have a terminal.
-
-### Live Governance Dashboard
-
-WebSocket-based real-time dashboard showing governance events — gate evaluations, guardrail hits, kill switch activations — as they happen. No polling, no refresh. Connect a browser and watch your agent fleet's governance posture update live.
-
-### OpenClaw Governance (C17)
-
-**The first governance framework for the most popular open-source agent platform.**
-
-OpenClaw is the most widely adopted open-source agent framework — 247K+ GitHub stars, 21+ messaging channels (Telegram, Slack, WhatsApp, Discord, and more), thousands of community-built skills. It also has zero built-in governance. Every tool call runs with ambient authority. Koi Security discovered 824+ malicious skills in the "ClawHavoc" campaign. CVSS 8.8 vulnerability reported. Castellan C17 provides three integration surfaces:
-
-**WebSocket Gateway Proxy** — Transparent proxy between downstream clients and the upstream OpenClaw Gateway. Intercepts all governed method frames (`tools.invoke`, `node.invoke`, `chat.send`, `exec.approval.resolve`) and runs a full enforcement pipeline per request:
-
-1. Parse & validate (JSON frame validation)
-2. Rate limiting (token bucket per policy)
-3. Tool access control (allowlist/blocklist)
-4. Turn count limits (max invocations per session)
-5. Skill governance (allowlist/blocklist for `/skill_name` invocations)
-6. Trust scoring (4-dimensional anomaly detection: output consistency, tool patterns, latency, intent alignment)
-7. Output filtering (regex-based PII redaction)
-8. Tamper-evident attestation (SHA-256 chain per interaction)
-
-Per-channel policies allow different tool access per messaging channel — Telegram read-only, Slack full access, WhatsApp restricted tools.
-
-**Skill Supply Chain Scanner** — OpenClaw skills are Markdown files with YAML frontmatter, installed from the ClawHub marketplace. The scanner runs 22 detection patterns across 6 threat categories: prompt injection, data exfiltration, privilege escalation, credential harvesting, supply chain dependencies, and code obfuscation. Risk classification: LOW / MEDIUM / HIGH / CRITICAL.
-
-**HTTP Endpoint Governance** — The same enforcement pipeline applied to REST APIs, webhook receivers, and internal microservices. One policy file governs all three transports (WebSocket, HTTP, gRPC).
-
-### SENESCHAL — On-Premises Runtime Authority (Rust Sub-Component)
-
-**The on-premises enforcement engine. SPIFFE identity, FIPS 140-3 crypto, air-gapped operation. Built for classified environments.**
-
-SENESCHAL is a **Rust binary** that serves as the on-premises runtime authority within the Castellan ecosystem. It enforces policy gates for all agent-to-agent (A2A) and agent-to-MCP-server communication, manages a dual-node registry (Castellan-compiled agents + Charlotte-compiled MCP servers), maintains tamper-evident attestation chains, and operates with **full autonomy** — no cloud connectivity required. When connectivity is available, it syncs attestation records upstream through Herald.
-
-**Four-Layer Architecture:**
-
-| Layer | Name | What It Does |
-|:--|:--|:--|
-| **Layer 4** | **Identity** | SPIFFE/SPIRE (CNCF-graduated) — X.509 SVIDs, trust domain management, mTLS credential provisioning. Every node gets a cryptographic identity: `spiffe://domain/agent/name` or `spiffe://domain/mcp/name` |
-| **Layer 3** | **The Record** | Append-only SHA-384 attestation chain — 36+ event types across 6 categories (governance, security, infrastructure, operational, audit, federation). Ed25519-signed, tamper-evident, immutable |
-| **Layer 2** | **The Brain** | Rule-based policy gates — 7-check A2A gate + 8-check MCP gate + MCP governance checks (29–32). 100+ named violation types. All deterministic, zero ML inference, fully explainable |
-| **Layer 1** | **The Fabric** | MLS RFC 9420 (IETF-ratified) encrypted group messaging. Forward secrecy. Fast path for pre-approved bilateral pairs |
-
-**Compliance & Security:**
-
-| Capability | Standard / Implementation |
-|:--|:--|
-| **Cryptography** | FIPS 140-3 via `aws-lc-rs` — Ed25519-Dalek, AES-GCM, SHA-256/SHA-384. Validated crypto module |
-| **Identity** | SPIFFE/SPIRE — X.509 SVIDs, trust domain management, mTLS for all node-to-node communication |
-| **Messaging** | MLS RFC 9420 — IETF-ratified encrypted group messaging with forward secrecy |
-| **Classification** | CDS governance across 6 levels: Unclassified, FOUO, CUI, SECRET, TOP SECRET, TS/SCI. Cross-classification data flow with channel authorization, label HMAC verification, content quarantine |
-| **DoD Alignment** | Zero Trust Architecture, CAC/PKI authentication (IA-2(12)), STIG compliance, fail-closed architecture |
-| **Federation** | NIST CAISI compliance (checks 17–23) — bilateral agreement enforcement, trust domain validation, policy reconciliation, cross-org data flow control, mutual kill switch |
-
-**Policy Gates — 15 Checks:**
-
-A2A Gate (7 checks): delegation scope, JWT verification, bilateral policy, autonomy gating, data flow control, data type validation, message size limits. MCP Gate (8 checks): agent trusted, tool exposed, tool blocked, scope validation, human approval gates, rate limiting, kill switch, node type validation. Plus MCP Governance checks (29–32): tool description sanitization, sampling governance, cross-MCP data flow, tool surface drift detection.
-
-**Tool Integrity Verification:** SHA-384 hash verification against registered manifest. Per-server hashes registered at startup. Rug-pull detection for runtime tool manipulation.
-
-**Call Chain Governance:** Configurable depth limits, circular call detection, prohibited sequence enforcement.
-
-**Behavioral Cost Limits:** Per-session token/cost budgets, per-hour enforcement, automatic tool call blocking when budgets exhausted.
-
-**Drawbridge Support:** HMAC-SHA384 envelope signing, replay protection, SPIFFE/SVID-backed identity for cross-organizational A2A.
-
-### vigil-edge — Behavioral Monitoring Agent (Rust Sub-Component)
-
-**Edge behavioral monitoring. 5-dimensional governance scoring, z-score anomaly detection, tool rug-pull detection.**
-
-vigil-edge reads JSONL telemetry from SENESCHAL, builds behavioral fingerprints, computes 5-dimensional governance scores, detects anomalies via z-score analysis, and fires alerts when agents drift from their governance baseline.
-
-**5-Dimensional Governance Scoring:**
-
-| Dimension | Weight | What It Measures |
-|:--|:--|:--|
-| **Policy** | 30% | Policy gate compliance rate |
-| **Behavior** | 25% | Behavioral pattern consistency |
-| **Schema** | 20% | Schema validation adherence |
-| **Candor** | 15% | Transparency and disclosure |
-| **Manifest** | 10% | Tool manifest integrity |
-
-**Status Thresholds:** Healthy ≥0.80, Degraded ≥0.60, AtRisk ≥0.40, Critical <0.40.
-
-**Z-Score Anomaly Detection (5 classes):** behavioral drift, tool pattern anomalies, score anomalies, data flow anomalies, temporal anomalies. 50-interaction minimum before baseline establishment.
-
-**Tool Rug-Pull Detection:** SHA-256 manifest verification against registered tool hashes. Detects runtime tool manipulation.
-
-Hardened Rust binary — LTO, strip, panic=abort. No caching — fresh telemetry read every cycle.
-
-### Citadel-edge — Air-Gapped Policy Management (Rust Sub-Component)
-
-**Scoped policy management for air-gapped deployments. Compliance floors are hard — they cannot be violated.**
-
-Citadel-edge loads policy bundles (YAML with HMAC signatures), allows bounded operator adjustments within compliance profiles, and validates all adjustments against compliance floors.
-
-**CNSA 2.0 Crypto:** SHA-384 hashing, deterministic JSON canonical form signing. Policy bundles contain behavioral policy, call stack policy (depth limits, circular detection), tool integrity manifest (SHA-384 hashes), and adjustment bounds (compliance-floored operator overrides).
-
-**Crossing Policy Support:** `crypto_suite: drawbridge-v1` or `drawbridge-plus-v1` for Drawbridge A2A integration.
-
-Hardened release profile: LTO, single codegen unit, stripped symbols, panic=abort, opt-level=z, overflow-checks=true.
-
-<details>
-<summary><strong>Full CLI reference (104 commands)</strong></summary>
-
-<br>
-
-| Command | Purpose |
-|:--|:--|
-| `castellan init` | Scaffold agent from template or intake form |
-| `castellan compile` | 6-stage compilation pipeline |
-| `castellan run` | Interactive or single-message execution |
-| `castellan validate` | Completeness and schema checks |
-| `castellan scan` | Security scanning (18+ patterns) |
-| `castellan test` | Behavioral + adversarial conversation testing |
-| `castellan score` | Constitutional + gate scoring |
-| `castellan candor` | Transparency analysis |
-| `castellan trace` / `castellan replay` | Execution trace and visual replay |
-| `castellan orchestrate` | Multi-agent orchestration |
-| `castellan serve` | Production FastAPI server |
-| `castellan export` | 7 deployment targets |
-| `castellan blocks` | Block library browser |
-| `castellan compose` | Inheritance/mixin resolution |
-| `castellan schema` | JSON Schema export |
-| `castellan diff` / `castellan migrate` | Spec versioning and migration |
-| `castellan eval` | LLM-as-judge evaluation with Elo ratings |
-| `castellan generate` | Spec generation from 5 starter profiles |
-| `castellan dashboard` / `castellan audit` | Runtime observability |
-| `castellan doctor` / `castellan selftest` | Diagnostics |
-| `castellan ci-diff` | Governance diff on PR with APPROVE/REVIEW/BLOCK verdict |
-| `castellan replay --visual` | Visual execution replay to HTML |
-| `castellan traceability` | Unified framework scoring matrix |
-| `castellan runbook` | Generate IR runbook from spec governance |
-| `castellan purge` | Data retention purge engine |
-| `castellan recertify` | Recertification loop with drift triggers |
-| `castellan design` | AI agent designer pipeline |
-| `castellan designer-serve` | Designer web UI server |
-| `castellan red-team` | Live adversarial testing harness |
-| `castellan canary` | Canary deployment lifecycle |
-| `castellan queue` | Centralized approval queue |
-| `castellan risk` | Predictive risk scoring |
-| `castellan autopilot` | Governance autopilot diagnostics |
-| `castellan verify` | Crypto provenance verification |
-| `castellan sign` | HMAC-SHA256 spec signing |
-| `castellan openclaw` | OpenClaw governance proxy + skill scanner |
-| `castellan watchtower` | Fleet telemetry server |
-| `castellan sentinel` | Recovery controller |
-| `castellan fleet` | Fleet governance dashboard |
-| `castellan sbom` | AI software bill of materials |
-| `castellan identity` | Agent identity manifest |
-| `aegis audit` | Full OWASP Top 10 security audit |
-| `aegis scan` | Quick security scan |
-| `aegis gate` | CI gate with verdict threshold |
-| `aegis scorecard` | OWASP scorecard generation |
-| `aegis diff` | Audit comparison between versions |
-| `aegis estimate` | Audit cost estimation |
-
-</details>
+`castellan ci-diff` compiles both base and head spec versions, runs governance scoring on both, produces a `GovernanceImpactReport` with verdict **APPROVE / REVIEW / BLOCK**. GitHub Action and GitLab CI templates included. Governance regression doesn't slip through code review &mdash; it blocks the merge.
 
 <div align="center">
 
-`104 commands` · `529 modules (Python) + 62 modules (Rust)` · `145,730 lines (Python + Rust)` · `7,501 tests, all passing`
+`CLI + Rust target generation` · `531 modules` · `122,545 lines` · `8,600+ tests`
 
 </div>
 
@@ -448,66 +222,53 @@ Hardened release profile: LTO, single codegen unit, stripped symbols, panic=abor
 
 ---
 
-## 2. Charlotte — Prompt & MCP Compiler
+## 2. Charlotte &mdash; Context Engineering Compiler
 
-**The prompt compiler. 94-block type system, defense-grade security scanning, multi-provider rendering, MCP server generation.**
+**The context compiler. 103-block template catalog, defense-grade security scanning, MCP server generation in Python and Rust.**
 
-> The problem: prompts are the source code of AI applications, but they have no SDLC. No compilation. No type system. No testing framework. No security scanning. No version control semantics. No CI/CD. Prompts are strings — written in text files, copy-pasted between projects, tested by running them and hoping. For any artifact this critical, that's engineering malpractice.
+> The problem: prompts are the source code of AI applications, but they have no SDLC. No compilation. No type system. No testing framework. No security scanning. No version control semantics. No CI/CD. For any artifact this critical, that's engineering malpractice.
 
-Charlotte transforms prompt engineering into **structured, validated, composable software engineering** through a 5-stage deterministic pipeline. Write a YAML spec. Charlotte compiles it into a validated, optimized, deployment-ready prompt with security scanning, testing, and multi-provider rendering. Full SDLC — the same rigor you'd apply to any production code artifact.
+Charlotte transforms prompt engineering into **structured, validated, composable software engineering** through a 5-stage deterministic pipeline. Write a YAML spec. Charlotte compiles it into a validated, optimized, deployment-ready prompt or complete MCP server with security scanning, testing, and multi-provider rendering.
 
 ### The Compilation Pipeline
 
 | Stage | What It Does |
 |:--|:--|
-| **Parse** | Validates YAML, resolves block references from the 94-block library across 17 types, checks required fields and constraints |
+| **Parse** | Validates YAML, resolves references from 103-block catalog across 20 types |
 | **Compose** | Assembles blocks in priority order, resolves variables with Jinja2, applies composition rules |
-| **Optimize** | Token budget analysis per provider model, prompt compression, whitespace normalization, cost estimation |
-| **Validate** | 30 assertion types for behavioral testing, output format verification, quality threshold checks |
-| **Render** | Multi-provider output — OpenAI, Anthropic, Google Gemini. Claude Code skills. MCP servers. GitHub Actions CI |
+| **Optimize** | Token budget analysis per provider model, prompt compression, cost estimation |
+| **Validate** | 30 assertion types, output format verification, quality threshold checks |
+| **Render** | Multi-provider output, Claude Code skills, MCP servers, GitHub Actions CI |
 
 ### Defense & Federal Compliance Scanning
 
-Charlotte implements **89 security patterns across 22 categories** — the deepest compliance scanning of any prompt engineering tool:
+Charlotte implements **89 security patterns across 22 categories**:
 
 | Capability | Implementation |
 |:--|:--|
-| **DoD Patterns** | 35+ detection patterns aligned to NIST 800-53 control families: AC (Access Control), AU (Audit), IA (Identification/Auth), SC (System Communications), SI (System Integrity), CM (Configuration), CP (Contingency), IR (Incident Response), RA (Risk Assessment), SA (Supply Chain) |
-| **STIG Export** | Full checklist generation with vulnerability IDs (V-222400 format), CAT I–III severity classification, status tracking, 12+ NIST 800-53 control families |
-| **FIPS 140-3** | Non-FIPS algorithm detection (MD5, weak crypto), FIPS transport requirement validation |
-| **mTLS / CAC** | Mutual TLS enforcement, Common Access Card / PKI authentication support |
+| **DoD Patterns** | 35+ detection patterns aligned to NIST 800-53 families (AC, AU, IA, SC, SI, CM, CP, IR, RA, SA) |
+| **STIG Export** | Checklist generation with vulnerability IDs (V-222400 format), CAT I&ndash;III |
+| **FIPS 140-3** | Non-FIPS algorithm detection, FIPS transport requirement validation |
+| **mTLS / CAC** | Mutual TLS enforcement, Common Access Card / PKI authentication |
 | **Classification Banners** | CUI, UNCLASSIFIED//FOUO, SECRET, TOP SECRET display enforcement |
-| **MCP DoD Hardening** | TLS 1.2+, AES-256, non-root containers, read-only filesystems, capability dropping, no-new-privileges |
-| **CoSAI Threat Model** | MCP-T1 (session token leakage), MCP-T2 (tenant isolation), MCP-T6 (shadow MCP servers), MCP-T9 (consent fatigue) |
-| **Audit Format** | JSON, CEF (ArcSight/SIEM integration), Syslog (RFC 5424) export |
-| **OWASP LLM Top 10** | Full coverage with red team testing alignment |
+| **MCP DoD Hardening** | TLS 1.2+, AES-256, non-root containers, capability dropping |
+| **CoSAI Threat Model** | MCP-T1/T2/T6/T9 coverage |
+| **Audit Format** | JSON, CEF (ArcSight/SIEM), Syslog RFC 5424 |
 
-**`dod_governance_preset()`** — one-call preset that activates FIPS requirement, mTLS enforcement, CAC authentication, and human approval gates. STIG profile support: `full`, `cat1` (critical only), `cat2` (high + critical), `none`.
+### MCP Server Generation
 
-### MCP Server Generation & Governance
+Charlotte compiles prompt specs into complete MCP servers in two targets:
 
-Charlotte compiles prompt specs into **complete MCP servers** with governance baked in:
-
-- **MCPGovernanceSpec** — classification level, audit_required, kill_switch, human_approval, trusted_agents, max_token_age
-- **Authentication** — OAuth 2.1, JWT verification, scope validation
-- **Data Flow Control** — data type classification (data/instruction/mixed), injection defense (strict/moderate/advisory)
-- **SENESCHAL Integration** — identity fragment generation with DoD hardening, registration with FIPS/mTLS/CAC requirements, fail-closed audit enforcement, kill switch propagation
-
-### What Charlotte Compiles
-
-| Output | Description |
+| Target | Description |
 |:--|:--|
-| **Optimized Prompts** | Token-budgeted, provider-specific, security-scanned |
-| **Claude Code Skills** | Complete skill packages with metadata and routing |
-| **MCP Servers** | Full server code with governance, auth, and audit |
-| **Test Suites** | Behavioral assertions, adversarial testing, regression checks |
-| **CI Pipelines** | GitHub Actions workflows for prompt SDLC |
-| **Workflow Chains** | Multi-prompt sequential pipelines with stage dependencies |
-| **DoD Packages** | STIG checklists, classification banners, audit trails |
+| **Python (FastMCP)** | Python MCP servers with governance spec integration |
+| **Rust (Level 6)** | Level 6 hardened Rust MCP binaries &mdash; FROM scratch, static musl, rustls, panic=abort |
+
+Additional quantized MCP renderers for air-gapped Ollama deployments.
 
 <div align="center">
 
-`CLI` · `104 modules` · `34,045 lines` · `3,034 tests, all passing`
+`CLI` · `135 modules` · `36,337 lines` · `3,700+ tests`
 
 </div>
 
@@ -515,52 +276,72 @@ Charlotte compiles prompt specs into **complete MCP servers** with governance ba
 
 ---
 
-## 3. Aegis — Pre-Deployment Security Audit
+## 3. Citadel &mdash; Compliance-Aware Design Intelligence
 
-**The security auditor. Three parallel audit layers, OWASP Top 10 mapping, verdict: SHIP / CONDITIONAL / BLOCK.**
+**The design front end and compliance engine. Compiler-ready specs in, governed fleet architectures and regulatory documents out.**
 
-> The problem: agents deploy without security review. Prompt injection, tool poisoning, excessive agency, insecure delegation — the OWASP Top 10 for Agentic Applications describes ten categories of vulnerabilities that every production agent is exposed to. Most teams discover them in production. After the damage.
+Citadel is the compliance-aware design intelligence platform. It generates compiler-ready YAML specs with governance fields that become Seneschal enforcement rules at runtime, compiles behavioral intent into enforceable runtime policy, and runs a full compliance engine for regulatory documentation and live codebase scanning.
 
-Aegis is a **pre-deployment security audit service** that orchestrates multiple analysis tools into a unified five-stage pipeline. It performs three audit layers in parallel (prompt, behavior, code), conducts cross-layer analysis with six static graph analyzers and three behavioral probes, maps every finding to the **OWASP Top 10 for Agentic Applications (ASI01-ASI10)**, and produces scored, evidence-backed security reports with exploit tests proving vulnerabilities and remediation tests verifying fixes.
+The behavioral governance pipeline: **Citadel compiles &rarr; Seneschal enforces &rarr; Vigil observes &rarr; Vigil amends.**
 
-### The Audit Pipeline
+### Three Operating Modes, 43 Tools
 
-```
-Intake ──> [ Prompt Audit (Charlotte Scanner — 54 checks, 21 categories) ]──┐
-           [ Behavior Audit (Castellan Scanner — 22 patterns + constitutional gate) ]├──> Cross-Layer Analysis ──> Scored Report
-           [ Code Audit (Stratum Aegis Detectors — 11 detectors, 26 vuln types) ]────┘
-```
+| Mode | Description |
+|:--|:--|
+| **`citadel design`** | Interactive CLI via Anthropic API (user-driven, reactive) |
+| **`citadel forge`** | Voice-first automated pipeline (4 stages, 3 approval gates) |
+| **`citadel serve`** | FastMCP server (stdio/SSE) for MCP clients |
 
-**Five stages:** Intake → Parallel Audit Layers → Cross-Layer Analysis → AIVSS Scoring → Deliverables
+### Fleet-Level Artifact Generation
 
-### Cross-Layer Analysis
+`gen_fleet_specs` produces coordinated artifacts for multi-agent deployments:
 
-Six static graph analyzers and three behavioral probes that correlate findings across layers:
+- Castellan agent specs + Charlotte MCP server specs (compliance + behavioral aware)
+- A2A trust policy (bilateral pairs with delegation types)
+- Seneschal registration config with spec hashes and hierarchy
+- Herald C2 config (protected fields, HMAC signing)
+- Vigil behavioral baseline (per-agent expected behaviors)
+- HMAC manifest (design-time placeholders)
+- Provenance manifest (Merkle root)
+- Tool description scan (poisoning detection)
+- Tool integrity manifest (SHA-384 description hashes)
+- Call stack policy (chain depth, circular detection, sequence rules)
+- Autonomy progression (tier-based promotion/demotion)
+- Crossing policy (Drawbridge territory allowlists, crypto suite selection)
+- SRP (Seneschal Redundancy Protocol) policy &mdash; governed failover
+- MCP topology policy (expected interaction graph, undeclared edge detection)
+- Trust scoring policy (behavioral trust decay)
+- SR 11-7 model cards (per-agent risk documentation)
 
-- **Tool chaining analysis** — traces data flow across tool boundaries
-- **Privilege scope analysis** — maps permission escalation paths
-- **Memory poisoning detection** — identifies persistent state injection vectors
-- **Delegation audit** — validates agent-to-agent trust boundaries
-- **Cascade failure analysis** — models failure propagation across agent topology
-- **Kill switch verification** — confirms kill switch accessibility and effectiveness
+### Compliance Engine &mdash; 26 Frameworks
 
-### Deliverables
+Live codebase scanning + regulatory document generation:
 
-Seven output formats per audit: executive summary, technical report, OWASP scorecard, generated test suite (exploit + remediation), candor report, compliance mapping, and handoff guide.
+- **`generate_fedramp_ssp(level)`** &mdash; FedRAMP SSP (OSCAL JSON, POA&M, low/moderate/high)
+- **`generate_nist800171_ssp(system_name)`** &mdash; NIST 800-171 Rev 2 SSP (CMMC L2)
+- **`run_stig_checklist(component)`** &mdash; DISA STIG with 45 findings, CKL export
+- **`generate_glba_safeguards_report()`** &mdash; GLBA Safeguards Rule (16 safeguards)
+- **`generate_pcidss_report()`** &mdash; PCI-DSS v4.0 (12 requirements, SAQ determination)
+- **`generate_ffiec_report()`** &mdash; FFIEC IT Examination Handbook (48 requirements, 5 domains)
+- **`generate_sox_itgc_report()`** &mdash; SOX ITGC (17 controls, 4 domains)
+- **`generate_model_card_report()`** &mdash; SR 11-7 model card per agent
+- ISO/IEC 42001 AI Management System assessment (32 clauses + Annexes A/B)
+- FDA PCCP tracking (7 change categories with bounded autonomy)
+- IEC 62304 SDP/SRS/SAD, ISO 14971 RMF, FDA PCCP, SOUP list
 
-**Verdict: SHIP / CONDITIONAL / BLOCK** — with CI gate support. `aegis gate --threshold B` returns exit code 0 or 1 for pipeline integration.
+### MCP Security Pipeline
 
-### Compliance Mapping
+Design-time defense against MCP attack vectors (tool poisoning, rug pulls, preference manipulation, call chain abuse). All modules are regex-based, deterministic, air-gap safe:
 
-Findings mapped to: EU AI Act, NIST AI RMF, ISO 42001, CoSAI, NIST 800-53.
-
-### Framework Auto-Detection
-
-Automatically detects and adapts to LangChain, CrewAI, OpenAI Agents SDK, with generic fallback for any Python/TypeScript/Java/Go agent.
+- **`scan_tool_descriptions(tools)`** &mdash; 20 patterns, 4 severity levels
+- **`verify_tool_integrity(tools, manifest)`** &mdash; SHA-384 hashes for rug-pull detection
+- **`compile_call_stack_policy(prompt, framework)`** &mdash; depth limits, circular detection
+- **`compile_topology_policy(prompt, framework)`** &mdash; MCP interaction graph, drift detection
+- **`compile_trust_scoring_policy(prompt, framework)`** &mdash; zero trust with memory
 
 <div align="center">
 
-`10 commands` · `103 modules` · `20,017 lines` · `675 tests, all passing`
+`CLI + MCP Server` · `88 modules` · `30,519 lines` · `1,000+ tests`
 
 </div>
 
@@ -568,327 +349,52 @@ Automatically detects and adapts to LangChain, CrewAI, OpenAI Agents SDK, with g
 
 ---
 
-## 4. Herald — Authenticated Command Channel
+## 4. Seneschal &mdash; Governance Runtime Authority
 
-**The command channel. HMAC-signed bidirectional communication between operator portals and deployed agent fleets.**
+**The on-premises enforcement engine. SPIFFE identity, FIPS 140-3 crypto, air-gapped operation. Built for classified environments.**
 
-> The problem: deployed agents are fire-and-forget. No way to query them in production. No way to update config without redeploying. No way to broadcast a recall. No secure channel between the operator who governs and the agent that runs.
+Seneschal is the **on-premises runtime authority** for the governance platform. It enforces policy gates for all agent-to-agent (A2A) and agent-to-MCP-server communication, manages a dual-node registry (Castellan-compiled agents + Charlotte-compiled MCP servers), maintains tamper-evident attestation chains, and operates with **full autonomy** &mdash; no cloud connectivity required.
 
-Herald is an **authenticated bidirectional command channel** between operator portals and deployed agent fleets. Every message is HMAC-SHA256 signed with constant-time verification, replay-protected via message expiry, and logged to an append-only JSONL audit trail. Constitutional bounds enforcement prevents config updates from overriding protected governance fields.
+### Four-Layer Architecture
 
-### Core Herald — Operator Command Loop
-
-- **HeraldListener** — Agent-side poller for pending messages
-- **HeraldDispatcher** — Routes verified messages to type-specific handlers
-- **HeraldResponder** — Signs and POSTs responses back to operator
-- **HeraldCommand** — Operator-side message composition and signing
-- **FleetHerald** — Broadcast to multiple agents with response collection
-- **HeraldAuditLog** — Append-only JSONL audit trail
-
-**Message types:** query, config_update, broadcast, recall
-
-### A2A Governed Communication
-
-Agent-to-agent task delegation with bilateral policy enforcement. Castellan policy engine integration ensures agents can only communicate through governed channels with conversation tracking and rate limiting.
-
-### MCP Gateway
-
-Policy-enforcing proxy for MCP tool access governance. OAuth 2.1 + DPoP (Demonstration of Proof-of-Possession) support, rate limiting, and per-tool audit trails. Agents access tools through Herald — Herald enforces the policy.
-
-### Identity & Trust Protocols
-
-- **Visa TAP** — Transaction Automation Protocol
-- **CSA ATF** — Cloud Security Alliance Agent Trust Framework
-- **W3C Verifiable Credentials** — Standards-based identity
-- **Microsoft Entra Agent ID** — NHI lifecycle management
-- **NHI Identity Registry** — Non-Human Identity registry with SLSA level enforcement, kill switch management, orphan detection
-
-### Security Model
-
-HMAC-SHA256 signing over canonical JSON. Constant-time comparison prevents timing attacks. Message expiry prevents replay. Constitutional bounds prevent governance override. Multi-tenant isolation with tenant-scoped signatures.
-
-<div align="center">
-
-`Library` · `34 modules` · `3,596 lines` · `219 tests, all passing`
-
-</div>
-
-<br>
-
----
-
-## 5. Recon — Governance Reverse-Engineering
-
-**The governance scanner. Point it at existing agent code, get back a complete governance contract with compliance assessments across 11 international standards.**
-
-> The problem: organizations have agents in production — built ad hoc, across teams, using different frameworks. Nobody knows what governance is actually in place. Nobody knows what compliance gaps exist. You can't govern what you can't see.
-
-Recon is a **3-stage pipeline that reverse-engineers governance contracts** from AI agent source code. Instead of asking "what's wrong with this code," it asks "what is this code doing." It takes any agent artifact — Python files, LangChain chains, prompt files, YAML specs, MCP manifests, or full repositories — and produces a complete governance audit package including reconstructed agent specifications, compliance assessments, and gap reports.
-
-### The Three Stages
-
-| Stage | What It Does |
-|:--|:--|
-| **1. EXTRACT** | ReconScanner — AST walking and pattern matching to extract governance signals from source code |
-| **2. RECONSTRUCT** | ReconReconstructor — generates a governance spec (agent.yaml) with confidence annotations and gap detection; multi-agent topology detection and splitting |
-| **3. REPORT & COMPILE** | Generates full governance outputs: manifests, checklists, compliance assessments, AI SBOM |
-
-### 21 Framework Adapters
-
-LangChain, LangGraph, CrewAI, AutoGen, OpenAI Agents, AWS Bedrock Agents, Google ADK, Semantic Kernel, DSPy, JavaScript/TypeScript, Java, Go adapters (via tree-sitter), raw prompt files, YAML specs, MCP manifests, OpenAI System Cards, A2A/Doc Agent Cards — with generic fallback.
-
-### Compliance Assessments — 11 International Standards
-
-| Standard | Domain |
-|:--|:--|
-| EU AI Act | European AI regulation |
-| NIST AI RMF | US federal AI risk management |
-| OWASP LLM Top 10 | Agentic application security |
-| GDPR | European data protection |
-| HIPAA | US healthcare privacy |
-| PCI-DSS | Payment card security |
-| SOC 2 | Service organization controls |
-| ISO 42001 | AI management systems |
-| ISO 27001 | Information security |
-| FZ-152 | Data protection |
-| Cross-Standard | Synthesis across all standards |
-
-### Outputs
-
-- **Reconstructed agent.yaml** — full Castellan spec with confidence annotations
-- **Compliance manifests** — per-standard compliance assessment with gap detection
-- **OWASP scorecard** — security posture assessment
-- **AI SBOM** — software bill of materials for the agent
-- **Multi-agent topology** — detected agent boundaries with relationship mapping
-
-<div align="center">
-
-`CLI` · `172 modules` · `44,596 lines` · `2,705 tests, all passing`
-
-</div>
-
-<br>
-
----
-
-## 6. Citadel — Unified Design Intelligence Platform
-
-**The design front end. Compliance-aware introspection into both compilers with compiler-ready spec generation.**
-
-Citadel reads live from both Castellan and Charlotte codebases, iterates on designs conversationally, and produces **compiler-ready specs with wiring already done**. Two operating modes: interactive CLI (Anthropic API) and FastMCP server (for MCP clients like Claude Code).
-
-### 14 FastMCP Tools
-
-| Category | Tools |
-|:--|:--|
-| **Introspection** | 5 tools — browse models, fields, enums, inheritance trees, search across both compilers |
-| **Generation** | 2 tools — generate Castellan agent specs, Charlotte prompt specs |
-| **Validation** | 2 tools — validate YAML against compiler schemas, check field compatibility |
-| **Design Intelligence** | 3 tools — suggest governance configs, recommend block compositions, analyze spec gaps |
-| **Decomposition** | 2 tools — break monolithic specs into composable modules |
-
-### Compliance Profile Resolution
-
-Built-in governance profiles for **FedRAMP**, **DoD IL4/IL5**, **HIPAA**, **SOC 2**, **PCI-DSS**, **EU AI Act**, and **GDPR**. Select a profile, and Citadel pre-populates the governance sections of generated specs with the required controls.
-
-<div align="center">
-
-`CLI + MCP Server` · `4,558 lines` · `117 tests, all passing`
-
-</div>
-
-<br>
-
----
-
-## 7. Drawbridge — Governed A2A Communication Backbone
-
-**The cross-organizational bridge. CNSA 2.0 cryptographic proof, bilateral crossing gates, post-quantum hardening. Built for DoD TS/SCI deployment.**
-
-> The problem: agents within a single organization can communicate through SENESCHAL's policy gates. But when two sovereign agent territories — different organizations, different trust domains, different classification levels — need to coordinate, there's no governed channel. Standard A2A protocols assume mutual trust. Classified environments demand cryptographic proof of every policy decision.
-
-Drawbridge is the **governed agent-to-agent communication backbone** for cross-organizational coordination. Two sovereign agent territories coordinate through encrypted channels with CNSA 2.0 cryptographic proof of every policy decision. Designed for DoD TS/SCI deployment with CNSSP-12 as the compliance floor.
-
-### Bilateral Crossing Gate — 7 Checks
-
-Every message between territories passes through bilateral enforcement — both sides check independently:
-
-1. **Peer not blocked** — kill switch and blocklist enforcement
-2. **Peer in allowlist** — explicit authorization required
-3. **Message type allowed** — per-peer message type control
-4. **Payload size limits** — configurable per-peer
-5. **TTL bounds** — time-to-live validation
-6. **Non-expired** — message freshness enforcement
-7. **Rate limit** — sliding window per-peer
-
-### CNSA 2.0 Cryptographic Proof
-
-| Capability | Implementation |
-|:--|:--|
-| **Hashing** | SHA-384 for all operations |
-| **Signing** | HMAC-SHA384 envelope signing |
-| **Comparison** | Constant-time to prevent timing attacks |
-| **Nonce Tracking** | Persistent SQLite-backed, survives restarts |
-| **Attestation** | SHA-384 linked chain, immutable |
-
-### Post-Quantum Hardening (Drawbridge Plus)
-
-Optional hybrid cryptographic suite for post-quantum resistance:
-
-- **Key Exchange** — X25519 + ML-KEM-1024
-- **Signing** — Ed25519 + ML-DSA-87 + SLH-DSA-256
-- **Hash-based signatures** — Stateless for long-term integrity
-
-### Kill Switch Propagation
-
-Kill switches propagate across organizational boundaries. If one territory revokes an agent's authorization, the crossing gate blocks all further communication immediately.
-
-<div align="center">
-
-`CLI + Gateway` · `4,180 lines` · `127 tests, all passing`
-
-</div>
-
-<br>
-
----
-
-<div align="center">
-
-# Automation & Utility Tooling
-
-*Five tools. Quality assurance, PRD compilation, governed plugin engineering, compliance integration testing, DoD hardened infrastructure.*
-
-![Tools Lines](https://img.shields.io/badge/124%2C400%2B-Source_Lines-2563EB?style=flat-square)
-![Tools Tests](https://img.shields.io/badge/5%2C491-Tests_Passing-16A34A?style=flat-square)
-
-</div>
-
-<br>
-
----
-
-## 8. Stratum — QA Compiler
-
-**The QA compiler. Architecture extraction, test generation, documentation, eight independent quality gates.**
-
-Stratum is a unified code quality, architecture extraction, test generation, and documentation pipeline. It consolidates **8 quality gates** and executes a pipeline with 3-layer context extraction across 6 languages, test generation across 4 frameworks, documentation rendering with 7 independent analyzers, and comprehensive validation across **13 modules**:
-
-| Module | Function |
-|:--|:--|
-| **Arbiter** | Rules engine — configurable quality rules |
-| **Forge** | 7 Laws of architecture validation |
-| **Candor** | Transparency reporting |
-| **Sentinel** | File watching and incremental analysis |
-| **Hydra** | Parallel execution engine |
-| **Specter** | Ghost dependency detection |
-| **Chronicle** | History analysis and trend tracking |
-| **Aegis** | Security vulnerability detection |
-| **Prophet** | Predictive quality scoring |
-| **Oracle** | Deep code analysis |
-| **Mimic** | Mirror testing and behavior cloning |
-| **Verdict** | Final quality judgment with pass/fail |
-
-**Context extraction** runs in three layers: L1 Skeleton (AST parsing), L2 Feature Slices (functional grouping), L3 Cross-Cutting (system-wide patterns). Six languages supported via tree-sitter.
-
-<div align="center">
-
-`CLI` · `311 modules` · `73,508 lines` · `4,322 tests, all passing`
-
-</div>
-
-<br>
-
----
-
-## 9. Chancery — AI Chief Product Officer
-
-**The PRD compiler. Transforms unstructured product input into production-quality PRDs with compliance-aware quality scoring.**
-
-> The problem: product requirements start as chaos — voice transcripts, Slack threads, meeting notes, emails. Turning that into a structured, compliance-aware PRD takes days. Most PRD tools produce generic documents with no regulatory awareness.
-
-Chancery is an **AI Chief Product Officer** that normalizes any unstructured product input and compiles it through a disciplined 3-phase, 3-gate workflow into production-quality PRDs with deterministic quality scoring.
-
-### 3-Phase Workflow
-
-| Phase | What It Does |
-|:--|:--|
-| **Phase 1: Intake** | Normalizes voice transcripts, Slack threads, meeting notes, emails, bullet points into structured input |
-| **Phase 2: Compilation** | Compiles normalized input through quality gates into structured PRD sections |
-| **Phase 3: Export** | Produces final PRD with compliance annotations, downstream toolchain targeting |
-
-### Compliance Framework Detection
-
-Chancery automatically detects and flags when a product touches regulated domains, identifying **10 compliance frameworks**:
-
-| Framework | Detection Triggers |
-|:--|:--|
-| **PCI-DSS** | Payment processing, credit card handling |
-| **HIPAA** | Healthcare data, patient information |
-| **GDPR** | EU personal data processing |
-| **EU AI Act** | AI system deployment in EU |
-| **NIST 800-53** | Federal system requirements |
-| **COPPA** | Children under 13, educational products |
-| **SOC 2** | Service organization controls |
-| **FedRAMP** | Federal cloud services |
-| **HL7 FHIR** | Healthcare interoperability |
-| **FINRA** | Financial services regulation |
-
-### Quality Scoring
-
-30-item quality checklist: 21 code-evaluated (deterministic) + 9 AI-evaluated. 7 cognitive bias detection with reframing challenges. Structured output targeting downstream toolchains (Claude Code, Cursor, Codex, Copilot, Gemini, Windsurf, Devin).
-
-<div align="center">
-
-`CLI + MCP Server` · `11,817 lines`
-
-</div>
-
-<br>
-
----
-
-## 10. CoWork — Governed Plugin Designer
-
-**The plugin engineer. Decomposes roles into governed Claude Code plugins with SENESCHAL enforcement and compliance sidecar packaging.**
-
-> The problem: teams need Claude Code plugins for specific roles, but building governed plugins from scratch — with proper policy enforcement, audit trails, HITL gates, and compliance framework support — requires deep knowledge of the governance stack. Most plugins ship ungoverned.
-
-CoWork generates **governed Claude Code plugins by default**. It decomposes natural language role descriptions into 15–30 plugin opportunities, then compiles them into complete plugin directories with SENESCHAL runtime enforcement, audit trails, HITL gates, and compliance support.
-
-### Governance by Default
-
-Every plugin ships with a `.castellan/` governance sidecar containing:
-
-- **SENESCHAL policy hooks** — 32-check policy gate per tool use
-- **Tool allowlists** — explicit tool permission boundaries
-- **HITL approval gates** — human-in-the-loop checkpoints for sensitive operations
-- **Audit trails** — immutable logging of all plugin actions
-
-### Compliance Framework Support — 10 Frameworks
-
-| Framework | Implementation |
-|:--|:--|
-| **FedRAMP** | Low/Moderate/High profile selection |
-| **DoD IL4** | Impact level 4 controls |
-| **DoD IL5** | Impact level 5 controls |
-| **HIPAA** | Healthcare privacy safeguards |
-| **SOC 2** | Service organization trust criteria |
-| **PCI-DSS v4.0** | Payment card industry controls |
-| **EU AI Act** | European AI regulation alignment |
-| **GDPR** | Data protection compliance |
-
-### Three-Tier Degradation
-
-| Mode | When | Behavior |
+| Layer | Name | What It Does |
 |:--|:--|:--|
-| **Full enforcement** | SENESCHAL online | All policy gates active |
-| **Local enforcement** | SENESCHAL offline | Local policy cache used |
-| **Fail-closed** | Regulated environments | All actions blocked without enforcement |
+| **Layer 4** | **Identity** | SPIFFE/SPIRE &mdash; X.509 SVIDs, trust domain management, mTLS credential provisioning |
+| **Layer 3** | **The Record** | Append-only SHA-384 attestation chain &mdash; 80 event types. Ed25519-signed, tamper-evident |
+| **Layer 2** | **The Brain** | Rule-based policy gates &mdash; 30 checks. 83 named violation types. Zero ML inference |
+| **Layer 1** | **The Fabric** | MLS RFC 9420 encrypted group messaging. Forward secrecy. Fast path for pre-approved bilateral pairs |
+
+### Compliance & Security
+
+| Capability | Standard / Implementation |
+|:--|:--|
+| **Cryptography** | FIPS 140-3 via `aws-lc-rs` &mdash; Ed25519, AES-GCM, SHA-256/SHA-384 |
+| **Identity** | SPIFFE/SPIRE &mdash; X.509 SVIDs, mTLS for all node-to-node communication |
+| **Messaging** | MLS RFC 9420 &mdash; IETF-ratified encrypted group messaging |
+| **Classification** | CDS governance: Unclassified, FOUO, CUI, SECRET, TOP SECRET, TS/SCI |
+| **Hardening** | Level 6: FROM scratch, static musl, RELRO+NX, BIND_NOW, panic=abort, LTO, stripped |
+| **DoD Alignment** | Zero Trust, CAC/PKI authentication (IA-2(12)), STIG compliance, fail-closed |
+| **Federation** | NIST CAISI compliance &mdash; bilateral agreements, mutual kill switch |
+
+### Policy Gates &mdash; 30 Checks
+
+**A2A Gate** (7 checks): delegation scope, JWT verification, bilateral policy, autonomy gating, data flow control, data type validation, message size limits.
+
+**MCP Gate** (8 checks): agent trusted, tool exposed, tool blocked, scope validation, human approval gates, rate limiting, kill switch, node type validation.
+
+**MCP Governance** (checks 29&ndash;30): tool description sanitization, sampling governance, cross-MCP data flow, tool surface drift detection.
+
+**Behavioral Governance** (checks 24&ndash;28): interaction limits, delegation rules, escalation, validation, anomaly detection.
+
+**Tool Integrity Verification:** SHA-384 hash verification against registered manifest &mdash; detects rug-pull attacks.
+
+**Call Chain Governance:** Configurable depth limits, circular call detection, prohibited sequence enforcement.
+
+**Behavioral Cost Limits:** Per-session token/cost budgets, per-hour enforcement, automatic blocking when budgets exhausted.
 
 <div align="center">
 
-`CLI` · `6,161 lines` · `307 tests, all passing`
+`Rust Binary (Level 6 Hardened)` · `23,115 lines` · `448+ tests`
 
 </div>
 
@@ -896,42 +402,59 @@ Every plugin ships with a `.castellan/` governance sidecar containing:
 
 ---
 
-## 11. Forge — Platform Integration Test Harness
+<br>
 
-**The compliance verification engine. 12 test layers mapped to NIST 800-53 controls with automated evidence generation for Authorizing Officials.**
+<div align="center">
 
-> The problem: platform systems pass their own unit tests, but cross-system governance contracts — Castellan-to-SENESCHAL policy enforcement, Charlotte-to-Drawbridge classification handling, multi-component compliance evidence chains — are only provable through structured integration testing. Without it, compliance claims are assertions, not evidence.
+# Tooling
 
-Forge is the **platform integration test harness** for the Castellan governance ecosystem. It validates cross-system contracts between Castellan, Charlotte, SENESCHAL, and Drawbridge through 12 structured test layers, each mapped to specific NIST 800-53 control families. Test results generate compliance evidence reports formatted for Authorizing Officials (AOs), providing auditable proof that governance enforcement works end-to-end — not just within individual components.
+</div>
+
+<br>
+
+---
+
+## 5. Forge &mdash; Platform Test Harness + Intake Pipeline
+
+**The compliance verification engine. 12 test layers mapped to NIST 800-53 controls + customer agent intake/verify/harden pipeline.**
+
+> The problem: platform systems pass their own unit tests, but cross-system governance contracts are only provable through structured integration testing. Without it, compliance claims are assertions, not evidence. And when customers bring third-party agents for governance review, there's no repeatable pipeline to verify them.
+
+Forge serves two complementary functions: the **platform integration test harness** for the governance ecosystem (Castellan, Charlotte, Citadel, Seneschal), and the **customer agent intake pipeline** for analyzing, verifying, and hardening third-party agents.
 
 ### 12 Test Layers
 
-| Layer | What It Validates | NIST 800-53 Controls |
+| Layer | What It Validates | NIST 800-53 |
 |:--|:--|:--|
-| **L1: Compilation** | Castellan + Charlotte compile specs correctly | CM-6, SA-10 |
-| **L2: Policy Gates** | SENESCHAL 15-check gates enforce correctly | AC-3, AC-4, AC-6 |
-| **L3: Attestation** | SHA-384 chains are tamper-evident end-to-end | AU-10, AU-14 |
-| **L4: Classification** | CDS classification governance across levels | AC-16, SC-16 |
-| **L5: Crossing** | Drawbridge bilateral gates enforce correctly | AC-4, SC-7 |
-| **L6: Kill Switch** | Kill switches propagate across all systems | SI-17, IR-4 |
-| **L7: Identity** | SPIFFE/SVID identity chains validate | IA-2, IA-8 |
-| **L8: Crypto** | FIPS 140-3 / CNSA 2.0 crypto operations | SC-12, SC-13 |
-| **L9: Audit** | Structured audit logs (JSON/CEF/Syslog) generate | AU-2, AU-3, AU-6 |
-| **L10: Federation** | Cross-org policy reconciliation works | CA-3, SA-9 |
-| **L11: Drift** | Governance drift detection fires correctly | CM-3, SI-7 |
-| **L12: Evidence** | Compliance reports generate for AO review | CA-2, CA-6 |
+| **Contracts** | API contracts across system boundaries | SA-11, SA-15 |
+| **Pipeline Compilation** | End-to-end compiler pipeline | CM-3, CM-6 |
+| **Cross-Language Crypto** | Python&harr;Rust crypto boundary | SC-12, SC-13 |
+| **Determinism** | Identical inputs produce identical outputs | CM-6, SI-7 |
+| **Live Seneschal Governance** | Runtime policy enforcement | AC-3, AC-6 |
+| **Full E2E Golden Path** | Complete happy-path | CA-2, CA-7 |
+| **SRP Failover / Crash Recovery** | State recovery, graceful degradation | CP-2, CP-10 |
+| **Deployment Skew** | Hosted, on-prem, air-gapped | CM-2, CM-3 |
+| **STIG Binary Hardening** | PIE, RELRO, NX, stack canaries | SI-7, CM-6 |
+| **CVE / SBOM / Dependency Audit** | Vulnerability scanning, SBOM | RA-5, SA-11 |
+| **Adversarial** | Tool poisoning, rug pulls, privilege escalation | SI-3, SI-4 |
+| **Version Compatibility** | Cross-version interoperability | CM-2, SA-10 |
+
+### Customer Agent Intake Pipeline
+
+- Static analysis, sandboxed execution, behavioral probing
+- Tool description poisoning detection
+- MCP server probing with wire-protocol attack vectors
+- Governance scoring across 8 dimensions
+- Local-model evaluation harness for quantized drivers
+- Compliance evidence report generation (HTML) for Authorizing Officials
 
 ### CI Gate Integration
 
-Forge integrates with CI pipelines as a merge-blocking gate. Test failures in any compliance-mapped layer block progression — governance regression cannot ship. Evidence reports attach to pipeline artifacts for audit trail continuity.
-
-### Compliance Evidence Reports
-
-Each test run produces structured evidence reports containing: test layer results, NIST 800-53 control mapping, pass/fail verdicts with timestamps, system versions under test, and cryptographic attestation of report integrity. Reports are formatted for direct inclusion in ATO (Authority to Operate) packages.
+Forge integrates with CI pipelines as a merge-blocking gate. Test failures in any compliance-mapped layer block progression &mdash; governance regression cannot ship. Evidence reports attach to pipeline artifacts for audit trail continuity.
 
 <div align="center">
 
-`Test Harness` · `~4,735 lines` · `862 tests, all passing`
+`Test Harness + CLI` · `~13,000 lines` · `421+ tests`
 
 </div>
 
@@ -939,70 +462,304 @@ Each test run produces structured evidence reports containing: test layer result
 
 ---
 
-## 12. DoD Hardened MCP Servers — Classified Rust Tool & Knowledge Infrastructure
-
-**34 Level 6 hardened Rust binaries for defense environments. CUI // NOFORN classified. CNSA 2.0 crypto, mTLS enforcement, SENESCHAL read-only contract.**
-
-> The problem: defense environments need MCP tooling that meets Level 6 binary hardening standards, operates under classified handling restrictions, and provides query-only access to sensitive domain knowledge — vulnerability scanning procedures, STIG compilation, ATO package assembly, threat modeling frameworks, incident response playbooks. Commercial MCP servers are built for convenience, not for classified environments. They ship without hardening, without structured audit, without cryptographic compliance, and without runtime policy enforcement.
-
-The DoD Hardened MCP Servers are **34 Level 6 hardened Rust binaries** — 17 tool servers and 17 knowledge servers — providing 137 query-only tools, 92 MCP resources, and 92 KB files containing approximately 1.8MB of DoD domain content. All binaries are classified **CUI // NOFORN** and operate under SENESCHAL's read-only contract enforcement at runtime.
-
-### Level 6 Binary Hardening
-
-Every binary ships with the full hardening profile:
-
-| Hardening Measure | Implementation |
-|:--|:--|
-| **Stripped symbols** | All debug symbols removed from release binaries |
-| **PIE/ASLR** | Position-independent executables with address space layout randomization |
-| **Full RELRO** | Read-only relocations — GOT hardened against overwrite attacks |
-| **BIND_NOW** | Immediate symbol binding — no lazy resolution |
-| **NX (No Execute)** | Non-executable stack and heap |
-| **panic=abort** | No unwinding — panic terminates immediately |
-| **LTO** | Link-time optimization across all crates |
-| **overflow-checks** | Integer overflow detection enabled in release builds |
-
-### Shared `mcp-hardened` Crate
-
-All 34 binaries share a common hardened infrastructure crate providing:
-
-- **mTLS via rustls** — mutual TLS for all server communication, no OpenSSL dependency
-- **Structured audit logging** — JSON, CEF (ArcSight/SIEM), and Syslog (RFC 5424) output formats
-- **CNSA 2.0 cryptography** — SHA-384 hashing, HMAC-SHA384 signing for all attestation and integrity operations
-
-### 17 Tool Servers (137 Query-Only Tools)
-
-| Server | Domain | Tools |
-|:--|:--|:--|
-| **ACAS/Nessus** | Vulnerability scanning | Scan policy lookup, plugin family queries, compliance audit references |
-| **Splunk SIEM** | Security monitoring | Search syntax, dashboard templates, alert correlation |
-| **Snort/Suricata IDS** | Intrusion detection | Rule syntax, signature lookup, tuning guidance |
-| **AD/PKI Identity** | Identity management | Active Directory policy, PKI certificate lifecycle, CAC integration |
-| **STIG Compiler** | Compliance checklists | STIG rule lookup, CAT I–III severity queries, checklist generation |
-| **ATO Package** | Authorization to Operate | SSP templates, control implementation statements, POA&M generation |
-| **SBOM/Supply Chain** | Software supply chain (EO 14028) | SBOM generation, dependency analysis, provenance verification |
-| **STRIDE/DREAD** | Threat modeling | Threat enumeration, risk scoring, mitigation mapping |
-| **IR Playbook** | Incident response | Playbook lookup, escalation procedures, containment strategies |
-| **Behavioral Threat Intel** | Threat intelligence | TTP mapping, indicator correlation, adversary profiling |
-| **Zero Trust Architecture** | Network security | ZTA policy templates, micro-segmentation guidance, trust evaluation |
-| **CNSA Crypto** | Cryptographic compliance | Algorithm validation, key management, CNSA 2.0 migration guidance |
-| **DFIR** | Digital forensics | Evidence collection procedures, chain of custody, analysis frameworks |
-| **Firewall Policy** | Network defense | Rule generation, policy analysis, zone architecture |
-| **EDR** | Endpoint detection | Detection rule syntax, response automation, telemetry collection |
-| **PAM** | Privileged access | Session management, credential vaulting, just-in-time access |
-| **Cloud Security** | Cloud defense | CSP hardening guides, workload protection, cloud STIG mapping |
-
-### 17 Knowledge Servers (92 MCP Resources, 92 KB Files)
-
-Each knowledge server provides MCP resources and curated KB files covering DoD-specific domain content — regulations, procedures, reference architectures, compliance mappings, and operational guidance. Approximately 1.8MB of structured domain knowledge accessible through governed MCP resource endpoints.
-
-### SENESCHAL Runtime Enforcement
-
-All 34 servers operate under SENESCHAL's **read-only contract** — tools are query-only by design, and SENESCHAL enforces this contract at runtime through its MCP governance gate. No write operations. No state mutation. No data exfiltration paths. The read-only contract is not a convention — it is enforced by the runtime authority.
+<br>
 
 <div align="center">
 
-`34 Rust Binaries` · `~28,200 Rust lines` · `CUI // NOFORN`
+# Products
+
+*Eight production deployments of the governance stack.*
+
+</div>
+
+<br>
+
+---
+
+## 6. Bastion &mdash; Enterprise Governed AI Agent Platform
+
+**The enterprise platform. 34-crate Rust workspace, 4 SKUs spanning hosted through classified, 22 MCP servers.**
+
+Bastion is the fully integrated production deployment of the governance stack. 34 Rust workspace crates, 29 binaries, live web UI, KeyServer license system, and 22 MCP servers (10 Charlotte-generated + 12 enterprise).
+
+### Four-SKU Model
+
+| SKU | Target | Deployment |
+|:--|:--|:--|
+| **Citadel** | Enterprise hosted | Cloud/managed |
+| **Enclave** | Air-gapped classified | SCIF deployment |
+| **Stronghold** | On-premises | Customer datacenter |
+| **Sovereign** | Dedicated single-tenant | Customer-owned infrastructure |
+
+### Architecture
+
+- **Gateway Agent** &mdash; Entry point with routing, authentication, approval gates
+- **Executor Agent** &mdash; Tool execution with governance enforcement
+- **Bootstrap Agent** &mdash; Initialization and recovery
+- **KeyServer** &mdash; License management with HSM integration
+- **22 MCP Servers** &mdash; 10 Charlotte-generated with governance + 12 enterprise-specific
+- **Level 6 hardened binaries** &mdash; full FROM scratch, static musl, RELRO/NX stack
+- **Multi-tenant isolation** &mdash; cost limits, kill switch, per-tenant governance
+- **Fleet composition validation** &mdash; structural enforcement of agent topology rules
+- **K8s + Docker** &mdash; CycloneDX SBOM, cosign image signatures, custom seccomp profiles
+
+<div align="center">
+
+`34 Rust Crates · 29 Binaries` · `118,269 lines` · `327+ tests`
+
+</div>
+
+<br>
+
+---
+
+## 7. Chancery &mdash; AI Chief Product Officer
+
+**The PRD compiler and design front door. Unstructured product input in, compliance-aware PRDs and per-component SDD bundles out.**
+
+> The problem: product requirements start as chaos &mdash; voice transcripts, Slack threads, meeting notes, emails. Turning that into a structured, compliance-aware PRD takes days. Most PRD tools produce generic documents with no regulatory awareness.
+
+Chancery is an **AI Chief Product Officer** that normalizes unstructured product input and compiles it through a disciplined 4-phase, 3-gate workflow into production-quality PRDs and agent/MCP fleet architectures.
+
+### 4-Phase Workflow
+
+| Phase | Gate | Output |
+|:--|:--|:--|
+| **Assessment** | Structured input | Normalized problem statement |
+| **Discovery** | Domain interrogation | Branch-adapted discovery (5 branches) |
+| **Spec** | Quality gates (30-item checklist) | Compliance-annotated PRD |
+| **SDD** | Per-component validation | SDD bundles for Charlotte + Castellan |
+
+### Architect Mode
+
+Chancery's architect mode deploys as a **Claude Desktop Project** and **Claude Code skill** (`/chancery-architect`). Embeds V1 Agent Architecture Design methodology: conversational decomposition into min-correct agent/MCP architectures with per-component SDD bundles validated by Charlotte + Castellan. Ships with 7 fat knowledge files (~89K tokens), QA'd on 4 synthetic scenarios.
+
+### Compliance Framework Detection
+
+Automatically detects **10 compliance frameworks**: PCI-DSS, HIPAA, GDPR, EU AI Act, NIST 800-53, COPPA, SOC 2, FedRAMP, HL7 FHIR, FINRA. Citadel bridge surfaces compliance gaps as PRD NFRs and risks.
+
+### Quality Infrastructure
+
+- 30-item quality checklist (21 deterministic + 9 LLM-assisted)
+- 7 cognitive bias detectors with reframing challenges
+- Small-agents philosophy &mdash; code-enforced &lt;6 agents per fleet
+- Passthrough-first design &mdash; `claude -p`, no API key required
+- 15 knowledge files (~140K tokens)
+
+<div align="center">
+
+`CLI + MCP Server + Claude Desktop Project` · `70 modules` · `19,829 lines` · `822+ tests`
+
+</div>
+
+<br>
+
+---
+
+## 8. Verity &mdash; SM/PM Intelligence Platform
+
+**The Scrum Master / Project Manager survival weapon. Reads Jira, Confluence, GitHub, Bitbucket, Slack, Teams — surfaces the conversations you need to have today.**
+
+Verity is the Scrum Master / Project Manager intelligence platform. 33 workspace crates, 58 CLI subcommands, **17 MCP servers**, **8 governed agents**. SOC 2 compliant fleet artifacts generated by Citadel. **Read-only by compile-time construction** &mdash; the HTTP client is GET-only, enforced at the type level.
+
+### Intelligence Capabilities
+
+- **23 antipattern detectors** &mdash; 12 Scrum + 3 Review Quality + 8 Kanban
+- **Methodology system** &mdash; Scrum, Kanban, Scrumban, PM
+- **5 ceremony pipelines** &mdash; Standup, Planning, Review, Retro, Refine
+- **Review quality intelligence** &mdash; Structured review analysis
+- **5-layer signal observability** &mdash; Raw, feature, correlation, pattern, insight
+- **Delivery system** &mdash; SMTP/Slack/Teams with audience fan-out
+- **Report writer** &mdash; 9 report kinds with voice-initiated publish
+- **Day-Zero scan pipeline** &mdash; 24-hour intelligence onboarding for new roles
+- **Career log** &mdash; ChaCha20-Poly1305 + Argon2id encrypted personal history
+- **Profile system** &mdash; Per-role configuration
+- **Web UI** &mdash; axum + rustls
+
+### Governance
+
+- Citadel-generated fleet specs (SOC 2 compliant)
+- Every component passes Castellan + Charlotte compliance floors
+- Read-only by construction &mdash; compile-time GET-only HTTP client
+
+<div align="center">
+
+`33 Rust Crates` · `172,941 lines` · `3,900+ tests`
+
+</div>
+
+<br>
+
+---
+
+## 9. Steward &mdash; PO/PM Intelligence Platform
+
+**The Product Owner / Product Manager survival weapon. Same architecture as Verity, tuned for product intelligence cadences.**
+
+Steward is the Product Owner / Product Manager intelligence platform &mdash; sibling to Verity, same read-only architecture. 21 workspace crates, 50 CLI subcommands, **5 MCP servers**, **8 PO-specific agents**. SOC 2 compliant fleet artifacts generated by Citadel.
+
+### Intelligence Capabilities
+
+- **16 PO antipattern detectors** &mdash; roadmap_drift, backlog_bloat, refinement_desert, stakeholder_silent_veto, and more
+- **5 PO intelligence cadences** &mdash; roadmap_review (weekly), backlog_health (daily), stakeholder_pulse (biweekly), release_readiness (per-release), outcome_review (monthly)
+- **8 PO-specific agents** &mdash; roadmap strategist, backlog refinement analyst, stakeholder coordinator, release readiness auditor, outcome tracker, and more
+- **Day-Zero pipeline** &mdash; fast onboarding for new PO roles
+- **Report writer** &mdash; 9 PO-specific report kinds
+- **Delivery system** &mdash; SMTP/Slack/Teams with audience fan-out
+- **Web UI** &mdash; 20 routes + 5 SVG visualizations
+- **62 knowledge bundles** &mdash; MCP server domain knowledge
+- **5 synthetic test scenarios** &mdash; deterministic validation
+
+<div align="center">
+
+`21 Rust Crates` · `94,780 lines` · `145+ tests`
+
+</div>
+
+<br>
+
+---
+
+## 10. Reeve &mdash; Governed Atlassian Administration
+
+**The Atlassian writer where Verity and Steward are readers. Governed configuration, approval gates, state snapshots + rollback.**
+
+Reeve is the governed Atlassian administration platform. It exposes 5 MCP servers for governed project/workflow/permission updates, with compliance-aware fleet artifacts generated by Citadel when the framework demands traceable Atlassian admin actions (SOX change control, HIPAA access review, SOC 2 privilege separation).
+
+### 5 Governed MCP Servers (102 Atlassian Tools)
+
+| Server | Domain |
+|:--|:--|
+| **jira-config** | Projects, workflows, schemes, permissions |
+| **jira-reporting** | Dashboards, filters, custom fields |
+| **jsm** | Service desk configuration, request types, SLAs |
+| **confluence-admin** | Spaces, permissions, page templates |
+| **plugin-governance** | Plugin lifecycle, allowlists, compliance attestation |
+
+### Architecture
+
+- **7 CLI subcommands** for governed Atlassian admin
+- **Plain-language intent** &mdash; describe configuration in natural language
+- **Approval gates** &mdash; HITL checkpoints for regulated changes
+- **State snapshots + rollback** &mdash; recoverable configuration changes
+- **4 governed agents** &mdash; config architect, reporting analyst, hygiene enforcer, process optimizer
+- **12 knowledge files** (20,982 words) &mdash; Atlassian admin patterns
+- **Read-write-http client** &mdash; governed write access (contrasts with Verity/Steward read-only)
+
+<div align="center">
+
+`17 Rust Crates` · `31,019 lines` · `532+ tests`
+
+</div>
+
+<br>
+
+---
+
+## 11. Meridian &mdash; Governed AI Time Management
+
+**The governed time management platform. 9 MCP servers, 6 intelligence modules, 4 calendar providers. No competitor in the category has compliance or governance.**
+
+Meridian is the governed AI time management platform. Architecture: 9 MCP servers with 57 tools, 6 intelligence modules, 4 calendar providers, SQLite persistence, and a dark-theme operational dashboard.
+
+### 9 MCP Servers (57 Tools)
+
+| Server | Function |
+|:--|:--|
+| **Calendar CRUD** | Events, recurring patterns, exception handling |
+| **Time Intelligence** | Time-of-day analysis, chronotype detection |
+| **Task Tracking** | Task lifecycle, dependency management |
+| **Notifications** | Multi-channel alerts with preference management |
+| **Communications** | Meeting coordination, attendee handling |
+| **Billing** | Time capture, client billing integration |
+| **Constraint Solver** | Scheduling optimization under constraints |
+| **Enterprise** | Organization-wide calendar analytics |
+| **Intelligence** | Cross-module pattern synthesis |
+
+### 6 Intelligence Modules
+
+- **Overrun Predictor** &mdash; Meeting/task overrun prediction
+- **Resilience** &mdash; Schedule robustness scoring
+- **Focus Debt** &mdash; Deep-work deficit tracking
+- **OPTEMPO** &mdash; Operational tempo monitoring
+- **Classification** &mdash; Calendar event classification governance
+- **Threat Detection** &mdash; Behavioral anomaly detection
+
+### Calendar Providers
+
+Google Calendar, Outlook, CalDAV, Exchange EWS &mdash; with behavioral autonomy level configuration per provider.
+
+<div align="center">
+
+`9 MCP Servers + CLI` · `66 modules` · `11,072 lines` · `437+ tests`
+
+</div>
+
+<br>
+
+---
+
+## 12. Oracle &mdash; Governed Intelligence MCP Server
+
+**The classified intelligence MCP. Compiled knowledge base, FIPS 140-3 Ed25519 signing, Level 6 hardening. CUI // NOFORN.**
+
+Oracle is a governed intelligence MCP server providing compiled knowledge base query capabilities across two personas. Ships as a hardened Rust binary with embedded knowledge bases compiled into the binary at build time (`include_str!`) &mdash; no markdown files on disk, no soft targets for tampering.
+
+### Compliance & Security
+
+| Capability | Implementation |
+|:--|:--|
+| **Classification** | CUI // NOFORN |
+| **Cryptography** | FIPS 140-3 via `aws-lc-rs` (cert #4796) &mdash; Ed25519 signing |
+| **Audit Log** | Ed25519-signed + hash-chained append-only log |
+| **Policy Gates** | HITL escalation, scope validation |
+| **Hardening** | Level 6: FROM scratch, static musl, RELRO+NX, custom seccomp, K8s SecurityContext |
+
+### Personas
+
+- **STIG Oracle** &mdash; 7 DISA STIGs, 262 findings, CAT I&ndash;III severity lookup, CKL generation
+- **Email Intelligence** &mdash; Email analysis with compiled reference corpus
+
+### Query Pipeline
+
+12-step query pipeline with TF-IDF search over compiled knowledge. 4 MCP tools exposed through governed endpoints.
+
+<div align="center">
+
+`Rust Binary (Level 6 Hardened)` · `4,261 lines` · `29+ tests` · `CUI // NOFORN`
+
+</div>
+
+<br>
+
+---
+
+## 13. Author &mdash; Story/Epic Coaching Tool
+
+**The authoring discipline tool. Generates epics and stories on command; deterministic refusal layer catches shallow authoring.**
+
+Author generates epics and stories on command and enforces authoring discipline through a deterministic refusal layer that catches shallow authoring before it reaches Jira. 6 workspace crates (author-core, author-store, author-llm, author-control, author-mcp, author-web).
+
+### Capabilities
+
+- **INVEST scoring + DoR gates** &mdash; Deterministic quality enforcement
+- **15 anti-pattern detectors** &mdash; Shallow authoring patterns caught before submission
+- **Deterministic refusal layer** &mdash; Rejects work that fails structural quality
+- **Gold-signature matcher** &mdash; Auto-anchoring against validated exemplars
+- **LLM coaching with keyword skeleton fallback** &mdash; Works with or without LLM access
+- **5 domain packs** &mdash; Domain-specific authoring templates
+- **Adaptive tuning state** &mdash; Coach learns from accepted/rejected outputs
+- **Scan + rewrite** &mdash; Bulk analysis and suggested rewrites
+- **Live Jira JQL read + push** + Confluence export &mdash; Optional integration
+- **MCP stdio server + axum web UI** &mdash; Multi-surface access
+
+### Quality Metrics
+
+MAE = 0.109, F1 = 0.97, one-shot-good 10/10 on reference corpus.
+
+<div align="center">
+
+`6 Rust Crates` · `59,474 lines` · `181+ tests`
 
 </div>
 
@@ -1013,70 +770,63 @@ All 34 servers operate under SENESCHAL's **read-only contract** — tools are qu
 ## How They Connect
 
 ```
-                    CASTELLAN AGENT & MCP GOVERNANCE PLATFORM
-  ┌──────────────────────────────────────────────────────────────────────┐
-  │                                                                      │
-  │   COMPILE              AUDIT                DESIGN                   │
-  │   ───────              ─────                ──────                   │
-  │   Castellan            Aegis                Citadel                  │
-  │   (Agent Compiler)     (Security Audit)     (Design Intelligence)    │
-  │        │                    │                                        │
-  │   Charlotte                 │                                        │
-  │   (Prompt Compiler)         │                                        │
-  │        │                    │                                        │
-  │   ┌────┴─ Sub-Components ───┴────────────────────────────────┐       │
-  │   │  ENFORCE: SENESCHAL (On-Prem Runtime, 15-check gates)    │       │
-  │   │  MONITOR: vigil-edge (5D governance scoring, anomalies)  │       │
-  │   │  POLICY:  Citadel-edge (Air-gapped policy management)    │       │
-  │   └──────────────────────────────────────────────────────────┘       │
-  │                                                                      │
-  │   COMMUNICATE          SCAN                 BRIDGE                   │
-  │   ───────────          ────                 ──────                   │
-  │   Herald               Recon                Drawbridge               │
-  │   (Command Channel)    (Reverse-Engineer)   (Cross-Org A2A)          │
-  │                                                                      │
-  └──────────────────────────────────────────────────────────────────────┘
+┌──────────────────────────────────────────────────────────────────────┐
+│                          CORE PLATFORM                                │
+│  ┌────────────┐                                                      │
+│  │  Citadel   │──> compliance-aware design intelligence              │
+│  │ (design)   │    (fleet specs, compliance docs, behavioral policy) │
+│  └─────┬──────┘                                                      │
+│        │                                                             │
+│        v                                                             │
+│  ┌────────────┐      ┌────────────┐                                  │
+│  │ Castellan  │─────>│  Charlotte │  (compilers produce specs)        │
+│  │ (agents)   │      │  (context) │                                  │
+│  └─────┬──────┘      └─────┬──────┘                                  │
+│        │                    │                                         │
+│        v                    v                                         │
+│  ┌────────────────────────────────┐                                  │
+│  │        Seneschal (runtime)     │  30-check gate, attestation      │
+│  └────────────────────────────────┘                                  │
+│                                                                      │
+├──────────────────────────────────────────────────────────────────────┤
+│                            TOOLING                                    │
+│                                                                      │
+│   Forge — platform test harness + customer agent intake              │
+│                                                                      │
+├──────────────────────────────────────────────────────────────────────┤
+│                            PRODUCTS                                   │
+│                                                                      │
+│   Bastion  ──────────  Enterprise deployment of the full stack       │
+│                                                                      │
+│   Chancery                                                           │
+│   (AI CPO)      ──> PRDs + SDD bundles feed Charlotte + Castellan    │
+│                                                                      │
+│   Verity + Steward ──> Read Jira/Confluence/GitHub/Slack/Teams        │
+│   (SM/PM)  (PO/PM)     surface intelligence, deliver reports         │
+│                                                                      │
+│   Reeve ───────────> Write Atlassian admin (governed, approval-gated) │
+│                                                                      │
+│   Meridian ─────────> Time management across 4 calendar providers    │
+│                                                                      │
+│   Oracle ──────────> Classified intelligence MCP (CUI // NOFORN)      │
+│                                                                      │
+│   Author ──────────> Story/epic coaching with refusal layer          │
+│                                                                      │
+└──────────────────────────────────────────────────────────────────────┘
 
-                      AUTOMATION & UTILITY TOOLING
-  ┌──────────────────────────────────────────────────────────────────────┐
-  │                                                                      │
-  │   QUALITY              PRD / PLUGINS         COMPLIANCE              │
-  │   ───────              ─────────────         ──────────              │
-  │   Stratum              Chancery              Forge                   │
-  │   (QA Compiler)        (PRD Compiler)        (Integration Tests)     │
-  │                                                                      │
-  │                        CoWork                DoD MCP Servers          │
-  │                        (Plugin Designer)     (34 Hardened Binaries)   │
-  │                                                                      │
-  └──────────────────────────────────────────────────────────────────────┘
-
-  Data Flow:
-  Chancery PRDs       → define product requirements with compliance detection
-  Charlotte prompts   → power AI stages across Stratum, Aegis, Recon
-  Stratum             → validates code all systems generate
-  Castellan           → compiles agents with governance
-  SENESCHAL           → enforces policies on-premises (Rust binary)
-  vigil-edge          → monitors behavioral drift (Rust binary)
-  Citadel-edge        → manages air-gapped policy (Rust binary)
-  Aegis               → audits agent security pre-deployment
-  Herald              → delivers commands to deployed agents
-  Drawbridge          → governs cross-organizational A2A communication
-  Recon               → reverse-engineers governance from existing agents
-  Citadel             → design intelligence front end for both compilers
-  CoWork              → generates governed plugins with SENESCHAL enforcement
-  Forge               → validates platform compliance evidence across systems
-  DoD MCP Servers     → provide classified-environment tooling under SENESCHAL
+Product Lifecycle Loop:
+Chancery (discover) → Author (write) → Jira → Verity + Steward (read) → Reeve (admin)
+                                              SM / PM      PO / PM       Atlassian
 ```
 
 ### The Governance Loop
 
-1. **Design** — Chancery compiles the PRDs with compliance detection. Citadel provides design intelligence
-2. **Build** — Charlotte compiles the prompts. Castellan compiles the agent
-3. **Validate** — Stratum runs quality gates. Aegis audits security. Forge validates cross-system compliance evidence
-4. **Enforce** — SENESCHAL enforces policies on-premises with SPIFFE identity and FIPS crypto. DoD Hardened MCP Servers operate under SENESCHAL's read-only contract
-5. **Deploy** — Herald establishes the command channel. Drawbridge governs cross-org communication
-6. **Monitor** — vigil-edge tracks governance drift, fires alerts on anomalies. Citadel-edge manages air-gapped policy
-7. **Scan** — Recon reverse-engineers governance from agents already in production
+1. **Design** &mdash; Chancery compiles PRDs and SDD bundles. Citadel generates governance-aware fleet specs
+2. **Build** &mdash; Charlotte compiles context/prompts/MCP servers. Castellan compiles agents
+3. **Validate** &mdash; Forge runs platform integration tests + customer agent intake. Citadel generates compliance evidence
+4. **Enforce** &mdash; Seneschal enforces policies on-premises with SPIFFE identity and FIPS crypto
+5. **Deploy** &mdash; Bastion is the integrated enterprise deployment; Oracle ships alongside for classified intel
+6. **Operate** &mdash; Verity (SM/PM), Steward (PO/PM), Reeve (admin), Meridian (time), Author (authoring) cover the product lifecycle
 
 Every system is standalone. Together they close the loop.
 
@@ -1088,36 +838,41 @@ Every system is standalone. Together they close the loop.
 
 <br>
 
-![Total Lines](https://img.shields.io/badge/381%2C000%2B-Total_Source_Lines-2563EB?style=for-the-badge)
-![Total Tests](https://img.shields.io/badge/19%2C800%2B-Tests_Passing-16A34A?style=for-the-badge)
-![Total Systems](https://img.shields.io/badge/12-Production_Systems-7C3AED?style=for-the-badge)
+![Total Lines](https://img.shields.io/badge/737%2C000%2B-Total_Source_Lines-2563EB?style=for-the-badge)
+![Total Tests](https://img.shields.io/badge/25%2C000%2B-Tests_Passing-16A34A?style=for-the-badge)
+![Total Systems](https://img.shields.io/badge/13-Production_Systems-7C3AED?style=for-the-badge)
 
 <br>
 
-### Castellan Agent & MCP Governance Platform
+### Core Platform
 
-| | Castellan (+ sub-components) | Charlotte | Aegis | Herald | Recon | Citadel | Drawbridge | **Subtotal** |
-|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **Source Lines** | 145,730 | 34,045 | 20,017 | 3,596 | 44,596 | 4,558 | 4,180 | **256,722** |
-| **Tests** | 7,501 | 3,034 | 675 | 219 | 2,705 | 117 | 127 | **14,378** |
+| | Castellan | Charlotte | Citadel | Seneschal | **Subtotal** |
+|:--|:--:|:--:|:--:|:--:|:--:|
+| **Source Lines** | 122,545 | 36,337 | 30,519 | 23,115 | **212,516** |
+| **Tests** | 8,600+ | 3,700+ | 1,000+ | 448+ | **13,748+** |
 
-*Castellan includes: 121K Python (main) + 20.2K Rust (SENESCHAL) + 3.6K Rust (vigil-edge) + 959 Rust (Citadel-edge)*
+### Tooling
 
-### Automation & Utility Tooling
+| | Forge |
+|:--|:--:|
+| **Source Lines** | ~13,000 |
+| **Tests** | 421+ |
 
-| | Stratum | Chancery | CoWork | Forge | DoD MCP Servers | **Subtotal** |
-|:--|:--:|:--:|:--:|:--:|:--:|:--:|
-| **Source Lines** | 73,508 | 11,817 | 6,161 | ~4,735 | ~28,200 | **~124,421** |
-| **Tests** | 4,322 | — | 307 | 862 | — | **5,491** |
+### Products
+
+| | Bastion | Chancery | Verity | Steward | Reeve | Meridian | Oracle | Author | **Subtotal** |
+|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **Source Lines** | 118,269 | 19,829 | 172,941 | 94,780 | 31,019 | 11,072 | 4,261 | 59,474 | **511,645** |
+| **Tests** | 327+ | 822+ | 3,900+ | 145+ | 532+ | 437+ | 29+ | 181+ | **6,373+** |
 
 ### Combined
 
 | Metric | Value |
 |:--|:--|
-| **Total Systems** | **12** |
-| **Total Source Lines** | **~381,000+** |
-| **Total Tests (passing)** | **~19,800+** |
-| **Compliance Standards** | **18+** (EU AI Act, NIST AI RMF, NIST 800-53, NIST CSF 2.0/CAISI, CNSSP-12, GDPR, HIPAA, PCI-DSS v4.0, SOC 2 Type II, ISO 42001, ISO 27001, FZ-152, OWASP Top 10, CoSAI, FedRAMP, FIPS 140-3, DoD STIG/IL4/IL5, CNSA 2.0, FINRA 2026, COPPA) |
+| **Total Systems** | **13** |
+| **Total Source Lines** | **~737,000+** |
+| **Total Tests (passing)** | **~25,000+** |
+| **Compliance Standards** | **20+** (EU AI Act, NIST AI RMF, NIST 800-53, NIST 800-171 Rev 2, NIST CSF 2.0/CAISI, NIST IR 8596, FedRAMP Low/Moderate/High, DoD IL4/IL5, CMMC L1/L2/L3, CNSSP-12, CNSA 2.0, FIPS 140-3, DoD STIG, HIPAA, PCI-DSS v4.0, SOC 2 Type II, ISO 42001, ISO 27001, ISO 42005, GDPR, GLBA Safeguards, FFIEC IT Handbook, SOX ITGC, OCC SR 11-7, FINRA 2026, MAS AI RM, Singapore IMDA, OWASP Top 10, CoSAI, COPPA) |
 | **Languages** | Python, Rust, TypeScript |
 
 <br>
@@ -1127,22 +882,23 @@ Every system is standalone. Together they close the loop.
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Rust](https://img.shields.io/badge/Rust-2021-DEA584?style=flat-square&logo=rust&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=flat-square&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react&logoColor=black)
-![Next.js](https://img.shields.io/badge/Next.js-16-000000?style=flat-square&logo=next.js&logoColor=white)
+![Axum](https://img.shields.io/badge/Axum-Rust-000000?style=flat-square)
+![Tokio](https://img.shields.io/badge/Tokio-Async-000000?style=flat-square)
 ![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat-square&logo=fastapi&logoColor=white)
 ![Pydantic](https://img.shields.io/badge/Pydantic-v2-E92063?style=flat-square&logo=pydantic&logoColor=white)
-![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-2.0-D71F00?style=flat-square)
+![rustls](https://img.shields.io/badge/rustls-mTLS-orange?style=flat-square)
+![aws--lc--rs](https://img.shields.io/badge/aws--lc--rs-FIPS_140--3-yellow?style=flat-square)
+![SQLite](https://img.shields.io/badge/SQLite-003B57?style=flat-square&logo=sqlite&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?style=flat-square&logo=postgresql&logoColor=white)
 ![Redis](https://img.shields.io/badge/Redis-DC382D?style=flat-square&logo=redis&logoColor=white)
-![Tailwind](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white)
 
 ![Claude](https://img.shields.io/badge/Claude_API-D4A574?style=flat-square&logo=anthropic&logoColor=black)
 ![OpenAI](https://img.shields.io/badge/OpenAI_API-412991?style=flat-square&logo=openai&logoColor=white)
 ![Gemini](https://img.shields.io/badge/Gemini_API-4285F4?style=flat-square&logo=google&logoColor=white)
-![OpenTelemetry](https://img.shields.io/badge/OpenTelemetry-000000?style=flat-square&logo=opentelemetry&logoColor=white)
-![WebSocket](https://img.shields.io/badge/WebSocket-010101?style=flat-square)
-![tree--sitter](https://img.shields.io/badge/tree--sitter-6_languages-yellow?style=flat-square)
+![Ollama](https://img.shields.io/badge/Ollama-Local-000000?style=flat-square)
+![MCP](https://img.shields.io/badge/MCP-2025--11--25-8A2BE2?style=flat-square)
 ![SPIFFE](https://img.shields.io/badge/SPIFFE%2FSPIRE-CNCF-326CE5?style=flat-square&logo=cncf&logoColor=white)
+![MLS](https://img.shields.io/badge/MLS-RFC_9420-blue?style=flat-square)
 
 </div>
 
@@ -1156,11 +912,11 @@ Every system is standalone. Together they close the loop.
 
 </div>
 
-If your team is shipping production AI agents and needs them **governed, compiled, tested, and monitored** — not hand-assembled and hoped for — I built the platform that makes that possible.
+If your team is shipping production AI agents and needs them **governed, compiled, tested, and monitored** &mdash; not hand-assembled and hoped for &mdash; I built the platform that makes that possible.
 
 I take on AI-first contract engagements:
 
-> **Agent governance platforms** · **Agentic compilation** · **On-premises policy enforcement** · **Defense & federal compliance** (FIPS, CNSA 2.0, CNSSP-12, STIG, FedRAMP, DoD IL4/IL5) · **Compliance evidence automation** · **Classified-environment MCP tooling** · **SDLC automation** · **Rapid prototyping** from spec to production · Pre-deployment security auditing · Fleet governance monitoring · Prompt and skill compilation · Test generation pipelines · Quality gate systems · OWASP security auditing · Governance reverse-engineering · Cross-organizational A2A communication
+> **Agent governance platforms** · **Agent compilation** · **On-premises policy enforcement** · **Defense & federal compliance** (FIPS, CNSA 2.0, CNSSP-12, STIG, FedRAMP, DoD IL4/IL5, CMMC) · **Compliance evidence automation** · **Classified-environment MCP tooling** · **SDLC automation** · **Rapid prototyping** from spec to production · Pre-deployment security auditing · Fleet governance monitoring · Context engineering and MCP server compilation · Test generation pipelines · OWASP security auditing · Product intelligence platforms for SM/PM/PO teams
 
 <div align="center">
 
