@@ -2,7 +2,7 @@
 
 # Tim Wolfe
 
-### Context Architect | Agent Governance, MCP & Secure Systems | DoD · NIST-Aligned | CSPO · A-CSCM
+### AI Infrastructure Architect
 
 <br>
 
@@ -10,9 +10,9 @@
 
 <br>
 
-![Source](https://img.shields.io/badge/611%2C000%2B-Source_Lines-2563EB?style=for-the-badge)
-![Tests](https://img.shields.io/badge/19%2C400%2B-Tests_Passing-16A34A?style=for-the-badge)
-![Systems](https://img.shields.io/badge/10-Production_Systems-7C3AED?style=for-the-badge)
+![Source](https://img.shields.io/badge/620%2C000%2B-Source_Lines-2563EB?style=for-the-badge)
+![Tests](https://img.shields.io/badge/19%2C700%2B-Tests_Passing-16A34A?style=for-the-badge)
+![Systems](https://img.shields.io/badge/12-Production_Systems-7C3AED?style=for-the-badge)
 ![Standards](https://img.shields.io/badge/20%2B-Compliance_Standards-DC2626?style=for-the-badge)
 
 <br>
@@ -36,7 +36,7 @@ Los Altos, CA · [rtwolfe@gmail.com](mailto:rtwolfe@gmail.com) · 650-390-5003 �
 
 ## About
 
-I build **governance infrastructure for AI agents** &mdash; the compilers, runtime attestation substrate, design intelligence platforms, and production products that make autonomous agents safe to deploy. Not wrappers. Not demos. Not prompt templates. **Four core systems and six production products** that close the loop from raw idea to deployed, governed, monitored, cryptographically attested agent fleet &mdash; with defense-grade compliance enforcement at every stage.
+I build **governance infrastructure for AI agents** &mdash; the compilers, runtime attestation substrate, design intelligence platforms, and production products that make autonomous agents safe to deploy. Not wrappers. Not demos. Not prompt templates. **Four core systems and eight production products** that close the loop from raw idea to deployed, governed, monitored, cryptographically attested agent fleet &mdash; with defense-grade compliance enforcement at every stage.
 
 **Governance is the core problem.** Every team shipping AI agents hits the same wall: the prototype works, but production demands governance &mdash; constitutional constraints, runtime guardrails, OWASP security auditing, compliance drift detection, kill switches, audit trails, cryptographic evidence. Most frameworks hand you a runtime and leave governance as an exercise for the reader. I built a platform that makes governance structural. It's enforced at compile time. It travels with the deployed agent. It's monitored in real time. It's signed and attested. It's not optional.
 
@@ -57,6 +57,8 @@ I build **governance infrastructure for AI agents** &mdash; the compilers, runti
 - **Reeve** &mdash; governed Atlassian administration platform. The *writer* where Verity/Steward are *readers*. 5 MCP servers with 102 Atlassian tools, compliance-aware approval gates, state snapshots + rollback
 - **Steward** &mdash; Product Owner / Product Manager intelligence platform. 21 crates, 5 MCP servers, 8 PO-specific agents, 16 PO antipattern detectors, 5 PO intelligence cadences. Sibling architecture to Verity
 - **Verity** &mdash; Scrum Master / Project Manager intelligence platform. 33 crates, 17 MCP servers, 8 governed agents, 23 antipattern detectors, 5 ceremony pipelines, SOC 2 compliant. Reads Jira/Confluence/GitHub/Bitbucket/Slack/Teams; read-only by compile-time construction
+- **Quaestor** &mdash; RFP intelligence engine. 7-crate Rust workspace that judges federal solicitation responses against the questions they claim to address. Three-state verdicts with five sub-scores, risk-signal taxonomy, fabricated-quote detection, dark-themed dual HTML+PDF report. Federal Procurement domain pack consumer; three skews (hosted / on-prem IL5 / air-gap SCIF)
+- **Augur** &mdash; AI Strategy & Center-of-Excellence Advisor. CoE-as-a-Service consulting product and the **evidence layer** under Citadel and Chancery's spec generators. One agent + four fat MCP servers (Model Catalog, Framework Catalog, CoE Playbook, Use Case Library), six anti-hallucination structural verifiers, six wired bridges into the rest of the platform. EU AI Act High-Risk + ISO 42005 + OCC SR 11-7
 
 Every system is standalone. Together they automate the full lifecycle for AI agents &mdash; from rapid prototyping through governed deployment to real-time fleet monitoring with cryptographic attestation. The platform is self-hosting: these are the same tools I use to deliver for enterprise clients.
 
@@ -79,8 +81,8 @@ Before AI infrastructure: 20+ years of enterprise operations leadership &mdash; 
 │   Audit Pro   Chancery    Verity     Steward                    │
 │   (audit)     (PRD)       (SM/PM)    (PO/PM)                    │
 │                                                                 │
-│   Reeve       Author                                            │
-│   (admin)     (stories)                                         │
+│   Reeve       Author      Quaestor    Augur                    │
+│   (admin)     (stories)   (RFP)       (CoE advisor)             │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -88,7 +90,7 @@ Before AI infrastructure: 20+ years of enterprise operations leadership &mdash; 
 
 **Core** &nbsp;&nbsp; [Castellan](#1-castellan--agent-governance-compiler) · [Charlotte](#2-charlotte--context-engineering-compiler) · [Chronicle](#3-chronicle--runtime-attestation--compliance-observability) · [Citadel](#4-citadel--compliance-aware-design-intelligence)
 
-**Products** &nbsp;&nbsp; [Audit Pro](#5-audit-pro--productized-governance-audit) · [Chancery](#6-chancery--ai-chief-product-officer) · [Verity](#7-verity--smpm-intelligence-platform) · [Steward](#8-steward--popm-intelligence-platform) · [Reeve](#9-reeve--governed-atlassian-administration) · [Author](#10-author--storyepic-coaching-tool)
+**Products** &nbsp;&nbsp; [Audit Pro](#5-audit-pro--productized-governance-audit) · [Chancery](#6-chancery--ai-chief-product-officer) · [Verity](#7-verity--smpm-intelligence-platform) · [Steward](#8-steward--popm-intelligence-platform) · [Reeve](#9-reeve--governed-atlassian-administration) · [Author](#10-author--storyepic-coaching-tool) · [Quaestor](#11-quaestor--rfp-intelligence-engine) · [Augur](#12-augur--ai-strategy--center-of-excellence-advisor)
 
 [How They Connect](#how-they-connect) · [Platform Totals](#platform-totals)
 
@@ -102,7 +104,7 @@ AI agents have a governance problem. And a compilation problem. And an SDLC prob
 
 Code gets compiled. Databases get migrated. Infrastructure gets provisioned through declarative configs with validation and version control. But AI agents &mdash; the specs they're built from, the prompts they use, the tests that prove they work, the governance that keeps them safe, the evidence that proves they behaved &mdash; are still assembled by hand, shipped on instinct, and debugged in production. There's no compiler. No governance enforcement. No automated SDLC. No cryptographic ledger of what the agent did at runtime. No way to prove an agent won't go off-script next week, and no way to prove what it did last week.
 
-I built four core systems and six production products to fix that. The core handles compilation, runtime attestation, and design intelligence. The products deploy the stack in specific domains &mdash; productized audit, product management operations, authoring discipline.
+I built four core systems and eight production products to fix that. The core handles compilation, runtime attestation, and design intelligence. The products deploy the stack in specific domains &mdash; productized audit, product management operations, authoring discipline, federal RFP intelligence, and AI Center-of-Excellence advisory.
 
 Every system is standalone. Together they close the loop from unstructured idea to deployed, tested, governed, monitored, signed, attested agent fleet. The platform is self-hosting &mdash; Chancery compiles the PRDs, Charlotte compiles the prompts, Castellan compiles the agents, Citadel generates compliance evidence, Chronicle signs runtime events, and the products demonstrate the stack in production.
 
@@ -872,6 +874,165 @@ A draft that fails the refusal layer is rejected with structured reason; the use
 
 ---
 
+## 11. Quaestor &mdash; RFP Intelligence Engine
+
+**Reads federal solicitations, judges every offeror response against the question it claims to address, returns a forensic verdict with byte-level provenance.**
+
+Quaestor is the procurement-response validation engine. Roman quaestors audited state procurement contracts; this binary does the same job two thousand years later, faster. V0 ships as a single Rust binary (7-crate workspace). Reads `.docx` and `.pdf` solicitation responses, judges each (requirement, response) pair via `claude -p` subprocess, and emits a dark-themed dual HTML+PDF verdict report plus structured JSON with full source provenance. **V1 9-component fleet** (4 agents + 9 MCP servers + Chronicle + Drawbridge clients) is on disk as design reference; activated when an engagement justifies it.
+
+### The Judging Philosophy &mdash; Demonstrate vs Name-Drop
+
+Federal solicitation responses live or die on this distinction. Mentioning FedRAMP is name-drop; citing an ATO date, level, and authorizing officer is demonstration. Mentioning past performance is name-drop; supplying a contract number, period of performance, contract value, and CPARS rating is demonstration. Quaestor scores against the demonstration bar, calibrated by a Federal Procurement domain pack auto-loaded at judgment time.
+
+### Verdict Schema
+
+Three-state verdict (`pass` / `weak` / `miss`) with 0&ndash;100 confidence, five sub-scores, surfaced risk signals, framework attestations, missing demonstrations, and verbatim supporting quotes.
+
+| Sub-score | Scale | What It Measures |
+|:--|:--:|:--|
+| **Completeness** | 0&ndash;100 | Does the response address every sub-ask in the requirement? |
+| **Specificity** | 0&ndash;100 | Concrete tools, dates, contracts, evidence vs generic capability claims |
+| **Evidence Quality** | 0&ndash;100 | Are claims corroborable from the response itself? |
+| **Framework Demonstration** | 0&ndash;100 | When NIST/FAR/DFARS clauses are invoked, are controls demonstrated or just named? |
+| **Fluff** | 0&ndash;100 | Fraction of hand-wave language. **Lower is better.** |
+
+### Risk Signal Taxonomy
+
+| `type` | Meaning |
+|:--|:--|
+| **false_claim_signal** | Certification/ATO/contract claimed without offered corroboration |
+| **oci_signal** | Organizational Conflict of Interest &mdash; impaired objectivity or unequal access |
+| **ceiling_above_signal** | Framework invoked above what a reasonable offeror would carry (e.g. FedRAMP High but no ATO) |
+| **date_inconsistency** | Internal date conflicts (period of performance vs completion vs award) |
+| **fabricated_quote** | **Quaestor-injected**: model returned a supporting quote not present in source. Each fabricated quote downgrades evidence_quality by 20; auto-detected via verbatim source round-trip |
+
+### V0 Architecture
+
+| Crate | Role |
+|:--|:--|
+| **qsr-core** | IDs, errors, provenance, verdict, classification |
+| **qsr-crypto** | CNSA 2.0 wrappers (SHA-384, HMAC-SHA384, FIPS module verify) |
+| **qsr-cui** | DoDM 5200.01 V4 banner injection trait + classification scanner |
+| **qsr-judge** | docx/pdf extract &rarr; `claude -p` subprocess &rarr; HTML render &rarr; PDF post-process |
+| **qsr-cli** | binary `quaestor` with `judge`/`render`/`pdf`/`selftest` subcommands |
+| **qsr-chronicle-client** | Attestation event emission (V0 stub, V1 substrate) |
+| **qsr-drawbridge-client** | A2A signed messaging (V0 stub, V1 substrate) |
+
+### Three-Stage PDF Rendering Pipeline
+
+wkhtmltopdf alone can't produce a viewer-portable dark PDF; Quaestor stitches three tools:
+
+1. **wkhtmltopdf** renders the dark-themed HTML to PDF
+2. **pdftocairo** (poppler-utils) normalizes the malformed xref table so a strict PDF parser can read it
+3. **`qsr_judge::pdf_post::add_page_background`** opens the PDF with `lopdf`, prepends `q  R G B rg  llx lly w h re  f  Q` to every page's content stream &mdash; a save-state, set-non-stroke-RGB, fill-rect-covering-MediaBox, restore-state. Universal PDF op codes; every viewer (Chrome PDFium, Safari, Adobe Reader, Preview) honors them.
+
+### Three Skews, One Binary
+
+| Skew | Boundary | Model Provider |
+|:--|:--|:--|
+| **Hosted** | Public CSPs allowed | Claude API hosted |
+| **On-prem IL4/IL5** | Tenant VPC | Claude on customer VPC, FIPS module mandatory |
+| **Air-gap SCIF** | No network | Local model (Ollama-class) via redirected `claude -p` |
+
+### Compliance & Provenance
+
+- **CNSA 2.0 alignment** &mdash; SHA-384 + HMAC-SHA384 only, FIPS module verified at startup
+- **DoDM 5200.01 V4 banner discipline** &mdash; classification detection requires standalone uppercase lines, ≤100 chars, no sentence-ending punctuation; body prose containing "CUI" is correctly rejected
+- **Reproducibility envelope** &mdash; every artifact carries source SHA-384, run timestamp (RFC 3339 UTC), model identifier, and per-quote verification
+- **Domain-pack-aware** &mdash; auto-loads `/projects/fleet/governance/federal-procurement-pack/` when present; demonstrate-vs-namedrop YAMLs inject into the judgment prompt for per-framework calibration
+- **Resumable runs** &mdash; `--resume` skips sections with prior verdicts, no double-billing for `claude` tokens
+
+### Customer Delivery Convention
+
+Output bundle lands in `<given-dir>/quaestor/`; tar.gz sibling at `<given-dir>/<source-stem>.quaestor.final.tar.gz`. The archive contains analysis only &mdash; never the client's source DOCX/PDF.
+
+### Sample Run Benchmark
+
+EPA Cloud Engineering Enhanced v4 (3.1 MB DOCX, 9 sections): **0 pass · 3 weak · 6 miss** at 83% mean confidence. Frameworks invoked: CJIS, FedRAMP, HIPAA, IRS Pub 1075, NIST SP 800-53. Risk signals surfaced: false_claim (FedRAMP "alignment" without ATO), ceiling_above (5 compliance regimes claimed without proof), date_inconsistency (referenceable case study with no dates), fabricated_quote (multiple sections). Representative federal-procurement work in 2026 &mdash; heavy on framework name-drops, light on demonstrated controls.
+
+<div align="center">
+
+`7 Rust Crates` · `4,014 lines` · `83 tests`
+
+</div>
+
+<br>
+
+---
+
+## 12. Augur &mdash; AI Strategy & Center-of-Excellence Advisor
+
+**The CoE function on tap. A consultant walks into a company and *is* the AI Center of Excellence for the engagement &mdash; with an auditable model catalog, framework catalog, CoE playbook, and use-case library doing the institutional work.**
+
+Augur is a CoE-as-a-Service consulting product and the **evidence layer underneath Citadel and Chancery's spec generators**. Mid-size companies (500&ndash;5,000 employees) face board pressure to "have an AI strategy" but lack the institutional muscle &mdash; a permanent 5-person CoE staff over 18 months is the alternative they're trying to avoid. Augur replaces years of accumulated CoE knowledge with an auditable, score-justified, audit-replayable catalog. **One agent, four fat MCP servers, six wired bridges, two refresh sources, one portable skill.**
+
+### The Five-Mode Engagement Workflow
+
+| Mode | What Happens |
+|:--|:--|
+| **Discovery** | Stakeholder intake interview, candidate use cases identified, data requirements extracted from voice or text input |
+| **Shortlist** | Model and Framework Catalogs queried, candidates ranked under defensible scoring rubric, optionally Forge-eval'd, adopt-or-reject recommendation with full evidence trail |
+| **Translate** | BRDs, FRDs, user stories, and data mapping documents from the locked use case definition |
+| **Govern** | Model cards, risk register, ROI scorecards, governance gate checklists generated by calling the Citadel compliance engine through its Python bridge |
+| **Present** | Workshop deck, POC scaffold, executive presentation; rendered live through Folio so stakeholders see governance scorecards as PDFs in seconds |
+
+### Four Fat MCP Servers
+
+| MCP Server | Substance |
+|:--|:--|
+| **Model Catalog** | 12 cataloged agentic-capable models (frontier + open-weights + small-local) scored across 8 dimensions: tool-use, multi-turn reliability, MCP support, RAG fit, cost-per-decision, deployment surface, license posture, agentic loop behavior. Hardware envelope filtering (VRAM, RAM, quantization). Refresh from HuggingFace + vendor docs + curated seed; every entry SHA-384 hashed with fetch timestamp + source URL + scorer version |
+| **Framework Catalog** | 10 reference frameworks (LangChain, LangGraph, LlamaIndex, AutoGen, CrewAI, Anthropic Agents SDK, OpenAI Agents SDK, Google ADK, MCP, A2A) with governance posture overlays: audit trail, lock-in risk, compliance friendliness, deployment portability, MLOps fit |
+| **CoE Playbook** | AI Center of Excellence adoption patterns: intake gates, ROI scoring rubrics, governance scorecards, model risk classification, change management workflows, autonomy progression tier ceilings. Sourced from public CoE writeups, ISO 42005, EU AI Act high-risk obligations, NIST AI RMF, OCC SR 11-7, plus the Citadel compliance engine itself |
+| **Use Case Library** | 19 patterns (12 synthetic_seed + 7 pilot_validated, mined from operator's own deployed platform: Verity, Steward, Reeve, Bastion, Forge, Conversational Code, Folio). Tagged with outcome data &mdash; what shipped, what flopped, why, ROI realized, governance overhead actually incurred. Keyed by industry and business unit |
+
+### Anti-Hallucination Guardrails
+
+Six structural verifiers run before every recommendation returns. Tamper-evident audit log writes per call.
+
+| Verifier | Enforces |
+|:--|:--|
+| **CatalogIntegrityVerifier** | All cited models/frameworks exist in catalog at the cited version; no fabricated entries |
+| **CatalogResidenceVerifier** | Score values in recommendations match catalog values exactly &mdash; no model invented its own scoring |
+| **ScoreVerifier** | Composite scoring math is reproducible from cataloged sub-scores |
+| **CitationVerifier** | Citation byte-ranges round-trip against source documents |
+| **ROIVerifier** | ROI claims trace to use-case-library outcome data, not generated narrative |
+| **ComplianceVerifier** | Framework attestations align with the Citadel compliance engine, not free-form text |
+
+### Six Wired Bridges
+
+Augur calls into and is called by the rest of the platform:
+
+- **Citadel bridge** &mdash; Augur's recommendations replace hardcoded defaults in `castellan_gen` (model + provider), `charlotte_gen` (MCP target model), and `fleet_gen` (runtime tier + local-quantized open-weights model with vendor-id-to-Ollama-tag translation)
+- **Chancery bridge** &mdash; Same pattern for PRD-driven spec generation
+- **Folio bridge** &mdash; Live PDF rendering during workshops
+- **Forge bridge** &mdash; Real eval harness fired during Shortlist mode
+- **Refresh source: HuggingFace** &mdash; Catalog refresh from model card metadata
+- **Refresh source: vendor docs** &mdash; Catalog refresh from API documentation
+
+Behavior contract: when Augur is installed in the venv, recommendations carry catalog provenance (composite score, runner-up, rationale, scorer version, sources) recorded as `augur_recommendation` blocks in spec output. When absent, hardcoded defaults are used exactly as before. **Graceful, optional, additive &mdash; never a hard dependency.**
+
+### Compliance Posture
+
+EU AI Act High-Risk as the primary framework, with ISO 42005 AI risk management and OCC SR 11-7 model risk available as overlays. Two runtime tiers from day one: **frontier** (Claude via passthrough) for fast iteration on commercial engagements, and **local_quantized** (Ollama llama 3.1 8B class) for air-gap or sovereign engagements where customer AI strategy data cannot leave the boundary. Selected per engagement, not baked in.
+
+### Conductor Tier
+
+Regulated Conductor tier: full governance layers (A2A, Seneschal registration, Herald, Vigil baseline, tool integrity, call stack, autonomy progression, behavioral, topology, trust scoring, crossing policy, SRP), HMAC-SHA384 manifests, single-tenant Chronicle, software HSM, 7-year retention, five gates. Sovereign tier reserved for DoD-adjacent CoE engagements.
+
+### Hero Use Case &mdash; Day-Zero Domination
+
+Walk into a CoE engagement having already cataloged the relevant agentic model landscape against the customer's stack, with governance artifacts pre-templated for their compliance posture, with workshop scripts and POC scaffolds ready, and with the eval harness primed to fire real benchmarks during the first stakeholder session. By the end of week one the customer believes the consultant has been doing AI CoE work for a decade. The tool is the difference.
+
+<div align="center">
+
+`Python 3.10+` · `5,551 lines` · `209 tests` · `1 Agent + 4 MCPs` · `12 models · 10 frameworks · 19 use-case patterns`
+
+</div>
+
+<br>
+
+---
+
 ## How They Connect
 
 ```
@@ -911,6 +1072,12 @@ A draft that fails the refusal layer is rejected with structured reason; the use
 │                                                                      │
 │   Author ──────────> Story/epic coaching with refusal layer          │
 │                                                                      │
+│   Quaestor ────────> RFP intelligence — judge offeror responses,     │
+│                      surface fabricated quotes, three-skew binary    │
+│                                                                      │
+│   Augur ───────────> AI Strategy + CoE advisor; evidence layer       │
+│                      under Citadel/Chancery spec generators          │
+│                                                                      │
 └──────────────────────────────────────────────────────────────────────┘
 
 Product Lifecycle Loop:
@@ -920,6 +1087,14 @@ Chancery (discover) → Author (write) → Jira → Verity + Steward (read) → 
 Audit Loop (third-party customers):
 Customer agents → Audit Pro → Citadel scan + Castellan/Charlotte recompile
                             → Chronicle sign → 3PAO-verifiable evidence bundle
+
+RFP Loop:
+Federal solicitation .docx/.pdf → Quaestor judge → forensic verdict report
+                                                  + Chronicle-signed evidence
+
+CoE Engagement Loop:
+Stakeholder intake → Augur Discovery → Shortlist → Translate → Govern → Present
+              (catalogs feed Citadel + Chancery for governed spec generation)
 ```
 
 ### The Governance Loop
@@ -928,7 +1103,7 @@ Customer agents → Audit Pro → Citadel scan + Castellan/Charlotte recompile
 2. **Build** &mdash; Charlotte compiles context/prompts/MCP servers. Castellan compiles agents. Both enforce compliance floors
 3. **Attest** &mdash; Chronicle signs runtime events with hybrid Ed25519 + ML-DSA-65; produces OSCAL packages and signed ATO bundles
 4. **Audit** &mdash; Audit Pro composes the engines into a customer-facing productized audit; emits Chronicle-signed evidence + drop-in recompiled specs
-5. **Operate** &mdash; Verity (SM/PM), Steward (PO/PM), Reeve (admin), Author (authoring), Chancery (PRDs) cover the product lifecycle
+5. **Operate** &mdash; Verity (SM/PM), Steward (PO/PM), Reeve (admin), Author (authoring), Chancery (PRDs) cover the product lifecycle. Quaestor judges federal RFP responses; Augur runs the CoE engagement and feeds the rest of the platform an evidence-backed catalog
 
 Every system is standalone. Together they close the loop.
 
@@ -940,9 +1115,9 @@ Every system is standalone. Together they close the loop.
 
 <br>
 
-![Total Lines](https://img.shields.io/badge/611%2C000%2B-Total_Source_Lines-2563EB?style=for-the-badge)
-![Total Tests](https://img.shields.io/badge/19%2C400%2B-Tests_Passing-16A34A?style=for-the-badge)
-![Total Systems](https://img.shields.io/badge/10-Production_Systems-7C3AED?style=for-the-badge)
+![Total Lines](https://img.shields.io/badge/620%2C000%2B-Total_Source_Lines-2563EB?style=for-the-badge)
+![Total Tests](https://img.shields.io/badge/19%2C700%2B-Tests_Passing-16A34A?style=for-the-badge)
+![Total Systems](https://img.shields.io/badge/12-Production_Systems-7C3AED?style=for-the-badge)
 
 <br>
 
@@ -955,18 +1130,18 @@ Every system is standalone. Together they close the loop.
 
 ### Products
 
-| | Audit Pro | Chancery | Verity | Steward | Reeve | Author | **Subtotal** |
-|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **Source Lines** | 19,114 | 19,829 | 172,941 | 94,780 | 31,019 | 59,474 | **397,157** |
-| **Tests** | 215+ | 822+ | 3,900+ | 145+ | 532+ | 181+ | **5,795+** |
+| | Audit Pro | Chancery | Verity | Steward | Reeve | Author | Quaestor | Augur | **Subtotal** |
+|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **Source Lines** | 19,114 | 19,829 | 172,941 | 94,780 | 31,019 | 59,474 | 4,014 | 5,551 | **406,722** |
+| **Tests** | 215+ | 822+ | 3,900+ | 145+ | 532+ | 181+ | 83 | 209 | **6,087+** |
 
 ### Combined
 
 | Metric | Value |
 |:--|:--|
-| **Total Systems** | **10** |
-| **Total Source Lines** | **~611,000+** |
-| **Total Tests (passing)** | **~19,400+** |
+| **Total Systems** | **12** |
+| **Total Source Lines** | **~620,000+** |
+| **Total Tests (passing)** | **~19,700+** |
 | **Compliance Standards** | **20+** (EU AI Act, NIST AI RMF, NIST 800-53, NIST 800-171 Rev 2, NIST CSF 2.0/CAISI, NIST IR 8596, FedRAMP Low/Moderate/High, DoD IL4/IL5, CMMC L1/L2/L3, CNSSP-12, CNSA 2.0, FIPS 140-3, FIPS 204 (ML-DSA), DoD STIG, HIPAA, PCI-DSS v4.0, SOC 2 Type II, ISO 42001, ISO 27001, ISO 42005, GDPR, GLBA Safeguards, FFIEC IT Handbook, SOX ITGC, OCC SR 11-7, FINRA 2026, MAS AI RM, Singapore IMDA, OWASP Top 10, CoSAI, COPPA) |
 | **Languages** | Python, Rust, TypeScript |
 
