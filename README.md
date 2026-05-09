@@ -2,7 +2,7 @@
 
 # Tim Wolfe
 
-### Context Architect | Agent Governance, MCP & Secure Systems | DoD · NIST-Aligned | CSPO · A-CSCM
+### AI Infrastructure Architect
 
 <br>
 
@@ -36,7 +36,7 @@ Los Altos, CA · [rtwolfe@gmail.com](mailto:rtwolfe@gmail.com) · 650-390-5003 �
 
 ## About
 
-I build **governance infrastructure for AI agents** &mdash; the compilers, runtime attestation substrate, design intelligence platforms, and production products that make autonomous agents safe to deploy. Not wrappers. Not demos. Not prompt templates. **Four core systems and eight production products** that close the loop from raw idea to deployed, governed, monitored, cryptographically attested agent fleet &mdash; with defense-grade compliance enforcement at every stage.
+I build **governance infrastructure for AI agents** &mdash; the compilers, runtime attestation substrate, design intelligence platforms, and production products that make autonomous agents safe to deploy. Not wrappers. Not demos. Not prompt templates. **Four core systems, four production products, and a four-app Operator Loop tier** that close the loop from raw idea to deployed, governed, monitored, cryptographically attested agent fleet &mdash; with defense-grade compliance enforcement at every stage.
 
 **Governance is the core problem.** Every team shipping AI agents hits the same wall: the prototype works, but production demands governance &mdash; constitutional constraints, runtime guardrails, OWASP security auditing, compliance drift detection, kill switches, audit trails, cryptographic evidence. Most frameworks hand you a runtime and leave governance as an exercise for the reader. I built a platform that makes governance structural. It's enforced at compile time. It travels with the deployed agent. It's monitored in real time. It's signed and attested. It's not optional.
 
@@ -52,13 +52,16 @@ I build **governance infrastructure for AI agents** &mdash; the compilers, runti
 **Products:**
 
 - **Audit Pro** &mdash; productized governance audit for third-party AI agents. Customer-facing Rust outer shell + seven Castellan-compiled audit agents + seven Charlotte-compiled MCP servers + Chronicle-signed evidence bundles. Independent verification by any 3PAO
-- **Author** &mdash; story/epic coaching tool. 6-crate Rust workspace with INVEST scoring, 15 anti-pattern detectors, deterministic refusal layer
 - **Chancery** &mdash; AI Chief Product Officer. Transforms unstructured product input into production-quality PRDs and per-component SDD bundles through a 4-phase, 3-gate workflow. Deployed as Claude Desktop Project and Claude Code skill (`/chancery-architect`)
-- **Reeve** &mdash; governed Atlassian administration platform. The *writer* where Verity/Steward are *readers*. 5 MCP servers with 102 Atlassian tools, compliance-aware approval gates, state snapshots + rollback
-- **Steward** &mdash; Product Owner / Product Manager intelligence platform. 21 crates, 5 MCP servers, 8 PO-specific agents, 16 PO antipattern detectors, 5 PO intelligence cadences. Sibling architecture to Verity
-- **Verity** &mdash; Scrum Master / Project Manager intelligence platform. 33 crates, 17 MCP servers, 8 governed agents, 23 antipattern detectors, 5 ceremony pipelines, SOC 2 compliant. Reads Jira/Confluence/GitHub/Bitbucket/Slack/Teams; read-only by compile-time construction
 - **Quaestor** &mdash; RFP intelligence engine. 7-crate Rust workspace that judges federal solicitation responses against the questions they claim to address. Three-state verdicts with five sub-scores, risk-signal taxonomy, fabricated-quote detection, dark-themed dual HTML+PDF report. Federal Procurement domain pack consumer; three skews (hosted / on-prem IL5 / air-gap SCIF)
-- **Augur** &mdash; AI Strategy & Center-of-Excellence Advisor. CoE-as-a-Service consulting product and the **evidence layer** under Citadel and Chancery's spec generators. One agent + four fat MCP servers (Model Catalog, Framework Catalog, CoE Playbook, Use Case Library), six anti-hallucination structural verifiers, six wired bridges into the rest of the platform. EU AI Act High-Risk + ISO 42005 + OCC SR 11-7
+- **Augur** &mdash; AI Strategy & Center-of-Excellence Advisor. CoE-as-a-Service consulting product and the **evidence layer** under Citadel and Chancery's spec generators. One agent + four MCP servers (Model Catalog, Framework Catalog, CoE Playbook, Use Case Library), six anti-hallucination structural verifiers, six wired bridges into the rest of the platform. EU AI Act High-Risk + ISO 42005 + OCC SR 11-7
+
+**Operator Loop &mdash; the practitioner-side complement, built on the platform:**
+
+- **Verity** &mdash; Scrum Master / Project Manager intelligence platform. 33 crates, 17 MCP servers, 8 governed agents, 23 antipattern detectors, 5 ceremony pipelines. Read-only by compile-time construction. Reads Jira / Confluence / GitHub / Bitbucket / Slack / Teams; surfaces the conversations you need to have today
+- **Steward** &mdash; Product Owner / Product Manager intelligence platform. 21 crates, 5 MCP servers, 8 PO-specific agents, 16 PO antipattern detectors, 5 PO intelligence cadences. Sibling to Verity, tuned for product cadences
+- **Reeve** &mdash; governed Atlassian administration. The *writer* where Verity / Steward are *readers*. 5 MCP servers covering 102 Atlassian admin tools, approval gates, state snapshots + rollback
+- **Author** &mdash; story / epic coaching tool. 6-crate Rust workspace with INVEST scoring, 15 anti-pattern detectors, deterministic refusal layer that catches shallow authoring before it reaches Jira
 
 Every system is standalone. Together they automate the full lifecycle for AI agents &mdash; from rapid prototyping through governed deployment to real-time fleet monitoring with cryptographic attestation. The platform is self-hosting: these are the same tools I use to deliver for enterprise clients.
 
@@ -78,11 +81,13 @@ Before AI infrastructure: 20+ years of enterprise operations leadership &mdash; 
 │                                                                 │
 ├─────────────────────────────────────────────────────────────────┤
 │                           PRODUCTS                               │
-│   Audit Pro   Chancery    Verity     Steward                    │
-│   (audit)     (PRD)       (SM/PM)    (PO/PM)                    │
+│   Audit Pro   Chancery    Quaestor    Augur                     │
+│   (audit)     (PRD)       (RFP)       (CoE advisor)             │
 │                                                                 │
-│   Reeve       Author      Quaestor    Augur                    │
-│   (admin)     (stories)   (RFP)       (CoE advisor)             │
+├─────────────────────────────────────────────────────────────────┤
+│                        OPERATOR LOOP                             │
+│   Verity      Steward     Reeve       Author                    │
+│   (SM/PM)     (PO/PM)     (admin)     (stories)                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -90,7 +95,9 @@ Before AI infrastructure: 20+ years of enterprise operations leadership &mdash; 
 
 **Core** &nbsp;&nbsp; [Castellan](#1-castellan--agent-governance-compiler) · [Charlotte](#2-charlotte--context-engineering-compiler) · [Chronicle](#3-chronicle--runtime-attestation--compliance-observability) · [Citadel](#4-citadel--compliance-aware-design-intelligence)
 
-**Products** &nbsp;&nbsp; [Audit Pro](#5-audit-pro--productized-governance-audit) · [Chancery](#6-chancery--ai-chief-product-officer) · [Verity](#7-verity--smpm-intelligence-platform) · [Steward](#8-steward--popm-intelligence-platform) · [Reeve](#9-reeve--governed-atlassian-administration) · [Author](#10-author--storyepic-coaching-tool) · [Quaestor](#11-quaestor--rfp-intelligence-engine) · [Augur](#12-augur--ai-strategy--center-of-excellence-advisor)
+**Products** &nbsp;&nbsp; [Audit Pro](#5-audit-pro--productized-governance-audit) · [Chancery](#6-chancery--ai-chief-product-officer) · [Quaestor](#7-quaestor--rfp-intelligence-engine) · [Augur](#8-augur--ai-strategy--center-of-excellence-advisor)
+
+**Operator Loop** &nbsp;&nbsp; [Verity](#9-verity--smpm-intelligence-platform) · [Steward](#10-steward--popm-intelligence-platform) · [Reeve](#11-reeve--governed-atlassian-administration) · [Author](#12-author--storyepic-coaching-tool)
 
 [How They Connect](#how-they-connect) · [Platform Totals](#platform-totals)
 
@@ -104,7 +111,7 @@ AI agents have a governance problem. And a compilation problem. And an SDLC prob
 
 Code gets compiled. Databases get migrated. Infrastructure gets provisioned through declarative configs with validation and version control. But AI agents &mdash; the specs they're built from, the prompts they use, the tests that prove they work, the governance that keeps them safe, the evidence that proves they behaved &mdash; are still assembled by hand, shipped on instinct, and debugged in production. There's no compiler. No governance enforcement. No automated SDLC. No cryptographic ledger of what the agent did at runtime. No way to prove an agent won't go off-script next week, and no way to prove what it did last week.
 
-I built four core systems and eight production products to fix that. The core handles compilation, runtime attestation, and design intelligence. The products deploy the stack in specific domains &mdash; productized audit, product management operations, authoring discipline, federal RFP intelligence, and AI Center-of-Excellence advisory.
+I built four core systems, four production products, and a four-app Operator Loop tier to fix that. The core handles compilation, runtime attestation, and design intelligence. The products deploy the stack in specific domains &mdash; productized audit, conversational PRD design, federal RFP intelligence, and AI Center-of-Excellence advisory. The Operator Loop is the practitioner-side complement — the daily SM/PM, PO/PM, Atlassian admin, and authoring tooling I run on top of the platform to do my own job.
 
 Every system is standalone. Together they close the loop from unstructured idea to deployed, tested, governed, monitored, signed, attested agent fleet. The platform is self-hosting &mdash; Chancery compiles the PRDs, Charlotte compiles the prompts, Castellan compiles the agents, Citadel generates compliance evidence, Chronicle signs runtime events, and the products demonstrate the stack in production.
 
@@ -323,7 +330,7 @@ Every event, every OSCAL package, every ATO bundle is signed with **both Ed25519
 | **Canonicalization** | RFC 8785 JSON Canonicalization Scheme &mdash; identical events serialize byte-identically |
 | **Hash chain** | SHA-256 Merkle tree, O(log N) inclusion proofs |
 | **Signing** | Hybrid Ed25519 + ML-DSA-65 keyring; FIPS-only build feature substitutes AES-GCM for ChaCha20-Poly1305 |
-| **Reproducible build** | `lto = "fat"`, `codegen-units = 1`, `strip = "symbols"`, `SOURCE_DATE_EPOCH` pinned &mdash; same commit produces byte-identical binary |
+| **Reproducible build** | `lto = true`, `codegen-units = 1`, `strip = "symbols"`, `SOURCE_DATE_EPOCH` pinned &mdash; same commit produces byte-identical binary |
 | **Persistence** | PostgreSQL store with tenant isolation; in-memory store for tests |
 | **Witness** | Internal log + external witness adapters (Mock, Rekor) for transparency |
 
@@ -575,7 +582,7 @@ Chancery is an **AI Chief Product Officer** that normalizes unstructured product
 
 ### Architect Mode
 
-Chancery's architect mode deploys as a **Claude Desktop Project** and **Claude Code skill** (`/chancery-architect`). Embeds V1 Agent Architecture Design methodology: conversational decomposition into min-correct agent/MCP architectures with per-component SDD bundles validated by Charlotte + Castellan. Ships with 7 fat knowledge files (~89K tokens), QA'd on 4 synthetic scenarios &mdash; all pass with strong discipline signals (caught HIPAA-doesn't-apply-to-vets, PCI SAQ scoping, FIPS 140-2/140-3 transition; collapsed a 5-agent legal fleet to 2 with rationale).
+Chancery's architect mode deploys as a **Claude Desktop Project** and **Claude Code skill** (`/chancery-architect`). Embeds V1 Agent Architecture Design methodology: conversational decomposition into min-correct agent/MCP architectures with per-component SDD bundles validated by Charlotte + Castellan. Ships with 7 dense knowledge files (~89K tokens), QA'd on 4 synthetic scenarios &mdash; all pass with strong discipline signals (caught HIPAA-doesn't-apply-to-vets, PCI SAQ scoping, FIPS 140-2/140-3 transition; collapsed a 5-agent legal fleet to 2 with rationale).
 
 ### Per-Component SDD Bundle Generation
 
@@ -634,247 +641,7 @@ Deterministic regex patterns + LLM-assisted reframing challenges. The detectors 
 
 ---
 
-## 7. Verity &mdash; SM/PM Intelligence Platform
-
-**The Scrum Master / Project Manager survival weapon. Reads Jira, Confluence, GitHub, Bitbucket, Slack, Teams — surfaces the conversations you need to have today.**
-
-Verity is the Scrum Master / Project Manager intelligence platform. 33 workspace crates, 58 CLI subcommands, **17 MCP servers**, **8 governed agents**. SOC 2 compliant fleet artifacts generated by Citadel. **Read-only by compile-time construction** &mdash; the HTTP client is GET-only, enforced at the type level.
-
-### 17 MCP Servers Across 6 Data Sources
-
-Verity reads from Jira, Confluence, GitHub, Bitbucket, Slack, and Teams. The MCP layer wraps each source with governed tools that respect rate limits, scope restrictions, and read-only enforcement. Each MCP server has both stub and live handlers; live handlers ship as parallel implementations behind a trait, never replacing the stubs.
-
-### 23 Antipattern Detectors
-
-| Methodology | Count | Examples |
-|:--|:--:|:--|
-| **Scrum** | 12 | sprint_goal_drift, standup_status_only, retro_no_action, planning_overcommit, demo_skipped, ceremony_decay, dependency_silence |
-| **Review Quality** | 3 | review_summary_thin, action_items_missing, decision_unmoored |
-| **Kanban** | 8 | wip_runaway, age_drift, blocker_silent, swimlane_collapse, policy_decay |
-
-### 8 Governed Agents
-
-Sprint intelligence, antipattern detector, ceremony brief composer, review quality analyst, GitHub intel, signal correlator, delivery dispatcher, report writer. Each compiled by Castellan, every prompt by Charlotte, every fleet spec by Citadel under SOC 2.
-
-### 5 Ceremony Pipelines
-
-| Pipeline | Cadence | Output |
-|:--|:--|:--|
-| **Standup** | Daily | Surfaces blockers, drift signals, talk-track for the SM |
-| **Planning** | Per-sprint | Capacity check, dependency map, scope warnings |
-| **Review** | Per-sprint | Structured demo recap, decision capture |
-| **Retro** | Per-sprint | Pattern continuity from prior retros, action-item carryover |
-| **Refine** | Weekly | Backlog readiness, story-quality scoring |
-
-### 5-Layer Signal Observability
-
-| Layer | What Lives Here |
-|:--|:--|
-| **Raw** | Unmodified source events (Jira webhooks, Slack messages, GitHub PR events) |
-| **Feature** | Extracted facts: sprint goal text, PR review counts, ceremony attendance |
-| **Correlation** | Cross-source links (PR &harr; Jira ticket &harr; Slack thread) |
-| **Pattern** | Detector matches: antipattern hits, ceremony drift, dependency silences |
-| **Insight** | Framed talk-tracks for the SM, ranked by impact |
-
-### Methodology System
-
-Profile-driven configuration covering **Scrum, Kanban, Scrumban, PM**. Per-profile cadence schedules, sprint anchor source (Jira / GitHub / manual), bindings (Jira project, GitHub repo, Slack channel). Daemon mode (`verity daemon`) reads `cadence_json` per profile, computes next firings, fires when `ready_at` arrives. Briefs land with status `ready`. Nothing auto-delivers.
-
-### Day-Zero Scan Pipeline
-
-24-hour intelligence onboarding for new SM/PM roles. Walk in, run the scan, sit Day 1's standup with team history compounded into the talk-track.
-
-### Delivery & Reporting
-
-- **9 report kinds** with voice-initiated publish
-- **Multi-channel delivery** &mdash; SMTP / Slack / Teams with audience fan-out
-- **Slack/Teams bot** &mdash; click = request only; Verity-side confirmation is the governed event (all skews)
-- **Voice-initiated publish** &mdash; primary delivery path; auto-fired findings are secondary
-- **Career log** &mdash; ChaCha20-Poly1305 + Argon2id encrypted personal history
-- **Web UI** &mdash; axum + rustls, full route coverage
-
-### Governance Posture
-
-- Citadel-generated fleet specs (SOC 2 compliant)
-- Every component passes Castellan + Charlotte compliance floors
-- Read-only by construction &mdash; compile-time GET-only HTTP client (the type system rejects POST / PUT / PATCH / DELETE at compile time)
-
-<div align="center">
-
-`33 Rust Crates` · `172,941 lines` · `3,900+ tests`
-
-</div>
-
-<br>
-
----
-
-## 8. Steward &mdash; PO/PM Intelligence Platform
-
-**The Product Owner / Product Manager survival weapon. Same architecture as Verity, tuned for product intelligence cadences.**
-
-Steward is the Product Owner / Product Manager intelligence platform &mdash; sibling to Verity, same read-only architecture. 21 workspace crates, 50 CLI subcommands, **5 MCP servers**, **8 PO-specific agents**. SOC 2 compliant fleet artifacts generated by Citadel. **62 knowledge bundles** (1.1 MB total, 59 wired to MCP server specs).
-
-### 8 PO-Specific Agents
-
-| Agent | Domain | Autonomy |
-|:--|:--|:--|
-| **roadmap-intelligence-agent** | Roadmap health, epic correlation, drift detection | supervised |
-| **backlog-quality-agent** | Story readiness, AC quality, refinement scoring | supervised |
-| **stakeholder-dynamics-agent** | Engagement patterns, priority conflicts, silent vetoes | supervised |
-| **product-drift-agent** | Scope vs vision, feature factory detection | supervised |
-| **outcome-intelligence-agent** | Post-release value, adoption signals | supervised |
-| **decision-archaeology-agent** | Decision history, trade-off replay | supervised |
-| **communication-agent** | Drafts external sends, never auto-sends | human-in-loop |
-| **individual-mirror-agent** | Self-reflection, career log (one-way data firewall) | supervised |
-
-### 5 PO Intelligence Cadences
-
-| Cadence | Frequency | Purpose |
-|:--|:--|:--|
-| **roadmap_review** | Weekly | Roadmap drift, epic health, milestone risk |
-| **backlog_health** | Daily | Story readiness, refinement debt, stale-ticket pruning |
-| **stakeholder_pulse** | Biweekly | Engagement patterns, silent-veto detection, alignment scoring |
-| **release_readiness** | Per-release | Scope-vs-promise diff, defect risk, rollout gating |
-| **outcome_review** | Monthly | Post-release adoption signals, value-delivered audit |
-
-### 16 PO Antipattern Detectors
-
-roadmap_drift · backlog_bloat · refinement_desert · stakeholder_silent_veto · scope_vs_vision_drift · feature_factory · acceptance_criteria_thin · story_breakdown_horizontal_only · release_promise_overrun · adoption_signal_unmonitored · decision_unrecorded · priority_conflict_unsurfaced · stakeholder_engagement_decay · backlog_age_skew · epic_correlation_missing · outcome_review_skipped &mdash; all with real detection logic over the data store, not stubs.
-
-### Day-Zero Scan Pipeline
-
-`steward scan` Phase 4 invokes 4 PO agents (roadmap-intelligence, backlog-quality, stakeholder-dynamics, decision-archaeology) for fast onboarding into a new PO role. Skippable with `--no-agents` for air-gap mode.
-
-### Authoring Knowledge
-
-4 dedicated authoring knowledge bundles (~80.6 KB): `user_story_writing_patterns.md`, `vertical_slicing_methodology.md`, `invest_criteria_reference.md`, `acceptance_criteria_advanced.md`. Powers the `communication-agent` draft pipeline.
-
-### Delivery & Web UI
-
-- **9 PO-specific report kinds** with voice-initiated publish
-- **Multi-channel delivery** &mdash; SMTP / Slack / Teams with audience fan-out
-- **Web UI** &mdash; 20 routes + 5 SVG visualizations: `/today`, `/roadmap`, `/backlog`, `/stakeholders`, `/releases`, `/outcomes`, `/decisions`, `/brief`, `/findings`, `/drafts`, `/cadences`, `/reports`, `/profiles`, `/settings/connections`, `/settings/audiences`, `/settings/cadence`, `/settings/delivery`, `/observability`, `/author`, `/audit`
-- **5 synthetic test scenarios** &mdash; deterministic validation
-- **Individual mirror as one-way firewall** &mdash; `individual-mirror-agent` accepts data IN (with consent), nothing flows OUT. Hard architectural rule.
-
-<div align="center">
-
-`21 Rust Crates` · `94,780 lines` · `145+ tests`
-
-</div>
-
-<br>
-
----
-
-## 9. Reeve &mdash; Governed Atlassian Administration
-
-**The Atlassian writer where Verity and Steward are readers. Governed configuration, approval gates, state snapshots + rollback.**
-
-Reeve is the governed Atlassian administration platform. It exposes 5 MCP servers for governed project/workflow/permission updates, with compliance-aware fleet artifacts generated by Citadel when the framework demands traceable Atlassian admin actions (SOX change control, HIPAA access review, SOC 2 privilege separation).
-
-### 5 Governed MCP Servers &mdash; 102 Atlassian Tools
-
-| Server | Domain | Tool surface |
-|:--|:--|:--|
-| **jira-config** | Projects, workflows, schemes, permissions | Project lifecycle, workflow CRUD, permission scheme bind/unbind, role assignment, custom field management |
-| **jira-reporting** | Dashboards, filters, custom fields | Dashboard CRUD, JQL filter authoring, gadget configuration, sprint reports |
-| **jsm** | Service desk configuration | Request type CRUD, SLA configuration, queue management, automation rules, customer portal config |
-| **confluence-admin** | Spaces, permissions, page templates | Space CRUD, permission inheritance, template authoring, page restrictions, label governance |
-| **plugin-governance** | Plugin lifecycle | Marketplace allowlists, version pinning, license attestation, security review tracking, deprecation handling |
-
-### 4 Governed Agents
-
-| Agent | Function |
-|:--|:--|
-| **config architect** | Reasons over configuration intent, proposes changes, surfaces conflicts before write |
-| **reporting analyst** | Builds JQL filters and dashboards from plain-language asks |
-| **hygiene enforcer** | Detects drift from declared configuration baselines, proposes corrective changes |
-| **process optimizer** | Surfaces workflow inefficiencies, suggests structural improvements |
-
-### Governed Write Architecture
-
-- **7 CLI subcommands** for governed Atlassian admin
-- **Plain-language intent** &mdash; describe configuration in natural language; the agent decomposes into typed tool calls
-- **Approval gates** &mdash; HITL checkpoints for regulated changes (SOX change control, HIPAA access review, SOC 2 privilege separation)
-- **State snapshots + rollback** &mdash; every change captured as a pre-state snapshot; rollback is a one-command revert
-- **Read-write-http client** &mdash; governed write access (contrasts with Verity/Steward read-only). Type system distinguishes read vs. write operations
-- **Compliance-aware fleet specs** &mdash; Citadel generates the agent + MCP fleet under the framework demanded by the customer's regulatory posture
-
-### Knowledge Architecture
-
-12 knowledge files (20,982 words) covering Atlassian admin patterns: workflow design, permission scheme inheritance, JSM SLA configuration, Confluence space governance, plugin lifecycle management, and audit-trail requirements per framework.
-
-<div align="center">
-
-`17 Rust Crates` · `31,019 lines` · `532+ tests`
-
-</div>
-
-<br>
-
----
-
-## 10. Author &mdash; Story/Epic Coaching Tool
-
-**The authoring discipline tool. Generates epics and stories on command; deterministic refusal layer catches shallow authoring.**
-
-Author generates epics and stories on command and enforces authoring discipline through a deterministic refusal layer that catches shallow authoring before it reaches Jira. The primary function is **generation** &mdash; building world-class epics and stories on command. The refusal layer is the safety net that prevents bad authoring from leaving the tool, not the headline feature.
-
-### 6-Crate Workspace
-
-| Crate | Role |
-|:--|:--|
-| **author-core** | Domain types, INVEST scoring, anti-pattern detection, refusal evaluator, gold-signature matcher |
-| **author-store** | SQLite persistence for stories, drafts, gold signatures, adaptive tuning state |
-| **author-llm** | LLM provider abstraction (Anthropic, OpenAI, Ollama) + keyword-skeleton fallback for air-gap |
-| **author-control** | Workflow state machine: draft &rarr; coach &rarr; refusal-eval &rarr; accept/reject |
-| **author-mcp** | MCP stdio server exposing authoring tools to other agents |
-| **author-web** | axum web UI with story browser, draft authoring surface, refusal explanations |
-
-### The Deterministic Refusal Layer
-
-The refusal layer is structural quality enforcement that runs before any LLM output ships:
-
-| Gate | What It Enforces |
-|:--|:--|
-| **INVEST scoring** | Independent, Negotiable, Valuable, Estimable, Small, Testable &mdash; numeric scoring with per-dimension thresholds |
-| **DoR gates** | Definition of Ready compliance &mdash; acceptance criteria present, dependencies named, scope bounded |
-| **15 anti-pattern detectors** | Shallow authoring patterns caught before submission &mdash; vague_value, role_missing_user_type, ac_implementation_detail, scope_horizontal_slice, dependency_silent, estimate_unmoored, story_disguised_epic, technical_task_as_story, etc. |
-| **Gold-signature matcher** | Auto-anchoring against validated exemplars &mdash; the user has seen exactly one good epic/story set in his career; gold signatures encode that bar |
-| **Adaptive tuning state** | Coach learns from accepted/rejected outputs &mdash; threshold weights adjust over time per user |
-
-A draft that fails the refusal layer is rejected with structured reason; the user gets specific guidance on what to fix, not a generic "try again." Most real-world stories should fail, not pass &mdash; the refusal layer is calibrated against the user's authoring bar, not against the median.
-
-### Capabilities
-
-- **5 domain packs** &mdash; Domain-specific authoring templates and patterns
-- **Scan + rewrite** &mdash; Bulk analysis of existing Jira stories with suggested rewrites
-- **Live Jira JQL read + push** &mdash; Optional integration; pulls existing stories, pushes accepted drafts back
-- **Confluence export** &mdash; Epic-level export to Confluence pages with structured layout
-- **MCP stdio server + axum web UI** &mdash; Multi-surface access (terminal, browser, agent integration)
-- **LLM coaching with keyword-skeleton fallback** &mdash; Works with or without LLM access; the keyword skeleton produces structurally valid drafts even air-gapped
-
-### Quality Metrics
-
-| Metric | Value | Meaning |
-|:--|:--|:--|
-| **MAE** | 0.109 | Mean absolute error between predicted and human-graded scores on reference corpus |
-| **F1** | 0.97 | Anti-pattern detector precision/recall balance |
-| **one-shot-good** | 10/10 | Reference corpus pass rate on first generation |
-
-<div align="center">
-
-`6 Rust Crates` · `59,474 lines` · `181+ tests`
-
-</div>
-
-<br>
-
----
-
-## 11. Quaestor &mdash; RFP Intelligence Engine
+## 7. Quaestor &mdash; RFP Intelligence Engine
 
 **Reads federal solicitations, judges every offeror response against the question it claims to address, returns a forensic verdict with byte-level provenance.**
 
@@ -960,11 +727,11 @@ EPA Cloud Engineering Enhanced v4 (3.1 MB DOCX, 9 sections): **0 pass · 3 weak 
 
 ---
 
-## 12. Augur &mdash; AI Strategy & Center-of-Excellence Advisor
+## 8. Augur &mdash; AI Strategy & Center-of-Excellence Advisor
 
 **The CoE function on tap. A consultant walks into a company and *is* the AI Center of Excellence for the engagement &mdash; with an auditable model catalog, framework catalog, CoE playbook, and use-case library doing the institutional work.**
 
-Augur is a CoE-as-a-Service consulting product and the **evidence layer underneath Citadel and Chancery's spec generators**. Mid-size companies (500&ndash;5,000 employees) face board pressure to "have an AI strategy" but lack the institutional muscle &mdash; a permanent 5-person CoE staff over 18 months is the alternative they're trying to avoid. Augur replaces years of accumulated CoE knowledge with an auditable, score-justified, audit-replayable catalog. **One agent, four fat MCP servers, six wired bridges, two refresh sources, one portable skill.**
+Augur is a CoE-as-a-Service consulting product and the **evidence layer underneath Citadel and Chancery's spec generators**. Mid-size companies (500&ndash;5,000 employees) face board pressure to "have an AI strategy" but lack the institutional muscle &mdash; a permanent 5-person CoE staff over 18 months is the alternative they're trying to avoid. Augur replaces years of accumulated CoE knowledge with an auditable, score-justified, audit-replayable catalog. **One agent, four MCP servers, six wired bridges, two refresh sources, one portable skill.**
 
 ### The Five-Mode Engagement Workflow
 
@@ -976,14 +743,14 @@ Augur is a CoE-as-a-Service consulting product and the **evidence layer undernea
 | **Govern** | Model cards, risk register, ROI scorecards, governance gate checklists generated by calling the Citadel compliance engine through its Python bridge |
 | **Present** | Workshop deck, POC scaffold, executive presentation; rendered live through Folio so stakeholders see governance scorecards as PDFs in seconds |
 
-### Four Fat MCP Servers
+### Four MCP Servers
 
 | MCP Server | Substance |
 |:--|:--|
 | **Model Catalog** | 12 cataloged agentic-capable models (frontier + open-weights + small-local) scored across 8 dimensions: tool-use, multi-turn reliability, MCP support, RAG fit, cost-per-decision, deployment surface, license posture, agentic loop behavior. Hardware envelope filtering (VRAM, RAM, quantization). Refresh from HuggingFace + vendor docs + curated seed; every entry SHA-384 hashed with fetch timestamp + source URL + scorer version |
 | **Framework Catalog** | 10 reference frameworks (LangChain, LangGraph, LlamaIndex, AutoGen, CrewAI, Anthropic Agents SDK, OpenAI Agents SDK, Google ADK, MCP, A2A) with governance posture overlays: audit trail, lock-in risk, compliance friendliness, deployment portability, MLOps fit |
 | **CoE Playbook** | AI Center of Excellence adoption patterns: intake gates, ROI scoring rubrics, governance scorecards, model risk classification, change management workflows, autonomy progression tier ceilings. Sourced from public CoE writeups, ISO 42005, EU AI Act high-risk obligations, NIST AI RMF, OCC SR 11-7, plus the Citadel compliance engine itself |
-| **Use Case Library** | 19 patterns (12 synthetic_seed + 7 pilot_validated, mined from operator's own deployed platform: Verity, Steward, Reeve, Bastion, Forge, Conversational Code, Folio). Tagged with outcome data &mdash; what shipped, what flopped, why, ROI realized, governance overhead actually incurred. Keyed by industry and business unit |
+| **Use Case Library** | 19 patterns (12 synthetic_seed + 7 pilot_validated, mined from real-world AI agent deployments). Tagged with outcome data &mdash; what shipped, what flopped, why, ROI realized, governance overhead actually incurred. Keyed by industry and business unit |
 
 ### Anti-Hallucination Guardrails
 
@@ -1033,6 +800,258 @@ Walk into a CoE engagement having already cataloged the relevant agentic model l
 
 ---
 
+
+<br>
+
+<div align="center">
+
+# Operator Loop
+
+*The daily loop I use to do my own job — built on top of Castellan, Charlotte, Chronicle, and Citadel. Not part of the IP-protected core platform; the practitioner-side complement.*
+
+[Verity](#9-verity--smpm-intelligence-platform) · [Steward](#10-steward--popm-intelligence-platform) · [Reeve](#11-reeve--governed-atlassian-administration) · [Author](#12-author--storyepic-coaching-tool)
+
+</div>
+
+<br>
+
+---
+
+## 9. Verity &mdash; SM/PM Intelligence Platform
+
+**The Scrum Master / Project Manager survival weapon. Reads Jira, Confluence, GitHub, Bitbucket, Slack, Teams — surfaces the conversations you need to have today.**
+
+Verity is the Scrum Master / Project Manager intelligence platform. 33 workspace crates, 58 CLI subcommands, **17 MCP servers**, **8 governed agents**. SOC 2 compliant fleet artifacts generated by Citadel. **Read-only by compile-time construction** &mdash; the HTTP client is GET-only, enforced at the type level.
+
+### 17 MCP Servers Across 6 Data Sources
+
+Verity reads from Jira, Confluence, GitHub, Bitbucket, Slack, and Teams. The MCP layer wraps each source with governed tools that respect rate limits, scope restrictions, and read-only enforcement. Each MCP server has both stub and live handlers; live handlers ship as parallel implementations behind a trait, never replacing the stubs.
+
+### 23 Antipattern Detectors
+
+| Methodology | Count | Examples |
+|:--|:--:|:--|
+| **Scrum** | 12 | sprint_goal_drift, standup_status_only, retro_no_action, planning_overcommit, demo_skipped, ceremony_decay, dependency_silence |
+| **Review Quality** | 3 | review_summary_thin, action_items_missing, decision_unmoored |
+| **Kanban** | 8 | wip_runaway, age_drift, blocker_silent, swimlane_collapse, policy_decay |
+
+### 8 Governed Agents
+
+Sprint intelligence, antipattern detector, ceremony brief composer, review quality analyst, GitHub intel, signal correlator, delivery dispatcher, report writer. Each compiled by Castellan, every prompt by Charlotte, every fleet spec by Citadel under SOC 2.
+
+### 5 Ceremony Pipelines
+
+| Pipeline | Cadence | Output |
+|:--|:--|:--|
+| **Standup** | Daily | Surfaces blockers, drift signals, talk-track for the SM |
+| **Planning** | Per-sprint | Capacity check, dependency map, scope warnings |
+| **Review** | Per-sprint | Structured demo recap, decision capture |
+| **Retro** | Per-sprint | Pattern continuity from prior retros, action-item carryover |
+| **Refine** | Weekly | Backlog readiness, story-quality scoring |
+
+### 5-Layer Signal Observability
+
+| Layer | What Lives Here |
+|:--|:--|
+| **Raw** | Unmodified source events (Jira webhooks, Slack messages, GitHub PR events) |
+| **Feature** | Extracted facts: sprint goal text, PR review counts, ceremony attendance |
+| **Correlation** | Cross-source links (PR &harr; Jira ticket &harr; Slack thread) |
+| **Pattern** | Detector matches: antipattern hits, ceremony drift, dependency silences |
+| **Insight** | Framed talk-tracks for the SM, ranked by impact |
+
+### Methodology System
+
+Profile-driven configuration covering **Scrum, Kanban, Scrumban, PM**. Per-profile cadence schedules, sprint anchor source (Jira / GitHub / manual), bindings (Jira project, GitHub repo, Slack channel). Daemon mode (`verity daemon`) reads `cadence_json` per profile, computes next firings, fires when `ready_at` arrives. Briefs land with status `ready`. Nothing auto-delivers.
+
+### Day-Zero Scan Pipeline
+
+24-hour intelligence onboarding for new SM/PM roles. Walk in, run the scan, sit Day 1's standup with team history compounded into the talk-track.
+
+### Delivery & Reporting
+
+- **9 report kinds** with voice-initiated publish
+- **Multi-channel delivery** &mdash; SMTP / Slack / Teams with audience fan-out
+- **Slack/Teams bot** &mdash; click = request only; Verity-side confirmation is the governed event (all skews)
+- **Voice-initiated publish** &mdash; primary delivery path; auto-fired findings are secondary
+- **Career log** &mdash; ChaCha20-Poly1305 + Argon2id encrypted personal history
+- **Web UI** &mdash; axum + rustls, full route coverage
+
+### Governance Posture
+
+- Citadel-generated fleet specs (SOC 2 compliant)
+- Every component passes Castellan + Charlotte compliance floors
+- Read-only by construction &mdash; compile-time GET-only HTTP client (the type system rejects POST / PUT / PATCH / DELETE at compile time)
+
+<div align="center">
+
+`33 Rust Crates` · `172,941 lines` · `3,900+ tests`
+
+</div>
+
+<br>
+
+---
+
+## 10. Steward &mdash; PO/PM Intelligence Platform
+
+**The Product Owner / Product Manager survival weapon. Same architecture as Verity, tuned for product intelligence cadences.**
+
+Steward is the Product Owner / Product Manager intelligence platform &mdash; sibling to Verity, same read-only architecture. 21 workspace crates, 50 CLI subcommands, **5 MCP servers**, **8 PO-specific agents**. SOC 2 compliant fleet artifacts generated by Citadel. **62 knowledge bundles** (1.1 MB total, 59 wired to MCP server specs).
+
+### 8 PO-Specific Agents
+
+| Agent | Domain | Autonomy |
+|:--|:--|:--|
+| **roadmap-intelligence-agent** | Roadmap health, epic correlation, drift detection | supervised |
+| **backlog-quality-agent** | Story readiness, AC quality, refinement scoring | supervised |
+| **stakeholder-dynamics-agent** | Engagement patterns, priority conflicts, silent vetoes | supervised |
+| **product-drift-agent** | Scope vs vision, feature factory detection | supervised |
+| **outcome-intelligence-agent** | Post-release value, adoption signals | supervised |
+| **decision-archaeology-agent** | Decision history, trade-off replay | supervised |
+| **communication-agent** | Drafts external sends, never auto-sends | human-in-loop |
+| **individual-mirror-agent** | Self-reflection, career log (one-way data firewall) | supervised |
+
+### 5 PO Intelligence Cadences
+
+| Cadence | Frequency | Purpose |
+|:--|:--|:--|
+| **roadmap_review** | Weekly | Roadmap drift, epic health, milestone risk |
+| **backlog_health** | Daily | Story readiness, refinement debt, stale-ticket pruning |
+| **stakeholder_pulse** | Biweekly | Engagement patterns, silent-veto detection, alignment scoring |
+| **release_readiness** | Per-release | Scope-vs-promise diff, defect risk, rollout gating |
+| **outcome_review** | Monthly | Post-release adoption signals, value-delivered audit |
+
+### 16 PO Antipattern Detectors
+
+roadmap_drift · backlog_bloat · refinement_desert · stakeholder_silent_veto · scope_vs_vision_drift · feature_factory · acceptance_criteria_thin · story_breakdown_horizontal_only · release_promise_overrun · adoption_signal_unmonitored · decision_unrecorded · priority_conflict_unsurfaced · stakeholder_engagement_decay · backlog_age_skew · epic_correlation_missing · outcome_review_skipped &mdash; all with real detection logic over the data store, not stubs.
+
+### Day-Zero Scan Pipeline
+
+`steward scan` Phase 4 invokes 4 PO agents (roadmap-intelligence, backlog-quality, stakeholder-dynamics, decision-archaeology) for fast onboarding into a new PO role. Skippable with `--no-agents` for air-gap mode.
+
+### Authoring Knowledge
+
+4 dedicated authoring knowledge bundles (~80.6 KB): `user_story_writing_patterns.md`, `vertical_slicing_methodology.md`, `invest_criteria_reference.md`, `acceptance_criteria_advanced.md`. Powers the `communication-agent` draft pipeline.
+
+### Delivery & Web UI
+
+- **9 PO-specific report kinds** with voice-initiated publish
+- **Multi-channel delivery** &mdash; SMTP / Slack / Teams with audience fan-out
+- **Web UI** &mdash; 20 routes + 5 SVG visualizations: `/today`, `/roadmap`, `/backlog`, `/stakeholders`, `/releases`, `/outcomes`, `/decisions`, `/brief`, `/findings`, `/drafts`, `/cadences`, `/reports`, `/profiles`, `/settings/connections`, `/settings/audiences`, `/settings/cadence`, `/settings/delivery`, `/observability`, `/author`, `/audit`
+- **5 synthetic test scenarios** &mdash; deterministic validation
+- **Individual mirror as one-way firewall** &mdash; `individual-mirror-agent` accepts data IN (with consent), nothing flows OUT. Hard architectural rule.
+
+<div align="center">
+
+`21 Rust Crates` · `94,780 lines` · `145+ tests`
+
+</div>
+
+<br>
+
+---
+
+## 11. Reeve &mdash; Governed Atlassian Administration
+
+**The Atlassian writer where Verity and Steward are readers. Governed configuration, approval gates, state snapshots + rollback.**
+
+Reeve is the governed Atlassian administration platform. It exposes 5 MCP servers for governed project/workflow/permission updates, with compliance-aware fleet artifacts generated by Citadel when the framework demands traceable Atlassian admin actions (SOX change control, HIPAA access review, SOC 2 privilege separation).
+
+### 5 Governed MCP Servers &mdash; 102 Atlassian Tools
+
+| Server | Domain | Tool surface |
+|:--|:--|:--|
+| **jira-config** | Projects, workflows, schemes, permissions | Project lifecycle, workflow CRUD, permission scheme bind/unbind, role assignment, custom field management |
+| **jira-reporting** | Dashboards, filters, custom fields | Dashboard CRUD, JQL filter authoring, gadget configuration, sprint reports |
+| **jsm** | Service desk configuration | Request type CRUD, SLA configuration, queue management, automation rules, customer portal config |
+| **confluence-admin** | Spaces, permissions, page templates | Space CRUD, permission inheritance, template authoring, page restrictions, label governance |
+| **plugin-governance** | Plugin lifecycle | Marketplace allowlists, version pinning, license attestation, security review tracking, deprecation handling |
+
+### 4 Governed Agents
+
+| Agent | Function |
+|:--|:--|
+| **config architect** | Reasons over configuration intent, proposes changes, surfaces conflicts before write |
+| **reporting analyst** | Builds JQL filters and dashboards from plain-language asks |
+| **hygiene enforcer** | Detects drift from declared configuration baselines, proposes corrective changes |
+| **process optimizer** | Surfaces workflow inefficiencies, suggests structural improvements |
+
+### Governed Write Architecture
+
+- **7 CLI subcommands** for governed Atlassian admin
+- **Plain-language intent** &mdash; describe configuration in natural language; the agent decomposes into typed tool calls
+- **Approval gates** &mdash; HITL checkpoints for regulated changes (SOX change control, HIPAA access review, SOC 2 privilege separation)
+- **State snapshots + rollback** &mdash; every change captured as a pre-state snapshot; rollback is a one-command revert
+- **Read-write-http client** &mdash; governed write access (contrasts with Verity/Steward read-only). Type system distinguishes read vs. write operations
+- **Compliance-aware fleet specs** &mdash; Citadel generates the agent + MCP fleet under the framework demanded by the customer's regulatory posture
+
+### Knowledge Architecture
+
+12 knowledge files (20,982 words) covering Atlassian admin patterns: workflow design, permission scheme inheritance, JSM SLA configuration, Confluence space governance, plugin lifecycle management, and audit-trail requirements per framework.
+
+<div align="center">
+
+`17 Rust Crates` · `31,019 lines` · `532+ tests`
+
+</div>
+
+<br>
+
+---
+
+## 12. Author &mdash; Story/Epic Coaching Tool
+
+**The authoring discipline tool. Generates epics and stories on command; deterministic refusal layer catches shallow authoring.**
+
+Author generates epics and stories on command and enforces authoring discipline through a deterministic refusal layer that catches shallow authoring before it reaches Jira. The primary function is **generation** &mdash; building world-class epics and stories on command. The refusal layer is the safety net that prevents bad authoring from leaving the tool, not the headline feature.
+
+### 6-Crate Workspace
+
+| Crate | Role |
+|:--|:--|
+| **author-core** | Domain types, INVEST scoring, anti-pattern detection, refusal evaluator, gold-signature matcher |
+| **author-store** | SQLite persistence for stories, drafts, gold signatures, adaptive tuning state |
+| **author-llm** | LLM provider abstraction (Anthropic, OpenAI, Ollama) + keyword-skeleton fallback for air-gap |
+| **author-control** | Workflow state machine: draft &rarr; coach &rarr; refusal-eval &rarr; accept/reject |
+| **author-mcp** | MCP stdio server exposing authoring tools to other agents |
+| **author-web** | axum web UI with story browser, draft authoring surface, refusal explanations |
+
+### The Deterministic Refusal Layer
+
+The refusal layer is structural quality enforcement that runs before any LLM output ships:
+
+| Gate | What It Enforces |
+|:--|:--|
+| **INVEST scoring** | Independent, Negotiable, Valuable, Estimable, Small, Testable &mdash; numeric scoring with per-dimension thresholds |
+| **DoR gates** | Definition of Ready compliance &mdash; acceptance criteria present, dependencies named, scope bounded |
+| **15 anti-pattern detectors** | Shallow authoring patterns caught before submission &mdash; vague_value, role_missing_user_type, ac_implementation_detail, scope_horizontal_slice, dependency_silent, estimate_unmoored, story_disguised_epic, technical_task_as_story, etc. |
+| **Gold-signature matcher** | Auto-anchoring against validated exemplars &mdash; the user has seen exactly one good epic/story set in his career; gold signatures encode that bar |
+| **Adaptive tuning state** | Coach learns from accepted/rejected outputs &mdash; threshold weights adjust over time per user |
+
+A draft that fails the refusal layer is rejected with structured reason; the user gets specific guidance on what to fix, not a generic "try again." Most real-world stories should fail, not pass &mdash; the refusal layer is calibrated against the user's authoring bar, not against the median.
+
+### Capabilities
+
+- **5 domain packs** &mdash; Domain-specific authoring templates and patterns
+- **Scan + rewrite** &mdash; Bulk analysis of existing Jira stories with suggested rewrites
+- **Live Jira JQL read + push** &mdash; Optional integration; pulls existing stories, pushes accepted drafts back
+- **Confluence export** &mdash; Epic-level export to Confluence pages with structured layout
+- **MCP stdio server + axum web UI** &mdash; Multi-surface access (terminal, browser, agent integration)
+- **LLM coaching with keyword-skeleton fallback** &mdash; Works with or without LLM access; the keyword skeleton produces structurally valid drafts even air-gapped
+
+### Quality Metrics
+
+| Metric | Value | Meaning |
+|:--|:--|:--|
+| **MAE** | 0.109 | Mean absolute error between predicted and human-graded scores on reference corpus |
+| **F1** | 0.97 | Anti-pattern detector precision/recall balance |
+| **one-shot-good** | 10/10 | Reference corpus pass rate on first generation |
+
+<div align="center">
+
+
+---
+
 ## How They Connect
 
 ```
@@ -1059,18 +1078,11 @@ Walk into a CoE engagement having already cataloged the relevant agentic model l
 ├──────────────────────────────────────────────────────────────────────┤
 │                            PRODUCTS                                   │
 │                                                                      │
-│   Audit Pro ───────> Productized audit of third-party agents.         │
+│   Audit Pro ───────> Productized audit of third-party agents.        │
 │                      Chronicle-signed evidence + recompiled specs.   │
 │                                                                      │
-│   Chancery                                                           │
-│   (AI CPO)      ──> PRDs + SDD bundles feed Charlotte + Castellan    │
-│                                                                      │
-│   Verity + Steward ──> Read Jira/Confluence/GitHub/Slack/Teams        │
-│   (SM/PM)  (PO/PM)     surface intelligence, deliver reports         │
-│                                                                      │
-│   Reeve ───────────> Write Atlassian admin (governed, approval-gated) │
-│                                                                      │
-│   Author ──────────> Story/epic coaching with refusal layer          │
+│   Chancery ────────> AI CPO. PRDs + SDD bundles feed                 │
+│   (AI CPO)           Charlotte + Castellan                           │
 │                                                                      │
 │   Quaestor ────────> RFP intelligence — judge offeror responses,     │
 │                      surface fabricated quotes, three-skew binary    │
@@ -1078,11 +1090,17 @@ Walk into a CoE engagement having already cataloged the relevant agentic model l
 │   Augur ───────────> AI Strategy + CoE advisor; evidence layer       │
 │                      under Citadel/Chancery spec generators          │
 │                                                                      │
+├──────────────────────────────────────────────────────────────────────┤
+│                          OPERATOR LOOP                                │
+│                                                                      │
+│   Verity + Steward ──> Read Jira/Confluence/GitHub/Slack/Teams       │
+│   (SM/PM)  (PO/PM)     surface intelligence, deliver reports         │
+│                                                                      │
+│   Reeve ───────────> Write Atlassian admin (governed, approval-gated)│
+│                                                                      │
+│   Author ──────────> Story/epic coaching with refusal layer          │
+│                                                                      │
 └──────────────────────────────────────────────────────────────────────┘
-
-Product Lifecycle Loop:
-Chancery (discover) → Author (write) → Jira → Verity + Steward (read) → Reeve (admin)
-                                              SM / PM      PO / PM       Atlassian
 
 Audit Loop (third-party customers):
 Customer agents → Audit Pro → Citadel scan + Castellan/Charlotte recompile
@@ -1095,6 +1113,10 @@ Federal solicitation .docx/.pdf → Quaestor judge → forensic verdict report
 CoE Engagement Loop:
 Stakeholder intake → Augur Discovery → Shortlist → Translate → Govern → Present
               (catalogs feed Citadel + Chancery for governed spec generation)
+
+Operator Lifecycle Loop:
+Chancery (discover) → Author (write) → Jira → Verity + Steward (read) → Reeve (admin)
+                                              SM / PM      PO / PM       Atlassian
 ```
 
 ### The Governance Loop
@@ -1103,7 +1125,7 @@ Stakeholder intake → Augur Discovery → Shortlist → Translate → Govern �
 2. **Build** &mdash; Charlotte compiles context/prompts/MCP servers. Castellan compiles agents. Both enforce compliance floors
 3. **Attest** &mdash; Chronicle signs runtime events with hybrid Ed25519 + ML-DSA-65; produces OSCAL packages and signed ATO bundles
 4. **Audit** &mdash; Audit Pro composes the engines into a customer-facing productized audit; emits Chronicle-signed evidence + drop-in recompiled specs
-5. **Operate** &mdash; Verity (SM/PM), Steward (PO/PM), Reeve (admin), Author (authoring), Chancery (PRDs) cover the product lifecycle. Quaestor judges federal RFP responses; Augur runs the CoE engagement and feeds the rest of the platform an evidence-backed catalog
+5. **Operate** &mdash; Chancery runs the conversational PRD + per-component SDD design loop. Quaestor judges federal RFP responses against the questions they claim to address. Augur runs the CoE engagement and feeds the rest of the platform an evidence-backed catalog of models, frameworks, and use cases. The Operator Loop tier &mdash; Verity (SM/PM), Steward (PO/PM), Reeve (Atlassian admin), Author (story coaching) &mdash; covers the practitioner-side product lifecycle, eating the platform's own dogfood
 
 Every system is standalone. Together they close the loop.
 
@@ -1130,10 +1152,17 @@ Every system is standalone. Together they close the loop.
 
 ### Products
 
-| | Audit Pro | Chancery | Verity | Steward | Reeve | Author | Quaestor | Augur | **Subtotal** |
-|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **Source Lines** | 19,114 | 19,829 | 172,941 | 94,780 | 31,019 | 59,474 | 4,014 | 5,551 | **406,722** |
-| **Tests** | 215+ | 822+ | 3,900+ | 145+ | 532+ | 181+ | 83 | 209 | **6,087+** |
+| | Audit Pro | Chancery | Quaestor | Augur | **Subtotal** |
+|:--|:--:|:--:|:--:|:--:|:--:|
+| **Source Lines** | 19,114 | 19,829 | 4,014 | 5,551 | **48,508** |
+| **Tests** | 215+ | 822+ | 83 | 209 | **1,329+** |
+
+### Operator Loop
+
+| | Verity | Steward | Reeve | Author | **Subtotal** |
+|:--|:--:|:--:|:--:|:--:|:--:|
+| **Source Lines** | 172,941 | 94,780 | 31,019 | 59,474 | **358,214** |
+| **Tests** | 3,900+ | 145+ | 532+ | 181+ | **4,758+** |
 
 ### Combined
 
@@ -1187,7 +1216,7 @@ If your team is shipping production AI agents and needs them **governed, compile
 
 I take on AI-first contract engagements:
 
-> **Agent governance platforms** · **Agent compilation** · **Runtime attestation & cryptographic evidence** · **Productized AI governance audits** · **Defense & federal compliance** (FIPS 140-3, FIPS 204 ML-DSA, CNSA 2.0, CNSSP-12, STIG, FedRAMP, DoD IL4/IL5, CMMC) · **Compliance evidence automation** (OSCAL, ATO bundles) · **SDLC automation** · **Rapid prototyping** from spec to production · Pre-deployment security auditing · Fleet governance monitoring · Context engineering and MCP server compilation · Test generation pipelines · OWASP security auditing · Product intelligence platforms for SM/PM/PO teams
+> **Agent governance platforms** · **Agent compilation** · **Runtime attestation & cryptographic evidence** · **Productized AI governance audits** · **Defense & federal compliance** (FIPS 140-3, FIPS 204 ML-DSA, CNSA 2.0, CNSSP-12, STIG, FedRAMP, DoD IL4/IL5, CMMC) · **Compliance evidence automation** (OSCAL, ATO bundles) · **SDLC automation** · **Rapid prototyping** from spec to production · Pre-deployment security auditing · Fleet governance monitoring · Context engineering and MCP server compilation · Test generation pipelines · OWASP security auditing · Federal RFP intelligence · AI Center-of-Excellence advisory · Product intelligence platforms for SM / PM / PO teams
 
 <div align="center">
 
@@ -1204,3 +1233,4 @@ I take on AI-first contract engagements:
 <br>
 
 </div>
+
