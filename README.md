@@ -2,7 +2,7 @@
 
 # Tim Wolfe
 
-### AI Infrastructure Architect
+### Context Architect | Agent Governance, MCP & Secure Systems | DoD · NIST-Aligned | CSPO · A-CSCM
 
 <br>
 
