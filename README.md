@@ -2,7 +2,7 @@
 
 # Tim Wolfe
 
-### Context Architect | Agent Governance, MCP & Secure Systems | DoD · NIST-Aligned | CSPO · A-CSCM
+### Agentic AI Architect | Governed Agents · A2A Transport · Runtime Attestation | Post-Quantum · DoD-Hardened | 2× IPOs · 5× Exits
 
 <br>
 
