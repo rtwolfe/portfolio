@@ -12,8 +12,8 @@
 
 <br>
 
-![Tests](https://img.shields.io/badge/23%2C500%2B-Tests_Passing-16A34A?style=for-the-badge)
-![Systems](https://img.shields.io/badge/19-Production_Systems-7C3AED?style=for-the-badge)
+![Tests](https://img.shields.io/badge/24%2C000%2B-Tests_Passing-16A34A?style=for-the-badge)
+![Systems](https://img.shields.io/badge/20-Production_Systems-7C3AED?style=for-the-badge)
 ![Standards](https://img.shields.io/badge/20%2B-Compliance_Standards-DC2626?style=for-the-badge)
 ![Architecture](https://img.shields.io/badge/4--Tier-Platform-DEA584?style=for-the-badge)
 
@@ -38,7 +38,7 @@ Los Altos, CA · [rtwolfe@gmail.com](mailto:rtwolfe@gmail.com) · 650-390-5003 �
 
 ## About
 
-I build **governance infrastructure for AI agents** &mdash; the compilers, runtime authority, A2A transport, observability substrate, design intelligence platforms, and production products that make autonomous agents safe to deploy in DoD, federal, and regulated-industry environments. Not wrappers. Not demos. Not prompt templates. **Five design-time compilers, a six-component runtime substrate, four production products, and a four-app Operator Loop tier** that close the loop from raw idea to deployed, governed, monitored, cryptographically attested agent fleet &mdash; with FIPS 140-3 / CNSA 2.0 alignment and defense-grade compliance enforcement at every stage.
+I build **governance infrastructure for AI agents** &mdash; the compilers, pre-deployment audit gate, runtime authority, A2A transport, observability substrate, design intelligence platforms, and production products that make autonomous agents safe to deploy in DoD, federal, and regulated-industry environments. Not wrappers. Not demos. Not prompt templates. **Five design-time compilers, a seven-component runtime substrate, four production products, and a four-app Operator Loop tier** that close the loop from raw idea to deployed, governed, monitored, cryptographically attested agent fleet &mdash; with FIPS 140-3 / CNSA 2.0 alignment and defense-grade compliance enforcement at every stage.
 
 **Governance is the core problem.** Every team shipping AI agents hits the same wall: the prototype works, but production demands governance &mdash; constitutional constraints, runtime guardrails, OWASP security auditing, compliance drift detection, kill switches, audit trails, cryptographic evidence. Most frameworks hand you a runtime and leave governance as an exercise for the reader. I built a platform that makes governance structural. It's enforced at compile time. It travels with the deployed agent. It's monitored in real time. It's signed and attested. It's not optional.
 
@@ -52,8 +52,9 @@ I build **governance infrastructure for AI agents** &mdash; the compilers, runti
 - **Citadel** &mdash; compliance-aware design intelligence platform. 43 FastMCP tools for introspection, fleet decomposition, spec generation, and regulatory document generation (FedRAMP SSP, NIST 800-171 SSP, STIG CKL, ISO 42001, GLBA, PCI-DSS, FFIEC, SOX, OCC SR 11-7)
 - **Recon** &mdash; the inbound complement to the four Cs. Reverse-engineers compliance contracts from already-built AI agent artifacts (Python, LangChain, LangGraph, CrewAI, AutoGen, OpenAI Agents SDK, Google ADK, Bedrock, Semantic Kernel, DSPy, MCP manifests, A2A agent cards). 21 framework adapters, 48 checks, 272 priority-tagged citations, 4 output formats (JSON / Markdown / HTML / SARIF 2.1.0), deterministic three-tier verdict (CERTIFIED / CONDITIONAL / REJECTED)
 
-**Runtime Substrate &mdash; the enforcement, transport, and observability layer:**
+**Runtime Substrate &mdash; the pre-deployment gate, enforcement, transport, and observability layer:**
 
+- **Aegis** &mdash; pre-deployment security audit gate. Six-dimension spec validation (tool description poisoning, integrity-manifest SHA-384 agreement, MCP topology, behavioral policy floor, attestation provenance chain, license-token presence) producing a binary SHIP / BLOCK verdict. BLOCK verdicts carry remediation pointers back into the spec. Nothing reaches runtime substrate until Aegis says SHIP. Produces the pre-deployment attestation artifact required for FedRAMP ATO, DoD ATO, and CMMC packages
 - **Seneschal** &mdash; on-premises Rust runtime authority enforcing the policy compiled by Citadel. 30-check policy gate, 80 attestation event types, 83 violation classifications, kill-switch surface, FIPS 140-3 cryptography, HMAC-SHA384 signing of every policy decision
 - **Garrison** &mdash; the customer-facing shell. Hardened single-operator Rust runtime hosting Castellan-compiled agent binaries and Charlotte-compiled MCP servers. Closed-allowlist (only Aegis-attested, Key-Server-licensed binaries load). Level 6 release profile (LTO, strip, panic=abort, overflow checks, opt-level=z) with stripped PIE binaries, four SKU tiers (Hosted / Stronghold / Enclave / Sovereign)
 - **Drawbridge** &mdash; governed agent-to-agent transport stack. Per-message signing, encryption, attestation binding, and policy gating across territory boundaries. Four components: **Drawbridge** (the transport, classical FIPS 140-3 primitives), **Drawbridge Console** (sovereign operator command channel), **Outpost** (remote-operator client), **Portcullis** (standalone cryptographic CLI)
@@ -94,8 +95,8 @@ Before AI infrastructure: 20+ years of enterprise operations leadership &mdash; 
 │                                                                         │
 ├─────────────────────────────────────────────────────────────────────────┤
 │                     RUNTIME SUBSTRATE                                   │
-│   Seneschal   Garrison    Drawbridge    Vigil       Bailiff   Key Srv   │
-│   (policy)    (shell)     (A2A)         (telemetry) (Rust rt) (license) │
+│   Aegis   Seneschal   Garrison    Drawbridge   Vigil    Bailiff  Key Sv │
+│   (gate)  (policy)    (shell)     (A2A)        (telem)  (Rust)   (lic)  │
 │                                                                         │
 ├─────────────────────────────────────────────────────────────────────────┤
 │                           PRODUCTS                                      │
@@ -113,11 +114,11 @@ Before AI infrastructure: 20+ years of enterprise operations leadership &mdash; 
 
 **Design-Time Compilers** &nbsp;&nbsp; [Castellan](#1-castellan--agent-governance-compiler) · [Charlotte](#2-charlotte--context-engineering-compiler) · [Chronicle](#3-chronicle--runtime-attestation--compliance-observability) · [Citadel](#4-citadel--compliance-aware-design-intelligence) · [Recon](#5-recon--ai-agent-inspector)
 
-**Runtime Substrate** &nbsp;&nbsp; [Seneschal](#6-seneschal--runtime-policy-authority) · [Garrison](#7-garrison--hardened-operator-console) · [Drawbridge](#8-drawbridge--governed-a2a-transport-stack) · [Vigil](#9-vigil--vigil-edge--fleet-behavioral-monitoring) · [Bailiff](#10-bailiff--rust-agent-runtime) · [Key Server](#11-key-server--fleet-licensing-backbone)
+**Runtime Substrate** &nbsp;&nbsp; [Aegis](#6-aegis--pre-deployment-audit-gate) · [Seneschal](#7-seneschal--runtime-policy-authority) · [Garrison](#8-garrison--hardened-operator-console) · [Drawbridge](#9-drawbridge--governed-a2a-transport-stack) · [Vigil](#10-vigil--vigil-edge--fleet-behavioral-monitoring) · [Bailiff](#11-bailiff--rust-agent-runtime) · [Key Server](#12-key-server--fleet-licensing-backbone)
 
-**Products** &nbsp;&nbsp; [Audit Pro](#12-audit-pro--productized-governance-audit) · [Chancery](#13-chancery--ai-chief-product-officer) · [Quaestor](#14-quaestor--rfp-intelligence-engine) · [Augur](#15-augur--ai-strategy--center-of-excellence-advisor)
+**Products** &nbsp;&nbsp; [Audit Pro](#13-audit-pro--productized-governance-audit) · [Chancery](#14-chancery--ai-chief-product-officer) · [Quaestor](#15-quaestor--rfp-intelligence-engine) · [Augur](#16-augur--ai-strategy--center-of-excellence-advisor)
 
-**Operator Loop** &nbsp;&nbsp; [Verity](#16-verity--smpm-intelligence-platform) · [Steward](#17-steward--popm-intelligence-platform) · [Reeve](#18-reeve--governed-atlassian-administration) · [Author](#19-author--storyepic-coaching-tool)
+**Operator Loop** &nbsp;&nbsp; [Verity](#17-verity--smpm-intelligence-platform) · [Steward](#18-steward--popm-intelligence-platform) · [Reeve](#19-reeve--governed-atlassian-administration) · [Author](#20-author--storyepic-coaching-tool)
 
 [How They Connect](#how-they-connect) · [Platform Totals](#platform-totals)
 
@@ -131,7 +132,7 @@ AI agents have a governance problem. And a compilation problem. And an SDLC prob
 
 Code gets compiled. Databases get migrated. Infrastructure gets provisioned through declarative configs with validation and version control. But AI agents &mdash; the specs they're built from, the prompts they use, the tests that prove they work, the governance that keeps them safe, the evidence that proves they behaved &mdash; are still assembled by hand, shipped on instinct, and debugged in production. There's no compiler. No governance enforcement. No automated SDLC. No cryptographic ledger of what the agent did at runtime. No way to prove an agent won't go off-script next week, and no way to prove what it did last week.
 
-I built five design-time compilers, a six-component runtime substrate, four production products, and a four-app Operator Loop tier to fix that. The compilers handle agent generation, context engineering, runtime attestation, design intelligence, and reverse-engineering compliance from already-built agents. The runtime substrate enforces the compiled policy: Seneschal as the policy authority, Garrison as the hardened operator shell, Drawbridge as the governed A2A transport (FIPS 140-3, classical + post-quantum), Vigil for fleet observability, Bailiff for Rust-only sovereign deployments, and Key Server as the licensing backbone. The products deploy the stack in specific domains &mdash; productized audit, conversational PRD design, federal RFP intelligence, and AI Center-of-Excellence advisory. The Operator Loop is the practitioner-side complement — the daily SM/PM, PO/PM, Atlassian admin, and authoring tooling I run on top of the platform to do my own job.
+I built five design-time compilers, a seven-component runtime substrate, four production products, and a four-app Operator Loop tier to fix that. The compilers handle agent generation, context engineering, runtime attestation, design intelligence, and reverse-engineering compliance from already-built agents. The runtime substrate enforces the compiled policy: Aegis as the pre-deployment audit gate, Seneschal as the runtime policy authority, Garrison as the hardened operator shell, Drawbridge as the governed A2A transport (FIPS 140-3, classical + post-quantum), Vigil for fleet observability, Bailiff for Rust-only sovereign deployments, and Key Server as the licensing backbone. The products deploy the stack in specific domains &mdash; productized audit, conversational PRD design, federal RFP intelligence, and AI Center-of-Excellence advisory. The Operator Loop is the practitioner-side complement — the daily SM/PM, PO/PM, Atlassian admin, and authoring tooling I run on top of the platform to do my own job.
 
 Every system is standalone. Together they close the loop from unstructured idea to deployed, tested, governed, monitored, signed, attested agent fleet. The platform is self-hosting &mdash; Chancery compiles the PRDs, Charlotte compiles the prompts, Castellan compiles the agents, Citadel generates compliance evidence, Chronicle signs runtime events, and the products demonstrate the stack in production.
 
@@ -547,7 +548,7 @@ The reconstructed spec is itself Castellan/Charlotte-conformant &mdash; meaning 
 
 ### Used By Audit Pro
 
-Recon is the inbound governance-extraction stage of [Audit Pro](#12-audit-pro--productized-governance-audit)'s customer scan pipeline. Customers don't need to interact with Recon directly &mdash; Audit Pro orchestrates it, then signs the outputs into a Chronicle evidence bundle.
+Recon is the inbound governance-extraction stage of [Audit Pro](#13-audit-pro--productized-governance-audit)'s customer scan pipeline. Customers don't need to interact with Recon directly &mdash; Audit Pro orchestrates it, then signs the outputs into a Chronicle evidence bundle.
 
 <div align="center">
 
@@ -563,7 +564,7 @@ Recon is the inbound governance-extraction stage of [Audit Pro](#12-audit-pro--p
 
 # Runtime Substrate
 
-*Six systems. Policy authority, customer shell, governed transport, observability, Rust runtime, licensing. The enforcement layer that makes the compiled output run.*
+*Seven systems. Pre-deployment audit gate, policy authority, customer shell, governed transport, observability, Rust runtime, licensing. The enforcement layer that decides what runs and keeps it honest while it does.*
 
 </div>
 
@@ -571,7 +572,45 @@ Recon is the inbound governance-extraction stage of [Audit Pro](#12-audit-pro--p
 
 ---
 
-## 6. Seneschal &mdash; Runtime Policy Authority
+## 6. Aegis &mdash; Pre-Deployment Audit Gate
+
+**The ship/block decision point. Every governed binary that reaches Garrison's allowlist passed through here. BLOCK verdicts carry remediation pointers back into the originating spec; nothing reaches runtime substrate until Aegis says SHIP.**
+
+Aegis is the gate between compile-time and runtime. Castellan, Charlotte, and Citadel produce the binaries and the governance specification; Aegis is what audits the resulting bundle end-to-end before a single byte reaches Garrison or any other deployment substrate. Its output is the attestation artifact required for FedRAMP authorization-to-operate packages, DoD ATO submissions, and CMMC pre-deployment evidence.
+
+### What Aegis Validates
+
+| Dimension | Check |
+|:--|:--|
+| **Tool description integrity** | Scans for poisoning indicators (exfiltration URLs, hidden directives, embedded prompt-injection patterns) across every MCP tool description |
+| **Integrity manifest coverage** | Verifies SHA-384 hash agreement between declared tool manifest and compiled artifact; no rug-pull surface |
+| **MCP topology** | Compares declared-versus-expected interaction graph; flags undeclared fan-out, cross-domain calls, hop-depth violations |
+| **Behavioral policy completeness** | Confirms compiled policy meets framework floor (DoD IL5, FedRAMP High, HIPAA, etc.) on every required dimension |
+| **Attestation provenance chain** | Walks the Merkle-anchored provenance chain from spec back to compiler version; flags broken anchors |
+| **License-token presence** | Confirms a valid Key Server license token is present for every deployable binary in the bundle |
+
+### Binary Verdict
+
+| Verdict | Meaning |
+|:--|:--|
+| **SHIP** | All dimensions pass; bundle proceeds to Garrison ingest and runtime activation |
+| **BLOCK** | One or more dimensions fail; verdict carries remediation pointers naming exact spec locations to fix; bundle does not reach runtime |
+
+### Compliance Posture
+
+Produces the pre-deployment attestation artifact required for **FedRAMP** authorization-to-operate packages, **DoD ATO** submissions, **CMMC** pre-deployment evidence, and **ISO/IEC 42001** management-system audits. Aegis output is consumed directly by Audit Pro as part of customer-facing audit deliverables.
+
+<div align="center">
+
+`Pre-Deployment Gate` · `6-Dimension Spec Validation` · `Binary SHIP / BLOCK Verdict` · `716 tests` · `FedRAMP ATO + DoD ATO + CMMC Evidence Artifact`
+
+</div>
+
+<br>
+
+---
+
+## 7. Seneschal &mdash; Runtime Policy Authority
 
 **The on-premises Rust authority that turns Citadel's compiled policy into runtime enforcement. Every agent action passes through it. Every decision is signed.**
 
@@ -618,7 +657,7 @@ The behavioral-governance loop runs continuously: Citadel compiles policy &rarr;
 
 ---
 
-## 7. Garrison &mdash; Hardened Operator Console
+## 8. Garrison &mdash; Hardened Operator Console
 
 **The customer-facing shell. Closed-allowlist runtime that hosts the agents and MCP servers Castellan and Charlotte produce. No third-party plugins. No unsigned binaries. Ever.**
 
@@ -658,7 +697,7 @@ Level 6 release build throughout: **LTO**, **strip**, **panic=abort**, **overflo
 
 ---
 
-## 8. Drawbridge &mdash; Governed A2A Transport Stack
+## 9. Drawbridge &mdash; Governed A2A Transport Stack
 
 **Per-message signed, encrypted, attested, policy-gated inter-territory messaging. Most AI platforms don't have governed inter-agent comms at all. This one does &mdash; with FIPS 140-3 today and a post-quantum tier for TS/SCI tomorrow.**
 
@@ -687,7 +726,7 @@ Built against **FIPS 140-3** cryptographic requirements. Deployable in HIPAA, PC
 
 ---
 
-## 9. Vigil + Vigil-Edge &mdash; Fleet Behavioral Monitoring
+## 10. Vigil + Vigil-Edge &mdash; Fleet Behavioral Monitoring
 
 **Compiled policy alone doesn't prove an agent is behaving. Vigil and Vigil-Edge ingest Seneschal's attestation stream, compare it against the behavioral baseline Citadel compiled, and synthesize amendment proposals that flow back through Herald to Seneschal &mdash; closed loop, no redeploy, full audit trail.**
 
@@ -705,7 +744,7 @@ The amendment loop is the part most monitoring stacks don't have: drift detected
 
 ---
 
-## 10. Bailiff &mdash; Rust Agent Runtime
+## 11. Bailiff &mdash; Rust Agent Runtime
 
 **Castellan compiles agents to Python or Rust. The Rust target needs a Rust runtime to execute it &mdash; one that has no Python anywhere in the execution path. Bailiff is that runtime.**
 
@@ -721,7 +760,7 @@ DoD IL5 and CNSSP-12 sovereign environments routinely exclude managed-runtime la
 
 ---
 
-## 11. Key Server &mdash; Fleet Licensing Backbone
+## 12. Key Server &mdash; Fleet Licensing Backbone
 
 **Bootstrap step zero. Every governed binary in the fleet validates a license before it will start &mdash; or refuses to start.**
 
@@ -751,7 +790,7 @@ Three license behaviors most fleet licensing systems don't handle: (1) offline t
 
 ---
 
-## 12. Audit Pro &mdash; Productized Governance Audit
+## 13. Audit Pro &mdash; Productized Governance Audit
 
 **The customer-facing audit product. Third-party AI agents in, Chronicle-signed evidence bundles out. Independent verification by any 3PAO.**
 
@@ -827,7 +866,7 @@ The shell is the same across all three years. Year-by-year, more of the loop bec
 
 ---
 
-## 13. Chancery &mdash; AI Chief Product Officer
+## 14. Chancery &mdash; AI Chief Product Officer
 
 **The PRD compiler and design front door. Unstructured product input in, compliance-aware PRDs and per-component SDD bundles out.**
 
@@ -905,7 +944,7 @@ Deterministic regex patterns + LLM-assisted reframing challenges. The detectors 
 
 ---
 
-## 14. Quaestor &mdash; RFP Intelligence Engine
+## 15. Quaestor &mdash; RFP Intelligence Engine
 
 **Reads federal solicitations, judges every offeror response against the question it claims to address, returns a forensic verdict with byte-level provenance.**
 
@@ -991,7 +1030,7 @@ EPA Cloud Engineering Enhanced v4 (3.1 MB DOCX, 9 sections): **0 pass · 3 weak 
 
 ---
 
-## 15. Augur &mdash; AI Strategy & Center-of-Excellence Advisor
+## 16. Augur &mdash; AI Strategy & Center-of-Excellence Advisor
 
 **The CoE function on tap. A consultant walks into a company and *is* the AI Center of Excellence for the engagement &mdash; with an auditable model catalog, framework catalog, CoE playbook, and use-case library doing the institutional work.**
 
@@ -1073,7 +1112,7 @@ Walk into a CoE engagement having already cataloged the relevant agentic model l
 
 *The daily loop I use to do my own job — built on top of Castellan, Charlotte, Chronicle, and Citadel. Not part of the IP-protected core platform; the practitioner-side complement.*
 
-[Verity](#9-verity--smpm-intelligence-platform) · [Steward](#10-steward--popm-intelligence-platform) · [Reeve](#11-reeve--governed-atlassian-administration) · [Author](#12-author--storyepic-coaching-tool)
+[Verity](#17-verity--smpm-intelligence-platform) · [Steward](#18-steward--popm-intelligence-platform) · [Reeve](#19-reeve--governed-atlassian-administration) · [Author](#20-author--storyepic-coaching-tool)
 
 </div>
 
@@ -1081,7 +1120,7 @@ Walk into a CoE engagement having already cataloged the relevant agentic model l
 
 ---
 
-## 16. Verity &mdash; SM/PM Intelligence Platform
+## 17. Verity &mdash; SM/PM Intelligence Platform
 
 **The Scrum Master / Project Manager survival weapon. Reads Jira, Confluence, GitHub, Bitbucket, Slack, Teams — surfaces the conversations you need to have today.**
 
@@ -1156,7 +1195,7 @@ Profile-driven configuration covering **Scrum, Kanban, Scrumban, PM**. Per-profi
 
 ---
 
-## 17. Steward &mdash; PO/PM Intelligence Platform
+## 18. Steward &mdash; PO/PM Intelligence Platform
 
 **The Product Owner / Product Manager survival weapon. Same architecture as Verity, tuned for product intelligence cadences.**
 
@@ -1215,7 +1254,7 @@ roadmap_drift · backlog_bloat · refinement_desert · stakeholder_silent_veto �
 
 ---
 
-## 18. Reeve &mdash; Governed Atlassian Administration
+## 19. Reeve &mdash; Governed Atlassian Administration
 
 **The Atlassian writer where Verity and Steward are readers. Governed configuration, approval gates, state snapshots + rollback.**
 
@@ -1263,7 +1302,7 @@ Reeve is the governed Atlassian administration platform. It exposes 5 MCP server
 
 ---
 
-## 19. Author &mdash; Story/Epic Coaching Tool
+## 20. Author &mdash; Story/Epic Coaching Tool
 
 **The authoring discipline tool. Generates epics and stories on command; deterministic refusal layer catches shallow authoring.**
 
@@ -1345,6 +1384,9 @@ A draft that fails the refusal layer is rejected with structured reason; the use
 ├──────────────────────────────────────────────────────────────────────┤
 │                       RUNTIME SUBSTRATE                               │
 │                                                                      │
+│   Aegis ───────────> Pre-deployment audit gate. SHIP / BLOCK verdict │
+│                      6-dimension spec validation. ATO + CMMC evidence│
+│                                                                      │
 │   Seneschal ───────> 30-check policy gate, 80 event types,           │
 │                      83 violation classes, kill switch, FIPS 140-3   │
 │                                                                      │
@@ -1391,9 +1433,10 @@ A draft that fails the refusal layer is rejected with structured reason; the use
 └──────────────────────────────────────────────────────────────────────┘
 
 Outbound Build Loop:
-Spec YAML → Citadel (compliance) → Castellan/Charlotte (binaries) → Aegis
-         → Key Server (license) → Garrison (host) → Seneschal (enforce)
-         → Chronicle (sign) → Vigil (observe) → Herald (amend) → loop
+Spec YAML → Citadel (compliance) → Castellan/Charlotte (compile binaries)
+         → Aegis (SHIP/BLOCK verdict on bundle) → Key Server (license)
+         → Garrison (host) → Seneschal (enforce) → Chronicle (sign)
+         → Vigil (observe) → Herald (amend) → loop
 
 Inbound Audit Loop (third-party customer agents):
 Customer artifacts → Recon (extract + reconstruct) → Audit Pro (orchestrate)
@@ -1423,13 +1466,14 @@ Chancery (discover) → Author (write) → Jira → Verity + Steward (read) → 
 1. **Design** &mdash; Chancery compiles PRDs and SDD bundles. Citadel generates governance-aware fleet specs and regulatory documentation
 2. **Build** &mdash; Charlotte compiles context/prompts/MCP servers. Castellan compiles agents. Both enforce compliance floors
 3. **Audit Inbound** &mdash; Recon reverse-engineers compliance contracts from already-built customer artifacts. Inbound complement to outbound compilation
-4. **Host** &mdash; Garrison loads only Aegis-attested, Key-Server-licensed binaries. Closed allowlist. Four SKU tiers from Hosted to Sovereign
-5. **Enforce** &mdash; Seneschal evaluates every agent action through a 30-check policy gate. 80 attestation events, 83 violation classes, kill switch, HMAC-SHA384 signing
-6. **Transport** &mdash; Drawbridge carries every cross-territory agent message under per-message signing, encryption, attestation, and policy gating. Classical FIPS 140-3 + post-quantum tier
-7. **Attest** &mdash; Chronicle signs runtime events with hybrid Ed25519 + ML-DSA-65; produces OSCAL packages and signed ATO bundles
-8. **Observe + Amend** &mdash; Vigil and Vigil-Edge compare runtime behavior against the compiled baseline; synthesize amendments; Herald carries them back to Seneschal for mid-flight adaptation
-9. **Audit Productized** &mdash; Audit Pro composes the engines into a customer-facing productized audit; emits Chronicle-signed evidence + drop-in recompiled specs
-10. **Operate** &mdash; Chancery for conversational design. Quaestor for federal RFP judging. Augur for CoE engagement. Verity / Steward / Reeve / Author for the practitioner-side lifecycle &mdash; eating the platform's own dogfood
+4. **Gate** &mdash; Aegis runs the pre-deployment audit across six dimensions (tool description poisoning, integrity-manifest agreement, MCP topology, behavioral policy floor, attestation provenance, license-token presence). SHIP / BLOCK verdict. Nothing reaches Garrison until Aegis says SHIP
+5. **Host** &mdash; Garrison loads only Aegis-attested, Key-Server-licensed binaries. Closed allowlist. Four SKU tiers from Hosted to Sovereign
+6. **Enforce** &mdash; Seneschal evaluates every agent action through a 30-check policy gate. 80 attestation events, 83 violation classes, kill switch, HMAC-SHA384 signing
+7. **Transport** &mdash; Drawbridge carries every cross-territory agent message under per-message signing, encryption, attestation, and policy gating. Classical FIPS 140-3 + post-quantum tier
+8. **Attest** &mdash; Chronicle signs runtime events with hybrid Ed25519 + ML-DSA-65; produces OSCAL packages and signed ATO bundles
+9. **Observe + Amend** &mdash; Vigil and Vigil-Edge compare runtime behavior against the compiled baseline; synthesize amendments; Herald carries them back to Seneschal for mid-flight adaptation
+10. **Audit Productized** &mdash; Audit Pro composes the engines into a customer-facing productized audit; emits Chronicle-signed evidence + drop-in recompiled specs
+11. **Operate** &mdash; Chancery for conversational design. Quaestor for federal RFP judging. Augur for CoE engagement. Verity / Steward / Reeve / Author for the practitioner-side lifecycle &mdash; eating the platform's own dogfood
 
 Every system is standalone. Together they close the loop.
 
@@ -1441,8 +1485,8 @@ Every system is standalone. Together they close the loop.
 
 <br>
 
-![Total Tests](https://img.shields.io/badge/23%2C500%2B-Tests_Passing-16A34A?style=for-the-badge)
-![Total Systems](https://img.shields.io/badge/19-Production_Systems-7C3AED?style=for-the-badge)
+![Total Tests](https://img.shields.io/badge/24%2C000%2B-Tests_Passing-16A34A?style=for-the-badge)
+![Total Systems](https://img.shields.io/badge/20-Production_Systems-7C3AED?style=for-the-badge)
 ![Total Standards](https://img.shields.io/badge/20%2B-Compliance_Standards-DC2626?style=for-the-badge)
 
 <br>
@@ -1455,9 +1499,9 @@ Every system is standalone. Together they close the loop.
 
 ### Runtime Substrate
 
-| | Seneschal | Garrison | Drawbridge | Vigil + Edge | Bailiff | Key Server | **Subtotal** |
-|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
-| **Tests** | 179+ | 200+ | 100+ | 250+ | 50+ | 50+ | **800+** |
+| | Aegis | Seneschal | Garrison | Drawbridge | Vigil + Edge | Bailiff | Key Server | **Subtotal** |
+|:--|:--:|:--:|:--:|:--:|:--:|:--:|:--:|:--:|
+| **Tests** | 700+ | 179+ | 200+ | 100+ | 250+ | 50+ | 50+ | **1,500+** |
 
 ### Products
 
@@ -1475,8 +1519,8 @@ Every system is standalone. Together they close the loop.
 
 | Metric | Value |
 |:--|:--|
-| **Total Systems** | **19** |
-| **Total Tests (passing)** | **~23,500+** |
+| **Total Systems** | **20** |
+| **Total Tests (passing)** | **~24,000+** |
 | **Compliance Standards** | **20+** (EU AI Act, NIST AI RMF, NIST 800-53, NIST 800-171 Rev 2, NIST CSF 2.0/CAISI, NIST IR 8596, FedRAMP Low/Moderate/High, DoD IL4/IL5, CMMC L1/L2/L3, CNSSP-12, CNSA 2.0, FIPS 140-3, FIPS 204 (ML-DSA), DoD STIG, HIPAA, PCI-DSS v4.0, SOC 2 Type II, ISO 42001, ISO 27001, ISO 42005, GDPR, GLBA Safeguards, FFIEC IT Handbook, SOX ITGC, OCC SR 11-7, FINRA 2026, MAS AI RM, Singapore IMDA, OWASP Top 10, CoSAI, COPPA) |
 | **Languages** | Python, Rust, TypeScript |
 
@@ -1541,3 +1585,4 @@ If your team is shipping production AI agents and needs them **governed, compile
 <br>
 
 </div>
+
